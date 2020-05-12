@@ -1,3 +1,8 @@
+dist/
+www/
+loader/
+src/components.d.ts
+
 .*
 *.log
 *.lock
