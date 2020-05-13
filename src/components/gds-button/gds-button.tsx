@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Host, h } from '@stencil/core'
 
 @Component({
   tag: 'gds-button',
@@ -13,6 +13,6 @@ export class GdsButton {
           <slot></slot>
         </button>
       </Host>
-    );
+    )
   }
 }

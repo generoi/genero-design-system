@@ -1,5 +1,5 @@
-import { Config } from '@stencil/core';
-import { sass } from '@stencil/sass';
+import { Config } from '@stencil/core'
+import { sass } from '@stencil/sass'
 
 export const config: Config = {
   namespace: 'gds',
@@ -21,4 +21,4 @@ export const config: Config = {
     },
   ],
   plugins: [sass()],
-};
+}
