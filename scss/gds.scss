@@ -1,0 +1,3 @@
+$button: true !default;
+
+@forward '../src/components/gds-button/gds-button' with ($output: $button);

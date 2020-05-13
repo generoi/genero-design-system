@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core'
+import { Component, Prop, h } from '@stencil/core'
 
 @Component({
   tag: 'gds-button',
@@ -6,13 +6,13 @@ import { Component, Host, h } from '@stencil/core'
   shadow: true,
 })
 export class GdsButton {
+  @Prop({ reflect: true }) disabled: boolean = false
+
   render() {
     return (
-      <Host>
-        <button>
-          <slot></slot>
-        </button>
-      </Host>
+      <button class="gds-button" disabled={this.disabled}>
+        <slot></slot>
+      </button>
     )
   }
 }
