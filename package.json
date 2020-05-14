@@ -16,7 +16,9 @@
   "unpkg": "dist/button/button.js",
   "files": [
     "dist/",
-    "loader/"
+    "loader/",
+    "src/**/*.scss",
+    "scss/"
   ],
   "scripts": {
     "lint": "npm-run-all lint:*",
