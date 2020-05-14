@@ -1,13 +1,5 @@
 @use "index" as *;
 
-$output: true !default;
-
-@if $output {
-  :host([disabled]) {
-    pointer-events: none;
-  }
-
-  .gds-button {
-    @include base;
-  }
+.gds-button {
+  @include base;
 }

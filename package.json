@@ -17,8 +17,7 @@
   "files": [
     "dist/",
     "loader/",
-    "src/**/*.scss",
-    "scss/"
+    "src/**/*.scss"
   ],
   "scripts": {
     "lint": "npm-run-all lint:*",

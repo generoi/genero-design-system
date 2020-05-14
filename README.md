@@ -6,26 +6,13 @@ npm run build
 
 ## SASS library
 
-### Use the mixins as a component library
+There's no main entrypoint for all mixins, you are instead encouraged to encapsulate all dependencies in the files that they are used.
 
 ```scss
-// Import the entire library
-@use '~genero-design-system/scss' as gds;
-
-// …or import individual components
-@use '~genero-design-system/src/components/button' as button;
+// Import component
+@use '~genero-design-system/src/components/gds-button' as button;
 
 .button {
-  @include gds.button-base;
   @include button.base;
 }
-```
-
-### Use the entire design system
-
-```scss
-@use '~/genero-design-system/scss/gds' with (
-  $button: true,
-  $accordion: false
-);
 ```
