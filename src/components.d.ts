@@ -6,7 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from '@stencil/core/internal'
 export namespace Components {
-  interface GdsButton {}
+  interface GdsButton {
+    disabled: boolean
+  }
 }
 declare global {
   interface HTMLGdsButtonElement extends Components.GdsButton, HTMLStencilElement {}
@@ -19,7 +21,9 @@ declare global {
   }
 }
 declare namespace LocalJSX {
-  interface GdsButton {}
+  interface GdsButton {
+    disabled?: boolean
+  }
   interface IntrinsicElements {
     'gds-button': GdsButton
   }

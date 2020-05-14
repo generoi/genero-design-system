@@ -1,3 +1,5 @@
-:host {
-  display: block;
+@use "index" as *;
+
+.gds-button {
+  @include base;
 }

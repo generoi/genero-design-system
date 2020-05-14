@@ -1,0 +1,9 @@
+@mixin base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+}
