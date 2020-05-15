@@ -1,6 +1,7 @@
 dist/
 www/
 loader/
+react/
 storybook-static/
 
 *~
