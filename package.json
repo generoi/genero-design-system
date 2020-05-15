@@ -17,6 +17,7 @@
   "files": [
     "dist/",
     "loader/",
+    "react/",
     "src/**/*.scss"
   ],
   "scripts": {
