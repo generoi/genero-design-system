@@ -25,12 +25,13 @@
     "lint:prettier": "prettier --write .",
     "build": "npm-run-all build:* lint:prettier",
     "build:stencil": "stencil build --docs",
+    "build:storybook": "build-storybook",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
     "storybook": "start-storybook -p 6006",
-    "build:storybook": "build-storybook"
+    "prepare": "npm run build"
   },
   "engines": {
     "node": ">=11.0.0"
