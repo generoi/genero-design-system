@@ -1,9 +1,5 @@
 # Genero Design System
 
-```sh
-npm run build
-```
-
 ## SASS library
 
 There's no main entrypoint for all mixins, you are instead encouraged to encapsulate all dependencies in the files that they are used.
@@ -15,4 +11,19 @@ There's no main entrypoint for all mixins, you are instead encouraged to encapsu
 .button {
   @include button.base;
 }
+```
+
+## Development
+
+```sh
+npm run build
+```
+
+### Publishing a new version
+
+```sh
+npm version patch
+git push
+git push --tags
+npm publish
 ```
