@@ -3,3 +3,6 @@ www/
 loader/
 react/
 storybook-static/
+
+react-ts/*
+!react-ts/tsconfig.json

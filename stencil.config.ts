@@ -7,8 +7,8 @@ export const config: Config = {
   taskQueue: 'async',
   outputTargets: [
     reactOutputTarget({
-      componentCorePackage: '../',
-      proxiesFile: './react/index.ts',
+      componentCorePackage: 'genero-design-system',
+      proxiesFile: './react-ts/index.ts',
     }),
     {
       type: 'dist-custom-elements-bundle',
