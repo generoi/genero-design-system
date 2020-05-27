@@ -1,9 +1,10 @@
 dist/
 www/
 loader/
-react/
 storybook-static/
 
+react/*
+!react/.gitkeep
 react-ts/*
 !react-ts/tsconfig.json
 
