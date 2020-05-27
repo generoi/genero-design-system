@@ -13,7 +13,7 @@
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/button/button.js",
+  "unpkg": "dist/gds/gds.js",
   "files": [
     "dist/",
     "loader/",
