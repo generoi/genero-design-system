@@ -63,7 +63,14 @@ There's no main entrypoint for all mixins, you are instead encouraged to encapsu
 ## Development
 
 ```sh
+npm install
 npm run build
+```
+
+Run storybook
+
+```sh
+npm run storybook
 ```
 
 ### Publishing a new version
