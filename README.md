@@ -92,10 +92,10 @@ Next do the following:
 - Add a compoent.stories.js file.
 - Add a README.md file
 
-Build the component and generate readme.md docs.
+Build and watch the component and generate readme.md docs.
 
 ```sh
-npm run build:stencil
+npm run build:stencil --watch
 ```
 
 ### Style Guide
