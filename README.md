@@ -102,6 +102,10 @@ npm run build:stencil
 
 While we don't have our internal Style Guide, let's use the same as Stencil core team: https://stenciljs.com/docs/style-guide
 
+### Storybook roadmap
+
+- Add props table: https://github.com/storybookjs/storybook/tree/next/addons/docs/web-components#props-tables
+
 ### Publishing a new version
 
 ```sh
