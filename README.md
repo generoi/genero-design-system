@@ -73,6 +73,35 @@ Run storybook
 npm run storybook
 ```
 
+### Creating a new component
+
+Use the `gds-button` component as a basis for the new component.
+
+Use Stencil CLI to generate a new component:
+
+- Component naming example: `gds-my-component`
+- Skip test files for now. We need to think about those later.
+
+```sh
+npm run generate
+```
+
+Next do the following:
+
+- Rename the stylesheet from .css to .scss
+- Add a compoent.stories.js file.
+- Add a README.md file
+
+Build the component and generate readme.md docs.
+
+```sh
+npm run build:stencil
+```
+
+### Style Guide
+
+While we don't have our internal Style Guide, let's use the same as Stencil core team: https://stenciljs.com/docs/style-guide
+
 ### Publishing a new version
 
 ```sh
