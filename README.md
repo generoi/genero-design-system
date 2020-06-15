@@ -66,10 +66,44 @@ There's no main entrypoint for all mixins, you are instead encouraged to encapsu
 npm run build
 ```
 
+### Commits
+
+Commits will be linted according to [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+
+you can also use [commitizen](https://commitizen.github.io/cz-cli/)
+
 ### Publishing a new version
 
+#### Create release
+
+generate changelog and bump the version based on commit log
+
 ```sh
-npm version patch
+npm run release
+```
+
+---
+
+#### Create a named prerelease version
+
+```sh
+npm run release -- --prerelease beta
+```
+
+#### Manually specifify the version bump
+
+```sh
+npm run release -- --release-as minor
+npm run release -- --release-as 1.1.0
+```
+
+see [conventional-changelog/standard-version#cli-usage](https://github.com/conventional-changelog/standard-version#cli-usage) for more details and examples
+
+---
+
+#### Push and publish release
+
+```sh
 git push
 git push --tags
 npm publish
