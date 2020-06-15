@@ -63,8 +63,48 @@ There's no main entrypoint for all mixins, you are instead encouraged to encapsu
 ## Development
 
 ```sh
+npm install
 npm run build
 ```
+
+Run storybook
+
+```sh
+npm run storybook
+```
+
+### Creating a new component
+
+Use the `gds-button` component as a basis for the new component.
+
+Use Stencil CLI to generate a new component:
+
+- Component naming example: `gds-my-component`
+- Skip test files for now. We need to think about those later.
+
+```sh
+npm run generate
+```
+
+Next do the following:
+
+- Rename the stylesheet from .css to .scss
+- Add a compoent.stories.js file.
+- Add a README.md file
+
+Build and watch the component and generate readme.md docs.
+
+```sh
+npm run build:stencil --watch
+```
+
+### Style Guide
+
+While we don't have our internal Style Guide, let's use the same as Stencil core team: https://stenciljs.com/docs/style-guide
+
+### Storybook roadmap
+
+- Add props table: https://github.com/storybookjs/storybook/tree/next/addons/docs/web-components#props-tables
 
 ### Commits
 

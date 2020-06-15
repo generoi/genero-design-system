@@ -9,6 +9,9 @@ export namespace Components {
   interface GdsButton {
     disabled: boolean
   }
+  interface GdsMediaCard {
+    heading: string
+  }
 }
 declare global {
   interface HTMLGdsButtonElement extends Components.GdsButton, HTMLStencilElement {}
@@ -16,16 +19,26 @@ declare global {
     prototype: HTMLGdsButtonElement
     new (): HTMLGdsButtonElement
   }
+  interface HTMLGdsMediaCardElement extends Components.GdsMediaCard, HTMLStencilElement {}
+  var HTMLGdsMediaCardElement: {
+    prototype: HTMLGdsMediaCardElement
+    new (): HTMLGdsMediaCardElement
+  }
   interface HTMLElementTagNameMap {
     'gds-button': HTMLGdsButtonElement
+    'gds-media-card': HTMLGdsMediaCardElement
   }
 }
 declare namespace LocalJSX {
   interface GdsButton {
     disabled?: boolean
   }
+  interface GdsMediaCard {
+    heading?: string
+  }
   interface IntrinsicElements {
     'gds-button': GdsButton
+    'gds-media-card': GdsMediaCard
   }
 }
 export { LocalJSX as JSX }
@@ -33,6 +46,7 @@ declare module '@stencil/core' {
   export namespace JSX {
     interface IntrinsicElements {
       'gds-button': LocalJSX.GdsButton & JSXBase.HTMLAttributes<HTMLGdsButtonElement>
+      'gds-media-card': LocalJSX.GdsMediaCard & JSXBase.HTMLAttributes<HTMLGdsMediaCardElement>
     }
   }
 }
