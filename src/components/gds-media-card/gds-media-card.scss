@@ -1,3 +1,21 @@
-:host {
-  display: block;
+@use "index" as *;
+
+.card {
+  @include card;
+}
+
+.image {
+  @include image;
+}
+
+.headline {
+  @include headline;
+}
+
+.description {
+  @include description;
+}
+
+.tags {
+  @include tags;
 }
