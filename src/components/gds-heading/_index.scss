@@ -1,0 +1,44 @@
+@mixin base {
+  display: block;
+  font-family: Gilroy, Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  letter-spacing: 0px;
+}
+
+// H1
+@mixin heading-xxl {
+  @include base;
+  font-size: 72px;
+  line-height: 74px;
+}
+
+// H2
+@mixin heading-xl {
+  @include base;
+  font-size: 60px;
+  line-height: 60px;
+}
+
+// H3
+@mixin heading-l {
+  @include base;
+  font-size: 36px;
+  line-height: 36px;
+}
+
+// H4
+@mixin heading-m {
+  @include base;
+  font-size: 28px;
+  line-height: 28px;
+}
+
+// H5
+@mixin heading-s {
+  @include base;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 800;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
