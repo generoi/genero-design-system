@@ -1,0 +1,5 @@
+@use "index" as *;
+
+:host {
+  @include base;
+}

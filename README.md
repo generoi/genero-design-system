@@ -88,19 +88,31 @@ npm run generate
 
 Next do the following:
 
-- Rename the stylesheet from .css to .scss
-- Add a compoent.stories.js file.
+- Copy `gds-button/_index.scss` the the new component's folder.
+- Rename the stylesheet from .css to .scss and use the `gds-button.scss` as a basis.
+- Add a component.stories.js file.
 - Add a README.md file
 
 Build and watch the component and generate readme.md docs.
+TODO: This should also watch changes in \_index.scss files.
 
 ```sh
-npm run build:stencil --watch
+npm run start
 ```
 
 ### Style Guide
 
 While we don't have our internal Style Guide, let's use the same as Stencil core team: https://stenciljs.com/docs/style-guide
+
+### Docs
+
+- On Properties: https://stenciljs.com/docs/properties
+
+### Tips, tricks, and gotchas
+
+Please add here, when you solve something you got stuck at.
+
+- In HTML, attributes need to use dash-case. In JSX you use camelCase.
 
 ### Storybook roadmap
 
