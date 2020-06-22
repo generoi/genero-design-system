@@ -1,4 +1,4 @@
-# gds-heading-s
+# gds-heading
 
 <!-- Auto Generated Below -->
 
