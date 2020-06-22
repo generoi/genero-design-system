@@ -1,28 +1,33 @@
 // TODO: Move styles to _index.css if needed for WP?
 @use "index" as *;
+@use "../../styles/colors" as *;
+@use "../../styles/breakpoints" as *;
+
+$grid-item-desktop-size: 263px;
+$grid-item-mobile-size: 180px;
 
 :host {
   @include base;
 
   display: grid;
-  grid-template-columns: repeat(auto-fit, 263px);
-  grid-template-rows: repeat(auto-fill, 263px);
+  grid-template-columns: repeat(auto-fit, $grid-item-desktop-size);
+  grid-template-rows: repeat(auto-fill, $grid-item-desktop-size);
   grid-gap: 0;
   justify-content: center;
   max-width: 1060px;
 }
 
 ::slotted(gds-logo-grid-item) {
-  border-top: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee;
+  border-top: 1px solid $border-light-color;
+  border-left: 1px solid $border-light-color;
 }
 
 // Mobile has 2 columns
 // TODO: Use breakpoints
-@media (max-width: 1059px) {
+@include mobileAndTablet {
   :host {
-    grid-template-columns: repeat(auto-fit, 180px);
-    grid-template-rows: repeat(auto-fill, 180px);
+    grid-template-columns: repeat(auto-fit, $grid-item-mobile-size);
+    grid-template-rows: repeat(auto-fill, $grid-item-mobile-size);
   }
 
   // Remove top borders
@@ -40,7 +45,7 @@
 
 // Desktop has 4 columns
 // TODO: Use breakpoints
-@media (min-width: 1060px) {
+@include desktopOnly {
   // Remove top borders
   ::slotted(:first-child),
   ::slotted(:nth-child(2)),

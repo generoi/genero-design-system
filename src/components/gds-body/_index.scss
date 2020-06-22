@@ -1,0 +1,28 @@
+@use "../../styles/typography" as *;
+@use "../../styles/colors" as *;
+
+@mixin base {
+  display: block;
+  color: $body-text-color;
+  font-family: $body-font-family;
+  font-weight: 400;
+  letter-spacing: 0px;
+}
+
+@mixin body-l {
+  @include base;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+@mixin body-m {
+  @include base;
+  font-size: 17px;
+  line-height: 27px;
+}
+
+@mixin body-s {
+  @include base;
+  font-size: 15px;
+  line-height: 25px;
+}

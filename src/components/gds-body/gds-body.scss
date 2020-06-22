@@ -1,0 +1,13 @@
+@use "index" as *;
+
+.gds-body-l {
+  @include body-l;
+}
+
+.gds-body-m {
+  @include body-m;
+}
+
+.gds-body-s {
+  @include body-s;
+}

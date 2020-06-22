@@ -1,5 +1,7 @@
+@use "../../styles/typography" as *;
+
 @mixin base {
-  font-family: Gilroy, Arial, Helvetica, sans-serif;
+  font-family: $label-font-family;
   font-size: 10px;
   line-height: 14px;
   font-weight: 600;

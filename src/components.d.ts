@@ -6,6 +6,12 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface GdsBody {
+        /**
+          * Size of the body.
+         */
+        "size": string;
+    }
     interface GdsButton {
         "disabled": boolean;
     }
@@ -102,6 +108,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLGdsBodyElement extends Components.GdsBody, HTMLStencilElement {
+    }
+    var HTMLGdsBodyElement: {
+        prototype: HTMLGdsBodyElement;
+        new (): HTMLGdsBodyElement;
+    };
     interface HTMLGdsButtonElement extends Components.GdsButton, HTMLStencilElement {
     }
     var HTMLGdsButtonElement: {
@@ -151,6 +163,7 @@ declare global {
         new (): HTMLGdsTagElement;
     };
     interface HTMLElementTagNameMap {
+        "gds-body": HTMLGdsBodyElement;
         "gds-button": HTMLGdsButtonElement;
         "gds-heading": HTMLGdsHeadingElement;
         "gds-label": HTMLGdsLabelElement;
@@ -162,6 +175,12 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface GdsBody {
+        /**
+          * Size of the body.
+         */
+        "size"?: string;
+    }
     interface GdsButton {
         "disabled"?: boolean;
     }
@@ -257,6 +276,7 @@ declare namespace LocalJSX {
         "target"?: string;
     }
     interface IntrinsicElements {
+        "gds-body": GdsBody;
         "gds-button": GdsButton;
         "gds-heading": GdsHeading;
         "gds-label": GdsLabel;
@@ -271,6 +291,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "gds-body": LocalJSX.GdsBody & JSXBase.HTMLAttributes<HTMLGdsBodyElement>;
             "gds-button": LocalJSX.GdsButton & JSXBase.HTMLAttributes<HTMLGdsButtonElement>;
             "gds-heading": LocalJSX.GdsHeading & JSXBase.HTMLAttributes<HTMLGdsHeadingElement>;
             "gds-label": LocalJSX.GdsLabel & JSXBase.HTMLAttributes<HTMLGdsLabelElement>;
