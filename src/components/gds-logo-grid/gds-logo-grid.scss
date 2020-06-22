@@ -1,0 +1,57 @@
+// TODO: Move styles to _index.css if needed for WP?
+@use "index" as *;
+
+:host {
+  @include base;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 263px);
+  grid-template-rows: repeat(auto-fill, 263px);
+  grid-gap: 0;
+  justify-content: center;
+  max-width: 1060px;
+}
+
+::slotted(gds-logo-grid-item) {
+  border-top: 1px solid #eeeeee;
+  border-left: 1px solid #eeeeee;
+}
+
+// Mobile has 2 columns
+// TODO: Use breakpoints
+@media (max-width: 1059px) {
+  :host {
+    grid-template-columns: repeat(auto-fit, 180px);
+    grid-template-rows: repeat(auto-fill, 180px);
+  }
+
+  // Remove top borders
+  ::slotted(:first-child),
+  ::slotted(:nth-child(2)) {
+    border-top: none;
+  }
+
+  // Remove borders on the left
+  ::slotted(:first-child),
+  ::slotted(:nth-child(2n + 1)) {
+    border-left: none;
+  }
+}
+
+// Desktop has 4 columns
+// TODO: Use breakpoints
+@media (min-width: 1060px) {
+  // Remove top borders
+  ::slotted(:first-child),
+  ::slotted(:nth-child(2)),
+  ::slotted(:nth-child(3)),
+  ::slotted(:nth-child(4)) {
+    border-top: none;
+  }
+
+  // Remove borders on the left
+  ::slotted(:first-child),
+  ::slotted(:nth-child(4n + 1)) {
+    border-left: none;
+  }
+}

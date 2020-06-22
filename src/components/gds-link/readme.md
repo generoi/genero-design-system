@@ -1,18 +1,20 @@
-# gds-button
+# gds-link
 
 <!-- Auto Generated Below -->
 
 ## Properties
 
-| Property | Attribute | Description       | Type     | Default     |
-| -------- | --------- | ----------------- | -------- | ----------- |
-| `href`   | `href`    | Link url.         | `string` | `undefined` |
-| `target` | `target`  | Link open target. | `string` | `undefined` |
+| Property | Attribute | Description       | Type      | Default     |
+| -------- | --------- | ----------------- | --------- | ----------- |
+| `block`  | `block`   |                   | `boolean` | `undefined` |
+| `href`   | `href`    | Link url.         | `string`  | `undefined` |
+| `target` | `target`  | Link open target. | `string`  | `undefined` |
 
 ## Dependencies
 
 ### Used by
 
+- [gds-logo-grid-item](../gds-logo-grid-item)
 - [gds-media-card](../gds-media-card)
 - [gds-tag](../gds-tag)
 
@@ -20,6 +22,7 @@
 
 ```mermaid
 graph TD;
+  gds-logo-grid-item --> gds-link
   gds-media-card --> gds-link
   gds-tag --> gds-link
   style gds-link fill:#f9f,stroke:#333,stroke-width:4px

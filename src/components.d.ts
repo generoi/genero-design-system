@@ -26,10 +26,27 @@ export namespace Components {
         "color": string;
     }
     interface GdsLink {
+        "block": boolean;
         /**
           * Link url.
          */
         "href": string;
+        /**
+          * Link open target.
+         */
+        "target": string;
+    }
+    interface GdsLogoGrid {
+    }
+    interface GdsLogoGridItem {
+        /**
+          * If defined, the logo will be a link.
+         */
+        "href": string;
+        /**
+          * Image url.
+         */
+        "imageUrl": string;
         /**
           * Link open target.
          */
@@ -109,6 +126,18 @@ declare global {
         prototype: HTMLGdsLinkElement;
         new (): HTMLGdsLinkElement;
     };
+    interface HTMLGdsLogoGridElement extends Components.GdsLogoGrid, HTMLStencilElement {
+    }
+    var HTMLGdsLogoGridElement: {
+        prototype: HTMLGdsLogoGridElement;
+        new (): HTMLGdsLogoGridElement;
+    };
+    interface HTMLGdsLogoGridItemElement extends Components.GdsLogoGridItem, HTMLStencilElement {
+    }
+    var HTMLGdsLogoGridItemElement: {
+        prototype: HTMLGdsLogoGridItemElement;
+        new (): HTMLGdsLogoGridItemElement;
+    };
     interface HTMLGdsMediaCardElement extends Components.GdsMediaCard, HTMLStencilElement {
     }
     var HTMLGdsMediaCardElement: {
@@ -126,6 +155,8 @@ declare global {
         "gds-heading": HTMLGdsHeadingElement;
         "gds-label": HTMLGdsLabelElement;
         "gds-link": HTMLGdsLinkElement;
+        "gds-logo-grid": HTMLGdsLogoGridElement;
+        "gds-logo-grid-item": HTMLGdsLogoGridItemElement;
         "gds-media-card": HTMLGdsMediaCardElement;
         "gds-tag": HTMLGdsTagElement;
     }
@@ -151,10 +182,27 @@ declare namespace LocalJSX {
         "color"?: string;
     }
     interface GdsLink {
+        "block"?: boolean;
         /**
           * Link url.
          */
         "href"?: string;
+        /**
+          * Link open target.
+         */
+        "target"?: string;
+    }
+    interface GdsLogoGrid {
+    }
+    interface GdsLogoGridItem {
+        /**
+          * If defined, the logo will be a link.
+         */
+        "href"?: string;
+        /**
+          * Image url.
+         */
+        "imageUrl"?: string;
         /**
           * Link open target.
          */
@@ -213,6 +261,8 @@ declare namespace LocalJSX {
         "gds-heading": GdsHeading;
         "gds-label": GdsLabel;
         "gds-link": GdsLink;
+        "gds-logo-grid": GdsLogoGrid;
+        "gds-logo-grid-item": GdsLogoGridItem;
         "gds-media-card": GdsMediaCard;
         "gds-tag": GdsTag;
     }
@@ -225,6 +275,8 @@ declare module "@stencil/core" {
             "gds-heading": LocalJSX.GdsHeading & JSXBase.HTMLAttributes<HTMLGdsHeadingElement>;
             "gds-label": LocalJSX.GdsLabel & JSXBase.HTMLAttributes<HTMLGdsLabelElement>;
             "gds-link": LocalJSX.GdsLink & JSXBase.HTMLAttributes<HTMLGdsLinkElement>;
+            "gds-logo-grid": LocalJSX.GdsLogoGrid & JSXBase.HTMLAttributes<HTMLGdsLogoGridElement>;
+            "gds-logo-grid-item": LocalJSX.GdsLogoGridItem & JSXBase.HTMLAttributes<HTMLGdsLogoGridItemElement>;
             "gds-media-card": LocalJSX.GdsMediaCard & JSXBase.HTMLAttributes<HTMLGdsMediaCardElement>;
             "gds-tag": LocalJSX.GdsTag & JSXBase.HTMLAttributes<HTMLGdsTagElement>;
         }

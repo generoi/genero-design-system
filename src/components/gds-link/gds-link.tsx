@@ -14,10 +14,19 @@ export class GdsLink {
    * Link open target.
    */
   @Prop() target: string
+  /**
+   *
+   */
+  @Prop() block: boolean
 
   render() {
     return (
-      <a class="gds-link" href={this.href} target={this.target}>
+      <a
+        class={{
+          block: this.block,
+        }}
+        href={this.href}
+        target={this.target}>
         <slot></slot>
       </a>
     )

@@ -1,7 +1,7 @@
 @mixin card {
   display: flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
   text-align: center;
   border-radius: 8px;
   box-shadow: 0px 0px 10px #0000001a;
