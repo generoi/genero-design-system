@@ -7,7 +7,7 @@
 
 | Property | Attribute | Description       | Type     | Default |
 | -------- | --------- | ----------------- | -------- | ------- |
-| `size`   | `size`    | Size of the body. | `string` | `'m'`   |
+| `size`   | `size`    | Size of the text. | `string` | `'m'`   |
 
 
 ----------------------------------------------

@@ -4,20 +4,20 @@ import { Component, h, Prop } from '@stencil/core'
  * Paragraph element with different sizes.
  */
 @Component({
-  tag: 'gds-body',
-  styleUrl: 'gds-body.scss',
+  tag: 'gds-paragraph',
+  styleUrl: 'gds-paragraph.scss',
   // Expose the p elements for better SEO.
   shadow: false,
 })
-export class GdsBody {
+export class GdsParagraph {
   /**
-   * Size of the body.
+   * Size of the text.
    */
   @Prop() size: string = 'm'
 
   render() {
     return (
-      <p class={`gds-body-${this.size}`}>
+      <p class={`gds-paragraph-${this.size}`}>
         <slot></slot>
       </p>
     )
