@@ -6,7 +6,7 @@ import { Component, h, Prop } from '@stencil/core'
 @Component({
   tag: 'gds-body',
   styleUrl: 'gds-body.scss',
-  // Expose the h elements for better SEO.
+  // Expose the p elements for better SEO.
   shadow: false,
 })
 export class GdsBody {

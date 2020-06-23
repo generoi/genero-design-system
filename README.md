@@ -114,6 +114,8 @@ Please add here, when you solve something you got stuck at.
 
 - In HTML, attributes need to use dash-case. In JSX you use camelCase.
 - When you add new components, it's best to restart build watcher because it usually breaks here.
+- Use `/public` folder for static assets in stories.
+- Use `/.storybook/preview-head.html` to inject code stories.
 
 ### Storybook roadmap
 

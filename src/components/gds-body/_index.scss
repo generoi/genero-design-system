@@ -1,10 +1,6 @@
-@use "../../styles/typography" as *;
-@use "../../styles/colors" as *;
-
 @mixin base {
-  display: block;
-  color: $body-text-color;
-  font-family: $body-font-family;
+  color: var(--body-text-color);
+  font-family: var(--body-font-family);
   font-weight: 400;
   letter-spacing: 0px;
 }

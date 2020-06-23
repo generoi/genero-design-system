@@ -1,0 +1,25 @@
+/* NOTE: Use plain css for now. Switch to using Sass once someone get's it to load in storybook preview iframe. */
+
+:root {
+  /**
+   * Typography
+   */
+
+  /* Basic text elements */
+  --heading-font-family: Gilroy, Arial, Helvetica, sans-serif;
+  --body-font-family: Gilroy, Arial, Helvetica, sans-serif;
+  --label-font-family: Gilroy, Arial, Helvetica, sans-serif;
+
+  /* Other UI elements */
+  --button-font-family: Gilroy, Arial, Helvetica, sans-serif;
+
+  /**
+   * Colors
+   */
+
+  /* Font colors */
+  --body-text-color: black;
+
+  /* Border colors */
+  --border-light-color: #eeeeee;
+}

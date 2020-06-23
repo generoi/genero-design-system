@@ -1,6 +1,5 @@
 // TODO: Move styles to _index.css if needed for WP?
 @use "index" as *;
-@use "../../styles/colors" as *;
 @use "../../styles/breakpoints" as *;
 
 $grid-item-desktop-size: 263px;
@@ -18,8 +17,9 @@ $grid-item-mobile-size: 180px;
 }
 
 ::slotted(gds-logo-grid-item) {
-  border-top: 1px solid $border-light-color;
-  border-left: 1px solid $border-light-color;
+  border-top: 1px solid black;
+  border-top: 1px solid var(--border-light-color);
+  border-left: 1px solid var(--border-light-color);
 }
 
 // Mobile has 2 columns

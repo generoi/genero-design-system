@@ -1,5 +1,5 @@
 // TODO: Move styles to _index.css if needed for WP?
-@use "index" as *;
+@use "index";
 
 :host {
   display: block; /* by default, custom elements are display: inline */
