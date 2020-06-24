@@ -18,8 +18,8 @@ $grid-item-mobile-size: 180px;
 
 ::slotted(gds-logo-grid-item) {
   border-top: 1px solid black;
-  border-top: 1px solid var(--border-light-color);
-  border-left: 1px solid var(--border-light-color);
+  border-top: 1px solid var(--border-color-light);
+  border-left: 1px solid var(--border-color-light);
 }
 
 // Mobile has 2 columns

@@ -29,6 +29,10 @@ html {
    * Colors
    */
 
+  /* Base colors */
+  --color-primary: #00a06e;
+  --color-secondary: #00a3b7;
+
   /* Fill colors */
   --body-background-color: #eeeeee;
 
@@ -36,5 +40,5 @@ html {
   --body-text-color: black;
 
   /* Border colors */
-  --border-light-color: #eeeeee;
+  --border-color-light: #eeeeee;
 }
