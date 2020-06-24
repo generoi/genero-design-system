@@ -9,6 +9,8 @@ export namespace Components {
     interface GdsButton {
         "disabled": boolean;
     }
+    interface GdsCard {
+    }
     interface GdsHeading {
         /**
           * Render the heading as a h element for SEO purposes.  Those h element should be visible to GoogleBot: https://www.searchenginejournal.com/shadow-dom/353644/
@@ -84,6 +86,10 @@ export namespace Components {
     }
     interface GdsParagraph {
         /**
+          * Use to override p element's style.
+         */
+        "class": string;
+        /**
           * Size of the text.
          */
         "size": string;
@@ -113,6 +119,12 @@ declare global {
     var HTMLGdsButtonElement: {
         prototype: HTMLGdsButtonElement;
         new (): HTMLGdsButtonElement;
+    };
+    interface HTMLGdsCardElement extends Components.GdsCard, HTMLStencilElement {
+    }
+    var HTMLGdsCardElement: {
+        prototype: HTMLGdsCardElement;
+        new (): HTMLGdsCardElement;
     };
     interface HTMLGdsHeadingElement extends Components.GdsHeading, HTMLStencilElement {
     }
@@ -164,6 +176,7 @@ declare global {
     };
     interface HTMLElementTagNameMap {
         "gds-button": HTMLGdsButtonElement;
+        "gds-card": HTMLGdsCardElement;
         "gds-heading": HTMLGdsHeadingElement;
         "gds-label": HTMLGdsLabelElement;
         "gds-link": HTMLGdsLinkElement;
@@ -177,6 +190,8 @@ declare global {
 declare namespace LocalJSX {
     interface GdsButton {
         "disabled"?: boolean;
+    }
+    interface GdsCard {
     }
     interface GdsHeading {
         /**
@@ -253,6 +268,10 @@ declare namespace LocalJSX {
     }
     interface GdsParagraph {
         /**
+          * Use to override p element's style.
+         */
+        "class"?: string;
+        /**
           * Size of the text.
          */
         "size"?: string;
@@ -277,6 +296,7 @@ declare namespace LocalJSX {
     }
     interface IntrinsicElements {
         "gds-button": GdsButton;
+        "gds-card": GdsCard;
         "gds-heading": GdsHeading;
         "gds-label": GdsLabel;
         "gds-link": GdsLink;
@@ -292,6 +312,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "gds-button": LocalJSX.GdsButton & JSXBase.HTMLAttributes<HTMLGdsButtonElement>;
+            "gds-card": LocalJSX.GdsCard & JSXBase.HTMLAttributes<HTMLGdsCardElement>;
             "gds-heading": LocalJSX.GdsHeading & JSXBase.HTMLAttributes<HTMLGdsHeadingElement>;
             "gds-label": LocalJSX.GdsLabel & JSXBase.HTMLAttributes<HTMLGdsLabelElement>;
             "gds-link": LocalJSX.GdsLink & JSXBase.HTMLAttributes<HTMLGdsLinkElement>;
