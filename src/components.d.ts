@@ -82,6 +82,12 @@ export namespace Components {
          */
         "target": string;
     }
+    interface GdsParagraph {
+        /**
+          * Size of the text.
+         */
+        "size": string;
+    }
     interface GdsTag {
         /**
           * Tag background color. TODO: Implement the color custom variable scheme.
@@ -144,6 +150,12 @@ declare global {
         prototype: HTMLGdsMediaCardElement;
         new (): HTMLGdsMediaCardElement;
     };
+    interface HTMLGdsParagraphElement extends Components.GdsParagraph, HTMLStencilElement {
+    }
+    var HTMLGdsParagraphElement: {
+        prototype: HTMLGdsParagraphElement;
+        new (): HTMLGdsParagraphElement;
+    };
     interface HTMLGdsTagElement extends Components.GdsTag, HTMLStencilElement {
     }
     var HTMLGdsTagElement: {
@@ -158,6 +170,7 @@ declare global {
         "gds-logo-grid": HTMLGdsLogoGridElement;
         "gds-logo-grid-item": HTMLGdsLogoGridItemElement;
         "gds-media-card": HTMLGdsMediaCardElement;
+        "gds-paragraph": HTMLGdsParagraphElement;
         "gds-tag": HTMLGdsTagElement;
     }
 }
@@ -238,6 +251,12 @@ declare namespace LocalJSX {
          */
         "target"?: string;
     }
+    interface GdsParagraph {
+        /**
+          * Size of the text.
+         */
+        "size"?: string;
+    }
     interface GdsTag {
         /**
           * Tag background color. TODO: Implement the color custom variable scheme.
@@ -264,6 +283,7 @@ declare namespace LocalJSX {
         "gds-logo-grid": GdsLogoGrid;
         "gds-logo-grid-item": GdsLogoGridItem;
         "gds-media-card": GdsMediaCard;
+        "gds-paragraph": GdsParagraph;
         "gds-tag": GdsTag;
     }
 }
@@ -278,6 +298,7 @@ declare module "@stencil/core" {
             "gds-logo-grid": LocalJSX.GdsLogoGrid & JSXBase.HTMLAttributes<HTMLGdsLogoGridElement>;
             "gds-logo-grid-item": LocalJSX.GdsLogoGridItem & JSXBase.HTMLAttributes<HTMLGdsLogoGridItemElement>;
             "gds-media-card": LocalJSX.GdsMediaCard & JSXBase.HTMLAttributes<HTMLGdsMediaCardElement>;
+            "gds-paragraph": LocalJSX.GdsParagraph & JSXBase.HTMLAttributes<HTMLGdsParagraphElement>;
             "gds-tag": LocalJSX.GdsTag & JSXBase.HTMLAttributes<HTMLGdsTagElement>;
         }
     }

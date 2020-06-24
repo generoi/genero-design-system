@@ -7,6 +7,10 @@ export default {
 
 // prettier-ignore
 export const Label = () => html`
-  <gds-label>Label for labels and tags</gds-label>
-  <gds-label color="blue">Label can override color</gds-label>
+  <p>
+    <gds-label>Labels are used for labels and tags</gds-label>
+  </p>
+  <p>
+    some text <gds-label color="blue">Label are inline and can use color</gds-label> some text
+  </p>
 `

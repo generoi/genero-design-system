@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property | Attribute | Description       | Type      | Default     |
@@ -10,16 +11,16 @@
 | `href`   | `href`    | Link url.         | `string`  | `undefined` |
 | `target` | `target`  | Link open target. | `string`  | `undefined` |
 
+
 ## Dependencies
 
 ### Used by
 
-- [gds-logo-grid-item](../gds-logo-grid-item)
-- [gds-media-card](../gds-media-card)
-- [gds-tag](../gds-tag)
+ - [gds-logo-grid-item](../gds-logo-grid-item)
+ - [gds-media-card](../gds-media-card)
+ - [gds-tag](../gds-tag)
 
 ### Graph
-
 ```mermaid
 graph TD;
   gds-logo-grid-item --> gds-link
@@ -28,6 +29,6 @@ graph TD;
   style gds-link fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*

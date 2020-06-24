@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property               | Attribute                | Description                                          | Type     | Default     |
@@ -14,6 +15,7 @@
 | `superimposedImageUrl` | `superimposed-image-url` | Superimposed image url. TODO: implement this.        | `string` | `undefined` |
 | `target`               | `target`                 | Link open target.                                    | `string` | `undefined` |
 
+
 ## Dependencies
 
 ### Depends on
@@ -22,7 +24,6 @@
 - [gds-link](../gds-link)
 
 ### Graph
-
 ```mermaid
 graph TD;
   gds-media-card --> gds-heading
@@ -30,6 +31,6 @@ graph TD;
   style gds-media-card fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*

@@ -3,6 +3,7 @@ www/
 loader/
 react/
 storybook-static/
+public/
 
 react-ts/*
 !react-ts/tsconfig.json
@@ -11,3 +12,5 @@ react-ts/*
 *.log
 *.lock
 node_modules
+*.md
+components.d.ts

@@ -1,0 +1,16 @@
+@use "index" as *;
+
+.gds-paragraph-l {
+  display: block;
+  @include paragraph-l;
+}
+
+.gds-paragraph-m {
+  display: block;
+  @include paragraph-m;
+}
+
+.gds-paragraph-s {
+  display: block;
+  @include paragraph-s;
+}

@@ -1,0 +1,11 @@
+// NOTE: DON'T USE THIS FILE WHILE index.css is not being replaced with _index.scss
+
+@mixin typography {
+  // Basic text elements
+  --heading-font-family: Gilroy, Arial, Helvetica, sans-serif;
+  --body-font-family: Gilroy, Arial, Helvetica, sans-serif;
+  --label-font-family: Gilroy, Arial, Helvetica, sans-serif;
+
+  // Other UI elements
+  --button-font-family: Gilroy, Arial, Helvetica, sans-serif;
+}
