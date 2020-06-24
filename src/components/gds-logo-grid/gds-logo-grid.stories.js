@@ -3,7 +3,7 @@ import { html } from 'lit-html'
 import { getMockImageUrl } from '../../stories/utils'
 
 export default {
-  title: 'Layouts and grids',
+  title: 'Containers',
   component: 'gds-logo-grid',
 }
 

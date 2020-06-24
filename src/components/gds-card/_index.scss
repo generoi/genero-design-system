@@ -1,0 +1,13 @@
+@mixin card {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  border-radius: 8px;
+  background-color: white;
+  box-shadow: 5px 5px 15px #64646426, -5px -5px 15px #ffffffcc;
+  overflow: hidden;
+  min-width: 356px;
+  width: 450px;
+  flex-direction: column;
+}

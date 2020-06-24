@@ -1,9 +1,5 @@
 @use "index" as *;
 
-.card {
-  @include card;
-}
-
 .image {
   @include image;
 }
@@ -14,6 +10,7 @@
 
 .description {
   @include description;
+  margin: 0 24px;
 }
 
 .tags {

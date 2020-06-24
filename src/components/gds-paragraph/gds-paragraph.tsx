@@ -14,10 +14,18 @@ export class GdsParagraph {
    * Size of the text.
    */
   @Prop() size: string = 'm'
+  /**
+   * Use to override p element's style.
+   */
+  @Prop() class: string
 
   render() {
     return (
-      <p class={`gds-paragraph-${this.size}`}>
+      <p
+        class={{
+          [`gds-paragraph-${this.size}`]: true,
+          [this.class]: !!this.class,
+        }}>
         <slot></slot>
       </p>
     )

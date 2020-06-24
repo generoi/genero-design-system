@@ -20,13 +20,17 @@
 
 ### Depends on
 
+- [gds-card](../gds-card)
 - [gds-heading](../gds-heading)
+- [gds-paragraph](../gds-paragraph)
 - [gds-link](../gds-link)
 
 ### Graph
 ```mermaid
 graph TD;
+  gds-media-card --> gds-card
   gds-media-card --> gds-heading
+  gds-media-card --> gds-paragraph
   gds-media-card --> gds-link
   style gds-media-card fill:#f9f,stroke:#333,stroke-width:4px
 ```

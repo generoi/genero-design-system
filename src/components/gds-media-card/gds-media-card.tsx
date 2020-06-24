@@ -38,20 +38,19 @@ export class GdsMediaCard {
   @Prop() description: string
 
   render() {
-    console.log('img', this.imageUrl)
-    console.log('headline', this.headline)
     // Main content
     const card = (
-      <div class="card">
+      <gds-card>
         {/* TODO: Implement a gds-image component that implements <picture> and srcset etc. */}
         <img src={this.imageUrl} class="image" />
         <div class="headline">
           <gds-heading size="s">{this.headline}</gds-heading>
         </div>
+        <gds-paragraph class="description">{this.description}</gds-paragraph>
         <div class="tags">
           <slot></slot>
         </div>
-      </div>
+      </gds-card>
     )
 
     // Render without a link
