@@ -4,6 +4,7 @@ loader/
 react/
 storybook-static/
 public/
+docs/
 
 react-ts/*
 !react-ts/tsconfig.json

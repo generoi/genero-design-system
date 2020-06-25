@@ -108,6 +108,21 @@ While we don't have our internal Style Guide, let's use the same as Stencil core
 
 - On Properties: https://stenciljs.com/docs/properties
 
+### Build and deploy Storybook to Github Pages
+
+Build static storybook to /docs folder. 
+This is from where Github Pages will render.
+
+```sh
+npm run build
+```
+
+You can test static version locally.
+
+```sh
+npx http-server docs
+```
+
 ### Tips, tricks, and gotchas
 
 Please add here, when you solve something you got stuck at.
