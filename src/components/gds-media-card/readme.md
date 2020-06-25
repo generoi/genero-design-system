@@ -5,15 +5,15 @@
 
 ## Properties
 
-| Property               | Attribute                | Description                                          | Type     | Default     |
-| ---------------------- | ------------------------ | ---------------------------------------------------- | -------- | ----------- |
-| `description`          | `description`            | TODO: implement this.                                | `string` | `undefined` |
-| `headline`             | `headline`               | Title for the card (note: title is a reserved word). | `string` | `undefined` |
-| `href`                 | `href`                   | If defined, the card will be a link.                 | `string` | `undefined` |
-| `imageUrl`             | `image-url`              | Image url.                                           | `string` | `undefined` |
-| `superimposedImageFit` | `superimposed-image-fit` | Superimposed image fit. TODO: implement this.        | `string` | `undefined` |
-| `superimposedImageUrl` | `superimposed-image-url` | Superimposed image url. TODO: implement this.        | `string` | `undefined` |
-| `target`               | `target`                 | Link open target.                                    | `string` | `undefined` |
+| Property               | Attribute                | Description                                                                                                                             | Type     | Default     |
+| ---------------------- | ------------------------ | --------------------------------------------------------------------------------------------------------------------------------------- | -------- | ----------- |
+| `description`          | `description`            |                                                                                                                                         | `string` | `undefined` |
+| `headline`             | `headline`               | Title for the card (note: title is a reserved word).                                                                                    | `string` | `undefined` |
+| `href`                 | `href`                   | If defined, the card will be a link.                                                                                                    | `string` | `undefined` |
+| `imageUrl`             | `image-url`              | Image url.                                                                                                                              | `string` | `undefined` |
+| `superimposedImageFit` | `superimposed-image-fit` | Superimposed image fit. TODO: implement this. This probably needs to be outside of gds-card So that the overflowing image won't be cut. | `string` | `undefined` |
+| `superimposedImageUrl` | `superimposed-image-url` | Superimposed image url. TODO: implement this.                                                                                           | `string` | `undefined` |
+| `target`               | `target`                 | Link open target.                                                                                                                       | `string` | `undefined` |
 
 
 ## Dependencies

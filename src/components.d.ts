@@ -55,9 +55,6 @@ export namespace Components {
         "target": string;
     }
     interface GdsMediaCard {
-        /**
-          * TODO: implement this.
-         */
         "description": string;
         /**
           * Title for the card (note: title is a reserved word).
@@ -72,7 +69,7 @@ export namespace Components {
          */
         "imageUrl": string;
         /**
-          * Superimposed image fit. TODO: implement this.
+          * Superimposed image fit. TODO: implement this. This probably needs to be outside of gds-card So that the overflowing image won't be cut.
          */
         "superimposedImageFit": string;
         /**
@@ -237,9 +234,6 @@ declare namespace LocalJSX {
         "target"?: string;
     }
     interface GdsMediaCard {
-        /**
-          * TODO: implement this.
-         */
         "description"?: string;
         /**
           * Title for the card (note: title is a reserved word).
@@ -254,7 +248,7 @@ declare namespace LocalJSX {
          */
         "imageUrl"?: string;
         /**
-          * Superimposed image fit. TODO: implement this.
+          * Superimposed image fit. TODO: implement this. This probably needs to be outside of gds-card So that the overflowing image won't be cut.
          */
         "superimposedImageFit"?: string;
         /**

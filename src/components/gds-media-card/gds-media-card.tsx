@@ -29,11 +29,12 @@ export class GdsMediaCard {
   @Prop() superimposedImageUrl: string
   /**
    * Superimposed image fit.
-   * TODO: implement this.
+   * TODO: implement this. This probably needs to be outside of gds-card
+   * So that the overflowing image won't be cut.
    */
   @Prop() superimposedImageFit: string
   /**
-   * TODO: implement this.
+   *
    */
   @Prop() description: string
 
