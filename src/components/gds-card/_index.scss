@@ -1,3 +1,6 @@
+// TODO: missing design
+$card-width: 450px;
+
 @mixin card {
   display: flex;
   align-items: center;
@@ -7,6 +10,6 @@
   background-color: white;
   box-shadow: 5px 5px 15px #64646426, -5px -5px 15px #ffffffcc;
   overflow: hidden;
-  width: 450px;
+  width: $card-width;
   flex-direction: column;
 }
