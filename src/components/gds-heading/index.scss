@@ -6,35 +6,35 @@
 }
 
 // H1
-@mixin heading-xxl {
+@mixin size-xxl {
   @include base;
   font-size: 72px;
   line-height: 74px;
 }
 
 // H2
-@mixin heading-xl {
+@mixin size-xl {
   @include base;
   font-size: 60px;
   line-height: 60px;
 }
 
 // H3
-@mixin heading-l {
+@mixin size-l {
   @include base;
   font-size: 36px;
   line-height: 36px;
 }
 
 // H4
-@mixin heading-m {
+@mixin size-m {
   @include base;
   font-size: 28px;
   line-height: 28px;
 }
 
 // H5
-@mixin heading-s {
+@mixin size-s {
   @include base;
   font-size: 20px;
   line-height: 24px;
