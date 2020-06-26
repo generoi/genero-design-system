@@ -2,15 +2,15 @@
 
 .gds-paragraph-l {
   display: block;
-  @include paragraph-l;
+  @include size-l;
 }
 
 .gds-paragraph-m {
   display: block;
-  @include paragraph-m;
+  @include size-m;
 }
 
 .gds-paragraph-s {
   display: block;
-  @include paragraph-s;
+  @include size-s;
 }

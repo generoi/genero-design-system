@@ -1,21 +1,21 @@
 @use "_index" as *;
 
 .gds-heading-xxl {
-  @include heading-xxl;
+  @include size-xxl;
 }
 
 .gds-heading-xl {
-  @include heading-xl;
+  @include size-xl;
 }
 
 .gds-heading-l {
-  @include heading-l;
+  @include size-l;
 }
 
 .gds-heading-m {
-  @include heading-m;
+  @include size-m;
 }
 
 .gds-heading-s {
-  @include heading-s;
+  @include size-s;
 }
