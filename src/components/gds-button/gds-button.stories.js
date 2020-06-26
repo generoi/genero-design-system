@@ -6,6 +6,19 @@ export default {
 }
 
 export const Button = () => html`
-  <gds-button>Basic Button</gds-button>
-  <gds-button disabled>Disabled Button</gds-button>
+  <p>
+    <gds-button size="s">Basic Button S</gds-button>
+  </p>
+  <p>
+    <gds-button>Basic Default Button M</gds-button>
+  </p>
+  <p>
+    <gds-button size="s" text>Text Button S</gds-button>
+  </p>
+  <p>
+    <gds-button size="m" text>Text Button M</gds-button>
+  </p>
+  <p>
+    <gds-button disabled>Disabled Button</gds-button>
+  </p>
 `

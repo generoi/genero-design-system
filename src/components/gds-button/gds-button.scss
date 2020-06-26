@@ -2,4 +2,19 @@
 
 .gds-button {
   @include base;
+  color: var(--button-color);
+  background-color: var(--button-background-color);
+}
+
+.gds-text-button {
+  @include base;
+  @include text-button;
+}
+
+.gds-button-s {
+  @include button-s;
+}
+
+.gds-button-m {
+  @include button-m;
 }

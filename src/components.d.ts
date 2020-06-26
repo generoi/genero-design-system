@@ -8,6 +8,14 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface GdsButton {
         "disabled": boolean;
+        /**
+          * Button size.
+         */
+        "size": string;
+        /**
+          * Is a textual button.
+         */
+        "text": boolean;
     }
     interface GdsCard {
     }
@@ -187,6 +195,14 @@ declare global {
 declare namespace LocalJSX {
     interface GdsButton {
         "disabled"?: boolean;
+        /**
+          * Button size.
+         */
+        "size"?: string;
+        /**
+          * Is a textual button.
+         */
+        "text"?: boolean;
     }
     interface GdsCard {
     }

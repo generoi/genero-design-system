@@ -5,9 +5,11 @@
 
 ## Properties
 
-| Property   | Attribute  | Description | Type      | Default |
-| ---------- | ---------- | ----------- | --------- | ------- |
-| `disabled` | `disabled` |             | `boolean` | `false` |
+| Property   | Attribute  | Description          | Type      | Default |
+| ---------- | ---------- | -------------------- | --------- | ------- |
+| `disabled` | `disabled` |                      | `boolean` | `false` |
+| `size`     | `size`     | Button size.         | `string`  | `'m'`   |
+| `text`     | `text`     | Is a textual button. | `boolean` | `false` |
 
 
 ----------------------------------------------

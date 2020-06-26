@@ -150,6 +150,7 @@ Please add here, when you solve something you got stuck at.
 - When you add new components, it's best to restart build watcher because it usually breaks here.
 - Use `/public` folder for static assets in stories.
 - Use `/.storybook/preview-head.html` to inject code to all stories globally.
+- Sometimes changes won't reflect in Storybook. If nothing helps try to build with `npm run build:stencil --watch`.
 
 ### Storybook roadmap
 

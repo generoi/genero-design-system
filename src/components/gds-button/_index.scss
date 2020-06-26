@@ -1,3 +1,5 @@
+// TODO: Add more css variables
+
 @mixin base {
   display: inline-flex;
   align-items: center;
@@ -6,4 +8,43 @@
   outline: none;
   text-decoration: none;
   cursor: pointer;
+  color: inherit;
+  background-color: inherit;
+  font-family: var(--button-font-family);
+  font-weight: 500;
+  text-transform: uppercase;
+  height: 56px;
+  line-height: 1em;
+  font-size: 20px;
+  letter-spacing: 1.6px;
+  border: none;
+  border-radius: 8px;
+  padding: var(--button-padding);
+  &:hover {
+    background-color: var(--button-background-color-hover);
+  }
+  &:disabled {
+    background-color: var(--button-background-color-hover);
+  }
+}
+
+@mixin text-button {
+  &:hover {
+    background-color: inherit;
+  }
+  &:disabled {
+    background-color: inherit;
+  }
+}
+
+@mixin button-s {
+  height: 48px;
+  font-size: 16px;
+  letter-spacing: 1.6px;
+}
+
+@mixin button-m {
+  height: 56px;
+  font-size: 20px;
+  letter-spacing: 1.28px;
 }

@@ -13,10 +13,6 @@ html {
 }
 
 :root {
-  /**
-   * Typography
-   */
-
   /* Basic text elements */
   --heading-font-family: Gilroy, Arial, Helvetica, sans-serif;
   --body-font-family: Gilroy, Arial, Helvetica, sans-serif;
@@ -24,10 +20,6 @@ html {
 
   /* Other UI elements */
   --button-font-family: Gilroy, Arial, Helvetica, sans-serif;
-
-  /**
-   * Colors
-   */
 
   /* Base colors */
   --color-primary: #00a06e;
@@ -41,4 +33,13 @@ html {
 
   /* Border colors */
   --border-color-light: #dddddd;
+
+  /* Buttons */
+  --button-color: white;
+  --button-background-color: #333031;
+  --button-background-color-hover: #646464;
+  --button-font-family: Gilroy, Arial, Helvetica, sans-serif;
+  --button-font-weight: 500;
+  /* Precise vertical position is dependent on the font. So you might need to adjust this. */
+  --button-padding: 18px 32px 14px 32px;
 }
