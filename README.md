@@ -2,7 +2,7 @@
 
 ## Usage
 
-### Javascript
+### In vanilla project
 
 Using lazy loaded ES modules.
 
@@ -12,6 +12,7 @@ Using lazy loaded ES modules.
   <head>
     <script type="module">
       import { applyPolyfills, defineCustomElements } from 'https://unpkg.com/genero-design-system/loader/index.mjs'
+      
       applyPolyfills().then(() => {
         defineCustomElements()
       })
@@ -23,27 +24,45 @@ Using lazy loaded ES modules.
 </html>
 ```
 
-Or if you want to bundle the library with your own build system.
+### In React projects
+
+Install GDS to you project.
+
+```sh
+npm install genero-design-system
+```
+
+Add this to React App's `index.js` file. More info https://stenciljs.com/docs/react
 
 ```js
+// Include global GDS css with css variables.
+import 'genero-design-system/dist/gds/gds.css'
+
 import { applyPolyfills, defineCustomElements } from 'genero-design-system/loader'
 
+// applyPolyfills for Edge and IE11. 
 applyPolyfills().then(() => {
   defineCustomElements()
 })
-
-const render = () => {
-  return `<gds-button>button</gds-button>`
-}
 ```
 
-### React components
+Use as React components.
 
 ```js
 import { GdsButton } from 'genero-design-system/react'
 
 const render = () => {
   return <GdsButton>button</GdsButton>
+}
+```
+
+Use as web components.
+
+```js
+import React from 'react'
+
+const render = () => {
+  return <div><gds-button>button</gds-button></div>
 }
 ```
 
