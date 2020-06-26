@@ -11,7 +11,7 @@
   color: inherit;
   background-color: inherit;
   font-family: var(--button-font-family);
-  font-weight: 500;
+  font-weight: var(--button-font-weight);
   text-transform: uppercase;
   height: 56px;
   line-height: 1em;
@@ -19,7 +19,7 @@
   letter-spacing: 1.6px;
   border: none;
   border-radius: 8px;
-  padding: var(--button-padding);
+  padding: var(--button-m-padding);
   &:hover {
     background-color: var(--button-background-color-hover);
   }
@@ -41,10 +41,12 @@
   height: 48px;
   font-size: 16px;
   letter-spacing: 1.6px;
+  padding: var(--button-s-padding);
 }
 
 @mixin size-m {
   height: 56px;
   font-size: 20px;
   letter-spacing: 1.28px;
+  padding: var(--button-m-padding);
 }
