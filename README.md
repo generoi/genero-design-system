@@ -171,10 +171,11 @@ see [conventional-changelog/standard-version#cli-usage](https://github.com/conve
 
 ---
 
-#### Push and publish release
+#### Push and publish release to NPM
 
 ```sh
 git push
 git push --tags
+npm login
 npm publish
 ```
