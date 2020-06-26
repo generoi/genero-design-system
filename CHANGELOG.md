@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/generoi/genero-design-system/compare/v0.2.0...v0.4.0) (2020-06-26)
+
+
+### Features
+
+* add gds-button ([5ff831c](https://github.com/generoi/genero-design-system/commit/5ff831cbae12a058184a88ef388bb908238b2f27))
+* button tweaks ([d9e2bcb](https://github.com/generoi/genero-design-system/commit/d9e2bcb658cb9801090b1f8d288f4a4b14759d9d))
+
+
+### Bug Fixes
+
+* add forgotten file ([d509a29](https://github.com/generoi/genero-design-system/commit/d509a29a936a92a57cc6d074a8a5c5d9d734a06d))
+
 ## [0.3.0](https://github.com/generoi/genero-design-system/compare/v0.2.0...v0.3.0) (2020-06-26)
 
 
