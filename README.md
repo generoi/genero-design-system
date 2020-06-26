@@ -162,6 +162,16 @@ Commits will be linted according to [conventional commits](https://www.conventio
 
 you can also use [commitizen](https://commitizen.github.io/cz-cli/)
 
+```sh
+npx git-cz
+```
+
+or if you have it installed
+
+```
+git cz
+```
+
 ### Publishing a new version
 
 #### Create release
