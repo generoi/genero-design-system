@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0](https://github.com/generoi/genero-design-system/compare/v0.4.0...v0.5.0) (2020-06-27)
+
+
+### Features
+
+* add font character icon support for gds-button ([b26b57c](https://github.com/generoi/genero-design-system/commit/b26b57c29f5379f7119c483fdfd589d38c5b8290))
+
+
+### Bug Fixes
+
+* fonts not loading in github pages ([8da9a34](https://github.com/generoi/genero-design-system/commit/8da9a34bc7107d591263e7938630454a476b3ebf))
+
 ## [0.4.0](https://github.com/generoi/genero-design-system/compare/v0.2.0...v0.4.0) (2020-06-26)
 
 
