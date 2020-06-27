@@ -13,7 +13,16 @@ export const Button = () => html`
     <gds-button>Basic Default Button M</gds-button>
   </p>
   <p>
-    <gds-button size="s" text>Text Button S</gds-button>
+    <gds-button left-icon="❮">Icon as character</gds-button>
+  </p>
+  <p>
+    <gds-button>Rotated icon<span style="transform: rotate(-90deg);" slot="right-icon">❮</span></gds-button>
+  </p>
+  <p>
+    <gds-button left-icon="❮" right-icon="❯">Both icons</gds-button>
+  </p>
+  <p>
+    <gds-button size="s" text left-icon="➞">Text Button S</gds-button>
   </p>
   <p>
     <gds-button size="m" text>Text Button M</gds-button>
@@ -21,4 +30,7 @@ export const Button = () => html`
   <p>
     <gds-button disabled>Disabled Button</gds-button>
   </p>
+  <gds-paragraph>
+    <a href="https://www.martinstoeckli.ch/fontmap/fontmap.html" target="_blank">List of icon like fonts</a>
+  </gds-paragraph>
 `

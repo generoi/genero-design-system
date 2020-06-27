@@ -1,20 +1,26 @@
 @use "index" as *;
 
-.gds-button {
+.button {
   @include base;
   color: var(--button-color);
   background-color: var(--button-background-color);
 }
 
-.gds-text-button {
+// NOTE: Not sure how to add this as a mixin?
+.button > * + *,
+.text-button > * + * {
+  margin-left: 16px;
+}
+
+.text-button {
   @include base;
   @include text-button;
 }
 
-.gds-button-s {
+.size-s {
   @include size-s;
 }
 
-.gds-button-m {
+.size-m {
   @include size-m;
 }

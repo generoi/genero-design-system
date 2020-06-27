@@ -9,6 +9,14 @@ export namespace Components {
     interface GdsButton {
         "disabled": boolean;
         /**
+          * Left side icon with a font. https://www.martinstoeckli.ch/fontmap/fontmap.html
+         */
+        "leftIcon": string;
+        /**
+          * Right side icon with a font.
+         */
+        "rightIcon": string;
+        /**
           * Button size.
          */
         "size": string;
@@ -195,6 +203,14 @@ declare global {
 declare namespace LocalJSX {
     interface GdsButton {
         "disabled"?: boolean;
+        /**
+          * Left side icon with a font. https://www.martinstoeckli.ch/fontmap/fontmap.html
+         */
+        "leftIcon"?: string;
+        /**
+          * Right side icon with a font.
+         */
+        "rightIcon"?: string;
         /**
           * Button size.
          */

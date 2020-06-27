@@ -18,17 +18,32 @@ export class GdsButton {
    * Button size.
    */
   @Prop() size: string = 'm'
+  /**
+   * Left side icon with a font.
+   * https://www.martinstoeckli.ch/fontmap/fontmap.html
+   */
+  @Prop() leftIcon: string
+  /**
+   * Right side icon with a font.
+   */
+  @Prop() rightIcon: string
 
   render() {
     return (
       <button
         class={{
-          'gds-button': !this.text,
-          'gds-text-button': this.text,
-          [`gds-button-${this.size}`]: true,
+          button: !this.text,
+          'text-button': this.text,
+          [`size-${this.size}`]: true,
         }}
         disabled={this.disabled}>
-        <slot></slot>
+        {this.leftIcon && <span class="icon">{this.leftIcon}</span>}
+        <slot name="left-icon"></slot>
+        <span>
+          <slot></slot>
+        </span>
+        {this.rightIcon && <span class="icon">{this.rightIcon}</span>}
+        <slot name="right-icon"></slot>
       </button>
     )
   }
