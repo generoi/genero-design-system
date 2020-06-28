@@ -172,13 +172,31 @@ npx git-cz
 
 or if you have it installed
 
-```
+```sh
 git cz
 ```
 
-### Publishing a new version
+### Using local version of GDS in other projects
 
-#### Create release
+You can use linking to use GDS local repo in other project directly.
+
+Go to GDS local repo.
+
+```sh
+yarn link
+```
+
+Go to you project where you want to use GDS directly.
+
+```sh
+yarn link genero-design-system
+```
+
+Presto!
+
+## Publishing a new version
+
+### Create release
 
 generate changelog and bump the version based on commit log
 
@@ -188,13 +206,13 @@ npm run release
 
 ---
 
-#### Create a named prerelease version
+### Create a named prerelease version
 
 ```sh
 npm run release -- --prerelease beta
 ```
 
-#### Manually specifify the version bump
+### Manually specifify the version bump
 
 ```sh
 npm run release -- --release-as minor
@@ -205,7 +223,7 @@ see [conventional-changelog/standard-version#cli-usage](https://github.com/conve
 
 ---
 
-#### Push and publish release to NPM
+### Push and publish release to NPM
 
 ```sh
 git push
