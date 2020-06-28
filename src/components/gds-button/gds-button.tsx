@@ -1,9 +1,9 @@
-import { Component, Prop, h } from '@stencil/core'
+import { Component, Prop, h, Host } from '@stencil/core'
 
 @Component({
   tag: 'gds-button',
   styleUrl: 'gds-button.scss',
-  shadow: false,
+  shadow: true,
 })
 export class GdsButton {
   /**
@@ -27,24 +27,45 @@ export class GdsButton {
    * Right side icon with a font.
    */
   @Prop() rightIcon: string
+  /**
+   *
+   */
+  @Prop() rightIconRotate: number
+  /**
+   *
+   */
+  @Prop() leftIconRotate: number
 
   render() {
+    // This ugly syntax is because of prettier. TODO: Fix this syntax.
+    const rightIconStyle = this.rightIconRotate
+      ? {
+          transform: `rotate(${this.rightIconRotate}deg)`,
+        }
+      : undefined
+
+    const leftIconStyle = this.leftIconRotate
+      ? {
+          transform: `rotate(${this.leftIconRotate}deg)`,
+        }
+      : undefined
+
     return (
-      <button
-        class={{
-          button: !this.text,
-          'text-button': this.text,
-          [`size-${this.size}`]: true,
-        }}
-        disabled={this.disabled}>
-        {this.leftIcon && <span class="icon">{this.leftIcon}</span>}
-        <slot name="left-icon"></slot>
-        <span>
-          <slot></slot>
-        </span>
-        {this.rightIcon && <span class="icon">{this.rightIcon}</span>}
-        <slot name="right-icon"></slot>
-      </button>
+      <Host>
+        <button
+          class={{
+            button: !this.text,
+            'text-button': this.text,
+            [`size-${this.size}`]: true,
+          }}
+          disabled={this.disabled}>
+          {this.leftIcon && <span style={leftIconStyle}>{this.leftIcon}</span>}
+          <span>
+            <slot></slot>
+          </span>
+          {this.rightIcon && <span style={rightIconStyle}>{this.rightIcon}</span>}
+        </button>
+      </Host>
     )
   }
 }

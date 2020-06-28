@@ -26,6 +26,9 @@
   &:disabled {
     background-color: var(--button-background-color-hover);
   }
+  & > * + * {
+    margin-left: 16px;
+  }
 }
 
 @mixin text-button {

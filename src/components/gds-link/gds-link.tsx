@@ -3,7 +3,7 @@ import { Component, Prop, h } from '@stencil/core'
 @Component({
   tag: 'gds-link',
   styleUrl: 'gds-link.scss',
-  shadow: false,
+  shadow: true,
 })
 export class GdsLink {
   /**

@@ -52,7 +52,7 @@ Use as React components.
 import { GdsButton } from 'genero-design-system/react'
 
 const render = () => {
-  return <GdsButton>button</GdsButton>
+  return <GdsButton rightIcon="❯">button</GdsButton>
 }
 ```
 
@@ -62,7 +62,7 @@ Use as web components.
 import React from 'react'
 
 const render = () => {
-  return <div><gds-button>button</gds-button></div>
+  return <div><gds-button right-icon="❯">button</gds-button></div>
 }
 ```
 
@@ -151,6 +151,10 @@ Please add here, when you solve something you got stuck at.
 - Use `/public` folder for static assets in stories.
 - Use `/.storybook/preview-head.html` to inject code to all stories globally.
 - Sometimes changes won't reflect in Storybook. If nothing helps try to build with `npm run build:stencil --watch`.
+
+In React apps:
+
+- When using Stencil component without shadow DOM (`shadow: false`) in a React app, you need to use a unique key for components that are re-rendered when state changes. 
 
 ### Storybook roadmap
 

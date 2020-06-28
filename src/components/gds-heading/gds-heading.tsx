@@ -3,8 +3,7 @@ import { Component, h, Prop } from '@stencil/core'
 @Component({
   tag: 'gds-heading',
   styleUrl: 'gds-heading.scss',
-  // Expose the h elements for better SEO.
-  shadow: false,
+  shadow: true,
 })
 export class GdsHeading {
   /**

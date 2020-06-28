@@ -38,6 +38,7 @@ export class GdsLogoGridItem {
     if (!this.href) return content
 
     // Render with a link
+    // FIXME: Not vertically aligns now that gds-link is using shadown dom.
     return (
       <gds-link block href={this.href} target={this.target}>
         {content}

@@ -16,7 +16,7 @@ export const Button = () => html`
     <gds-button left-icon="❮">Icon as character</gds-button>
   </p>
   <p>
-    <gds-button>Rotated icon<span style="transform: rotate(-90deg);" slot="right-icon">❮</span></gds-button>
+    <gds-button right-icon="❮" right-icon-rotate="90">Rotated icon</gds-button>
   </p>
   <p>
     <gds-button left-icon="❮" right-icon="❯">Both icons</gds-button>

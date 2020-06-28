@@ -12,10 +12,12 @@ export namespace Components {
           * Left side icon with a font. https://www.martinstoeckli.ch/fontmap/fontmap.html
          */
         "leftIcon": string;
+        "leftIconRotate": number;
         /**
           * Right side icon with a font.
          */
         "rightIcon": string;
+        "rightIconRotate": number;
         /**
           * Button size.
          */
@@ -207,10 +209,12 @@ declare namespace LocalJSX {
           * Left side icon with a font. https://www.martinstoeckli.ch/fontmap/fontmap.html
          */
         "leftIcon"?: string;
+        "leftIconRotate"?: number;
         /**
           * Right side icon with a font.
          */
         "rightIcon"?: string;
+        "rightIconRotate"?: number;
         /**
           * Button size.
          */

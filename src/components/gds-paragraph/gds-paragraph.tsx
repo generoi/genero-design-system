@@ -7,7 +7,7 @@ import { Component, h, Prop } from '@stencil/core'
   tag: 'gds-paragraph',
   styleUrl: 'gds-paragraph.scss',
   // Expose the p elements for better SEO.
-  shadow: false,
+  shadow: true,
 })
 export class GdsParagraph {
   /**
