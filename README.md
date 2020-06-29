@@ -196,6 +196,14 @@ Presto!
 
 ## Publishing a new version
 
+### Build first
+
+Make sure everything is built.
+
+```sh
+npm run build
+```
+
 ### Create release
 
 generate changelog and bump the version based on commit log
@@ -204,15 +212,22 @@ generate changelog and bump the version based on commit log
 npm run release
 ```
 
+Push release commit and tag.
+
+```sh
+git push
+git push --tags
+```
+
 ---
 
-### Create a named prerelease version
+#### Create a named prerelease version
 
 ```sh
 npm run release -- --prerelease beta
 ```
 
-### Manually specifify the version bump
+#### Manually specifify the version bump
 
 ```sh
 npm run release -- --release-as minor
@@ -223,11 +238,9 @@ see [conventional-changelog/standard-version#cli-usage](https://github.com/conve
 
 ---
 
-### Push and publish release to NPM
+### Publish release to NPM
 
 ```sh
-git push
-git push --tags
 npm login
 npm publish
 ```
