@@ -18,7 +18,8 @@
     "dist/",
     "loader/",
     "react/",
-    "src/**/*.scss"
+    "src/**/*.scss",
+    "src/**/*.css"
   ],
   "scripts": {
     "lint": "npm-run-all lint:*",
