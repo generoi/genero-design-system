@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.7.0](https://github.com/generoi/genero-design-system/compare/v0.6.0...v0.7.0) (2020-06-29)
+
+
+### Features
+
+* remove global box-sizing rules ([60f92df](https://github.com/generoi/genero-design-system/commit/60f92dfcfdb30bf65bb1fb225bf9be7578ade5d8))
+
 ## [0.6.0](https://github.com/generoi/genero-design-system/compare/v0.5.0...v0.6.0) (2020-06-28)
 
 
