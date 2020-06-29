@@ -1,0 +1,11 @@
+// TODO: Move styles to _index.css if needed for WP?
+@use "index" as *;
+@use "../../styles/breakpoints" as *;
+
+$grid-item-desktop-size: 263px;
+$grid-item-mobile-size: 180px;
+
+.container {
+  display: flex;
+  flex-direction: column;
+}

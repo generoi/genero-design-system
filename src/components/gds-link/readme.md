@@ -18,6 +18,8 @@
 
  - [gds-logo-grid-item](../gds-logo-grid-item)
  - [gds-media-card](../gds-media-card)
+ - [gds-menu-item](../gds-menu-item)
+ - [gds-navigation](../gds-navigation)
  - [gds-tag](../gds-tag)
 
 ### Graph
@@ -25,6 +27,8 @@
 graph TD;
   gds-logo-grid-item --> gds-link
   gds-media-card --> gds-link
+  gds-menu-item --> gds-link
+  gds-navigation --> gds-link
   gds-tag --> gds-link
   style gds-link fill:#f9f,stroke:#333,stroke-width:4px
 ```

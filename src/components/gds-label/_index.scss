@@ -3,6 +3,27 @@
   font-size: 10px;
   line-height: 14px;
   font-weight: 600;
-  letter-spacing: 0.5px;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@mixin size-l {
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: 1.28px;
+  font-weight: 400;
+}
+
+@mixin size-m {
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+@mixin size-s {
+  font-size: 10px;
+  line-height: 14px;
+  letter-spacing: 0.5px;
+  font-weight: 600;
 }

@@ -31,4 +31,14 @@
   /* Precise vertical position is dependent on the font. So you might need to adjust this. */
   --button-s-padding: 12px 24px 8px 24px;
   --button-m-padding: 18px 32px 14px 32px;
+
+  /* Spacing */
+  --spacing-xxxs: 4px;
+  --spacing-xxs: 8px;
+  --spacing-xs: 12px;
+  --spacing-s: 16px;
+  --spacing-m: 24px;
+  --spacing-l: 32px;
+  --spacing-xl: 40px;
+  --spacing-xxl: 48px;
 }

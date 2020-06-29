@@ -1,0 +1,32 @@
+// TODO: Move styles to _index.css if needed for WP?
+@use "index" as *;
+@use "../../styles/breakpoints" as *;
+
+li {
+  @include base;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  height: var(--spacing-xxl);
+  list-style: none;
+
+  // Direction derived from viewport width.
+  padding: 0 var(--spacing-m);
+  @include desktopOnly {
+    padding: 0 var(--spacing-s);
+  }
+}
+
+// Vertical direction explicitly defined.
+:host-context(.vertical) {
+  & li {
+    padding: 0 var(--spacing-m);
+  }
+}
+
+// Horizontal direction explicitly defined.
+:host-context(.horizontal) {
+  & li {
+    padding: 0 var(--spacing-s);
+  }
+}
