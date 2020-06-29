@@ -2,6 +2,7 @@
 $card-width: 450px;
 
 @mixin card {
+  box-sizing: border-box;
   display: flex;
   align-items: center;
   justify-content: flex-start;

@@ -1,17 +1,5 @@
 /* NOTE: Use plain css for now. Switch to using Sass once someone get's it to load in storybook preview iframe. */
 
-/**
- * Normalize
- */
-html {
-  box-sizing: border-box;
-}
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
 :root {
   /* Basic text elements */
   --heading-font-family: Gilroy, Arial, Helvetica, sans-serif;
