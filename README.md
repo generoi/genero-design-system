@@ -123,9 +123,17 @@ npm run start
 
 While we don't have our internal Style Guide, let's use the same as Stencil core team: https://stenciljs.com/docs/style-guide
 
+#### CSS
+
+- CSS variables should be used broadly in every component.
+- Naming scheme for variables is `--component-name-size-property-modifier`.
+- Use SASS variables for arbitrary values.
+
 ### Docs
 
+- Web Components Best Practices from Google: https://developers.google.com/web/fundamentals/web-components/best-practices
 - On Properties: https://stenciljs.com/docs/properties
+- On Shadow DOM: https://developers.google.com/web/fundamentals/web-components/shadowdom
 
 ### Build and deploy Storybook to Github Pages
 

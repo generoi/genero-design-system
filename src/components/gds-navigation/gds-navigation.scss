@@ -1,11 +1,79 @@
-// TODO: Move styles to _index.css if needed for WP?
+// TODO: Move styles to _index.scss if needed for WP?
 @use "index" as *;
 @use "../../styles/breakpoints" as *;
 
 $grid-item-desktop-size: 263px;
 $grid-item-mobile-size: 180px;
 
+header {
+  background-color: var(--navigation-background-color);
+}
+
 .container {
+  position: relative;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: var(--spacing-xs);
+
+  // Mobile as default.
+  height: var(--navigation-mobile-height);
+
+  // Desktop from viewport width.
+  @include desktopOnly {
+    height: var(--navigation-desktop-height);
+  }
+}
+
+.content {
+  display: flex;
+
+  @include mobileAndTablet {
+    display: none;
+    position: absolute;
+    background-color: white;
+    top: var(--navigation-mobile-height);
+    left: 0;
+    right: 0;
+    border-top: 2px solid var(--body-background-color);
+  }
+}
+
+.extensions {
+  @include mobileAndTablet {
+    display: none;
+  }
+}
+.content > .extensions {
+  display: block;
+  border-top: 2px solid var(--body-background-color);
+  padding-top: var(--spacing-l);
+}
+
+nav {
+  @include mobileAndTablet {
+    margin: var(--spacing-l) 0;
+  }
+}
+
+.hamburger {
+  --button-l-font-size: 30px;
+  --button-l-padding: 16px;
+
+  @include desktopOnly {
+    display: none;
+  }
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  height: var(--navigation-mobile-height);
+  padding-left: var(--spacing-l);
+
+  // Desktop from viewport width.
+  @include desktopOnly {
+    height: var(--navigation-desktop-height);
+  }
 }

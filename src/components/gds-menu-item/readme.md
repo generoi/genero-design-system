@@ -5,9 +5,10 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type     | Default     |
-| -------- | --------- | ----------- | -------- | ----------- |
-| `href`   | `href`    | Link url.   | `string` | `undefined` |
+| Property  | Attribute | Description                                                       | Type      | Default     |
+| --------- | --------- | ----------------------------------------------------------------- | --------- | ----------- |
+| `divider` | `divider` | Can be used to divide menu items. TODO: Implement desktop styles. | `boolean` | `undefined` |
+| `href`    | `href`    | Link url.                                                         | `string`  | `undefined` |
 
 
 ## Dependencies

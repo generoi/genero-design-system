@@ -115,6 +115,10 @@ export namespace Components {
     }
     interface GdsMenuItem {
         /**
+          * Can be used to divide menu items. TODO: Implement desktop styles.
+         */
+        "divider": boolean;
+        /**
           * Link url.
          */
         "href": string;
@@ -362,6 +366,10 @@ declare namespace LocalJSX {
         "homeUrl"?: string;
     }
     interface GdsMenuItem {
+        /**
+          * Can be used to divide menu items. TODO: Implement desktop styles.
+         */
+        "divider"?: boolean;
         /**
           * Link url.
          */

@@ -16,11 +16,13 @@
 ### Depends on
 
 - [gds-link](../gds-link)
+- [gds-button](../gds-button)
 
 ### Graph
 ```mermaid
 graph TD;
   gds-navigation --> gds-link
+  gds-navigation --> gds-button
   style gds-navigation fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

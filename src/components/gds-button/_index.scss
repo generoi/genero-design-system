@@ -42,14 +42,21 @@
 
 @mixin size-s {
   height: 48px;
-  font-size: 16px;
+  font-size: var(--button-s-font-size);
   letter-spacing: 1.6px;
   padding: var(--button-s-padding);
 }
 
 @mixin size-m {
   height: 56px;
-  font-size: 20px;
+  font-size: var(--button-m-font-size);
   letter-spacing: 1.28px;
   padding: var(--button-m-padding);
+}
+
+@mixin size-l {
+  height: 56px;
+  font-size: var(--button-l-font-size);
+  letter-spacing: 1.28px;
+  padding: var(--button-l-padding);
 }

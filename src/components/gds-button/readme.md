@@ -16,6 +16,19 @@
 | `text`            | `text`              | Is a textual button.                                                           | `boolean` | `false`     |
 
 
+## Dependencies
+
+### Used by
+
+ - [gds-navigation](../gds-navigation)
+
+### Graph
+```mermaid
+graph TD;
+  gds-navigation --> gds-button
+  style gds-button fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

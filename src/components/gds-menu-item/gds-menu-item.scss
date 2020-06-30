@@ -1,17 +1,21 @@
-// TODO: Move styles to _index.css if needed for WP?
+// TODO: Move styles to _index.scss if needed for WP?
 @use "index" as *;
 @use "../../styles/breakpoints" as *;
 
 li {
   @include base;
   box-sizing: border-box;
+  list-style: none;
+}
+
+.label {
+  height: var(--spacing-xxl);
   display: flex;
   align-items: center;
-  height: var(--spacing-xxl);
-  list-style: none;
-
-  // Direction derived from viewport width.
+  // Mobile as default.
   padding: 0 var(--spacing-m);
+
+  // Desktop from viewport width.
   @include desktopOnly {
     padding: 0 var(--spacing-s);
   }
@@ -19,14 +23,19 @@ li {
 
 // Vertical direction explicitly defined.
 :host-context(.vertical) {
-  & li {
+  & .label {
     padding: 0 var(--spacing-m);
   }
 }
 
 // Horizontal direction explicitly defined.
 :host-context(.horizontal) {
-  & li {
+  & .label {
     padding: 0 var(--spacing-s);
   }
+}
+
+.divider {
+  margin: var(--spacing-m) 0;
+  border-top: 2px solid var(--body-background-color);
 }
