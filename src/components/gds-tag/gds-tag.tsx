@@ -34,7 +34,7 @@ export class GdsTag {
           backgroundColor: this.backgroundColor,
           color: this.color,
         }}>
-        <gds-label color={this.color}>
+        <gds-label color={this.color} size="s">
           <slot></slot>
         </gds-label>
       </div>

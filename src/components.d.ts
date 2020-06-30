@@ -44,6 +44,10 @@ export namespace Components {
           * Text color. TODO: Implement the color custom variable scheme.
          */
         "color": string;
+        /**
+          * Size of the label.
+         */
+        "size": string;
     }
     interface GdsLink {
         "block": boolean;
@@ -98,6 +102,36 @@ export namespace Components {
           * Link open target.
          */
         "target": string;
+    }
+    interface GdsMenu {
+        /**
+          * Direction: "horizontal" or "vertial". Defaults to "vertical".
+         */
+        "direction": string;
+        /**
+          * Site url.
+         */
+        "homeUrl": string;
+    }
+    interface GdsMenuItem {
+        /**
+          * Can be used to divide menu items. TODO: Implement desktop styles.
+         */
+        "divider": boolean;
+        /**
+          * Link url.
+         */
+        "href": string;
+    }
+    interface GdsNavigation {
+        /**
+          * Site url.
+         */
+        "homeUrl": string;
+        /**
+          * Site logo image url.
+         */
+        "logoUrl": string;
     }
     interface GdsParagraph {
         /**
@@ -177,6 +211,24 @@ declare global {
         prototype: HTMLGdsMediaCardElement;
         new (): HTMLGdsMediaCardElement;
     };
+    interface HTMLGdsMenuElement extends Components.GdsMenu, HTMLStencilElement {
+    }
+    var HTMLGdsMenuElement: {
+        prototype: HTMLGdsMenuElement;
+        new (): HTMLGdsMenuElement;
+    };
+    interface HTMLGdsMenuItemElement extends Components.GdsMenuItem, HTMLStencilElement {
+    }
+    var HTMLGdsMenuItemElement: {
+        prototype: HTMLGdsMenuItemElement;
+        new (): HTMLGdsMenuItemElement;
+    };
+    interface HTMLGdsNavigationElement extends Components.GdsNavigation, HTMLStencilElement {
+    }
+    var HTMLGdsNavigationElement: {
+        prototype: HTMLGdsNavigationElement;
+        new (): HTMLGdsNavigationElement;
+    };
     interface HTMLGdsParagraphElement extends Components.GdsParagraph, HTMLStencilElement {
     }
     var HTMLGdsParagraphElement: {
@@ -198,6 +250,9 @@ declare global {
         "gds-logo-grid": HTMLGdsLogoGridElement;
         "gds-logo-grid-item": HTMLGdsLogoGridItemElement;
         "gds-media-card": HTMLGdsMediaCardElement;
+        "gds-menu": HTMLGdsMenuElement;
+        "gds-menu-item": HTMLGdsMenuItemElement;
+        "gds-navigation": HTMLGdsNavigationElement;
         "gds-paragraph": HTMLGdsParagraphElement;
         "gds-tag": HTMLGdsTagElement;
     }
@@ -241,6 +296,10 @@ declare namespace LocalJSX {
           * Text color. TODO: Implement the color custom variable scheme.
          */
         "color"?: string;
+        /**
+          * Size of the label.
+         */
+        "size"?: string;
     }
     interface GdsLink {
         "block"?: boolean;
@@ -296,6 +355,36 @@ declare namespace LocalJSX {
          */
         "target"?: string;
     }
+    interface GdsMenu {
+        /**
+          * Direction: "horizontal" or "vertial". Defaults to "vertical".
+         */
+        "direction"?: string;
+        /**
+          * Site url.
+         */
+        "homeUrl"?: string;
+    }
+    interface GdsMenuItem {
+        /**
+          * Can be used to divide menu items. TODO: Implement desktop styles.
+         */
+        "divider"?: boolean;
+        /**
+          * Link url.
+         */
+        "href"?: string;
+    }
+    interface GdsNavigation {
+        /**
+          * Site url.
+         */
+        "homeUrl"?: string;
+        /**
+          * Site logo image url.
+         */
+        "logoUrl"?: string;
+    }
     interface GdsParagraph {
         /**
           * Use to override p element's style.
@@ -333,6 +422,9 @@ declare namespace LocalJSX {
         "gds-logo-grid": GdsLogoGrid;
         "gds-logo-grid-item": GdsLogoGridItem;
         "gds-media-card": GdsMediaCard;
+        "gds-menu": GdsMenu;
+        "gds-menu-item": GdsMenuItem;
+        "gds-navigation": GdsNavigation;
         "gds-paragraph": GdsParagraph;
         "gds-tag": GdsTag;
     }
@@ -349,6 +441,9 @@ declare module "@stencil/core" {
             "gds-logo-grid": LocalJSX.GdsLogoGrid & JSXBase.HTMLAttributes<HTMLGdsLogoGridElement>;
             "gds-logo-grid-item": LocalJSX.GdsLogoGridItem & JSXBase.HTMLAttributes<HTMLGdsLogoGridItemElement>;
             "gds-media-card": LocalJSX.GdsMediaCard & JSXBase.HTMLAttributes<HTMLGdsMediaCardElement>;
+            "gds-menu": LocalJSX.GdsMenu & JSXBase.HTMLAttributes<HTMLGdsMenuElement>;
+            "gds-menu-item": LocalJSX.GdsMenuItem & JSXBase.HTMLAttributes<HTMLGdsMenuItemElement>;
+            "gds-navigation": LocalJSX.GdsNavigation & JSXBase.HTMLAttributes<HTMLGdsNavigationElement>;
             "gds-paragraph": LocalJSX.GdsParagraph & JSXBase.HTMLAttributes<HTMLGdsParagraphElement>;
             "gds-tag": LocalJSX.GdsTag & JSXBase.HTMLAttributes<HTMLGdsTagElement>;
         }

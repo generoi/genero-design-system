@@ -1,0 +1,29 @@
+// TODO: Move styles to _index.scss if needed for WP?
+@use "index" as *;
+@use "../../styles/breakpoints" as *;
+
+:host {
+  @include base;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+
+  // Direction derived from viewport width.
+  flex-direction: column;
+  @include desktopOnly {
+    flex-direction: row;
+  }
+}
+
+// Vertical direction explicitly defined.
+.vertical {
+  flex-direction: column;
+}
+
+// Horizontal direction explicitly defined.
+.horizontal {
+  flex-direction: row;
+}

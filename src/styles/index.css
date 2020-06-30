@@ -1,5 +1,9 @@
 /* NOTE: Use plain css for now. Switch to using Sass once someone get's it to load in storybook preview iframe. */
 
+/**
+ * Naming scheme for variables is `--component-name-size-property-modifier`.
+ */
+
 :root {
   /* Basic text elements */
   --heading-font-family: Gilroy, Arial, Helvetica, sans-serif;
@@ -31,4 +35,23 @@
   /* Precise vertical position is dependent on the font. So you might need to adjust this. */
   --button-s-padding: 12px 24px 8px 24px;
   --button-m-padding: 18px 32px 14px 32px;
+  --button-l-padding: 18px 32px 14px 32px;
+  --button-s-font-size: 16px;
+  --button-m-font-size: 20px;
+  --button-l-font-size: 24px;
+
+  /* Spacing */
+  --spacing-xxxs: 4px;
+  --spacing-xxs: 8px;
+  --spacing-xs: 12px;
+  --spacing-s: 16px;
+  --spacing-m: 24px;
+  --spacing-l: 32px;
+  --spacing-xl: 40px;
+  --spacing-xxl: 48px;
+
+  /* Navigation */
+  --navigation-background-color: white;
+  --navigation-desktop-height: 100px;
+  --navigation-mobile-height: 70px;
 }

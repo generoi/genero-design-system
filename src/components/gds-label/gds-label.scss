@@ -3,3 +3,15 @@
 :host {
   @include base;
 }
+
+.size-l {
+  @include size-l;
+}
+
+.size-m {
+  @include size-m;
+}
+
+.size-s {
+  @include size-s;
+}

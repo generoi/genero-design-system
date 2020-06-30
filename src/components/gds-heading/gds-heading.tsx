@@ -19,7 +19,7 @@ export class GdsHeading {
   @Prop() as: string
 
   render() {
-    const cls = `gds-heading-${this.size}`
+    const cls = `size-${this.size}`
 
     // This is a bit clumsy but I couldn't figure out a better way.
     switch (this.as) {
