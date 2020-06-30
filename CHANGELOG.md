@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.8.0](https://github.com/generoi/genero-design-system/compare/v0.7.0...v0.8.0) (2020-06-30)
+
+
+### Features
+
+* add navigation and menu ([aa11b3b](https://github.com/generoi/genero-design-system/commit/aa11b3be7a8f01b77b1324e75d171a0f9a7cc615))
+* wip ([099a5e6](https://github.com/generoi/genero-design-system/commit/099a5e6ee438b77969006ca6deb89806176f60ce))
+
 ## [0.7.0](https://github.com/generoi/genero-design-system/compare/v0.6.0...v0.7.0) (2020-06-29)
 
 
