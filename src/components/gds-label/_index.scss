@@ -1,29 +1,25 @@
 @mixin base {
   font-family: var(--label-font-family);
-  font-size: 10px;
-  line-height: 14px;
-  font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.5px;
 }
 
 @mixin size-l {
-  font-size: 16px;
+  font-size: var(--label-l-font-size);
   line-height: 19px;
-  letter-spacing: 1.28px;
-  font-weight: 400;
+  letter-spacing: var(--label-l-letter-spacing);
+  font-weight: var(--label-l-font-weight);
 }
 
 @mixin size-m {
-  font-size: 12px;
+  font-size: var(--label-m-font-size);
   line-height: 16px;
-  letter-spacing: 1px;
-  font-weight: 500;
+  letter-spacing: var(--label-m-letter-spacing);
+  font-weight: var(--label-l-font-weight);
 }
 
 @mixin size-s {
-  font-size: 10px;
+  font-size: var(--label-s-font-size);
   line-height: 14px;
-  letter-spacing: 0.5px;
-  font-weight: 600;
+  letter-spacing: var(--label-s-letter-spacing);
+  font-weight: var(--label-l-font-weight);
 }

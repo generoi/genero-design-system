@@ -5,40 +5,10 @@
  */
 
 :root {
-  /* Basic text elements */
-  --heading-font-family: Gilroy, Arial, Helvetica, sans-serif;
-  --body-font-family: Gilroy, Arial, Helvetica, sans-serif;
-  --label-font-family: Gilroy, Arial, Helvetica, sans-serif;
-
-  /* Other UI elements */
-  --button-font-family: Gilroy, Arial, Helvetica, sans-serif;
-
-  /* Base colors */
+  /* Colors */
   --color-primary: #00a06e;
   --color-secondary: #00a3b7;
-
-  /* Fill colors */
-  --body-background-color: #eeeeee;
-
-  /* Font colors */
-  --body-text-color: black;
-
-  /* Border colors */
   --border-color-light: #dddddd;
-
-  /* Buttons */
-  --button-color: white;
-  --button-background-color: #333031;
-  --button-background-color-hover: #646464;
-  --button-font-family: Gilroy, Arial, Helvetica, sans-serif;
-  --button-font-weight: 500;
-  /* Precise vertical position is dependent on the font. So you might need to adjust this. */
-  --button-s-padding: 12px 24px 8px 24px;
-  --button-m-padding: 18px 32px 14px 32px;
-  --button-l-padding: 18px 32px 14px 32px;
-  --button-s-font-size: 16px;
-  --button-m-font-size: 20px;
-  --button-l-font-size: 24px;
 
   /* Spacing */
   --spacing-xxxs: 4px;
@@ -49,6 +19,46 @@
   --spacing-l: 32px;
   --spacing-xl: 40px;
   --spacing-xxl: 48px;
+
+  /* Body */
+  --body-font-family: Gilroy, Arial, Helvetica, sans-serif;
+  --body-background-color: #eeeeee;
+  --body-text-color: black;
+
+  /* Headings */
+  --heading-font-family: Gilroy, Arial, Helvetica, sans-serif;
+
+  /* Labels */
+  --label-font-family: Gilroy, Arial, Helvetica, sans-serif;
+  --label-s-font-weight: 400;
+  --label-m-font-weight: 500;
+  --label-l-font-weight: 600;
+  --label-s-font-size: 10px;
+  --label-m-font-size: 12px;
+  --label-l-font-size: 16px;
+  --label-s-letter-spacing: 0.5px;
+  --label-m-letter-spacing: 1px;
+  --label-l-letter-spacing: 1.28px;
+
+  /* Buttons */
+  --button-font-family: Gilroy, Arial, Helvetica, sans-serif;
+  --button-color: white;
+  --button-background-color: #333031;
+  --button-background-color-hover: #646464;
+  --button-font-weight: 500;
+  --button-text-transform: uppercase;
+  --button-s-letter-spacing: 1.6px;
+  --button-m-letter-spacing: 1.28px;
+  --button-l-letter-spacing: 1.28px;
+  --button-border-radius: 8px;
+  --button-box-shadow: none;
+  /* Precise vertical position is dependent on the font. So you might need to adjust this. */
+  --button-s-padding: 12px 24px 8px 24px;
+  --button-m-padding: 18px 32px 14px 32px;
+  --button-l-padding: 18px 32px 14px 32px;
+  --button-s-font-size: 16px;
+  --button-m-font-size: 20px;
+  --button-l-font-size: 24px;
 
   /* Navigation */
   --navigation-background-color: white;

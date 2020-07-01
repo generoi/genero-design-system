@@ -12,13 +12,14 @@
   background-color: inherit;
   font-family: var(--button-font-family);
   font-weight: var(--button-font-weight);
-  text-transform: uppercase;
+  text-transform: var(--button-text-transform);
   height: 56px;
   line-height: 1em;
   font-size: 20px;
-  letter-spacing: 1.6px;
+  letter-spacing: var(--button-m-letter-spacing);
   border: none;
-  border-radius: 8px;
+  border-radius: var(--button-border-radius);
+  box-shadow: var(--button-box-shadow);
   padding: var(--button-m-padding);
   &:hover {
     background-color: var(--button-background-color-hover);
@@ -43,20 +44,20 @@
 @mixin size-s {
   height: 48px;
   font-size: var(--button-s-font-size);
-  letter-spacing: 1.6px;
+  letter-spacing: var(--button-s-letter-spacing);
   padding: var(--button-s-padding);
 }
 
 @mixin size-m {
   height: 56px;
   font-size: var(--button-m-font-size);
-  letter-spacing: 1.28px;
+  letter-spacing: var(--button-m-letter-spacing);
   padding: var(--button-m-padding);
 }
 
 @mixin size-l {
   height: 56px;
   font-size: var(--button-l-font-size);
-  letter-spacing: 1.28px;
+  letter-spacing: var(--button-l-letter-spacing);
   padding: var(--button-l-padding);
 }
