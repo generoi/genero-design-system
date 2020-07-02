@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.10.0](https://github.com/generoi/genero-design-system/compare/v0.9.0...v0.10.0) (2020-07-02)
+
+
+### Features
+
+* components crucial to SEO render to Light DOM ([5cffcc3](https://github.com/generoi/genero-design-system/commit/5cffcc32f17f50d6f10e4ec7067b720d5f03bae5))
+
+
+### Bug Fixes
+
+* some styling issues with menu and labels ([d35b1f9](https://github.com/generoi/genero-design-system/commit/d35b1f971ea1e7cedb02578f4d82cf68068887c9))
+
 ## [0.9.0](https://github.com/generoi/genero-design-system/compare/v0.8.0...v0.9.0) (2020-07-01)
 
 
