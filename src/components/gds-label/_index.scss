@@ -14,12 +14,12 @@
   font-size: var(--label-m-font-size);
   line-height: 16px;
   letter-spacing: var(--label-m-letter-spacing);
-  font-weight: var(--label-l-font-weight);
+  font-weight: var(--label-m-font-weight);
 }
 
 @mixin size-s {
   font-size: var(--label-s-font-size);
   line-height: 14px;
   letter-spacing: var(--label-s-letter-spacing);
-  font-weight: var(--label-l-font-weight);
+  font-weight: var(--label-s-font-weight);
 }
