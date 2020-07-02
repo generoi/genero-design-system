@@ -1,5 +1,9 @@
 import { Component, Prop, h, Host } from '@stencil/core'
 
+/**
+ * This is a button with optional left and right icons.
+ * NOTE: Should we have a separate button like anchor link component?
+ */
 @Component({
   tag: 'gds-button',
   styleUrl: 'gds-button.scss',

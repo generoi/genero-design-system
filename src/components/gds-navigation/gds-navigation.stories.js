@@ -7,24 +7,24 @@ export default {
 
 const getMenu = direction => html`
   <gds-menu direction="${direction}">
-    <gds-menu-item slot="item" href="https://www.genero.fi">First item</gds-menu-item>
-    <gds-menu-item slot="item" href="https://www.genero.fi">Second item</gds-menu-item>
-    <gds-menu-item slot="item" href="https://www.genero.fi">Short</gds-menu-item>
-    <gds-menu-item slot="item" href="https://www.genero.fi">And with ÖÄÅ</gds-menu-item>
+    <gds-menu-item slot="item" href="#first">First item</gds-menu-item>
+    <gds-menu-item slot="item" href="#second">Second item</gds-menu-item>
+    <gds-menu-item slot="item" href="#short">Short</gds-menu-item>
+    <gds-menu-item slot="item" href="#4">And with ÖÄÅ</gds-menu-item>
   </gds-menu>
 `
 const getExtensions = direction => html`
   <gds-menu direction="${direction}">
-    <gds-menu-item slot="item" href="https://www.genero.fi">FI</gds-menu-item>
-    <gds-menu-item slot="item" href="https://www.genero.fi">SE</gds-menu-item>
-    <gds-menu-item slot="item" href="https://www.genero.fi">EN</gds-menu-item>
+    <gds-menu-item slot="item" href="#fi">FI</gds-menu-item>
+    <gds-menu-item slot="item" href="#se">SE</gds-menu-item>
+    <gds-menu-item slot="item" href="#en">EN</gds-menu-item>
   </gds-menu>
 `
 
 // prettier-ignore
 export const Navigation = () => html`
   <gds-navigation
-    home-url="https://www.genero.fi"
+    home-url="/"
     logo-url="https://genero.fi/app/themes/genero/dist/images/logo_2cdda69a.svg"
   >
     <div slot="menu">

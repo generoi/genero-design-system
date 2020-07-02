@@ -3,7 +3,8 @@ import { Component, h, Prop } from '@stencil/core'
 @Component({
   tag: 'gds-tag',
   styleUrl: 'gds-tag.scss',
-  shadow: true,
+  // Use Light DOM so that Google bot can see important element without JS.
+  shadow: false,
 })
 export class GdsTag {
   /**
