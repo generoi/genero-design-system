@@ -137,6 +137,8 @@ While we don't have our internal Style Guide, let's use the same as Stencil core
 
 ### Build and deploy Storybook to Github Pages
 
+TODO: Move to gh-pages branch.
+
 Build static storybook to /docs folder. This is the folder from where Github Pages will render.
 
 ```sh
