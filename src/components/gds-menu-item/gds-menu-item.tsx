@@ -7,30 +7,28 @@ import { Component, h, Prop } from '@stencil/core'
 })
 export class GdsMenuItem {
   /**
-   * Link url.
+   * Is menu item appear active.
    */
-  @Prop() href: string
-  /**
-   * Can be used to divide menu items.
-   * TODO: Implement desktop styles.
-   */
-  @Prop() divider: boolean
+  @Prop({ reflect: true }) active: boolean
 
   render() {
-    if (this.divider) {
-      return <div class="divider"></div>
-    } else {
-      return (
-        <li class="item">
-          <gds-link href={this.href}>
-            <div class="label">
-              <gds-label size="l">
-                <slot></slot>
-              </gds-label>
+    return (
+      <li
+        class={{
+          item: true,
+          active: this.active,
+        }}>
+        <div class="content">
+          <gds-label size="l">
+            <slot></slot>
+          </gds-label>
+          {this.active && (
+            <div class="underline-container">
+              <div class="underline"></div>
             </div>
-          </gds-link>
-        </li>
-      )
-    }
+          )}
+        </div>
+      </li>
+    )
   }
 }

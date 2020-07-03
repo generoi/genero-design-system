@@ -1,5 +1,3 @@
-// TODO: Move styles to _index.scss if needed for WP?
-@use "index" as *;
 @use "../../styles/breakpoints" as *;
 
 $grid-item-desktop-size: 263px;
@@ -40,15 +38,19 @@ header {
   }
 }
 
-.extensions {
-  @include mobileAndTablet {
+.mobile-extensions {
+  display: block;
+  border-top: 2px solid var(--body-background-color);
+  padding: var(--spacing-l) 0;
+
+  @include desktopOnly {
     display: none;
   }
 }
-.content > .extensions {
-  display: block;
-  border-top: 2px solid var(--body-background-color);
-  padding-top: var(--spacing-l);
+.desktop-extensions {
+  @include mobileAndTablet {
+    display: none;
+  }
 }
 
 nav {
@@ -69,11 +71,16 @@ nav {
 .logo {
   display: flex;
   align-items: center;
-  height: var(--navigation-mobile-height);
   padding-left: var(--spacing-l);
 
-  // Desktop from viewport width.
+  height: var(--navigation-mobile-height);
+  & img {
+    height: 32px;
+  }
   @include desktopOnly {
     height: var(--navigation-desktop-height);
+    & img {
+      height: 48px;
+    }
   }
 }

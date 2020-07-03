@@ -1,19 +1,16 @@
-import { Component, h, Host, Prop, State } from '@stencil/core'
+import { Component, h, Host, State } from '@stencil/core'
 
+/**
+ * gds-navigation takes 4 slots: logo, menu, mobile-extensions, and desktop-extensions.
+ * This component can be used in on a webpage direct with good SEO since anchors are rendered outside of the component.
+ */
 @Component({
   tag: 'gds-navigation',
   styleUrl: 'gds-navigation.scss',
-  shadow: true,
+  // We want to use Light DOM so that the elements the the slots are easier to style.
+  shadow: false,
 })
 export class GdsNavigation {
-  /**
-   * Site url.
-   */
-  @Prop() homeUrl: string
-  /**
-   * Site logo image url.
-   */
-  @Prop() logoUrl: string
   /**
    * Mobile menu icon.
    */
@@ -42,32 +39,27 @@ export class GdsNavigation {
       }
     }
 
-    // Extensions are rendered in two places so that this would work with css breakpoints.
-    const extensions = (
-      <div class="extensions">
-        <slot name="extensions"></slot>
-      </div>
-    )
-
     return (
       <Host>
         <header>
           <div class="container">
-            <gds-link href={this.homeUrl}>
-              <div class="logo">
-                <img src={this.logoUrl} />
-              </div>
-            </gds-link>
+            <div class="logo">
+              <slot name="logo"></slot>
+            </div>
 
             <div class="content" ref={el => (this.content = el)}>
               <nav class="nav-primary">
                 <slot name="menu"></slot>
               </nav>
 
-              {this.open === true && extensions}
+              <div class="mobile-extensions">
+                <slot name="mobile-extensions"></slot>
+              </div>
             </div>
 
-            {this.open === undefined && extensions}
+            <div class="desktop-extensions">
+              <slot name="desktop-extensions"></slot>
+            </div>
 
             <div class="hamburger">
               <gds-button size="l" text onClick={onHamburgerClick}>

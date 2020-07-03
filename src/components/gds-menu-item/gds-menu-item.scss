@@ -1,17 +1,21 @@
-// TODO: Move styles to _index.scss if needed for WP?
-@use "index" as *;
 @use "../../styles/breakpoints" as *;
 
 li {
-  @include base;
   box-sizing: border-box;
   list-style: none;
 }
 
-.label {
+.active {
+  @include mobileOnly {
+    background-color: var(--background-color-primary);
+  }
+}
+
+.content {
   height: var(--spacing-xxl);
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 
   // Mobile as default.
   padding: 0 var(--spacing-m);
@@ -24,19 +28,37 @@ li {
 
 // Vertical direction explicitly defined.
 :host-context(.vertical) {
-  & .label {
+  & .content {
     padding: 0 var(--spacing-m);
   }
 }
 
 // Horizontal direction explicitly defined.
 :host-context(.horizontal) {
-  & .label {
+  & .content {
     padding: 0 var(--spacing-s);
   }
 }
 
+.underline-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+
+  // Hide underline on mobile.
+  @include mobileAndTablet {
+    display: none;
+  }
+}
+
+.underline {
+  position: absolute;
+  width: 100%;
+  top: 4px;
+  border-bottom: 3px solid var(--text-color-primary);
+}
+
 .divider {
   margin: var(--spacing-m) 0;
-  border-top: 2px solid var(--body-background-color);
+  border-top: 2px solid var(--background-color-primary);
 }

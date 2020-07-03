@@ -7,11 +7,18 @@ export default {
 
 const getMenu = direction => html`
   <gds-menu direction="${direction}">
-    <gds-menu-item slot="item" href="https://www.genero.fi">First item</gds-menu-item>
-    <gds-menu-item slot="item" href="https://www.genero.fi">Second item</gds-menu-item>
-    <gds-menu-item slot="item" href="https://www.genero.fi">Third item</gds-menu-item>
-    <gds-menu-item slot="item" href="https://www.genero.fi">Short</gds-menu-item>
-    <gds-menu-item slot="item" href="https://www.genero.fi">And with ÖÄÅ</gds-menu-item>
+    <a slot="item" href="#first">
+      <gds-menu-item>First item</gds-menu-item>
+    </a>
+    <a slot="item" href="#2">
+      <gds-menu-item active>Second item</gds-menu-item>
+    </a>
+    <a slot="item" href="#short">
+      <gds-menu-item>Short</gds-menu-item>
+    </a>
+    <a slot="item" href="#4">
+      <gds-menu-item>And with ÖÄÅ</gds-menu-item>
+    </a>
   </gds-menu>
 `
 

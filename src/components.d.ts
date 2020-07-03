@@ -108,30 +108,14 @@ export namespace Components {
           * Direction: "horizontal" or "vertial". Defaults to "vertical".
          */
         "direction": string;
-        /**
-          * Site url.
-         */
-        "homeUrl": string;
     }
     interface GdsMenuItem {
         /**
-          * Can be used to divide menu items. TODO: Implement desktop styles.
+          * Is menu item appear active.
          */
-        "divider": boolean;
-        /**
-          * Link url.
-         */
-        "href": string;
+        "active": boolean;
     }
     interface GdsNavigation {
-        /**
-          * Site url.
-         */
-        "homeUrl": string;
-        /**
-          * Site logo image url.
-         */
-        "logoUrl": string;
     }
     interface GdsParagraph {
         /**
@@ -360,30 +344,14 @@ declare namespace LocalJSX {
           * Direction: "horizontal" or "vertial". Defaults to "vertical".
          */
         "direction"?: string;
-        /**
-          * Site url.
-         */
-        "homeUrl"?: string;
     }
     interface GdsMenuItem {
         /**
-          * Can be used to divide menu items. TODO: Implement desktop styles.
+          * Is menu item appear active.
          */
-        "divider"?: boolean;
-        /**
-          * Link url.
-         */
-        "href"?: string;
+        "active"?: boolean;
     }
     interface GdsNavigation {
-        /**
-          * Site url.
-         */
-        "homeUrl"?: string;
-        /**
-          * Site logo image url.
-         */
-        "logoUrl"?: string;
     }
     interface GdsParagraph {
         /**

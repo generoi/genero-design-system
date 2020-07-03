@@ -1,10 +1,4 @@
-// TODO: Move styles to _index.scss if needed for WP?
-@use "index" as *;
 @use "../../styles/breakpoints" as *;
-
-:host {
-  @include base;
-}
 
 ul {
   padding: 0;
@@ -26,4 +20,9 @@ ul {
 // Horizontal direction explicitly defined.
 .horizontal {
   flex-direction: row;
+}
+
+::slotted(a) {
+  color: unset;
+  text-decoration: none;
 }

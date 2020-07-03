@@ -9,6 +9,10 @@
   --color-primary: #00a06e;
   --color-secondary: #00a3b7;
   --border-color-light: #dddddd;
+  --background-color-primary: #eeeeee;
+  --background-color-secondary: #eeeeee;
+  --text-color-primary: #333031;
+  /* TODO: all colors here and use them in the color definitions in this file. */
 
   /* Spacing */
   --spacing-xxxs: 4px;
@@ -22,8 +26,8 @@
 
   /* Body */
   --body-font-family: Gilroy, Arial, Helvetica, sans-serif;
-  --body-background-color: #eeeeee;
-  --body-text-color: black;
+  --body-background-color: var(--background-color-primary);
+  --body-text-color: var(--text-color-primary);
 
   /* Headings */
   --heading-font-family: Gilroy, Arial, Helvetica, sans-serif;

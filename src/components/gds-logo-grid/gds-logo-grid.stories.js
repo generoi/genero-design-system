@@ -17,7 +17,7 @@ export const LogoGrid = () => html`
   <gds-logo-grid>
     <gds-logo-grid-item
       href="https://www.genero.fi"
-      image-url="https://genero.fi/app/themes/genero/dist/images/logo_2cdda69a.svg"
+      image-url="/images/genero-logo.svg"
     ></gds-logo-grid-item>
     ${item}${item}${item}${item}${item}${item}${item}${item}${item}${item}
   </gds-logo-grid>
