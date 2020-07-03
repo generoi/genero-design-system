@@ -137,8 +137,7 @@ While we don't have our internal Style Guide, let's use the same as Stencil core
 
 ### Build and deploy Storybook to Github Pages
 
-Build static storybook to /docs folder. 
-This is from where Github Pages will render.
+Build static storybook to /docs folder. This is the folder from where Github Pages will render.
 
 ```sh
 npm run build
@@ -214,10 +213,30 @@ npm run build
 
 ### Create release
 
-generate changelog and bump the version based on commit log
+Automatically generates changelog and bumps the version.
+
+Bump minor (or patch or major) version:
+
+```sh
+npm run release -- --release-as minor
+```
+
+or based on commit log:
 
 ```sh
 npm run release
+```
+
+or manually specify the version:
+
+```sh
+npm run release -- --release-as 1.1.0
+```
+
+or a named prerelease version:
+
+```sh
+npm run release -- --prerelease beta
 ```
 
 Push release commit and tag.
@@ -227,24 +246,8 @@ git push
 git push --tags
 ```
 
----
+See [conventional-changelog/standard-version#cli-usage](https://github.com/conventional-changelog/standard-version#cli-usage) for more details and examples
 
-#### Create a named prerelease version
-
-```sh
-npm run release -- --prerelease beta
-```
-
-#### Manually specifify the version bump
-
-```sh
-npm run release -- --release-as minor
-npm run release -- --release-as 1.1.0
-```
-
-see [conventional-changelog/standard-version#cli-usage](https://github.com/conventional-changelog/standard-version#cli-usage) for more details and examples
-
----
 
 ### Publish release to NPM
 
