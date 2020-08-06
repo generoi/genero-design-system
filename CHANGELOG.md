@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.1](https://github.com/generoi/genero-design-system/compare/v0.11.0...v0.11.1) (2020-08-06)
+
+
+### Bug Fixes
+
+* audit warnings ([16ba942](https://github.com/generoi/genero-design-system/commit/16ba9428ef7df35db3fb5e561139e6dc7a44c749))
+* make button more WP friendly ([a24adb3](https://github.com/generoi/genero-design-system/commit/a24adb370bc4f3ede12f33a63610119592fd0ab9))
+
 ## [0.11.0](https://github.com/generoi/genero-design-system/compare/v0.10.0...v0.11.0) (2020-07-03)
 
 
