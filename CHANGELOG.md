@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.2](https://github.com/generoi/genero-design-system/compare/v0.11.1...v0.11.2) (2020-08-06)
+
+
+### Features
+
+* make Navigation more WP friendly ([8230954](https://github.com/generoi/genero-design-system/commit/8230954f380b5456d09ed87f53b0c8dee671c983))
+
+
+### Bug Fixes
+
+* somehow the `stencil build` is broken when using --dev flag ([286fa05](https://github.com/generoi/genero-design-system/commit/286fa0554993e78a859fc8d70b5798249a9fa534))
+
 ### [0.11.1](https://github.com/generoi/genero-design-system/compare/v0.11.0...v0.11.1) (2020-08-06)
 
 
