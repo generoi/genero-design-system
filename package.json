@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@babel/core": "^7.9.6",
-    "@commitlint/cli": "^8.3.5",
+    "@commitlint/cli": "^9.1.2",
     "@commitlint/config-conventional": "^8.3.4",
     "@stencil/core": "^1.13.0",
     "@stencil/react-output-target": "0.0.6",
@@ -65,7 +65,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "sass-loader": "^8.0.2",
-    "standard-version": "^8.0.0",
+    "standard-version": "^8.0.2",
     "style-loader": "^1.2.1"
   },
   "config": {
