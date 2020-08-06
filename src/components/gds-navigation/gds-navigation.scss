@@ -3,11 +3,11 @@
 $grid-item-desktop-size: 263px;
 $grid-item-mobile-size: 180px;
 
-header {
+header.gds-navigation-header {
   background-color: var(--navigation-background-color);
 }
 
-.container {
+.gds-navigation-container {
   position: relative;
   display: flex;
   flex-direction: row;
@@ -24,7 +24,7 @@ header {
   }
 }
 
-.content {
+.gds-navigation-content {
   display: flex;
 
   @include mobileAndTablet {
@@ -38,7 +38,7 @@ header {
   }
 }
 
-.mobile-extensions {
+.gds-navigation-mobile-extensions {
   display: block;
   border-top: 2px solid var(--body-background-color);
   padding: var(--spacing-l) 0;
@@ -47,19 +47,19 @@ header {
     display: none;
   }
 }
-.desktop-extensions {
+.gds-navigation-desktop-extensions {
   @include mobileAndTablet {
     display: none;
   }
 }
 
-nav {
+nav.gds-navigation-nav {
   @include mobileAndTablet {
     margin: var(--spacing-l) 0;
   }
 }
 
-.hamburger {
+.gds-navigation-hamburger {
   --button-l-font-size: 30px;
   --button-l-padding: 16px;
 
@@ -68,7 +68,7 @@ nav {
   }
 }
 
-.logo {
+.gds-navigation-logo {
   display: flex;
   align-items: center;
   padding-left: var(--spacing-l);

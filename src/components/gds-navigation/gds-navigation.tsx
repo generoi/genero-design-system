@@ -9,6 +9,8 @@ import { Component, h, Host, State } from '@stencil/core'
   styleUrl: 'gds-navigation.scss',
   // We want to use Light DOM so that the elements the the slots are easier to style.
   shadow: false,
+  // No need for scoping because css classes are prefixed.
+  scoped: false,
 })
 export class GdsNavigation {
   /**
@@ -41,27 +43,27 @@ export class GdsNavigation {
 
     return (
       <Host>
-        <header>
-          <div class="container">
-            <div class="logo">
+        <header class="gds-navigation-header">
+          <div class="gds-navigation-container">
+            <div class="gds-navigation-logo">
               <slot name="logo"></slot>
             </div>
 
-            <div class="content" ref={el => (this.content = el)}>
-              <nav class="nav-primary">
+            <div class="gds-navigation-content" ref={el => (this.content = el)}>
+              <nav class="gds-navigation-nav">
                 <slot name="menu"></slot>
               </nav>
 
-              <div class="mobile-extensions">
+              <div class="gds-navigation-mobile-extensions">
                 <slot name="mobile-extensions"></slot>
               </div>
             </div>
 
-            <div class="desktop-extensions">
+            <div class="gds-navigation-desktop-extensions">
               <slot name="desktop-extensions"></slot>
             </div>
 
-            <div class="hamburger">
+            <div class="gds-navigation-hamburger">
               <gds-button size="l" text onClick={onHamburgerClick}>
                 {this.menuIcon}
               </gds-button>
