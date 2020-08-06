@@ -9,7 +9,7 @@ export default {
 export const Navigation = () => html`
   <gds-navigation>
     <a slot="logo" href="/">
-      <img src="/images/genero-logo.png" />
+      <img src="images/genero-logo.png" />
     </a>
     <div slot="menu">
       <gds-menu key="123">

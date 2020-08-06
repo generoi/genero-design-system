@@ -22,6 +22,10 @@ header.gds-navigation-header {
   @include desktopOnly {
     height: var(--navigation-desktop-height);
   }
+
+  a {
+    color: var(--navigation-color);
+  }
 }
 
 .gds-navigation-content {

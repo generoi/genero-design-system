@@ -65,6 +65,7 @@
   --button-l-font-size: 24px;
 
   /* Navigation */
+  --navigation-color: black;
   --navigation-background-color: white;
   --navigation-desktop-height: 100px;
   --navigation-mobile-height: 70px;
