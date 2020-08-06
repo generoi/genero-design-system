@@ -2,8 +2,6 @@
 
 .button {
   @include base;
-  color: var(--button-color);
-  background-color: var(--button-background-color);
 }
 
 .text-button {

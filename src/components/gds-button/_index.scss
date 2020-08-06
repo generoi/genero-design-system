@@ -1,6 +1,7 @@
 // TODO: Add more css variables
 
 @mixin base {
+  box-sizing: border-box;
   display: inline-flex;
   align-items: center;
   justify-content: space-between;
@@ -8,8 +9,8 @@
   outline: none;
   text-decoration: none;
   cursor: pointer;
-  color: inherit;
-  background-color: inherit;
+  color: var(--button-color, inherit);
+  background-color: var(--button-background-color, inherit);
   font-family: var(--button-font-family);
   font-weight: var(--button-font-weight);
   text-transform: var(--button-text-transform);
