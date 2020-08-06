@@ -29,7 +29,7 @@
     "build:stencil": "stencil build --docs",
     "build:storybook": "build-storybook -s public -o docs --loglevel verbose",
     "build:react-ts": "tsc -p react-ts/",
-    "start": "stencil build --dev --docs --watch",
+    "start": "stencil build --docs --watch",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll",
     "generate": "stencil generate",
