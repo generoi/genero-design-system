@@ -11,5 +11,5 @@ export default create({
 
   brandTitle: 'Genero Design System',
   brandUrl: '/',
-  brandImage: '/images/genero-logo.svg',
+  brandImage: 'images/genero-logo.svg',
 })
