@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.11.3](https://github.com/generoi/genero-design-system/compare/v0.11.2...v0.11.3) (2020-08-06)
+
+
+### Features
+
+* customize navigation link colors ([3235e09](https://github.com/generoi/genero-design-system/commit/3235e091cf680886b675129bf44e76c7e752df6b))
+
 ### [0.11.2](https://github.com/generoi/genero-design-system/compare/v0.11.1...v0.11.2) (2020-08-06)
 
 
