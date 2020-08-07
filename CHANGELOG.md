@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.12.0](https://github.com/generoi/genero-design-system/compare/v0.11.4...v0.12.0) (2020-08-07)
+
+
+### Features
+
+* tag can define colors and border via css variables ([6881b74](https://github.com/generoi/genero-design-system/commit/6881b74243513d0993de4c4d16273bcde647ab2e))
+
 ### [0.11.4](https://github.com/generoi/genero-design-system/compare/v0.11.3...v0.11.4) (2020-08-07)
 
 
