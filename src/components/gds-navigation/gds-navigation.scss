@@ -39,6 +39,7 @@ header.gds-navigation-header {
     left: 0;
     right: 0;
     border-top: 2px solid var(--body-background-color);
+    z-index: 100;
   }
 }
 
@@ -52,6 +53,9 @@ header.gds-navigation-header {
   }
 }
 .gds-navigation-desktop-extensions {
+  // This will allow the menu item content to be centered a bit better.
+  min-width: 100px;
+
   @include mobileAndTablet {
     display: none;
   }

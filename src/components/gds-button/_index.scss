@@ -34,6 +34,8 @@
 }
 
 @mixin text-button {
+  color: inherit;
+  background-color: inherit;
   &:hover {
     background-color: inherit;
   }
