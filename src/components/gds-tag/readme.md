@@ -5,12 +5,10 @@
 
 ## Properties
 
-| Property          | Attribute          | Description                                                               | Type     | Default     |
-| ----------------- | ------------------ | ------------------------------------------------------------------------- | -------- | ----------- |
-| `backgroundColor` | `background-color` | Tag background color. TODO: Implement the color custom variable scheme.   | `string` | `undefined` |
-| `color`           | `color`            | Color for the tag text. TODO: Implement the color custom variable scheme. | `string` | `'white'`   |
-| `href`            | `href`             | If defined, the tag will be a link.                                       | `string` | `undefined` |
-| `target`          | `target`           | Link open target.                                                         | `string` | `undefined` |
+| Property | Attribute | Description                         | Type     | Default     |
+| -------- | --------- | ----------------------------------- | -------- | ----------- |
+| `href`   | `href`    | If defined, the tag will be a link. | `string` | `undefined` |
+| `target` | `target`  | Link open target.                   | `string` | `undefined` |
 
 
 ## Dependencies

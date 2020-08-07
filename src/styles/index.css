@@ -44,6 +44,11 @@
   --label-m-letter-spacing: 1px;
   --label-l-letter-spacing: 1.28px;
 
+  /* Tags */
+  --tag-color: white;
+  --tag-background-color: black;
+  --tag-border-color: transparent;
+
   /* Buttons */
   --button-font-family: Gilroy, Arial, Helvetica, sans-serif;
   --button-color: white;

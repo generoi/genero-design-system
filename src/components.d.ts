@@ -129,14 +129,6 @@ export namespace Components {
     }
     interface GdsTag {
         /**
-          * Tag background color. TODO: Implement the color custom variable scheme.
-         */
-        "backgroundColor": string;
-        /**
-          * Color for the tag text. TODO: Implement the color custom variable scheme.
-         */
-        "color": string;
-        /**
           * If defined, the tag will be a link.
          */
         "href": string;
@@ -364,14 +356,6 @@ declare namespace LocalJSX {
         "size"?: string;
     }
     interface GdsTag {
-        /**
-          * Tag background color. TODO: Implement the color custom variable scheme.
-         */
-        "backgroundColor"?: string;
-        /**
-          * Color for the tag text. TODO: Implement the color custom variable scheme.
-         */
-        "color"?: string;
         /**
           * If defined, the tag will be a link.
          */

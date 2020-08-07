@@ -15,27 +15,12 @@ export class GdsTag {
    * Link open target.
    */
   @Prop() target: string
-  /**
-   * Color for the tag text.
-   * TODO: Implement the color custom variable scheme.
-   */
-  @Prop() color: string = 'white'
-  /**
-   * Tag background color.
-   * TODO: Implement the color custom variable scheme.
-   */
-  @Prop() backgroundColor: string
 
   render() {
     // Main content
     const tag = (
-      <div
-        class="tag"
-        style={{
-          backgroundColor: this.backgroundColor,
-          color: this.color,
-        }}>
-        <gds-label color={this.color} size="s">
+      <div class="gds-tag">
+        <gds-label color="inherit" size="s">
           <slot></slot>
         </gds-label>
       </div>
