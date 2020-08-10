@@ -44,12 +44,20 @@ export class GdsMediaCard {
       <gds-card>
         {/* TODO: Implement a gds-image component that implements <picture> and srcset etc. */}
         <img src={this.imageUrl} class="image" />
-        <div class="headline">
-          <gds-heading size="s">{this.headline}</gds-heading>
-        </div>
-        <gds-paragraph class="description">{this.description}</gds-paragraph>
-        <div class="tags">
-          <slot></slot>
+        <div class="content">
+          {this.headline && (
+            <div class="headline">
+              <gds-heading size="s">{this.headline}</gds-heading>
+            </div>
+          )}
+
+          {this.description && <gds-paragraph class="description">{this.description}</gds-paragraph>}
+
+          <div class="tags">
+            <slot name="tags"></slot>
+          </div>
+
+          <slot name="content"></slot>
         </div>
       </gds-card>
     )

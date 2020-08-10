@@ -9,20 +9,28 @@ export default {
 
 // prettier-ignore
 export const MediaCard = () => html`
-  <p>
-    <gds-media-card headline="Card Headline" image-url="${getMockImageUrl('product', 500, 500)}">
-      <gds-tag>First Tag</gds-tag>
-      <gds-tag href="https://www.genero.fi">Tag with a link</gds-tag>
+  <div style="margin: 20px;">
+    <gds-media-card image-url="${getMockImageUrl('product', 500, 500)}">
+      <div slot="content">
+        <gds-heading size="s">This is a headline</gds-heading>
+        <gds-paragraph>
+          This Media Card uses a free form content slot. Here is some description.
+        </gds-paragraph>
+        <gds-tag>First Tag</gds-tag>
+        <gds-tag href="https://www.genero.fi">Tag with a link</gds-tag>
+      </div>
     </gds-media-card>
-  </p>
-  <p>
+  </div>
+  <div style="margin: 20px;">
     <gds-media-card
       headline="Card Headline"
       image-url="${getMockImageUrl('product', 500, 500)}"
-      description="L Body: A single micro service platform for five media sites and 16 media brands."
+      description="This Media Card uses a paramenters for content."
     >
-      <gds-tag>First Tag</gds-tag>
-      <gds-tag href="https://www.genero.fi">Tag with a link</gds-tag>
+      <div slot="tags">
+        <gds-tag>From tags slot</gds-tag>
+        <gds-tag href="https://www.genero.fi">Tag with a link</gds-tag>
+      </div>
     </gds-media-card>
-  </p>
-  `
+  </div>
+`
