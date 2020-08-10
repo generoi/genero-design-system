@@ -1,6 +1,6 @@
 @mixin image {
   width: 100%;
-  height: 370px;
+  height: var(--gds-media-card-media-height, 300px);
   display: block;
   margin-bottom: 24px;
   object-fit: cover;
