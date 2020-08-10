@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.13.0](https://github.com/generoi/genero-design-system/compare/v0.12.0...v0.13.0) (2020-08-10)
+
+
+### Features
+
+* **gds-media-card:** add free form content slot ([e274a86](https://github.com/generoi/genero-design-system/commit/e274a86582c249226f363703a653e6b994a4d83c))
+
 ## [0.12.0](https://github.com/generoi/genero-design-system/compare/v0.11.4...v0.12.0) (2020-08-07)
 
 
