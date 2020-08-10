@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.14.0](https://github.com/generoi/genero-design-system/compare/v0.13.0...v0.14.0) (2020-08-10)
+
+
+### Features
+
+* **gds-media-card:** add --gds-media-card-media-height ([b0027a8](https://github.com/generoi/genero-design-system/commit/b0027a8b5d1e50df2162bca9b50739fa5f9e98f8))
+
 ## [0.13.0](https://github.com/generoi/genero-design-system/compare/v0.12.0...v0.13.0) (2020-08-10)
 
 
