@@ -2,14 +2,15 @@ $card-width: 450px;
 
 @mixin card {
   box-sizing: border-box;
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
   text-align: center;
-  border-radius: 8px;
+  border-radius: var(--card-border-radius, 8px);
   background-color: white;
   box-shadow: 5px 5px 15px #64646426, -5px -5px 15px #ffffffcc;
   overflow: hidden;
-  width: var(--gds-card-width, $card-width);
+  width: var(--card-width, $card-width);
   flex-direction: column;
 }

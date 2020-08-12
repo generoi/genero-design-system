@@ -74,4 +74,11 @@
   --navigation-background-color: white;
   --navigation-desktop-height: 100px;
   --navigation-mobile-height: 70px;
+
+  /* Card */
+  --card-border-radius: 40px;
+  --card-width: 450px;
+
+  /* Media Card */
+  --media-card-media-height: 300px;
 }

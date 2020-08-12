@@ -1,7 +1,19 @@
 @use "index" as *;
 
+.media-card {
+  @include media-card;
+}
+
+.media {
+  @include media;
+}
+
 .image {
   @include image;
+}
+
+.superimpose {
+  @include superimpose;
 }
 
 .headline {

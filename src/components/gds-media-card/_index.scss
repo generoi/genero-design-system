@@ -1,6 +1,47 @@
+@mixin media-card {
+  position: relative;
+  display: inline-block;
+}
+
+@mixin media {
+  position: relative;
+  width: 100%;
+  height: var(--media-card-media-height, 300px);
+}
+
 @mixin image {
   width: 100%;
-  height: var(--gds-media-card-media-height, 300px);
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+@mixin superimpose {
+  width: 100%;
+  height: var(--media-card-media-height, 300px);
+  position: absolute;
+  z-index: 1;
+
+  & > .superimpose-image {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    & > img {
+      display: block;
+      position: relative;
+      height: 100%;
+      width: 100%;
+      object-fit: contain;
+    }
+  }
+}
+
+@mixin image {
+  width: 100%;
+  height: var(--media-card-media-height, 300px);
   display: block;
   object-fit: cover;
 }

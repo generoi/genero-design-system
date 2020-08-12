@@ -1,5 +1,10 @@
 import { Component, h, Prop } from '@stencil/core'
 
+/**
+ * Media Card component.
+ *
+ * TODO: Implement a gds-image component that implements <picture> and srcset etc.
+ */
 @Component({
   tag: 'gds-media-card',
   styleUrl: 'gds-media-card.scss',
@@ -23,27 +28,32 @@ export class GdsMediaCard {
    */
   @Prop() imageUrl: string
   /**
-   * Superimposed image url.
-   * TODO: implement this.
+   * superimpose image url.
    */
-  @Prop() superimposedImageUrl: string
+  @Prop() superimposeUrl: string
   /**
-   * Superimposed image fit.
-   * TODO: implement this. This probably needs to be outside of gds-card
-   * So that the overflowing image won't be cut.
+   * superimpose image overflow amount in pixels.
    */
-  @Prop() superimposedImageFit: string
+  @Prop() superimposeTop: string
+  @Prop() superimposeBottom: string
+  @Prop() superimposeLeft: string
+  @Prop() superimposeRight: string
   /**
    *
    */
   @Prop() description: string
 
   render() {
-    // Main content
+    // Main card
     const card = (
       <gds-card>
-        {/* TODO: Implement a gds-image component that implements <picture> and srcset etc. */}
-        <img src={this.imageUrl} class="image" />
+        <div
+          class="media"
+          style={{
+            marginBottom: this.superimposeBottom && `${this.superimposeBottom}px`,
+          }}>
+          <img src={this.imageUrl} class="image" />
+        </div>
         <div class="content">
           {this.headline && (
             <div class="headline">
@@ -62,13 +72,42 @@ export class GdsMediaCard {
       </gds-card>
     )
 
+    // Optional superimposed image.
+    // Note: Superimpose needs to be outside of card because it has overflow hidden.
+    const superimpose = this.superimposeUrl && (
+      <div class="superimpose">
+        <div
+          class="superimpose-image"
+          style={{
+            top: this.superimposeTop && `-${this.superimposeTop}px`,
+            bottom: this.superimposeBottom && `-${this.superimposeBottom}px`,
+            left: this.superimposeLeft && `-${this.superimposeLeft}px`,
+            right: this.superimposeRight && `-${this.superimposeRight}px`,
+          }}>
+          <img src={this.superimposeUrl} />
+        </div>
+      </div>
+    )
+
+    // Container for card and superimpose image
+    const mediaCard = (
+      <div
+        class="media-card"
+        style={{
+          paddingTop: this.superimposeTop && `${this.superimposeTop}px`,
+        }}>
+        {superimpose}
+        {card}
+      </div>
+    )
+
     // Render without a link
-    if (!this.href) return card
+    if (!this.href) return mediaCard
 
     // Render with a link
     return (
       <gds-link href={this.href} target={this.target}>
-        {card}
+        {mediaCard}
       </gds-link>
     )
   }

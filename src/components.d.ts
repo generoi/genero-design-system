@@ -90,14 +90,17 @@ export namespace Components {
           * Image url.
          */
         "imageUrl": string;
+        "superimposeBottom": string;
+        "superimposeLeft": string;
+        "superimposeRight": string;
         /**
-          * Superimposed image fit. TODO: implement this. This probably needs to be outside of gds-card So that the overflowing image won't be cut.
+          * superimpose image overflow amount in pixels.
          */
-        "superimposedImageFit": string;
+        "superimposeTop": string;
         /**
-          * Superimposed image url. TODO: implement this.
+          * superimpose image url.
          */
-        "superimposedImageUrl": string;
+        "superimposeUrl": string;
         /**
           * Link open target.
          */
@@ -318,14 +321,17 @@ declare namespace LocalJSX {
           * Image url.
          */
         "imageUrl"?: string;
+        "superimposeBottom"?: string;
+        "superimposeLeft"?: string;
+        "superimposeRight"?: string;
         /**
-          * Superimposed image fit. TODO: implement this. This probably needs to be outside of gds-card So that the overflowing image won't be cut.
+          * superimpose image overflow amount in pixels.
          */
-        "superimposedImageFit"?: string;
+        "superimposeTop"?: string;
         /**
-          * Superimposed image url. TODO: implement this.
+          * superimpose image url.
          */
-        "superimposedImageUrl"?: string;
+        "superimposeUrl"?: string;
         /**
           * Link open target.
          */
