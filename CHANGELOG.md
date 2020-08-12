@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.15.0](https://github.com/generoi/genero-design-system/compare/v0.14.1...v0.15.0) (2020-08-12)
+
+
+### Features
+
+* **gds-media-card:** add superimposed image ([f7778ac](https://github.com/generoi/genero-design-system/commit/f7778ac58b3905ecda33751c2e7967fbde354cc0))
+
 ### [0.14.1](https://github.com/generoi/genero-design-system/compare/v0.14.0...v0.14.1) (2020-08-11)
 
 
