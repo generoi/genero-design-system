@@ -30,7 +30,37 @@ export const Button = () => html`
   <p>
     <gds-button disabled>Disabled Button</gds-button>
   </p>
+  <style>
+    .inverted {
+      --button-color: black;
+      --button-background-color: white;
+      --button-border: 1px solid black;
+    }
+    .sharp {
+      --button-border-radius: 0;
+    }
+    .outline {
+      --button-border: 1px solid white;
+      --button-outline: 4px solid black;
+    }
+    .glow {
+      --button-outline: 4px solid #264534;
+      --button-outline-hover: 4px solid #264534;
+      --button-background-color: transparent;
+      --button-background-image: radial-gradient(#006e3b, #264534);
+      --button-background-image-hover: radial-gradient(#387c57, #334b3d);
+    }
+  </style>
+  <p>
+    <gds-button class="inverted sharp" size="m">Sharp corners + border</gds-button>
+  </p>
+  <p>
+    <gds-button class="sharp outline" size="m">Outline + border</gds-button>
+  </p>
+  <p>
+    <gds-button class="sharp outline glow" size="m">Inner glow</gds-button>
+  </p>
   <gds-paragraph>
-    <a href="https://www.martinstoeckli.ch/fontmap/fontmap.html" target="_blank">List of icon like fonts</a>
+    <a href="https://www.martinstoeckli.ch/fontmap/fontmap.html" target="_blank">Here is a list of icon like fonts</a>
   </gds-paragraph>
 `

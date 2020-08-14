@@ -8,7 +8,7 @@ header.gds-navigation-header {
 }
 header.gds-navigation-transparent {
   background-color: transparent;
-  --navigation-color: var(--navigation-color-transparent, white)
+  --navigation-color: var(--navigation-color-transparent, white);
 }
 
 .gds-navigation-container {

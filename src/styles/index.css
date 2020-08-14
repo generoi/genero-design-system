@@ -54,6 +54,8 @@
   --button-color: white;
   --button-background-color: #333031;
   --button-background-color-hover: #646464;
+  --button-background-image: none;
+  --button-background-image-hover: var(--button-background-image, none);
   --button-font-weight: 500;
   --button-text-transform: uppercase;
   --button-s-letter-spacing: 1.6px;
@@ -61,6 +63,9 @@
   --button-l-letter-spacing: 1.28px;
   --button-border-radius: 8px;
   --button-box-shadow: none;
+  --button-border: none;
+  --button-outline: none;
+  /* --button-outline-hover: var(--button-outline); */
   /* Precise vertical position is dependent on the font. So you might need to adjust this. */
   --button-s-padding: 12px 24px 8px 24px;
   --button-m-padding: 18px 32px 14px 32px;

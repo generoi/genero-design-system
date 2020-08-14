@@ -20,3 +20,8 @@
 .size-l {
   @include size-l;
 }
+
+.inner-border {
+  border: 1px solid var(--button-color, inherit);
+  position: absolute;
+}
