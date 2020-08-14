@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.17.0](https://github.com/generoi/genero-design-system/compare/v0.16.1...v0.17.0) (2020-08-14)
+
+
+### Features
+
+* **gds-button:** add outline, border, and background variables for default/hover/active ([3df9f7f](https://github.com/generoi/genero-design-system/commit/3df9f7f211c3363cb747f862e3e84059378bac58))
+* **storybook:** update to stable version 6 ([1498775](https://github.com/generoi/genero-design-system/commit/1498775a2f6842fe49fb9090a8128e96d387c3a9))
+
 ### [0.16.1](https://github.com/generoi/genero-design-system/compare/v0.16.0...v0.16.1) (2020-08-14)
 
 
