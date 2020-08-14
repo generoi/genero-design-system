@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.16.1](https://github.com/generoi/genero-design-system/compare/v0.16.0...v0.16.1) (2020-08-14)
+
+
+### Features
+
+* **gds-navigation:** minor tweaks spacing and transparent color ([d336aac](https://github.com/generoi/genero-design-system/commit/d336aacf6aec67cda8d29d5e8167ce3eb50b89ee))
+
 ## [0.16.0](https://github.com/generoi/genero-design-system/compare/v0.15.0...v0.16.0) (2020-08-14)
 
 
