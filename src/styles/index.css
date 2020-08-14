@@ -71,6 +71,7 @@
 
   /* Navigation */
   --navigation-color: black;
+  --navigation-color-transparent: white;
   --navigation-background-color: white;
   --navigation-desktop-height: 100px;
   --navigation-mobile-height: 70px;

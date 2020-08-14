@@ -8,6 +8,7 @@ header.gds-navigation-header {
 }
 header.gds-navigation-transparent {
   background-color: transparent;
+  --navigation-color: var(--navigation-color-transparent, white)
 }
 
 .gds-navigation-container {
@@ -16,13 +17,14 @@ header.gds-navigation-transparent {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-right: var(--spacing-xs);
+  padding-right: 0;
 
   // Mobile as default.
   height: var(--navigation-mobile-height);
 
   // Desktop from viewport width.
   @include desktopOnly {
+    padding-right: var(--spacing-xs);
     height: var(--navigation-desktop-height);
   }
 
@@ -82,13 +84,14 @@ nav.gds-navigation-nav {
 .gds-navigation-logo {
   display: flex;
   align-items: center;
-  padding-left: var(--spacing-l);
+  padding-left: var(--spacing-s);
 
   height: var(--navigation-mobile-height);
   & img {
     height: 32px;
   }
   @include desktopOnly {
+    padding-left: var(--spacing-l);
     height: var(--navigation-desktop-height);
     & img {
       height: 48px;
