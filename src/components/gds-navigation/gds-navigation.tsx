@@ -1,4 +1,4 @@
-import { Component, h, Host, State } from '@stencil/core'
+import { Component, h, Host, State, Prop } from '@stencil/core'
 
 /**
  * gds-navigation takes 4 slots: logo, menu, mobile-extensions, and desktop-extensions.
@@ -13,6 +13,10 @@ import { Component, h, Host, State } from '@stencil/core'
   scoped: false,
 })
 export class GdsNavigation {
+  /**
+   * Does the navigation appear as transparent.
+   */
+  @Prop() transparent: boolean
   /**
    * Mobile menu icon.
    */
@@ -43,7 +47,11 @@ export class GdsNavigation {
 
     return (
       <Host>
-        <header class="gds-navigation-header">
+        <header
+          class={{
+            'gds-navigation-header': true,
+            'gds-navigation-transparent': this.transparent,
+          }}>
           <div class="gds-navigation-container">
             <div class="gds-navigation-logo">
               <slot name="logo"></slot>

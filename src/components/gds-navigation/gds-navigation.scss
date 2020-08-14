@@ -6,6 +6,9 @@ $grid-item-mobile-size: 180px;
 header.gds-navigation-header {
   background-color: var(--navigation-background-color);
 }
+header.gds-navigation-transparent {
+  background-color: transparent;
+}
 
 .gds-navigation-container {
   position: relative;
