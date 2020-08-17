@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.17.2](https://github.com/generoi/genero-design-system/compare/v0.17.1...v0.17.2) (2020-08-17)
+
+
+### Bug Fixes
+
+* **gds-button:** broken font-size ([aff5276](https://github.com/generoi/genero-design-system/commit/aff5276d1295c9989ce9489b682416b4d7c1816a))
+
 ### [0.17.1](https://github.com/generoi/genero-design-system/compare/v0.17.0...v0.17.1) (2020-08-17)
 
 
