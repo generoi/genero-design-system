@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.17.1](https://github.com/generoi/genero-design-system/compare/v0.17.0...v0.17.1) (2020-08-17)
+
+
+### Bug Fixes
+
+* **gds-button:** remove direct height definitions ([eed0342](https://github.com/generoi/genero-design-system/commit/eed0342f2856633f41218862dea13aa34fffad1d))
+
 ## [0.17.0](https://github.com/generoi/genero-design-system/compare/v0.16.1...v0.17.0) (2020-08-14)
 
 
