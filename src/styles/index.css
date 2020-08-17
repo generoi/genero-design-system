@@ -65,7 +65,7 @@
   --button-box-shadow: none;
   --button-border: none;
   --button-outline: none;
-  /* --button-outline-hover: var(--button-outline); */
+  /* --button-outline-hover: none; */
   /* Precise vertical position is dependent on the font. So you might need to adjust this. */
   --button-s-padding: 12px 24px 8px 24px;
   --button-m-padding: 18px 32px 14px 32px;
