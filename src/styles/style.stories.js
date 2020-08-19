@@ -9,7 +9,22 @@ const style = `
   padding: 20px;
   margin: 20px;
   color: white;
+  text-shadow: 2px 2px black, 0 0 4px black;
 `
+
+const COLORS = [
+  'white',
+  'black',
+  'ui-background-01',
+  'ui-background-02',
+  'ui-01',
+  'ui-02',
+  'ui-03',
+  'ui-04',
+  'ui-05',
+  'ui-06',
+  'ui-07',
+]
 
 // prettier-ignore
 export const Colors = () => html`
@@ -20,8 +35,13 @@ export const Colors = () => html`
     <gds-card style="background-color: var(--color-secondary); ${style}">
       Secondary
     </gds-card>
-    <gds-card style="background-color: var(--body-background-color); ${style} color: black;">
+    <gds-card style="background-color: var(--body-background-color); ${style}">
       Body
     </gds-card>
+    ${COLORS.map(color => html`
+      <gds-card style="background-color: var(--gds-color-${color}); ${style}">
+        ${color}
+      </gds-card>
+    `)}
   </gds-paragraph>
 `
