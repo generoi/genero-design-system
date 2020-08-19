@@ -8,37 +8,41 @@
 // H1
 @mixin size-xxl {
   @include base;
-  font-size: 72px;
-  line-height: 74px;
+  font-size: var(--heading-xxl-font-size);
+  font-weight: var(--heading-xxl-font-weight);
+  line-height: var(--heading-xxl-line-height);
 }
 
 // H2
 @mixin size-xl {
   @include base;
-  font-size: 60px;
-  line-height: 60px;
+  font-size: var(--heading-xl-font-size);
+  font-weight: var(--heading-xl-font-weight);
+  line-height: var(--heading-xl-line-height);
 }
 
 // H3
 @mixin size-l {
   @include base;
-  font-size: 36px;
-  line-height: 36px;
+  font-size: var(--heading-l-font-size);
+  font-weight: var(--heading-l-font-weight);
+  line-height: var(--heading-l-line-height);
 }
 
 // H4
 @mixin size-m {
   @include base;
-  font-size: 28px;
-  line-height: 28px;
+  font-size: var(--heading-m-font-size);
+  font-weight: var(--heading-m-font-weight);
+  line-height: var(--heading-m-line-height);
 }
 
 // H5
 @mixin size-s {
   @include base;
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 800;
+  font-size: var(--heading-s-font-size);
+  font-weight: var(--heading-s-font-weight);
+  line-height: var(--heading-s-line-height);
   letter-spacing: 1.6px;
   text-transform: uppercase;
 }

@@ -31,6 +31,21 @@
 
   /* Headings */
   --heading-font-family: Gilroy, Arial, Helvetica, sans-serif;
+  --heading-s-font-size: 20px;
+  --heading-m-font-size: 28px;
+  --heading-l-font-size: 36px;
+  --heading-xl-font-size: 60px;
+  --heading-xxl-font-size: 72px;
+  --heading-s-font-weight: 800;
+  --heading-m-font-weight: 600;
+  --heading-l-font-weight: 600;
+  --heading-xl-font-weight: 600;
+  --heading-xxl-font-weight: 600;
+  --heading-s-line-height: 24px;
+  --heading-m-line-height: 28px;
+  --heading-l-line-height: 36px;
+  --heading-xl-line-height: 60px;
+  --heading-xxl-line-height: 74px;
 
   /* Labels */
   --label-font-family: Gilroy, Arial, Helvetica, sans-serif;
