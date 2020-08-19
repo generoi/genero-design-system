@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.18.0](https://github.com/generoi/genero-design-system/compare/v0.17.2...v0.18.0) (2020-08-19)
+
+
+### Features
+
+* **gds-heading:** add more css variables for headings ([a04cc41](https://github.com/generoi/genero-design-system/commit/a04cc4134976217f1b3cb895f71016c56c5238c1))
+
 ### [0.17.2](https://github.com/generoi/genero-design-system/compare/v0.17.1...v0.17.2) (2020-08-17)
 
 
