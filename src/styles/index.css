@@ -6,24 +6,24 @@
 
 :root {
   /* Colors */
-  --color-primary: var(--gds-color-ui-03);
-  --color-secondary: var(--gds-color-ui-04);
+  --color-primary: var(--color-ui-03);
+  --color-secondary: var(--color-ui-04);
   --border-color-light: #dddddd;
-  --background-color-primary: var(--gds-color-ui-background-01);
-  --background-color-secondary: var(--gds-color-ui-background-02);
-  --text-color-primary: var(--gds-color-black);
+  --background-color-primary: var(--color-ui-background-01);
+  --background-color-secondary: var(--color-ui-background-02);
+  --text-color-primary: var(--color-black);
 
-  --gds-color-white: #ffffff;
-  --gds-color-black: #333031;
-  --gds-color-ui-background-01: #eeeeee;
-  --gds-color-ui-background-02: rgba(238, 238, 238, 0.75);
-  --gds-color-ui-01: #acacac;
-  --gds-color-ui-02: #646464;
-  --gds-color-ui-03: #00a06e;
-  --gds-color-ui-04: #00a3b7;
-  --gds-color-ui-05: #f1615e;
-  --gds-color-ui-06: #ffdcdd;
-  --gds-color-ui-07: #9185db;
+  --color-white: #ffffff;
+  --color-black: #333031;
+  --color-ui-background-01: #eeeeee;
+  --color-ui-background-02: rgba(238, 238, 238, 0.75);
+  --color-ui-01: #acacac;
+  --color-ui-02: #646464;
+  --color-ui-03: #00a06e;
+  --color-ui-04: #00a3b7;
+  --color-ui-05: #f1615e;
+  --color-ui-06: #ffdcdd;
+  --color-ui-07: #9185db;
 
   /* Spacing */
   --spacing-xxxs: 4px;
@@ -79,8 +79,8 @@
   /* Buttons */
   --button-font-family: Gilroy, Arial, Helvetica, sans-serif;
   --button-color: white;
-  --button-background-color: var(--gds-color-black);
-  --button-background-color-hover: var(--gds-color-ui-02);
+  --button-background-color: var(--color-black);
+  --button-background-color-hover: var(--color-ui-02);
   --button-background-image: none;
   --button-background-image-hover: var(--button-background-image, none);
   --button-font-weight: 500;

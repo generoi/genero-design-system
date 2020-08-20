@@ -9,7 +9,7 @@ const style = `
   padding: 20px;
   margin: 20px;
   color: white;
-  text-shadow: 2px 2px black, 0 0 4px black;
+  text-shadow: 1px 1px 10px #000000cc;
 `
 
 const COLORS = [
@@ -39,7 +39,7 @@ export const Colors = () => html`
       Body
     </gds-card>
     ${COLORS.map(color => html`
-      <gds-card style="background-color: var(--gds-color-${color}); ${style}">
+      <gds-card style="background-color: var(--color-${color}); ${style}">
         ${color}
       </gds-card>
     `)}
