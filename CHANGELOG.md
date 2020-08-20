@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.19.0](https://github.com/generoi/genero-design-system/compare/v0.18.0...v0.19.0) (2020-08-20)
+
+
+### Features
+
+* **colors:** remove gds prefix from color variables ([5b15dca](https://github.com/generoi/genero-design-system/commit/5b15dcaebed0653a4ee68d7fcad21da51e97197e))
+* **gds-card:** add customization via css variables ([68aa8cb](https://github.com/generoi/genero-design-system/commit/68aa8cb341ac9b3f4bf268a991520e193c7d6b11))
+* add css variables for brand colors ([a3f72c0](https://github.com/generoi/genero-design-system/commit/a3f72c075d44a4ee6cc9604459ffe446e5e88848))
+
 ## [0.18.0](https://github.com/generoi/genero-design-system/compare/v0.17.2...v0.18.0) (2020-08-19)
 
 
