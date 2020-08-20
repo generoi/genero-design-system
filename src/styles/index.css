@@ -34,6 +34,7 @@
   --spacing-l: 32px;
   --spacing-xl: 40px;
   --spacing-xxl: 48px;
+  --spacing-xxxl: 80px;
 
   /* Body */
   --body-font-family: Gilroy, Arial, Helvetica, sans-serif;
@@ -108,8 +109,11 @@
   --navigation-mobile-height: 70px;
 
   /* Card */
+  --card-border: none;
   --card-border-radius: 40px;
   --card-width: 450px;
+  --card-background-color: white;
+  --card-box-shadow: 5px 5px 15px #64646426, -5px -5px 15px #ffffffcc;
 
   /* Media Card */
   --media-card-media-height: 300px;
