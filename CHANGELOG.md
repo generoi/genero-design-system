@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.20.0](https://github.com/generoi/genero-design-system/compare/v0.19.0...v0.20.0) (2020-08-21)
+
+
+### Features
+
+* **gds-heading:** add letter-spacing and text-transform variables ([7aa2a30](https://github.com/generoi/genero-design-system/commit/7aa2a309fbb729dbdfc85bd6ea3e625d10ae1636))
+
 ## [0.19.0](https://github.com/generoi/genero-design-system/compare/v0.18.0...v0.19.0) (2020-08-20)
 
 
