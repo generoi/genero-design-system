@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.21.0](https://github.com/generoi/genero-design-system/compare/v0.20.0...v0.21.0) (2020-08-21)
+
+
+### Bug Fixes
+
+* **gds-media-card:** rename superimposed attributes ([f69a673](https://github.com/generoi/genero-design-system/commit/f69a6737e583f681638c11f5b49d90915688acff))
+
 ## [0.20.0](https://github.com/generoi/genero-design-system/compare/v0.19.0...v0.20.0) (2020-08-21)
 
 
