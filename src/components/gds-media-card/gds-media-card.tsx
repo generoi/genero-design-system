@@ -30,14 +30,14 @@ export class GdsMediaCard {
   /**
    * superimpose image url.
    */
-  @Prop() superimposeUrl: string
+  @Prop() superimposedUrl: string
   /**
    * superimpose image overflow amount in pixels.
    */
-  @Prop() superimposeTop: string
-  @Prop() superimposeBottom: string
-  @Prop() superimposeLeft: string
-  @Prop() superimposeRight: string
+  @Prop() superimposedTop: string
+  @Prop() superimposedBottom: string
+  @Prop() superimposedLeft: string
+  @Prop() superimposedRight: string
   /**
    *
    */
@@ -50,7 +50,7 @@ export class GdsMediaCard {
         <div
           class="media"
           style={{
-            marginBottom: this.superimposeBottom && `${this.superimposeBottom}px`,
+            marginBottom: this.superimposedBottom && `${this.superimposedBottom}px`,
           }}>
           <img src={this.imageUrl} class="image" />
         </div>
@@ -74,17 +74,17 @@ export class GdsMediaCard {
 
     // Optional superimposed image.
     // Note: Superimpose needs to be outside of card because it has overflow hidden.
-    const superimpose = this.superimposeUrl && (
-      <div class="superimpose">
+    const superimposed = this.superimposedUrl && (
+      <div class="superimposed">
         <div
-          class="superimpose-image"
+          class="superimposed-image"
           style={{
-            top: this.superimposeTop && `-${this.superimposeTop}px`,
-            bottom: this.superimposeBottom && `-${this.superimposeBottom}px`,
-            left: this.superimposeLeft && `-${this.superimposeLeft}px`,
-            right: this.superimposeRight && `-${this.superimposeRight}px`,
+            top: this.superimposedTop && `-${this.superimposedTop}px`,
+            bottom: this.superimposedBottom && `-${this.superimposedBottom}px`,
+            left: this.superimposedLeft && `-${this.superimposedLeft}px`,
+            right: this.superimposedRight && `-${this.superimposedRight}px`,
           }}>
-          <img src={this.superimposeUrl} />
+          <img src={this.superimposedUrl} />
         </div>
       </div>
     )
@@ -94,9 +94,9 @@ export class GdsMediaCard {
       <div
         class="media-card"
         style={{
-          paddingTop: this.superimposeTop && `${this.superimposeTop}px`,
+          paddingTop: this.superimposedTop && `${this.superimposedTop}px`,
         }}>
-        {superimpose}
+        {superimposed}
         {card}
       </div>
     )

@@ -16,13 +16,13 @@
   object-fit: cover;
 }
 
-@mixin superimpose {
+@mixin superimposed {
   width: 100%;
   height: var(--media-card-media-height, 300px);
   position: absolute;
   z-index: 1;
 
-  & > .superimpose-image {
+  & > .superimposed-image {
     position: absolute;
     top: 0;
     bottom: 0;

@@ -27,9 +27,9 @@ export const MediaCard = () => html`
   <div style="margin: 40px;">
     <gds-media-card
       image-url="${getMockImageUrl('product', 500, 500)}"
-      superimpose-url="images/superimpose.png"
-      superimpose-top="50"
-      superimpose-bottom="50"
+      superimposed-url="images/superimpose.png"
+      superimposed-top="50"
+      superimposed-bottom="50"
       onclick="console.log('clicked media card')"
     >
       <div slot="content">

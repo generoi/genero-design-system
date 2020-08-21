@@ -90,17 +90,17 @@ export namespace Components {
           * Image url.
          */
         "imageUrl": string;
-        "superimposeBottom": string;
-        "superimposeLeft": string;
-        "superimposeRight": string;
+        "superimposedBottom": string;
+        "superimposedLeft": string;
+        "superimposedRight": string;
         /**
           * superimpose image overflow amount in pixels.
          */
-        "superimposeTop": string;
+        "superimposedTop": string;
         /**
           * superimpose image url.
          */
-        "superimposeUrl": string;
+        "superimposedUrl": string;
         /**
           * Link open target.
          */
@@ -325,17 +325,17 @@ declare namespace LocalJSX {
           * Image url.
          */
         "imageUrl"?: string;
-        "superimposeBottom"?: string;
-        "superimposeLeft"?: string;
-        "superimposeRight"?: string;
+        "superimposedBottom"?: string;
+        "superimposedLeft"?: string;
+        "superimposedRight"?: string;
         /**
           * superimpose image overflow amount in pixels.
          */
-        "superimposeTop"?: string;
+        "superimposedTop"?: string;
         /**
           * superimpose image url.
          */
-        "superimposeUrl"?: string;
+        "superimposedUrl"?: string;
         /**
           * Link open target.
          */
