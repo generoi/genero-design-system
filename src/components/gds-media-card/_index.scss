@@ -11,9 +11,9 @@
 
 @mixin image {
   width: 100%;
-  height: 100%;
+  height: var(--media-card-media-height, 300px);
   display: block;
-  object-fit: cover;
+  object-fit: var(--media-card-object-fit, cover);
 }
 
 @mixin superimposed {
@@ -37,13 +37,6 @@
       object-fit: contain;
     }
   }
-}
-
-@mixin image {
-  width: 100%;
-  height: var(--media-card-media-height, 300px);
-  display: block;
-  object-fit: cover;
 }
 
 @mixin headline {

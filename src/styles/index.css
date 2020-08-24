@@ -127,4 +127,5 @@
 
   /* Media Card */
   --media-card-media-height: 300px;
+  --media-card-object-fit: cover;
 }
