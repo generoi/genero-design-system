@@ -88,6 +88,7 @@
   /* Can also define this: --tag-border: none; */
   --tag-border-color: transparent;
   --tag-border-radius: 10px;
+  --tag-line-height: 1em;
 
   /* Buttons */
   --button-font-family: Gilroy, Arial, Helvetica, sans-serif;

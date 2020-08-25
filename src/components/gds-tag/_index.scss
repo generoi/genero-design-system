@@ -1,6 +1,7 @@
 @mixin base {
   display: inline-block;
   color: var(--tag-color, white);
+  line-height: var(--tag-line-height, 1em);
   background-color: var(--tag-background-color, black);
   padding: var(--tag-padding, 4px 12px 6px 12px);
   border-radius: var(--tag-border-radius, 10px);
