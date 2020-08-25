@@ -82,9 +82,12 @@
   --label-l-letter-spacing: 1.28px;
 
   /* Tags */
+  --tag-padding: 4px 12px 6px 12px;
   --tag-color: white;
   --tag-background-color: black;
+  /* Can also define this: --tag-border: none; */
   --tag-border-color: transparent;
+  --tag-border-radius: 10px;
 
   /* Buttons */
   --button-font-family: Gilroy, Arial, Helvetica, sans-serif;
@@ -102,7 +105,7 @@
   --button-box-shadow: none;
   --button-border: none;
   --button-outline: none;
-  /* --button-outline-hover: none; */
+  /* Can also define this: --button-outline-hover: none; */
   /* Precise vertical position is dependent on the font. So you might need to adjust this. */
   --button-s-padding: 12px 24px 8px 24px;
   --button-m-padding: 18px 32px 14px 32px;
