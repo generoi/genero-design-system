@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.23.0](https://github.com/generoi/genero-design-system/compare/v0.22.0...v0.23.0) (2020-08-25)
+
+
+### Features
+
+* **gds-tag:** add border and padding variables ([73571b1](https://github.com/generoi/genero-design-system/commit/73571b13e641b35403eac4c39ef705425956a33c))
+
 ## [0.22.0](https://github.com/generoi/genero-design-system/compare/v0.21.0...v0.22.0) (2020-08-24)
 
 
