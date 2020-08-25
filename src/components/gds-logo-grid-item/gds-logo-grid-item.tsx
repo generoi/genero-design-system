@@ -26,12 +26,12 @@ export class GdsLogoGridItem {
   render() {
     // Main content
     const content = (
-      <div class="gds-logo-grid-item-container">
-        <picture class="image">
+      <figure>
+        <picture>
           <source srcSet={this.imageUrl} />
           <img src={this.imageUrl} />
         </picture>
-      </div>
+      </figure>
     )
 
     // Render without a link
