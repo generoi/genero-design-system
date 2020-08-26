@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core'
+import { Component, h, Prop, Watch } from '@stencil/core'
 
 /**
  * Media Card component.
@@ -39,9 +39,24 @@ export class GdsMediaCard {
   @Prop() superimposedLeft: string
   @Prop() superimposedRight: string
   /**
+   * Overlay.
+   */
+  @Prop() overlay: boolean
+  /**
+   * Overlay effect.
+   */
+  @Prop() overlayEffect: string
+  /**
    *
    */
   @Prop() description: string
+
+  @Watch('overlayEffect')
+  validateOverlayEffect(newValue: string) {
+    if (newValue && !['blur'].includes(newValue)) {
+      throw new Error('overlay-effect: invalid effect')
+    }
+  }
 
   render() {
     // Main card
@@ -52,7 +67,11 @@ export class GdsMediaCard {
           style={{
             marginBottom: this.superimposedBottom && `${this.superimposedBottom}px`,
           }}>
-          <img src={this.imageUrl} class="image" />
+          <img
+            src={this.imageUrl}
+            class={['image', this.overlayEffect ? `has-${this.overlayEffect}-effect` : ''].filter(Boolean).join(' ')}
+          />
+          {this.overlay && <div class="overlay" />}
         </div>
         <div class="content">
           {this.headline && (

@@ -10,6 +10,14 @@
 
 .image {
   @include image;
+
+  &.has-blur-effect {
+    @include image-blur-effect;
+  }
+}
+
+.overlay {
+  @include overlay;
 }
 
 .superimposed {
