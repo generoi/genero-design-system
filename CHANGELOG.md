@@ -2,6 +2,50 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.24.0](https://github.com/generoi/genero-design-system/compare/v0.6.0...v0.24.0) (2020-08-26)
+
+
+### Features
+
+* add css variables for brand colors ([a3f72c0](https://github.com/generoi/genero-design-system/commit/a3f72c075d44a4ee6cc9604459ffe446e5e88848))
+* add navigation and menu ([aa11b3b](https://github.com/generoi/genero-design-system/commit/aa11b3be7a8f01b77b1324e75d171a0f9a7cc615))
+* components crucial to SEO render to Light DOM ([5cffcc3](https://github.com/generoi/genero-design-system/commit/5cffcc32f17f50d6f10e4ec7067b720d5f03bae5))
+* customize navigation link colors ([3235e09](https://github.com/generoi/genero-design-system/commit/3235e091cf680886b675129bf44e76c7e752df6b))
+* make Navigation more WP friendly ([8230954](https://github.com/generoi/genero-design-system/commit/8230954f380b5456d09ed87f53b0c8dee671c983))
+* modified gds-navigation to be SEO friendly ([6b23547](https://github.com/generoi/genero-design-system/commit/6b235476cc778635af32bd1e5cf8667b7a27c5bd))
+* more css variables for buttons and labels ([abd8c99](https://github.com/generoi/genero-design-system/commit/abd8c99c24b82efbd7439e196817cbbd4b819b6c))
+* **gds-navigation:** add transparent attribute ([3b0e80b](https://github.com/generoi/genero-design-system/commit/3b0e80b5f3accd196b824c83c7d80e092eedd8ca))
+* remove global box-sizing rules ([60f92df](https://github.com/generoi/genero-design-system/commit/60f92dfcfdb30bf65bb1fb225bf9be7578ade5d8))
+* **colors:** remove gds prefix from color variables ([a9a8f71](https://github.com/generoi/genero-design-system/commit/a9a8f71913e08ab2c2ef9191a2c6d59993dd0524))
+* **gds-button:** add outline, border, and background variables for default/hover/active ([3df9f7f](https://github.com/generoi/genero-design-system/commit/3df9f7f211c3363cb747f862e3e84059378bac58))
+* **gds-card:** add customization via css variables ([68aa8cb](https://github.com/generoi/genero-design-system/commit/68aa8cb341ac9b3f4bf268a991520e193c7d6b11))
+* **gds-heading:** add letter-spacing and text-transform variables ([7aa2a30](https://github.com/generoi/genero-design-system/commit/7aa2a309fbb729dbdfc85bd6ea3e625d10ae1636))
+* **gds-heading:** add more css variables for headings ([a04cc41](https://github.com/generoi/genero-design-system/commit/a04cc4134976217f1b3cb895f71016c56c5238c1))
+* **gds-media-card:** add --gds-media-card-media-height ([b0027a8](https://github.com/generoi/genero-design-system/commit/b0027a8b5d1e50df2162bca9b50739fa5f9e98f8))
+* **gds-media-card:** add free form content slot ([e274a86](https://github.com/generoi/genero-design-system/commit/e274a86582c249226f363703a653e6b994a4d83c))
+* **gds-media-card:** add object-fit variable for card image ([3822afb](https://github.com/generoi/genero-design-system/commit/3822afb9e0f424831402445b203fdf5b3449ba74))
+* **gds-media-card:** add superimposed image ([f7778ac](https://github.com/generoi/genero-design-system/commit/f7778ac58b3905ecda33751c2e7967fbde354cc0))
+* **gds-navigation:** minor tweaks spacing and transparent color ([d336aac](https://github.com/generoi/genero-design-system/commit/d336aacf6aec67cda8d29d5e8167ce3eb50b89ee))
+* **gds-tag:** add border and padding variables ([73571b1](https://github.com/generoi/genero-design-system/commit/73571b13e641b35403eac4c39ef705425956a33c))
+* **gds-tag:** add line-height variable ([6699f48](https://github.com/generoi/genero-design-system/commit/6699f4818f7d35995fbd0c34067e039bcfc8b61c))
+* **logo-grid:** support customizing the grid through variables ([fa44a0e](https://github.com/generoi/genero-design-system/commit/fa44a0ef44c0de31a4fde33688e9ac94df6d4806))
+* tag can define colors and border via css variables ([6881b74](https://github.com/generoi/genero-design-system/commit/6881b74243513d0993de4c4d16273bcde647ab2e))
+* wip ([099a5e6](https://github.com/generoi/genero-design-system/commit/099a5e6ee438b77969006ca6deb89806176f60ce))
+* **storybook:** update to stable version 6 ([1498775](https://github.com/generoi/genero-design-system/commit/1498775a2f6842fe49fb9090a8128e96d387c3a9))
+
+
+### Bug Fixes
+
+* audit warnings ([16ba942](https://github.com/generoi/genero-design-system/commit/16ba9428ef7df35db3fb5e561139e6dc7a44c749))
+* make button more WP friendly ([a24adb3](https://github.com/generoi/genero-design-system/commit/a24adb370bc4f3ede12f33a63610119592fd0ab9))
+* navigation and button tweaks for WP ([5d4b4ed](https://github.com/generoi/genero-design-system/commit/5d4b4ed783fbf63af776af4383b6a90c21ab3e4b))
+* some styling issues with menu and labels ([d35b1f9](https://github.com/generoi/genero-design-system/commit/d35b1f971ea1e7cedb02578f4d82cf68068887c9))
+* somehow the `stencil build` is broken when using --dev flag ([286fa05](https://github.com/generoi/genero-design-system/commit/286fa0554993e78a859fc8d70b5798249a9fa534))
+* **gds-button:** broken font-size ([aff5276](https://github.com/generoi/genero-design-system/commit/aff5276d1295c9989ce9489b682416b4d7c1816a))
+* **gds-button:** remove direct height definitions ([eed0342](https://github.com/generoi/genero-design-system/commit/eed0342f2856633f41218862dea13aa34fffad1d))
+* **gds-media-card:** remove unnecessary margin ([db1e018](https://github.com/generoi/genero-design-system/commit/db1e0186de10fc6abd06a0794a0f1b7e9e429726))
+* **gds-media-card:** rename superimposed attributes ([f69a673](https://github.com/generoi/genero-design-system/commit/f69a6737e583f681638c11f5b49d90915688acff))
+
 ### [0.23.1](https://github.com/generoi/genero-design-system/compare/v0.23.0...v0.23.1) (2020-08-25)
 
 
