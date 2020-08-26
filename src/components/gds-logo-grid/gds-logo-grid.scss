@@ -1,62 +1,9 @@
-// TODO: Move styles to _index.css if needed for WP?
 @use "index" as *;
-@use "../../styles/breakpoints" as *;
-
-$grid-item-desktop-size: 263px;
-$grid-item-mobile-size: 180px;
 
 :host {
   @include base;
-
-  display: grid;
-  grid-template-columns: repeat(auto-fit, $grid-item-desktop-size);
-  grid-template-rows: repeat(auto-fill, $grid-item-desktop-size);
-  grid-gap: 0;
-  justify-content: center;
-  max-width: 1060px;
 }
 
 ::slotted(gds-logo-grid-item) {
-  border-top: 1px solid black;
-  border-top: 1px solid var(--border-color-light);
-  border-left: 1px solid var(--border-color-light);
-}
-
-// Mobile has 2 columns
-// TODO: Use breakpoints
-@include mobileAndTablet {
-  :host {
-    grid-template-columns: repeat(auto-fit, $grid-item-mobile-size);
-    grid-template-rows: repeat(auto-fill, $grid-item-mobile-size);
-  }
-
-  // Remove top borders
-  ::slotted(:first-child),
-  ::slotted(:nth-child(2)) {
-    border-top: none;
-  }
-
-  // Remove borders on the left
-  ::slotted(:first-child),
-  ::slotted(:nth-child(2n + 1)) {
-    border-left: none;
-  }
-}
-
-// Desktop has 4 columns
-// TODO: Use breakpoints
-@include desktopOnly {
-  // Remove top borders
-  ::slotted(:first-child),
-  ::slotted(:nth-child(2)),
-  ::slotted(:nth-child(3)),
-  ::slotted(:nth-child(4)) {
-    border-top: none;
-  }
-
-  // Remove borders on the left
-  ::slotted(:first-child),
-  ::slotted(:nth-child(4n + 1)) {
-    border-left: none;
-  }
+  @include item;
 }

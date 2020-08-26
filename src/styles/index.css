@@ -132,4 +132,14 @@
   /* Media Card */
   --media-card-media-height: 300px;
   --media-card-object-fit: cover;
+
+  /* Logo Grid */
+  --logo-grid-item-desktop-count: 4;
+  --logo-grid-item-tablet-count: 2;
+  --logo-grid-item-mobile-count: 2;
+  --logo-grid-item-desktop-size: 263px;
+  --logo-grid-item-tablet-size: 180px;
+  --logo-grid-item-mobile-size: 180px;
+  --logo-grid-item-border-color: var(--border-color-light);
+  --logo-grid-item-padding: 15%;
 }
