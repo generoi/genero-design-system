@@ -24,15 +24,28 @@
   @include superimposed;
 }
 
-.headline {
+.headline,
+::slotted([slot="headline"]) {
+  display: block;
+
   @include headline;
 }
 
-.description {
+.description,
+::slotted([slot="description"]) {
+  display: block;
+
   @include description;
 }
 
-.tags {
+::slotted(gds-paragraph) {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+::slotted([slot="tags"]) {
+  display: block;
+
   @include tags;
 }
 
