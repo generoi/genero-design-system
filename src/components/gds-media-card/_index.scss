@@ -7,6 +7,8 @@
   position: relative;
   width: 100%;
   height: var(--media-card-media-height, 300px);
+  // Hide potential offset due to effects applied.
+  overflow: hidden;
 }
 
 @mixin image {
@@ -53,4 +55,22 @@
 
 @mixin content {
   padding: var(--spacing-m) var(--spacing-xs);
+}
+
+@mixin overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--media-card-overlay-color);
+  opacity: var(--media-card-overlay-opacity);
+  pointer-events: none;
+}
+
+@mixin image-blur-effect {
+  filter: blur(var(--media-card-blur-radius));
+  width: calc(100% + var(--media-card-blur-radius) * 2);
+  height: calc(var(--media-card-media-height, 300px) + var(--media-card-blur-radius) * 2);
+  margin: calc(var(--media-card-blur-radius) * -1);
 }
