@@ -89,8 +89,8 @@
 
   /* Tags */
   --tag-padding: 4px 12px 6px 12px;
-  --tag-color: white;
-  --tag-background-color: black;
+  --tag-color: var(--color-white);
+  --tag-background-color: var(--color-black);
   /* Can also define this: --tag-border: none; */
   --tag-border-color: transparent;
   --tag-border-radius: 10px;
@@ -127,9 +127,9 @@
   --button-l-font-size: 24px;
 
   /* Navigation */
-  --navigation-color: black;
-  --navigation-color-transparent: white;
-  --navigation-background-color: white;
+  --navigation-color: var(--color-black);
+  --navigation-color-transparent: var(--color-white);
+  --navigation-background-color: var(--color-white);
   --navigation-desktop-height: 100px;
   --navigation-mobile-height: 70px;
 
@@ -151,7 +151,7 @@
   --logo-grid-item-desktop-count: 4;
   --logo-grid-item-tablet-count: 2;
   --logo-grid-item-mobile-count: 2;
-  --logo-grid-item-desktop-size: 263px;
+  --logo-grid-item-desktop-size: 336px;
   --logo-grid-item-tablet-size: 180px;
   --logo-grid-item-mobile-size: 180px;
   --logo-grid-item-border-color: var(--border-color-light);
