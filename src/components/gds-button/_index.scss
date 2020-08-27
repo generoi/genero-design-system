@@ -46,6 +46,9 @@
 @mixin text-button {
   color: inherit;
   background-color: inherit;
+  font-weight: var(--button-text-button-font-weight);
+  padding-left: 0;
+
   &:hover {
     background-color: inherit;
   }

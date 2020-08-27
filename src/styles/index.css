@@ -102,6 +102,7 @@
   --button-background-image: none;
   --button-background-image-hover: var(--button-background-image, none);
   --button-font-weight: 500;
+  --button-text-button-font-weight: 600;
   --button-text-transform: uppercase;
   --button-s-letter-spacing: 1.6px;
   --button-m-letter-spacing: 1.28px;

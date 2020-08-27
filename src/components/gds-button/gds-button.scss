@@ -1,12 +1,8 @@
 @use "index" as *;
 
+.text-button,
 .button {
   @include base;
-}
-
-.text-button {
-  @include base;
-  @include text-button;
 }
 
 .size-s {
@@ -19,6 +15,10 @@
 
 .size-l {
   @include size-l;
+}
+
+.text-button {
+  @include text-button;
 }
 
 .inner-border {
