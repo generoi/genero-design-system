@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.25.0](https://github.com/generoi/genero-design-system/compare/v0.24.0...v0.25.0) (2020-08-27)
+
+
+### Features
+
+* **gds-media-card:** support overlay color and blur effect ([48a00ce](https://github.com/generoi/genero-design-system/commit/48a00cecd53473d55340dc8eef18a81e0473d954))
+
 ## [0.24.0](https://github.com/generoi/genero-design-system/compare/v0.6.0...v0.24.0) (2020-08-26)
 
 
