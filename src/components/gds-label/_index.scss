@@ -3,6 +3,13 @@
   text-transform: uppercase;
 }
 
+@mixin size-xl {
+  font-size: var(--label-xl-font-size);
+  line-height: 19px;
+  letter-spacing: var(--label-xl-letter-spacing);
+  font-weight: var(--label-xl-font-weight);
+}
+
 @mixin size-l {
   font-size: var(--label-l-font-size);
   line-height: 19px;
