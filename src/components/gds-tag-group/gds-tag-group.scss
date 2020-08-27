@@ -1,0 +1,13 @@
+@use "index" as *;
+
+:host {
+  display: block;
+}
+
+div {
+  @include base;
+}
+
+::slotted(gds-tag) {
+  @include item;
+}

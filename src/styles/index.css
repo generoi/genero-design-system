@@ -90,6 +90,10 @@
   --tag-border-radius: 10px;
   --tag-line-height: 1em;
 
+  /* Tag Group */
+  --tag-group-gutter-x: var(--spacing-s);
+  --tag-group-gutter-y: var(--spacing-xs);
+
   /* Buttons */
   --button-font-family: Gilroy, Arial, Helvetica, sans-serif;
   --button-color: white;

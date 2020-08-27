@@ -152,6 +152,8 @@ export namespace Components {
          */
         "target": string;
     }
+    interface GdsTagGroup {
+    }
 }
 declare global {
     interface HTMLGdsButtonElement extends Components.GdsButton, HTMLStencilElement {
@@ -232,6 +234,12 @@ declare global {
         prototype: HTMLGdsTagElement;
         new (): HTMLGdsTagElement;
     };
+    interface HTMLGdsTagGroupElement extends Components.GdsTagGroup, HTMLStencilElement {
+    }
+    var HTMLGdsTagGroupElement: {
+        prototype: HTMLGdsTagGroupElement;
+        new (): HTMLGdsTagGroupElement;
+    };
     interface HTMLElementTagNameMap {
         "gds-button": HTMLGdsButtonElement;
         "gds-card": HTMLGdsCardElement;
@@ -246,6 +254,7 @@ declare global {
         "gds-navigation": HTMLGdsNavigationElement;
         "gds-paragraph": HTMLGdsParagraphElement;
         "gds-tag": HTMLGdsTagElement;
+        "gds-tag-group": HTMLGdsTagGroupElement;
     }
 }
 declare namespace LocalJSX {
@@ -395,6 +404,8 @@ declare namespace LocalJSX {
          */
         "target"?: string;
     }
+    interface GdsTagGroup {
+    }
     interface IntrinsicElements {
         "gds-button": GdsButton;
         "gds-card": GdsCard;
@@ -409,6 +420,7 @@ declare namespace LocalJSX {
         "gds-navigation": GdsNavigation;
         "gds-paragraph": GdsParagraph;
         "gds-tag": GdsTag;
+        "gds-tag-group": GdsTagGroup;
     }
 }
 export { LocalJSX as JSX };
@@ -428,6 +440,7 @@ declare module "@stencil/core" {
             "gds-navigation": LocalJSX.GdsNavigation & JSXBase.HTMLAttributes<HTMLGdsNavigationElement>;
             "gds-paragraph": LocalJSX.GdsParagraph & JSXBase.HTMLAttributes<HTMLGdsParagraphElement>;
             "gds-tag": LocalJSX.GdsTag & JSXBase.HTMLAttributes<HTMLGdsTagElement>;
+            "gds-tag-group": LocalJSX.GdsTagGroup & JSXBase.HTMLAttributes<HTMLGdsTagGroupElement>;
         }
     }
 }
