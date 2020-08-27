@@ -84,6 +84,9 @@
   --label-l-letter-spacing: 1.28px;
   --label-xl-letter-spacing: 1.28px;
 
+  /* Paragraphs */
+  --paragraph-gutter: var(--spacing-l);
+
   /* Tags */
   --tag-padding: 4px 12px 6px 12px;
   --tag-color: white;

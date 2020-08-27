@@ -1,16 +1,22 @@
 @use "index" as *;
 
-.gds-paragraph-l {
+:host {
   display: block;
-  @include size-l;
-}
+  margin-block-start: var(--paragraph-gutter);
+  margin-block-end: var(--paragraph-gutter);
 
-.gds-paragraph-m {
-  display: block;
   @include size-m;
 }
 
-.gds-paragraph-s {
-  display: block;
+p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+:host-context([size='l']) {
+  @include size-l;
+}
+
+:host-context([size='s']) {
   @include size-s;
 }

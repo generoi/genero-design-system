@@ -8,6 +8,6 @@ export default {
 // prettier-ignore
 export const Paragraph = () => html`
   <gds-paragraph size="l">L Paragraph</gds-paragraph>
-  <gds-paragraph size="m">M Paragraph</gds-paragraph>
+  <gds-paragraph>M Paragraph</gds-paragraph>
   <gds-paragraph size="s">S Paragraph</gds-paragraph>
 `
