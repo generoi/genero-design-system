@@ -28,6 +28,13 @@ export const Button = () => html`
     <gds-button size="m" text>Text Button M</gds-button>
   </p>
   <p>
+    <gds-button right-icon-rotate="90">
+      <span slot="left-icon">❮</span>
+      Using slots
+      <span slot="right-icon">❮</span>
+    </gds-button>
+  </p>
+  <p>
     <gds-button disabled>Disabled Button</gds-button>
   </p>
   <style>

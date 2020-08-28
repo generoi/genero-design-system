@@ -41,18 +41,15 @@ export class GdsButton {
   @Prop() leftIconRotate: number
 
   render() {
-    // This ugly syntax is because of prettier. TODO: Fix this syntax.
-    const rightIconStyle = this.rightIconRotate
-      ? {
-          transform: `rotate(${this.rightIconRotate}deg)`,
-        }
-      : undefined
+    const iconStyleVariables = {}
 
-    const leftIconStyle = this.leftIconRotate
-      ? {
-          transform: `rotate(${this.leftIconRotate}deg)`,
-        }
-      : undefined
+    if (this.leftIconRotate) {
+      iconStyleVariables['--left-icon-rotate'] = `rotate(${this.leftIconRotate}deg)`
+    }
+
+    if (this.rightIconRotate) {
+      iconStyleVariables['--right-icon-rotate'] = `rotate(${this.rightIconRotate}deg)`
+    }
 
     return (
       <Host>
@@ -62,12 +59,17 @@ export class GdsButton {
             'text-button': this.text,
             [`size-${this.size}`]: true,
           }}
-          disabled={this.disabled}>
-          {this.leftIcon && <span style={leftIconStyle}>{this.leftIcon}</span>}
+          disabled={this.disabled}
+          style={iconStyleVariables}>
+          <slot name="left-icon">
+            {this.leftIcon && <span>{this.leftIcon}</span>}
+          </slot>
           <span>
             <slot></slot>
           </span>
-          {this.rightIcon && <span style={rightIconStyle}>{this.rightIcon}</span>}
+          <slot name="right-icon">
+            {this.rightIcon && <span>{this.rightIcon}</span>}
+          </slot>
         </button>
       </Host>
     )

@@ -39,7 +39,8 @@
     background-color: var(--button-background-color-hover);
   }
   & > * + * {
-    margin-left: 16px;
+    display: inline-block;
+    margin-left: var(--button-icon-gutter);
   }
 }
 

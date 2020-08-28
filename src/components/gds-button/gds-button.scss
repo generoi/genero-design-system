@@ -5,6 +5,16 @@
   @include base;
 }
 
+slot[name='left-icon'] {
+  display: inline-block;
+  transform: var(--left-icon-rotate);
+}
+
+slot[name='right-icon'] {
+  display: inline-block;
+  transform: var(--right-icon-rotate);
+}
+
 .size-s {
   @include size-s;
 }
