@@ -166,6 +166,7 @@
   --media-card-blur-radius: 5px;
   --media-card-overlay-color: var(--color-white);
   --media-card-overlay-opacity: 0.75;
+  --media-card-paragraph-gutter: var(--spacing-xxs);
 
   /* Logo Grid */
   --logo-grid-item-desktop-count: 4;

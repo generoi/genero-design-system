@@ -15,7 +15,7 @@ export const MediaCard = () => html`
       image-url="${getMockImageUrl('product', 500, 500)}"
     >
       <gds-heading size="s" slot="headline">This is a headline</gds-heading>
-      <gds-paragraph slot="description">
+      <gds-paragraph size="l" slot="description">
         This Media Card uses content slots for each section. Here is some description. The whole card is wrapped in link.
       </gds-paragraph>
       <gds-tag-group slot="tags">
@@ -35,7 +35,7 @@ export const MediaCard = () => html`
       <gds-link href="https://google.com" slot="headline">
         <gds-heading size="s">This heading is a link</gds-heading>
       </gds-link>
-      <gds-paragraph slot="description">
+      <gds-paragraph size="l" slot="description">
         This Media Card uses content slots for each section. Here is some description.
       </gds-paragraph>
       <gds-tag-group slot="tags">
@@ -67,7 +67,7 @@ export const MediaCard = () => html`
       style="--media-card-overlay-color: var(--color-ui-03)"
     >
       <gds-heading size="s" slot="headline">This heading is a link</gds-heading>
-      <gds-paragraph slot="description">
+      <gds-paragraph size="l" lot="description">
         This Media Card uses a blurred overlay with a custom color
       </gds-paragraph>
       <gds-tag-group slot="tags">
@@ -84,5 +84,9 @@ export const MediaCard = () => html`
       style="--media-card-overlay-color: var(--color-ui-04)"
       description="You can also apply only an overlay and keep the image sharp"
     />
+    <div slot="content">
+      <gds-paragraph size="s">There's also a freeform content slot</gds-paragraph>
+      <gds-paragraph size="s">which appears after after the other slots</gds-paragraph>
+    </div>
   </div>
 `

@@ -43,11 +43,11 @@
 
 @mixin headline {
   margin-top: 0;
-  margin-bottom: var(--spacing-xxs);
+  margin-bottom: var(--media-card-paragraph-gutter);
 }
 
 @mixin description {
-  margin-top: var(--spacing-xxs);
+  margin-top: var(--media-card-paragraph-gutter);
   margin-bottom: 0;
 }
 
@@ -56,6 +56,8 @@
 }
 
 @mixin content {
+  --paragraph-gutter: var(--media-card-paragraph-gutter);
+
   padding: var(--spacing-m) var(--spacing-m) var(--spacing-l) var(--spacing-m);
 }
 
