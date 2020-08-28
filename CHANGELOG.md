@@ -2,6 +2,32 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.26.0](https://github.com/generoi/genero-design-system/compare/v0.25.0...v0.26.0) (2020-08-28)
+
+
+### Features
+
+* **gds-button:** support icon slots ([331e640](https://github.com/generoi/genero-design-system/commit/331e640b52af8bbdc455530cfd5e41d58c10de5d))
+* **gds-text-button:** add hover effect ([26a8668](https://github.com/generoi/genero-design-system/commit/26a86683305c1ec7b207a49a0f60457d3c4b5058))
+* **gds-text-button:** split button text variation to own component ([6e8062c](https://github.com/generoi/genero-design-system/commit/6e8062ca7201f500c6cdfc1a75e29dc7d8c51040))
+* **heading:** add xs size ([8e55314](https://github.com/generoi/genero-design-system/commit/8e553141c91bfa2d330853a34fafe6d9ede37704))
+* **label:** add xl size ([785199a](https://github.com/generoi/genero-design-system/commit/785199a7430d93e416b7ae168d0ce57d06bdb018))
+* **mobile:** fix basic mobile support ([eaed152](https://github.com/generoi/genero-design-system/commit/eaed1521d736e2eb3023ccaacdd4fe7825975d4c))
+* **tag-group:** add tag group component ([923d335](https://github.com/generoi/genero-design-system/commit/923d3357f0db8921fe390527f310a3f0d5cca6d5))
+
+
+### Bug Fixes
+
+* **button:** text-button variation padding and font weight ([ba0f4e2](https://github.com/generoi/genero-design-system/commit/ba0f4e21847b6545a834b043211ed8002c1fc2e1))
+* **heading:** remove top margin when first block ([337e4e2](https://github.com/generoi/genero-design-system/commit/337e4e2097d64317d0165c264ef74e5c63e68dec))
+* **media-card:** apply reduced paragraph spacing in content slot ([ead79cc](https://github.com/generoi/genero-design-system/commit/ead79cc6f5d910a8e6bcccb160810cc2c5df7736))
+* **media-card:** fix vertical spacing for both slots and properties ([10ddd13](https://github.com/generoi/genero-design-system/commit/10ddd13862f4c6bfea797352222d019959bef669))
+* **media-card:** lintfix ([6dec26b](https://github.com/generoi/genero-design-system/commit/6dec26b19cbf67c85be333d9158bdf479ac3b867))
+* **paragraph:** adjascent block margins should overflow eachother ([7790422](https://github.com/generoi/genero-design-system/commit/7790422227295a55e3e23188e30323c3ed107042))
+* **paragraph:** composed paragraph blocks dont have correct size ([2e352bf](https://github.com/generoi/genero-design-system/commit/2e352bfc8cda70b36ffd2769eae3a1766f8aebc7))
+* **tag:** let host behave like inline-block to use margins ([c87a7ac](https://github.com/generoi/genero-design-system/commit/c87a7ac0e2d32a8972a6237a452d62d45fbb01bc))
+* **vars:** use color palette for variables and fix logo grid item width ([2f555d2](https://github.com/generoi/genero-design-system/commit/2f555d266e6dd41ce5af8d4895a98cff1dd95e75))
+
 ## [0.25.0](https://github.com/generoi/genero-design-system/compare/v0.24.0...v0.25.0) (2020-08-27)
 
 
