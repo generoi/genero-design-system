@@ -75,11 +75,19 @@ export class GdsMediaCard {
         </div>
         <div class="content">
           <slot name="headline">
-            {this.headline && <gds-heading size="s" class="headline">{this.headline}</gds-heading>}
+            {this.headline && (
+              <gds-heading size="s" class="headline">
+                {this.headline}
+              </gds-heading>
+            )}
           </slot>
 
           <slot name="description">
-            {this.description && <gds-paragraph size="l" class="description">{this.description}</gds-paragraph>}
+            {this.description && (
+              <gds-paragraph size="l" class="description">
+                {this.description}
+              </gds-paragraph>
+            )}
           </slot>
 
           <slot name="tags"></slot>
