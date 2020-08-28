@@ -4,6 +4,10 @@
   @include base;
 }
 
+.size-xl {
+  @include size-xl;
+}
+
 .size-l {
   @include size-l;
 }

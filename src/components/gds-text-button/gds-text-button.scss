@@ -1,15 +1,24 @@
 @use "index" as *;
 
-.button {
+:host {
+  display: block;
+}
+
+button {
   @include base;
 }
 
-slot[name='left-icon'] {
+slot[name='left-icon'],
+slot[name='right-icon'] {
+  display: inline-block;
+}
+
+slot[name='left-icon'] > * {
   display: inline-block;
   transform: var(--left-icon-rotate);
 }
 
-slot[name='right-icon'] {
+slot[name='right-icon'] > * {
   display: inline-block;
   transform: var(--right-icon-rotate);
 }
@@ -24,9 +33,4 @@ slot[name='right-icon'] {
 
 .size-l {
   @include size-l;
-}
-
-.inner-border {
-  border: 1px solid var(--button-color, inherit);
-  position: absolute;
 }

@@ -24,6 +24,7 @@
   box-shadow: var(--button-box-shadow);
   padding: var(--button-m-padding);
   outline: var(--button-outline);
+  transition: var(--button-transition);
 
   &:hover {
     background-color: var(--button-background-color-hover, var(--button-background-color));
@@ -38,19 +39,10 @@
   &:disabled {
     background-color: var(--button-background-color-hover);
   }
-  & > * + * {
-    margin-left: 16px;
-  }
-}
 
-@mixin text-button {
-  color: inherit;
-  background-color: inherit;
-  &:hover {
-    background-color: inherit;
-  }
-  &:disabled {
-    background-color: inherit;
+  & > * + * {
+    display: inline-block;
+    margin-left: var(--button-icon-gutter);
   }
 }
 

@@ -26,5 +26,5 @@ export const config: Config = {
     },
   ],
   plugins: [sass()],
-  globalStyle: 'src/styles/index.css',
+  globalStyle: 'src/styles/index.scss',
 }

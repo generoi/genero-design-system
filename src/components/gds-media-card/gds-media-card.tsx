@@ -74,17 +74,23 @@ export class GdsMediaCard {
           {this.overlay && <div class="overlay" />}
         </div>
         <div class="content">
-          {this.headline && (
-            <div class="headline">
-              <gds-heading size="s">{this.headline}</gds-heading>
-            </div>
-          )}
+          <slot name="headline">
+            {this.headline && (
+              <gds-heading size="s" class="headline">
+                {this.headline}
+              </gds-heading>
+            )}
+          </slot>
 
-          {this.description && <gds-paragraph class="description">{this.description}</gds-paragraph>}
+          <slot name="description">
+            {this.description && (
+              <gds-paragraph size="l" class="description">
+                {this.description}
+              </gds-paragraph>
+            )}
+          </slot>
 
-          <div class="tags">
-            <slot name="tags"></slot>
-          </div>
+          <slot name="tags"></slot>
 
           <slot name="content"></slot>
         </div>

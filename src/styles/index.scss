@@ -1,4 +1,4 @@
-/* NOTE: Use plain css for now. Switch to using Sass once someone get's it to load in storybook preview iframe. */
+@import 'breakpoints';
 
 /**
  * Naming scheme for variables is `--component-name-size-property-modifier`.
@@ -43,56 +43,93 @@
 
   /* Headings */
   --heading-font-family: Gilroy, Arial, Helvetica, sans-serif;
-  --heading-s-font-size: 20px;
-  --heading-m-font-size: 28px;
+  --heading-xs-font-size: 20px;
+  --heading-s-font-size: 19px;
+  --heading-m-font-size: 20px;
   --heading-l-font-size: 36px;
   --heading-xl-font-size: 60px;
-  --heading-xxl-font-size: 72px;
-  --heading-s-font-weight: 800;
-  --heading-m-font-weight: 600;
+  --heading-xxl-font-size: 62px;
+  --heading-xs-font-weight: 600;
+  --heading-s-font-weight: 500;
+  --heading-m-font-weight: 800;
   --heading-l-font-weight: 600;
   --heading-xl-font-weight: 600;
-  --heading-xxl-font-weight: 600;
-  --heading-s-line-height: 24px;
-  --heading-m-line-height: 28px;
+  --heading-xxl-font-weight: 800;
+  --heading-xs-line-height: 24px;
+  --heading-s-line-height: 23px;
+  --heading-m-line-height: 24px;
   --heading-l-line-height: 36px;
   --heading-xl-line-height: 60px;
-  --heading-xxl-line-height: 74px;
+  --heading-xxl-line-height: 67px;
+  --heading-xs-text-transform: uppercase;
   --heading-s-text-transform: uppercase;
-  --heading-m-text-transform: none;
+  --heading-m-text-transform: uppercase;
   --heading-l-text-transform: none;
   --heading-xl-text-transform: none;
-  --heading-xxl-text-transform: none;
-  --heading-s-letter-spacing: 1.6px;
-  --heading-m-letter-spacing: 0px;
+  --heading-xxl-text-transform: uppercase;
+  --heading-xs-letter-spacing: 1.6px;
+  --heading-s-letter-spacing: 3.8px;
+  --heading-m-letter-spacing: 1.6px;
   --heading-l-letter-spacing: 0px;
   --heading-xl-letter-spacing: 0px;
   --heading-xxl-letter-spacing: 0px;
+
+  @include mobileAndTablet {
+    --heading-xs-font-size: 16px;
+    --heading-l-font-size: 30px;
+    --heading-xl-font-size: 30px;
+    --heading-xxl-font-size: 30px;
+    --heading-xs-line-height: 24px;
+    --heading-l-line-height: 30px;
+    --heading-xl-line-height: 30px;
+    --heading-xxl-line-height: 30px;
+    --heading-xs-letter-spacing: 0;
+  }
 
   /* Labels */
   --label-font-family: Gilroy, Arial, Helvetica, sans-serif;
   --label-s-font-weight: 600;
   --label-m-font-weight: 500;
   --label-l-font-weight: 400;
+  --label-xl-font-weight: 600;
   --label-s-font-size: 10px;
   --label-m-font-size: 12px;
   --label-l-font-size: 16px;
+  --label-xl-font-size: 16px;
   --label-s-letter-spacing: 0.5px;
   --label-m-letter-spacing: 1px;
   --label-l-letter-spacing: 1.28px;
+  --label-xl-letter-spacing: 1.28px;
+
+  /* Paragraphs */
+  --paragraph-gutter: var(--spacing-l);
+  --paragraph-s-font-size: 15px;
+  --paragraph-m-font-size: 17px;
+  --paragraph-l-font-size: 20px;
+  --paragraph-s-line-height: 25px;
+  --paragraph-m-line-height: 27px;
+  --paragraph-l-line-height: 24px;
+
+  @include mobileAndTablet {
+    --paragraph-l-font-size: 18px;
+  }
 
   /* Tags */
   --tag-padding: 4px 12px 6px 12px;
-  --tag-color: white;
-  --tag-background-color: black;
+  --tag-color: var(--color-white);
+  --tag-background-color: var(--color-black);
   /* Can also define this: --tag-border: none; */
   --tag-border-color: transparent;
   --tag-border-radius: 10px;
   --tag-line-height: 1em;
 
+  /* Tag Group */
+  --tag-group-gutter-x: var(--spacing-s);
+  --tag-group-gutter-y: var(--spacing-xs);
+
   /* Buttons */
   --button-font-family: Gilroy, Arial, Helvetica, sans-serif;
-  --button-color: white;
+  --button-color: var(--color-white);
   --button-background-color: var(--color-black);
   --button-background-color-hover: var(--color-ui-02);
   --button-background-image: none;
@@ -102,6 +139,8 @@
   --button-s-letter-spacing: 1.6px;
   --button-m-letter-spacing: 1.28px;
   --button-l-letter-spacing: 1.28px;
+  --button-icon-gutter: 16px;
+  --button-transition: background-color 0.1s ease-out;
   --button-border-radius: 8px;
   --button-box-shadow: none;
   --button-border: none;
@@ -115,10 +154,29 @@
   --button-m-font-size: 20px;
   --button-l-font-size: 24px;
 
+  /* Text Buttons */
+  --text-button-font-family: var(--button-font-family);
+  --text-button-color: inherit;
+  --text-button-color-hover: var(--text-button-color);
+  --text-button-font-weight: 600;
+  --text-button-text-transform: var(--button-text-transform);
+  --text-button-s-letter-spacing: var(--button-s-letter-spacing);
+  --text-button-m-letter-spacing: var(--button-m-letter-spacing);
+  --text-button-l-letter-spacing: var(--button-l-letter-spacing);
+  --text-button-icon-gutter: var(--button-icon-gutter);
+  --text-button-s-padding: 12px 0 8px 0;
+  --text-button-m-padding: 18px 0 14px 0;
+  --text-button-l-padding: 18px 0 14px 0;
+  --text-button-s-font-size: var(--button-s-font-size);
+  --text-button-m-font-size: var(--button-m-font-size);
+  --text-button-l-font-size: var(--button-l-font-size);
+  --text-button-icon-transition: transform 0.1s ease-out;
+  --text-button-icon-hover-offset: var(--spacing-xxs);
+
   /* Navigation */
-  --navigation-color: black;
-  --navigation-color-transparent: white;
-  --navigation-background-color: white;
+  --navigation-color: var(--color-black);
+  --navigation-color-transparent: var(--color-white);
+  --navigation-background-color: var(--color-white);
   --navigation-desktop-height: 100px;
   --navigation-mobile-height: 70px;
 
@@ -135,12 +193,18 @@
   --media-card-blur-radius: 5px;
   --media-card-overlay-color: var(--color-white);
   --media-card-overlay-opacity: 0.75;
+  --media-card-content-padding: var(--spacing-m) var(--spacing-m) var(--spacing-l) var(--spacing-m);
+  --media-card-paragraph-gutter: var(--spacing-xxs);
+
+  @include mobileAndTablet {
+    --media-card-content-padding: var(--spacing-m) var(--spacing-m) var(--spacing-l) var(--spacing-m);
+  }
 
   /* Logo Grid */
   --logo-grid-item-desktop-count: 4;
   --logo-grid-item-tablet-count: 2;
   --logo-grid-item-mobile-count: 2;
-  --logo-grid-item-desktop-size: 263px;
+  --logo-grid-item-desktop-size: 336px;
   --logo-grid-item-tablet-size: 180px;
   --logo-grid-item-mobile-size: 180px;
   --logo-grid-item-border-color: var(--border-color-light);

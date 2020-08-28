@@ -3,6 +3,11 @@
   font-family: var(--heading-font-family);
   font-weight: 600;
   letter-spacing: 0px;
+
+  // @todo vertical spacing
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 // H1
@@ -53,4 +58,14 @@
   line-height: var(--heading-s-line-height);
   text-transform: var(--heading-s-text-transform);
   letter-spacing: var(--heading-s-letter-spacing);
+}
+
+// H6
+@mixin size-xs {
+  @include base;
+  font-size: var(--heading-xs-font-size);
+  font-weight: var(--heading-xs-font-weight);
+  line-height: var(--heading-xs-line-height);
+  text-transform: var(--heading-xs-text-transform);
+  letter-spacing: var(--heading-xs-letter-spacing);
 }

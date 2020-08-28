@@ -22,10 +22,6 @@ export namespace Components {
           * Button size.
          */
         "size": string;
-        /**
-          * Is a textual button.
-         */
-        "text": boolean;
     }
     interface GdsCard {
     }
@@ -152,6 +148,25 @@ export namespace Components {
          */
         "target": string;
     }
+    interface GdsTagGroup {
+    }
+    interface GdsTextButton {
+        "disabled": boolean;
+        /**
+          * Left side icon with a font. https://www.martinstoeckli.ch/fontmap/fontmap.html
+         */
+        "leftIcon": string;
+        "leftIconRotate": number;
+        /**
+          * Right side icon with a font.
+         */
+        "rightIcon": string;
+        "rightIconRotate": number;
+        /**
+          * Button size.
+         */
+        "size": string;
+    }
 }
 declare global {
     interface HTMLGdsButtonElement extends Components.GdsButton, HTMLStencilElement {
@@ -232,6 +247,18 @@ declare global {
         prototype: HTMLGdsTagElement;
         new (): HTMLGdsTagElement;
     };
+    interface HTMLGdsTagGroupElement extends Components.GdsTagGroup, HTMLStencilElement {
+    }
+    var HTMLGdsTagGroupElement: {
+        prototype: HTMLGdsTagGroupElement;
+        new (): HTMLGdsTagGroupElement;
+    };
+    interface HTMLGdsTextButtonElement extends Components.GdsTextButton, HTMLStencilElement {
+    }
+    var HTMLGdsTextButtonElement: {
+        prototype: HTMLGdsTextButtonElement;
+        new (): HTMLGdsTextButtonElement;
+    };
     interface HTMLElementTagNameMap {
         "gds-button": HTMLGdsButtonElement;
         "gds-card": HTMLGdsCardElement;
@@ -246,6 +273,8 @@ declare global {
         "gds-navigation": HTMLGdsNavigationElement;
         "gds-paragraph": HTMLGdsParagraphElement;
         "gds-tag": HTMLGdsTagElement;
+        "gds-tag-group": HTMLGdsTagGroupElement;
+        "gds-text-button": HTMLGdsTextButtonElement;
     }
 }
 declare namespace LocalJSX {
@@ -265,10 +294,6 @@ declare namespace LocalJSX {
           * Button size.
          */
         "size"?: string;
-        /**
-          * Is a textual button.
-         */
-        "text"?: boolean;
     }
     interface GdsCard {
     }
@@ -395,6 +420,25 @@ declare namespace LocalJSX {
          */
         "target"?: string;
     }
+    interface GdsTagGroup {
+    }
+    interface GdsTextButton {
+        "disabled"?: boolean;
+        /**
+          * Left side icon with a font. https://www.martinstoeckli.ch/fontmap/fontmap.html
+         */
+        "leftIcon"?: string;
+        "leftIconRotate"?: number;
+        /**
+          * Right side icon with a font.
+         */
+        "rightIcon"?: string;
+        "rightIconRotate"?: number;
+        /**
+          * Button size.
+         */
+        "size"?: string;
+    }
     interface IntrinsicElements {
         "gds-button": GdsButton;
         "gds-card": GdsCard;
@@ -409,6 +453,8 @@ declare namespace LocalJSX {
         "gds-navigation": GdsNavigation;
         "gds-paragraph": GdsParagraph;
         "gds-tag": GdsTag;
+        "gds-tag-group": GdsTagGroup;
+        "gds-text-button": GdsTextButton;
     }
 }
 export { LocalJSX as JSX };
@@ -428,6 +474,8 @@ declare module "@stencil/core" {
             "gds-navigation": LocalJSX.GdsNavigation & JSXBase.HTMLAttributes<HTMLGdsNavigationElement>;
             "gds-paragraph": LocalJSX.GdsParagraph & JSXBase.HTMLAttributes<HTMLGdsParagraphElement>;
             "gds-tag": LocalJSX.GdsTag & JSXBase.HTMLAttributes<HTMLGdsTagElement>;
+            "gds-tag-group": LocalJSX.GdsTagGroup & JSXBase.HTMLAttributes<HTMLGdsTagGroupElement>;
+            "gds-text-button": LocalJSX.GdsTextButton & JSXBase.HTMLAttributes<HTMLGdsTextButtonElement>;
         }
     }
 }

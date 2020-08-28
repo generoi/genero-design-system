@@ -5,11 +5,11 @@ import { Component, Prop, h, Host } from '@stencil/core'
  * NOTE: Should we have a separate button like anchor link component?
  */
 @Component({
-  tag: 'gds-button',
-  styleUrl: 'gds-button.scss',
+  tag: 'gds-text-button',
+  styleUrl: 'gds-text-button.scss',
   shadow: true,
 })
-export class GdsButton {
+export class GdsTextButton {
   /**
    *
    */

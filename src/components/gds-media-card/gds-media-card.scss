@@ -24,15 +24,23 @@
   @include superimposed;
 }
 
-.headline {
+.headline,
+::slotted([slot='headline']) {
+  display: block;
+
   @include headline;
 }
 
-.description {
+.description,
+::slotted([slot='description']) {
+  display: block;
+
   @include description;
 }
 
-.tags {
+::slotted([slot='tags']) {
+  display: block;
+
   @include tags;
 }
 

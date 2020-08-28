@@ -1,5 +1,9 @@
 @use "index" as *;
 
+gds-tag {
+  display: inline-block;
+}
+
 .gds-tag {
   @include base;
 }
