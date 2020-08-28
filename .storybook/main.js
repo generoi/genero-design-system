@@ -2,7 +2,12 @@ const path = require('path');
 
 module.exports = {
   stories: ['../src/**/*.stories.js'],
-  addons: ['@storybook/addon-docs'],
+  addons: [{
+    name: '@storybook/addon-essentials',
+    options: {
+      backgrounds: false,
+    }
+  }],
 
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
@@ -18,4 +23,3 @@ module.exports = {
     return config;
   },
 }
-
