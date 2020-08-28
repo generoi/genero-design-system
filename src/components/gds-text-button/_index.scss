@@ -1,0 +1,44 @@
+@mixin base {
+  position: relative;
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  background-color: inherit;
+  color: var(--text-button-color, inherit);
+  font-family: var(--text-button-font-family);
+  font-weight: var(--text-button-font-weight);
+  text-transform: var(--text-button-text-transform);
+  line-height: 1em;
+  font-size: var(--text-button-m-font-size);
+  letter-spacing: var(--text-button-m-letter-spacing);
+  padding: var(--text-button-m-padding);
+
+  & > * + * {
+    display: inline-block;
+    margin-left: var(--text-button-icon-gutter);
+  }
+}
+
+@mixin size-s {
+  font-size: var(--text-button-s-font-size);
+  letter-spacing: var(--text-button-s-letter-spacing);
+  padding: var(--text-button-s-padding);
+}
+
+@mixin size-m {
+  font-size: var(--text-button-m-font-size);
+  letter-spacing: var(--text-button-m-letter-spacing);
+  padding: var(--text-button-m-padding);
+}
+
+@mixin size-l {
+  font-size: var(--text-button-l-font-size);
+  letter-spacing: var(--text-button-l-letter-spacing);
+  padding: var(--text-button-l-padding);
+}

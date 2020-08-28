@@ -22,12 +22,6 @@ export const Button = () => html`
     <gds-button left-icon="❮" right-icon="❯">Both icons</gds-button>
   </p>
   <p>
-    <gds-button size="s" text left-icon="➞">Text Button S</gds-button>
-  </p>
-  <p>
-    <gds-button size="m" text>Text Button M</gds-button>
-  </p>
-  <p>
     <gds-button right-icon-rotate="90">
       <span slot="left-icon">❮</span>
       Using slots

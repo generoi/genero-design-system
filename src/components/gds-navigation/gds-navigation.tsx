@@ -72,9 +72,9 @@ export class GdsNavigation {
             </div>
 
             <div class="gds-navigation-hamburger">
-              <gds-button size="l" text onClick={onHamburgerClick}>
+              <gds-text-button size="l" onClick={onHamburgerClick}>
                 {this.menuIcon}
-              </gds-button>
+              </gds-text-button>
             </div>
           </div>
         </header>
