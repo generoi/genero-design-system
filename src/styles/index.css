@@ -113,6 +113,7 @@
   --button-m-letter-spacing: 1.28px;
   --button-l-letter-spacing: 1.28px;
   --button-icon-gutter: 16px;
+  --button-transition: background-color 0.1s ease-out;
   --button-border-radius: 8px;
   --button-box-shadow: none;
   --button-border: none;
@@ -129,6 +130,7 @@
   /* Text Buttons */
   --text-button-font-family: var(--button-font-family);
   --text-button-color: inherit;
+  --text-button-color-hover: var(--text-button-color);
   --text-button-font-weight: 600;
   --text-button-text-transform: var(--button-text-transform);
   --text-button-s-letter-spacing: var(--button-s-letter-spacing);
@@ -141,6 +143,8 @@
   --text-button-s-font-size: var(--button-s-font-size);
   --text-button-m-font-size: var(--button-m-font-size);
   --text-button-l-font-size: var(--button-l-font-size);
+  --text-button-icon-transition: transform 0.1s ease-out;
+  --text-button-icon-hover-offset: var(--spacing-xxs);
 
   /* Navigation */
   --navigation-color: var(--color-black);

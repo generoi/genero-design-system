@@ -23,6 +23,26 @@
     display: inline-block;
     margin-left: var(--text-button-icon-gutter);
   }
+
+  > * {
+    transition: var(--text-button-icon-transition);
+  }
+
+  &:hover {
+    color: var(--text-button-color-hover);
+
+    // left icon
+    & > :first-child:nth-last-child(3),
+    & > :first-child:nth-last-child(2) {
+      transform: translateX(var(--text-button-icon-hover-offset));
+    }
+
+    // right icon
+    & > :last-child:nth-child(3),
+    & > :last-child:nth-last-child(2) {
+      transform: translateX(calc(var(--text-button-icon-hover-offset) * -1));
+    }
+  }
 }
 
 @mixin size-s {

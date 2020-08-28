@@ -24,6 +24,7 @@
   box-shadow: var(--button-box-shadow);
   padding: var(--button-m-padding);
   outline: var(--button-outline);
+  transition: var(--button-transition);
 
   &:hover {
     background-color: var(--button-background-color-hover, var(--button-background-color));
