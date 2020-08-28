@@ -58,7 +58,7 @@
 @mixin content {
   --paragraph-gutter: var(--media-card-paragraph-gutter);
 
-  padding: var(--spacing-m) var(--spacing-m) var(--spacing-l) var(--spacing-m);
+  padding: var(--media-card-content-padding);
 }
 
 @mixin overlay {

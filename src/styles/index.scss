@@ -1,4 +1,4 @@
-/* NOTE: Use plain css for now. Switch to using Sass once someone get's it to load in storybook preview iframe. */
+@import 'breakpoints';
 
 /**
  * Naming scheme for variables is `--component-name-size-property-modifier`.
@@ -43,31 +43,48 @@
 
   /* Headings */
   --heading-font-family: Gilroy, Arial, Helvetica, sans-serif;
-  --heading-s-font-size: 20px;
-  --heading-m-font-size: 28px;
+  --heading-xs-font-size: 20px;
+  --heading-s-font-size: 19px;
+  --heading-m-font-size: 20px;
   --heading-l-font-size: 36px;
   --heading-xl-font-size: 60px;
-  --heading-xxl-font-size: 72px;
-  --heading-s-font-weight: 800;
-  --heading-m-font-weight: 600;
+  --heading-xxl-font-size: 62px;
+  --heading-xs-font-weight: 600;
+  --heading-s-font-weight: 500;
+  --heading-m-font-weight: 800;
   --heading-l-font-weight: 600;
   --heading-xl-font-weight: 600;
-  --heading-xxl-font-weight: 600;
-  --heading-s-line-height: 24px;
-  --heading-m-line-height: 28px;
+  --heading-xxl-font-weight: 800;
+  --heading-xs-line-height: 24px;
+  --heading-s-line-height: 23px;
+  --heading-m-line-height: 24px;
   --heading-l-line-height: 36px;
   --heading-xl-line-height: 60px;
-  --heading-xxl-line-height: 74px;
+  --heading-xxl-line-height: 67px;
+  --heading-xs-text-transform: uppercase;
   --heading-s-text-transform: uppercase;
-  --heading-m-text-transform: none;
+  --heading-m-text-transform: uppercase;
   --heading-l-text-transform: none;
   --heading-xl-text-transform: none;
-  --heading-xxl-text-transform: none;
-  --heading-s-letter-spacing: 1.6px;
-  --heading-m-letter-spacing: 0px;
+  --heading-xxl-text-transform: uppercase;
+  --heading-xs-letter-spacing: 1.6px;
+  --heading-s-letter-spacing: 3.8px;
+  --heading-m-letter-spacing: 1.6px;
   --heading-l-letter-spacing: 0px;
   --heading-xl-letter-spacing: 0px;
   --heading-xxl-letter-spacing: 0px;
+
+  @include mobileAndTablet {
+    --heading-xs-font-size: 16px;
+    --heading-l-font-size: 30px;
+    --heading-xl-font-size: 30px;
+    --heading-xxl-font-size: 30px;
+    --heading-xs-line-height: 24px;
+    --heading-l-line-height: 30px;
+    --heading-xl-line-height: 30px;
+    --heading-xxl-line-height: 30px;
+    --heading-xs-letter-spacing: 0;
+  }
 
   /* Labels */
   --label-font-family: Gilroy, Arial, Helvetica, sans-serif;
@@ -86,6 +103,16 @@
 
   /* Paragraphs */
   --paragraph-gutter: var(--spacing-l);
+  --paragraph-s-font-size: 15px;
+  --paragraph-m-font-size: 17px;
+  --paragraph-l-font-size: 20px;
+  --paragraph-s-line-height: 25px;
+  --paragraph-m-line-height: 27px;
+  --paragraph-l-line-height: 24px;
+
+  @include mobileAndTablet {
+    --paragraph-l-font-size: 18px;
+  }
 
   /* Tags */
   --tag-padding: 4px 12px 6px 12px;
@@ -166,7 +193,12 @@
   --media-card-blur-radius: 5px;
   --media-card-overlay-color: var(--color-white);
   --media-card-overlay-opacity: 0.75;
+  --media-card-content-padding: var(--spacing-m) var(--spacing-m) var(--spacing-l) var(--spacing-m);
   --media-card-paragraph-gutter: var(--spacing-xxs);
+
+  @include mobileAndTablet {
+    --media-card-content-padding: var(--spacing-m) var(--spacing-m) var(--spacing-l) var(--spacing-m);
+  }
 
   /* Logo Grid */
   --logo-grid-item-desktop-count: 4;

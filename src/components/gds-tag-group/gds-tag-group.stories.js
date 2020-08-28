@@ -10,7 +10,7 @@ const item = () => html`<gds-tag>${Math.round(Math.random()) ? 'Slightly longer 
 
 // prettier-ignore
 export const TagGroup = () => html`
-  <gds-tag-group style="width: 500px;">
+  <gds-tag-group style="max-width: 500px;">
     ${Array(20).fill().map(item)}
   </gds-tag-group>
 

@@ -9,7 +9,7 @@ export default {
 
 // prettier-ignore
 export const MediaCard = () => html`
-  <div style="margin: 40px;">
+  <div style="margin-bottom: 40px;">
     <gds-media-card
       href="https://google.com"
       image-url="${getMockImageUrl('product', 500, 500)}"
@@ -24,7 +24,7 @@ export const MediaCard = () => html`
       </gds-tag-group>
     </gds-media-card>
   </div>
-  <div style="margin: 40px;">
+  <div style="margin-bottom: 40px;">
     <gds-media-card
       image-url="${getMockImageUrl('product', 500, 500)}"
       superimposed-url="images/superimpose.png"
@@ -44,7 +44,7 @@ export const MediaCard = () => html`
       </gds-tag-group>
     </gds-media-card>
   </div>
-  <div style="margin: 40px;">
+  <div style="margin-bottom: 40px;">
     <gds-media-card
       headline="Blurred image"
       image-url="${getMockImageUrl('nature', 500, 500)}"
@@ -56,7 +56,7 @@ export const MediaCard = () => html`
       </gds-tag-group>
     </gds-media-card>
   </div>
-  <div style="margin: 40px;">
+  <div style="margin-bottom: 40px;">
     <gds-media-card
       image-url="${getMockImageUrl('nature', 500, 500)}"
       superimposed-url="images/superimpose.png"
@@ -76,7 +76,7 @@ export const MediaCard = () => html`
       </gds-tag-group>
     </gds-media-card>
   </div>
-  <div style="margin: 40px;">
+  <div style="margin-bottom: 40px;">
     <gds-media-card
       headline="Card Headline"
       image-url="${getMockImageUrl('product', 500, 500)}"
