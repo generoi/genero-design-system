@@ -3,6 +3,11 @@
   font-family: var(--heading-font-family);
   font-weight: 600;
   letter-spacing: 0px;
+
+  // @todo vertical spacing
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 // H1

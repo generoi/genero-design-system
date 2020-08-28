@@ -5,6 +5,7 @@ import { Component, h, Prop } from '@stencil/core'
   styleUrl: 'gds-heading.scss',
   // Use Light DOM so that Google bot can see important element without JS.
   shadow: false,
+  scoped: true,
 })
 export class GdsHeading {
   /**
