@@ -63,7 +63,10 @@ export class GdsMediaCard {
     const card = (
       <gds-card>
         <div
-          class="media"
+          class={{
+            media: true,
+            'has-overlay': this.overlay,
+          }}
           style={{
             marginBottom: this.superimposedBottom && `${this.superimposedBottom}px`,
           }}>
@@ -71,7 +74,6 @@ export class GdsMediaCard {
             src={this.imageUrl}
             class={['image', this.overlayEffect ? `has-${this.overlayEffect}-effect` : ''].filter(Boolean).join(' ')}
           />
-          {this.overlay && <div class="overlay" />}
         </div>
         <div class="content">
           <slot name="headline">
