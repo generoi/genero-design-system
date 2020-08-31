@@ -34,10 +34,10 @@ export class GdsMediaCard {
   /**
    * superimpose image overflow amount in pixels.
    */
-  @Prop() superimposedTop: string
-  @Prop() superimposedBottom: string
-  @Prop() superimposedLeft: string
-  @Prop() superimposedRight: string
+  @Prop() superimposedTop: number
+  @Prop() superimposedBottom: number
+  @Prop() superimposedLeft: number
+  @Prop() superimposedRight: number
   /**
    * Overlay.
    */

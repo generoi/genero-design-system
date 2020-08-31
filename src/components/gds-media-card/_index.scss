@@ -1,6 +1,6 @@
 @mixin media-card {
   position: relative;
-  display: inline-block;
+  display: inline-block; // @todo causes layout shift
 }
 
 @mixin media {
@@ -13,14 +13,15 @@
 
 @mixin image {
   width: 100%;
-  height: var(--media-card-media-height, 300px);
+  height: var(--media-card-media-height);
+
   display: block;
   object-fit: var(--media-card-object-fit, cover);
 }
 
 @mixin superimposed {
   width: 100%;
-  height: var(--media-card-media-height, 300px);
+  height: var(--media-card-media-height);
   position: absolute;
   z-index: 1;
 
