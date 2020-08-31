@@ -99,6 +99,26 @@ export class GdsMediaCard {
       </gds-card>
     )
 
+    const isNumeric = x => !isNaN(x) && isFinite(x)
+
+    const objectFitX =
+      isNumeric(this.superimposedLeft) && isNumeric(this.superimposedRight)
+        ? 'center'
+        : isNumeric(this.superimposedLeft)
+        ? 'left'
+        : isNumeric(this.superimposedRight)
+        ? 'right'
+        : 'center'
+
+    const objectFitY =
+      isNumeric(this.superimposedTop) && isNumeric(this.superimposedBottom)
+        ? 'center'
+        : isNumeric(this.superimposedTop)
+        ? 'top'
+        : isNumeric(this.superimposedBottom)
+        ? 'bottom'
+        : 'center'
+
     // Optional superimposed image.
     // Note: Superimpose needs to be outside of card because it has overflow hidden.
     const superimposed = this.superimposedUrl && (
@@ -106,12 +126,17 @@ export class GdsMediaCard {
         <div
           class="superimposed-image"
           style={{
-            top: this.superimposedTop && `-${this.superimposedTop}px`,
-            bottom: this.superimposedBottom && `-${this.superimposedBottom}px`,
-            left: this.superimposedLeft && `-${this.superimposedLeft}px`,
-            right: this.superimposedRight && `-${this.superimposedRight}px`,
+            top: this.superimposedTop && `${this.superimposedTop * -1}px`,
+            bottom: this.superimposedBottom && `${this.superimposedBottom * -1}px`,
+            left: this.superimposedLeft && `${this.superimposedLeft * -1}px`,
+            right: this.superimposedRight && `${this.superimposedRight * -1}px`,
           }}>
-          <img src={this.superimposedUrl} />
+          <img
+            src={this.superimposedUrl}
+            style={{
+              'object-position': `${objectFitY} ${objectFitX}`,
+            }}
+          />
         </div>
       </div>
     )
