@@ -1,6 +1,5 @@
 @mixin card {
   box-sizing: border-box;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -10,6 +9,7 @@
   background-color: var(--card-background-color, white);
   box-shadow: var(--card-box-shadow);
   overflow: hidden;
+  width: 100vw;
   max-width: var(--card-width);
   flex-direction: column;
 }

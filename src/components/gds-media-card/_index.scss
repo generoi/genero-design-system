@@ -1,19 +1,24 @@
 @mixin media-card {
   position: relative;
-  display: inline-block; // @todo causes layout shift
+  display: inline-block;
+  max-width: 100%;
+  margin-top: max(0px, var(--superimposed-top));
 }
 
 @mixin media {
   position: relative;
   width: 100%;
-  height: var(--media-card-media-height, 300px);
+  height: 0;
+  padding-bottom: var(--media-card-media-height);
+  margin-bottom: max(0px, var(--superimposed-bottom));
   // Hide potential offset due to effects applied.
   overflow: hidden;
 }
 
 @mixin image {
+  position: absolute;
   width: 100%;
-  height: var(--media-card-media-height);
+  height: 100%;
 
   display: block;
   object-fit: var(--media-card-object-fit, cover);
@@ -21,16 +26,17 @@
 
 @mixin superimposed {
   width: 100%;
-  height: var(--media-card-media-height);
+  height: 0;
+  padding-bottom: var(--media-card-media-height);
   position: absolute;
   z-index: 1;
 
   & > .superimposed-image {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    top: calc(var(--superimposed-top, 0) * -1);
+    bottom: calc(var(--superimposed-bottom, 0) * -1);
+    left: calc(var(--superimposed-left, 0) * -1);
+    right: calc(var(--superimposed-right, 0) * -1);
 
     & > img {
       display: block;
@@ -71,8 +77,9 @@
 }
 
 @mixin image-blur-effect {
+  // until @stencil/sass 1.4.0 is released most likely
   filter: #{'opacity(var(--media-card-blur-opacity, 0.5))'} blur(var(--media-card-blur-radius));
   width: calc(100% + var(--media-card-blur-radius) * 2);
-  height: calc(var(--media-card-media-height, 300px) + var(--media-card-blur-radius) * 2);
+  height: calc(100% + var(--media-card-blur-radius) * 2);
   margin: calc(var(--media-card-blur-radius) * -1);
 }
