@@ -1,5 +1,9 @@
 @use "index" as *;
 
+:host {
+  display: block;
+}
+
 .media-card {
   @include media-card;
 }

@@ -1,5 +1,7 @@
 import { Component, h, Prop, Watch } from '@stencil/core'
 
+const isNumeric = x => !isNaN(x) && isFinite(x)
+
 /**
  * Media Card component.
  *
@@ -59,20 +61,54 @@ export class GdsMediaCard {
   }
 
   render() {
+    const objectFitX =
+      isNumeric(this.superimposedLeft) && isNumeric(this.superimposedRight)
+        ? 'center'
+        : isNumeric(this.superimposedLeft)
+        ? 'left'
+        : isNumeric(this.superimposedRight)
+        ? 'right'
+        : 'center'
+
+    const objectFitY =
+      isNumeric(this.superimposedTop) && isNumeric(this.superimposedBottom)
+        ? 'center'
+        : isNumeric(this.superimposedTop)
+        ? 'top'
+        : isNumeric(this.superimposedBottom)
+        ? 'bottom'
+        : 'center'
+
+    // Optional superimposed image.
+    // Note: Superimpose needs to be outside of card because it has overflow hidden.
+    const superimposed = this.superimposedUrl && (
+      <div class="superimposed">
+        <div class="superimposed-image">
+          <img
+            src={this.superimposedUrl}
+            style={{
+              'object-position': `${objectFitY} ${objectFitX}`,
+            }}
+          />
+        </div>
+      </div>
+    )
+
     // Main card
     const card = (
       <gds-card>
+        {superimposed}
         <div
           class={{
             media: true,
             'has-overlay': this.overlay,
-          }}
-          style={{
-            marginBottom: this.superimposedBottom && `${this.superimposedBottom}px`,
           }}>
           <img
             src={this.imageUrl}
-            class={['image', this.overlayEffect ? `has-${this.overlayEffect}-effect` : ''].filter(Boolean).join(' ')}
+            class={{
+              image: true,
+              [`has-${this.overlayEffect}-effect`]: !!this.overlayEffect,
+            }}
           />
         </div>
         <div class="content">
@@ -99,56 +135,16 @@ export class GdsMediaCard {
       </gds-card>
     )
 
-    const isNumeric = x => !isNaN(x) && isFinite(x)
-
-    const objectFitX =
-      isNumeric(this.superimposedLeft) && isNumeric(this.superimposedRight)
-        ? 'center'
-        : isNumeric(this.superimposedLeft)
-        ? 'left'
-        : isNumeric(this.superimposedRight)
-        ? 'right'
-        : 'center'
-
-    const objectFitY =
-      isNumeric(this.superimposedTop) && isNumeric(this.superimposedBottom)
-        ? 'center'
-        : isNumeric(this.superimposedTop)
-        ? 'top'
-        : isNumeric(this.superimposedBottom)
-        ? 'bottom'
-        : 'center'
-
-    // Optional superimposed image.
-    // Note: Superimpose needs to be outside of card because it has overflow hidden.
-    const superimposed = this.superimposedUrl && (
-      <div class="superimposed">
-        <div
-          class="superimposed-image"
-          style={{
-            top: this.superimposedTop && `${this.superimposedTop * -1}px`,
-            bottom: this.superimposedBottom && `${this.superimposedBottom * -1}px`,
-            left: this.superimposedLeft && `${this.superimposedLeft * -1}px`,
-            right: this.superimposedRight && `${this.superimposedRight * -1}px`,
-          }}>
-          <img
-            src={this.superimposedUrl}
-            style={{
-              'object-position': `${objectFitY} ${objectFitX}`,
-            }}
-          />
-        </div>
-      </div>
-    )
-
-    // Container for card and superimpose image
+    // Container for card
     const mediaCard = (
       <div
         class="media-card"
         style={{
-          paddingTop: this.superimposedTop && `${this.superimposedTop}px`,
+          '--superimposed-top': this.superimposedTop ? `${this.superimposedTop}px` : '0px',
+          '--superimposed-bottom': this.superimposedBottom ? `${this.superimposedBottom}px` : '0px',
+          '--superimposed-left': this.superimposedLeft ? `${this.superimposedLeft}px` : '0px',
+          '--superimposed-right': this.superimposedRight ? `${this.superimposedRight}px` : '0px',
         }}>
-        {superimposed}
         {card}
       </div>
     )
@@ -158,7 +154,7 @@ export class GdsMediaCard {
 
     // Render with a link
     return (
-      <gds-link href={this.href} target={this.target}>
+      <gds-link href={this.href} target={this.target} block>
         {mediaCard}
       </gds-link>
     )
