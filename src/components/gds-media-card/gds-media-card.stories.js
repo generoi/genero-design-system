@@ -59,9 +59,10 @@ export const MediaCard = () => html`
   <div style="margin-bottom: 40px;">
     <gds-media-card
       image-url="${getMockImageUrl('nature', 500, 500)}"
-      superimposed-url="images/superimpose.png"
-      superimposed-top="50"
-      superimposed-bottom="50"
+      superimposed-url="images/superimpose-bottom.png"
+      superimposed-top="-20"
+      superimposed-bottom="0"
+      superimposed-left="20"
       overlay
       overlay-effect="blur"
       style="--media-card-overlay-color: var(--color-ui-03)"

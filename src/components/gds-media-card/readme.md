@@ -13,10 +13,10 @@
 | `imageUrl`           | `image-url`           | Image url.                                           | `string`  | `undefined` |
 | `overlay`            | `overlay`             | Overlay.                                             | `boolean` | `undefined` |
 | `overlayEffect`      | `overlay-effect`      | Overlay effect.                                      | `string`  | `undefined` |
-| `superimposedBottom` | `superimposed-bottom` |                                                      | `string`  | `undefined` |
-| `superimposedLeft`   | `superimposed-left`   |                                                      | `string`  | `undefined` |
-| `superimposedRight`  | `superimposed-right`  |                                                      | `string`  | `undefined` |
-| `superimposedTop`    | `superimposed-top`    | superimpose image overflow amount in pixels.         | `string`  | `undefined` |
+| `superimposedBottom` | `superimposed-bottom` |                                                      | `number`  | `undefined` |
+| `superimposedLeft`   | `superimposed-left`   |                                                      | `number`  | `undefined` |
+| `superimposedRight`  | `superimposed-right`  |                                                      | `number`  | `undefined` |
+| `superimposedTop`    | `superimposed-top`    | superimpose image overflow amount in pixels.         | `number`  | `undefined` |
 | `superimposedUrl`    | `superimposed-url`    | superimpose image url.                               | `string`  | `undefined` |
 | `target`             | `target`              | Link open target.                                    | `string`  | `undefined` |
 

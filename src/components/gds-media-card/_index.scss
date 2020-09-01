@@ -1,6 +1,6 @@
 @mixin media-card {
   position: relative;
-  display: inline-block;
+  display: inline-block; // @todo causes layout shift
 }
 
 @mixin media {
@@ -13,14 +13,15 @@
 
 @mixin image {
   width: 100%;
-  height: var(--media-card-media-height, 300px);
+  height: var(--media-card-media-height);
+
   display: block;
   object-fit: var(--media-card-object-fit, cover);
 }
 
 @mixin superimposed {
   width: 100%;
-  height: var(--media-card-media-height, 300px);
+  height: var(--media-card-media-height);
   position: absolute;
   z-index: 1;
 
@@ -62,18 +63,15 @@
 }
 
 @mixin overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background-color: var(--media-card-overlay-color);
-  opacity: var(--media-card-overlay-opacity);
-  pointer-events: none;
+
+  > img {
+    mix-blend-mode: multiply;
+  }
 }
 
 @mixin image-blur-effect {
-  filter: blur(var(--media-card-blur-radius));
+  filter: #{'opacity(var(--media-card-blur-opacity, 0.5))'} blur(var(--media-card-blur-radius));
   width: calc(100% + var(--media-card-blur-radius) * 2);
   height: calc(var(--media-card-media-height, 300px) + var(--media-card-blur-radius) * 2);
   margin: calc(var(--media-card-blur-radius) * -1);
