@@ -46,6 +46,9 @@ export namespace Components {
         "size": string;
     }
     interface GdsLink {
+        /**
+          * Block element.
+         */
         "block": boolean;
         /**
           * Link url.
@@ -318,6 +321,9 @@ declare namespace LocalJSX {
         "size"?: string;
     }
     interface GdsLink {
+        /**
+          * Block element.
+         */
         "block"?: boolean;
         /**
           * Link url.

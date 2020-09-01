@@ -5,6 +5,7 @@ import { Component, Prop, h } from '@stencil/core'
   styleUrl: 'gds-link.scss',
   // Use Light DOM so that Google bot can see important element without JS.
   shadow: false,
+  scoped: true,
 })
 export class GdsLink {
   /**
@@ -16,18 +17,13 @@ export class GdsLink {
    */
   @Prop() target: string
   /**
-   *
+   * Block element.
    */
-  @Prop() block: boolean
+  @Prop({ reflect: true }) block: boolean
 
   render() {
     return (
-      <a
-        class={{
-          block: this.block,
-        }}
-        href={this.href}
-        target={this.target}>
+      <a href={this.href} target={this.target}>
         <slot></slot>
       </a>
     )

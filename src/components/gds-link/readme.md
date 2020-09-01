@@ -7,7 +7,7 @@
 
 | Property | Attribute | Description       | Type      | Default     |
 | -------- | --------- | ----------------- | --------- | ----------- |
-| `block`  | `block`   |                   | `boolean` | `undefined` |
+| `block`  | `block`   | Block element.    | `boolean` | `undefined` |
 | `href`   | `href`    | Link url.         | `string`  | `undefined` |
 | `target` | `target`  | Link open target. | `string`  | `undefined` |
 
