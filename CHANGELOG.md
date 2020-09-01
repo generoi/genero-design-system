@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.27.0](https://github.com/generoi/genero-design-system/compare/v0.26.0...v0.27.0) (2020-09-01)
+
+
+### Features
+
+* **media-card:** use blur and background color blend mode ([240431f](https://github.com/generoi/genero-design-system/commit/240431f08be0cc6b71a9b9268a6ee0659bbd21e1))
+
+
+### Bug Fixes
+
+* **media-card:** superimposed image side alignment support ([e5e8dde](https://github.com/generoi/genero-design-system/commit/e5e8ddebdcf2659925e0b8083383f228622a7df7))
+
 ## [0.26.0](https://github.com/generoi/genero-design-system/compare/v0.25.0...v0.26.0) (2020-08-28)
 
 
