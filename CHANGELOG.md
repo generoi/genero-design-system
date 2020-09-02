@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.29.0](https://github.com/generoi/genero-design-system/compare/v0.27.0...v0.29.0) (2020-09-02)
+
+
+### Features
+
+* add rel attribute for nofollow etc ([dcf755d](https://github.com/generoi/genero-design-system/commit/dcf755dd41dd6ebfdb314a29f09124b3231c6c7a))
+
+
+### Bug Fixes
+
+* **link:** host element should also be block when set ([61c2b96](https://github.com/generoi/genero-design-system/commit/61c2b9610a7bbd20c65dd34d0e262195ac40cc33))
+* **media-card:** support percentage card heights ([466c7d7](https://github.com/generoi/genero-design-system/commit/466c7d7f8c72320bc1bfafd3c4319cde9a1b4308))
+
 ## [0.28.0](https://github.com/generoi/genero-design-system/compare/v0.27.0...v0.28.0) (2020-09-01)
 
 
