@@ -51,6 +51,9 @@ export const Button = () => html`
       --button-background-image: radial-gradient(#006e3b, #264534);
       --button-background-image-hover: radial-gradient(#387c57, #334b3d);
     }
+    .shadow {
+      --button-box-shadow: 8px 7px 0px 0px #fdc2c2;
+    }
   </style>
   <p>
     <gds-button class="inverted sharp" size="m">Sharp corners + border</gds-button>
@@ -60,6 +63,9 @@ export const Button = () => html`
   </p>
   <p>
     <gds-button class="sharp outline glow" size="m">Inner glow</gds-button>
+  </p>
+  <p>
+    <gds-button class="shadow" size="m">Shadow</gds-button>
   </p>
   <gds-paragraph>
     <a href="https://www.martinstoeckli.ch/fontmap/fontmap.html" target="_blank">Here is a list of icon like fonts</a>
