@@ -5,11 +5,12 @@
 
 ## Properties
 
-| Property | Attribute | Description       | Type      | Default     |
-| -------- | --------- | ----------------- | --------- | ----------- |
-| `block`  | `block`   | Block element.    | `boolean` | `undefined` |
-| `href`   | `href`    | Link url.         | `string`  | `undefined` |
-| `target` | `target`  | Link open target. | `string`  | `undefined` |
+| Property | Attribute | Description                                          | Type      | Default     |
+| -------- | --------- | ---------------------------------------------------- | --------- | ----------- |
+| `block`  | `block`   | Block element.                                       | `boolean` | `undefined` |
+| `href`   | `href`    | Link url.                                            | `string`  | `undefined` |
+| `rel`    | `rel`     | Link rel. (can be used for nofollow, sponsored etc.) | `string`  | `undefined` |
+| `target` | `target`  | Link open target.                                    | `string`  | `undefined` |
 
 
 ## Dependencies

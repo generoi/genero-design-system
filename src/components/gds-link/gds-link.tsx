@@ -17,13 +17,17 @@ export class GdsLink {
    */
   @Prop() target: string
   /**
+   * Link rel. (can be used for nofollow, sponsored etc.)
+   */
+  @Prop({ reflect: true }) rel: string
+  /**
    * Block element.
    */
   @Prop({ reflect: true }) block: boolean
 
   render() {
     return (
-      <a href={this.href} target={this.target}>
+      <a href={this.href} target={this.target} rel={this.rel}>
         <slot></slot>
       </a>
     )

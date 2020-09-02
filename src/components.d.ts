@@ -55,6 +55,10 @@ export namespace Components {
          */
         "href": string;
         /**
+          * Link rel. (can be used for nofollow, sponsored etc.)
+         */
+        "rel": string;
+        /**
           * Link open target.
          */
         "target": string;
@@ -329,6 +333,10 @@ declare namespace LocalJSX {
           * Link url.
          */
         "href"?: string;
+        /**
+          * Link rel. (can be used for nofollow, sponsored etc.)
+         */
+        "rel"?: string;
         /**
           * Link open target.
          */

@@ -13,4 +13,7 @@ export const Link = () => html`
   <p>
     <gds-link>Link without href</gds-link>
   </p>
+  <p>
+    <gds-link href="https://www.genero.fi" rel="nofollow">Basic Link with nofollow</gds-link>
+  </p>
 `
