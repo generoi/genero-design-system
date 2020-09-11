@@ -50,11 +50,19 @@ export class GdsButton {
     return (
       <Host>
         <button class={`button size-${this.size}`} disabled={this.disabled} style={iconStyleVariables}>
-          <slot name="left-icon">{this.leftIcon && <span>{this.leftIcon}</span>}</slot>
+          {this.leftIcon && (
+            <slot name="left-icon">
+              <span>{this.leftIcon}</span>
+            </slot>
+          )}
           <span>
             <slot></slot>
           </span>
-          <slot name="right-icon">{this.rightIcon && <span>{this.rightIcon}</span>}</slot>
+          {this.rightIcon && (
+            <slot name="right-icon">
+              <span>{this.rightIcon}</span>
+            </slot>
+          )}
         </button>
       </Host>
     )
