@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.32.0](https://github.com/generoi/genero-design-system/compare/v0.31.0...v0.32.0) (2020-09-14)
+
+
+### Features
+
+* **icon:** add Font Awesome icons as gds-icon ([5c84122](https://github.com/generoi/genero-design-system/commit/5c84122d26756ac5b9d536289ae9f0413f6a270f))
+
+
+### Bug Fixes
+
+* **button, text-button:** slotted icons not rendering ([b1382c1](https://github.com/generoi/genero-design-system/commit/b1382c18caa97faa85af06d6152e8eb9d2cee5cc))
+
 ## [0.31.0](https://github.com/generoi/genero-design-system/compare/v0.30.0...v0.31.0) (2020-09-11)
 
 
