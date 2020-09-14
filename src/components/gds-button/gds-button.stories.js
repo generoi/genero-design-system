@@ -24,8 +24,15 @@ export const Button = () => html`
   <p>
     <gds-button right-icon-rotate="90">
       <span slot="left-icon">❮</span>
-      Using slots
+      Icons using slots
       <span slot="right-icon">❮</span>
+    </gds-button>
+  </p>
+  <p>
+    <gds-button right-icon-rotate="90">
+      <span slot="left-icon"><span>❮</span></span>
+      Using using slots with element
+      <span slot="right-icon"><span>❮</span></span>
     </gds-button>
   </p>
   <p>

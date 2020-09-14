@@ -1,0 +1,8 @@
+@mixin base {
+  color: var(--icon-color, inherit);
+  font-size: var(--icon-font-size, inherit);
+
+  &:hover {
+    color: var(--icon-color-hover, inherit);
+  }
+}
