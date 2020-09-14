@@ -35,6 +35,23 @@ export namespace Components {
          */
         "size": string;
     }
+    interface GdsIcon {
+        /**
+          * Style overrides.
+         */
+        "class": string;
+        "duotone": boolean;
+        "light": boolean;
+        /**
+          * FA icon name.
+         */
+        "name": string;
+        /**
+          * FA icon style. Only use one style.
+         */
+        "regular": boolean;
+        "solid": boolean;
+    }
     interface GdsLabel {
         /**
           * Text color. TODO: Implement the color custom variable scheme.
@@ -194,6 +211,12 @@ declare global {
         prototype: HTMLGdsHeadingElement;
         new (): HTMLGdsHeadingElement;
     };
+    interface HTMLGdsIconElement extends Components.GdsIcon, HTMLStencilElement {
+    }
+    var HTMLGdsIconElement: {
+        prototype: HTMLGdsIconElement;
+        new (): HTMLGdsIconElement;
+    };
     interface HTMLGdsLabelElement extends Components.GdsLabel, HTMLStencilElement {
     }
     var HTMLGdsLabelElement: {
@@ -270,6 +293,7 @@ declare global {
         "gds-button": HTMLGdsButtonElement;
         "gds-card": HTMLGdsCardElement;
         "gds-heading": HTMLGdsHeadingElement;
+        "gds-icon": HTMLGdsIconElement;
         "gds-label": HTMLGdsLabelElement;
         "gds-link": HTMLGdsLinkElement;
         "gds-logo-grid": HTMLGdsLogoGridElement;
@@ -313,6 +337,23 @@ declare namespace LocalJSX {
           * Size of the heading.
          */
         "size"?: string;
+    }
+    interface GdsIcon {
+        /**
+          * Style overrides.
+         */
+        "class"?: string;
+        "duotone"?: boolean;
+        "light"?: boolean;
+        /**
+          * FA icon name.
+         */
+        "name"?: string;
+        /**
+          * FA icon style. Only use one style.
+         */
+        "regular"?: boolean;
+        "solid"?: boolean;
     }
     interface GdsLabel {
         /**
@@ -457,6 +498,7 @@ declare namespace LocalJSX {
         "gds-button": GdsButton;
         "gds-card": GdsCard;
         "gds-heading": GdsHeading;
+        "gds-icon": GdsIcon;
         "gds-label": GdsLabel;
         "gds-link": GdsLink;
         "gds-logo-grid": GdsLogoGrid;
@@ -478,6 +520,7 @@ declare module "@stencil/core" {
             "gds-button": LocalJSX.GdsButton & JSXBase.HTMLAttributes<HTMLGdsButtonElement>;
             "gds-card": LocalJSX.GdsCard & JSXBase.HTMLAttributes<HTMLGdsCardElement>;
             "gds-heading": LocalJSX.GdsHeading & JSXBase.HTMLAttributes<HTMLGdsHeadingElement>;
+            "gds-icon": LocalJSX.GdsIcon & JSXBase.HTMLAttributes<HTMLGdsIconElement>;
             "gds-label": LocalJSX.GdsLabel & JSXBase.HTMLAttributes<HTMLGdsLabelElement>;
             "gds-link": LocalJSX.GdsLink & JSXBase.HTMLAttributes<HTMLGdsLinkElement>;
             "gds-logo-grid": LocalJSX.GdsLogoGrid & JSXBase.HTMLAttributes<HTMLGdsLogoGridElement>;
