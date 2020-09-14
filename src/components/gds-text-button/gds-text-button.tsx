@@ -1,4 +1,5 @@
-import { Component, Prop, h, Host } from '@stencil/core'
+import { Component, Prop, h, Host, Element } from '@stencil/core'
+import { HTMLStencilElement } from '@stencil/core/internal'
 
 /**
  * This is a button with optional left and right icons.
@@ -36,6 +37,19 @@ export class GdsTextButton {
    */
   @Prop() leftIconRotate: number
 
+  /**
+   * Used to hide icon slots if they are empty:
+   * https://stackoverflow.com/questions/56092693/stenciljs-check-if-named-slot-is-empty
+   */
+  @Element() hostElement: HTMLStencilElement
+  hasLeftIconSlot: boolean
+  hasRightIconSlot: boolean
+
+  componentWillRender() {
+    this.hasLeftIconSlot = !!this.hostElement.querySelector('[slot="left-icon"]')
+    this.hasRightIconSlot = !!this.hostElement.querySelector('[slot="right-icon"]')
+  }
+
   render() {
     const iconStyleVariables = {}
 
@@ -50,11 +64,15 @@ export class GdsTextButton {
     return (
       <Host>
         <button class={`button size-${this.size}`} disabled={this.disabled} style={iconStyleVariables}>
-          <slot name="left-icon">{this.leftIcon && <span>{this.leftIcon}</span>}</slot>
+          {(this.hasLeftIconSlot || this.leftIcon) && (
+            <slot name="left-icon">{this.leftIcon && <span>{this.leftIcon}</span>}</slot>
+          )}
           <span>
             <slot></slot>
           </span>
-          <slot name="right-icon">{this.rightIcon && <span>{this.rightIcon}</span>}</slot>
+          {(this.hasRightIconSlot || this.rightIcon) && (
+            <slot name="right-icon">{this.rightIcon && <span>{this.rightIcon}</span>}</slot>
+          )}
         </button>
       </Host>
     )
