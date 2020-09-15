@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.34.0](https://github.com/generoi/genero-design-system/compare/v0.33.0...v0.34.0) (2020-09-15)
+
+
+### Features
+
+* add variable --card-text-align ([9ef974b](https://github.com/generoi/genero-design-system/commit/9ef974bcb7c39b48745e36f629e71559256e0ac3))
+
 ## [0.33.0](https://github.com/generoi/genero-design-system/compare/v0.30.0...v0.33.0) (2020-09-15)
 
 
