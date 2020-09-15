@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.35.0](https://github.com/generoi/genero-design-system/compare/v0.34.0...v0.35.0) (2020-09-15)
+
+
+### Bug Fixes
+
+* **gds-card:** remove align-items ([fd2ec27](https://github.com/generoi/genero-design-system/commit/fd2ec2788d577c7d52bc9a08db33519e46db963f))
+
 ## [0.34.0](https://github.com/generoi/genero-design-system/compare/v0.33.0...v0.34.0) (2020-09-15)
 
 
