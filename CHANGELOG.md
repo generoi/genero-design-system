@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.37.0](https://github.com/generoi/genero-design-system/compare/v0.36.0...v0.37.0) (2020-09-18)
+
+
+### Features
+
+* **label:** add --label-text-transform css variable ([5e1be19](https://github.com/generoi/genero-design-system/commit/5e1be19e106b052711570de4e025d0f8e6ac8b3b))
+* **menu, menu-item:** add 4 css variables ([ced896a](https://github.com/generoi/genero-design-system/commit/ced896a89b24dcdc000f6d1e88444f9c2d0020e7))
+* **navigation:** add styling customizations especially for mobile ([9c0b02a](https://github.com/generoi/genero-design-system/commit/9c0b02abe4569ae1c89956b19e3495824bc61085))
+
 ## [0.36.0](https://github.com/generoi/genero-design-system/compare/v0.35.0...v0.36.0) (2020-09-18)
 
 
