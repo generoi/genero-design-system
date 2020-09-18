@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.36.0](https://github.com/generoi/genero-design-system/compare/v0.35.0...v0.36.0) (2020-09-18)
+
+
+### Features
+
+* **icon:** better default value for hover ([e1dbce2](https://github.com/generoi/genero-design-system/commit/e1dbce256c31a2042b702e20edc3010e209780c2))
+* **navigation:** can slot anything for the mobile hamburger icon ([db08d1d](https://github.com/generoi/genero-design-system/commit/db08d1dec3be221c7725dfffb1910868cf357adc))
+
 ## [0.35.0](https://github.com/generoi/genero-design-system/compare/v0.34.0...v0.35.0) (2020-09-15)
 
 
