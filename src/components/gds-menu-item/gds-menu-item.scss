@@ -7,7 +7,7 @@ li {
 
 .active {
   @include mobileOnly {
-    background-color: var(--background-color-primary);
+    background-color: var(--menu-item-background-color-active, var(--background-color-primary));
   }
 }
 
@@ -44,10 +44,11 @@ li {
   position: relative;
   width: 100%;
   height: 0;
+  display: var(--menu-item-underline-display, block);
 
   // Hide underline on mobile.
   @include mobileAndTablet {
-    display: none;
+    display: var(--menu-item-underline-display, none);
   }
 }
 

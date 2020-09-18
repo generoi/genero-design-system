@@ -181,6 +181,12 @@
   --navigation-desktop-height: 100px;
   --navigation-mobile-height: 70px;
 
+  /* Menu */
+  --menu-text-align: left;
+  --menu-item-background-color-active: var(--background-color-primary);
+  // By default this is visible on desktop and hidden on mobile.
+  // --menu-item-underline-display: none;
+
   /* Card */
   --card-border: none;
   --card-border-radius: 40px;
