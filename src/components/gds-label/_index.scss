@@ -1,6 +1,6 @@
 @mixin base {
   font-family: var(--label-font-family);
-  text-transform: uppercase;
+  text-transform: var(--label-text-transform, uppercase);
 }
 
 @mixin size-xl {
