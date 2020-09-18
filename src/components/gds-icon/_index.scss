@@ -3,6 +3,6 @@
   font-size: var(--icon-font-size, inherit);
 
   &:hover {
-    color: var(--icon-color-hover, inherit);
+    color: var(--icon-color-hover, var(--icon-color));
   }
 }
