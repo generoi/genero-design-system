@@ -54,5 +54,37 @@ export const Navigation = () => html`
       </gds-menu>
     </div>
   </gds-navigation>
+
   <gds-paragraph>Navigation adjusts to the screen width.</gds-paragraph>
+
+  <gds-navigation>
+    <a slot="logo" href="/">
+      <img src="images/genero-logo.png" />
+    </a>
+    <div slot="menu">
+      <gds-menu key="123">
+        <a slot="item" href="#first">
+          <gds-menu-item>First item</gds-menu-item>
+        </a>
+        <a slot="item" href="#2">
+          <gds-menu-item active>Second item</gds-menu-item>
+        </a>
+        <a slot="item" href="#short">
+          <gds-menu-item>Short</gds-menu-item>
+        </a>
+        <a slot="item" href="#4">
+          <gds-menu-item>And with ÖÄÅ</gds-menu-item>
+        </a>
+      </gds-menu>
+    </div>
+    <style>
+      gds-icon {
+        --icon-color: #4444cc;
+        --icon-font-size: 44px;
+      }
+    </style>
+    <gds-icon name="hamburger" slot="hamburger-icon" />
+  </gds-navigation>
+
+  <gds-paragraph>Mobile navigation can have custom hamburger icon.</gds-paragraph>
 `

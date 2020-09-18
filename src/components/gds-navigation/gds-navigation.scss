@@ -73,8 +73,12 @@ nav.gds-navigation-nav {
 }
 
 .gds-navigation-hamburger {
-  --button-l-font-size: 30px;
-  --button-l-padding: 16px;
+  --text-button-l-font-size: 30px;
+  --text-button-l-padding: var(--spacing-s);
+
+  [slot='hamburger-icon'] {
+    padding-right: var(--spacing-s);
+  }
 
   @include desktopOnly {
     display: none;

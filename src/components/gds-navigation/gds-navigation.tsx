@@ -1,4 +1,5 @@
-import { Component, h, Host, State, Prop } from '@stencil/core'
+import { Component, h, Host, State, Prop, Element } from '@stencil/core'
+import { HTMLStencilElement } from '@stencil/core/internal'
 
 /**
  * gds-navigation takes 4 slots: logo, menu, mobile-extensions, and desktop-extensions.
@@ -7,7 +8,7 @@ import { Component, h, Host, State, Prop } from '@stencil/core'
 @Component({
   tag: 'gds-navigation',
   styleUrl: 'gds-navigation.scss',
-  // We want to use Light DOM so that the elements the the slots are easier to style.
+  // We want to use Light DOM so that the elements in the slots are easier to style.
   shadow: false,
   // No need for scoping because css classes are prefixed.
   scoped: false,
@@ -29,6 +30,18 @@ export class GdsNavigation {
    * Content element that get's hidden in mobile menu.
    */
   private content: HTMLElement
+
+  /**
+   * Used to hide slots if they are empty:
+   * https://stackoverflow.com/questions/56092693/stenciljs-check-if-named-slot-is-empty
+   */
+  @Element() hostElement: HTMLStencilElement
+
+  hasHamburgerIconSlot: boolean
+
+  componentWillRender() {
+    this.hasHamburgerIconSlot = !!this.hostElement.querySelector('[slot="hamburger-icon"]')
+  }
 
   render() {
     // Toggle manu open (mobile only).
@@ -71,10 +84,10 @@ export class GdsNavigation {
               <slot name="desktop-extensions"></slot>
             </div>
 
-            <div class="gds-navigation-hamburger">
-              <gds-text-button size="l" onClick={onHamburgerClick}>
-                {this.menuIcon}
-              </gds-text-button>
+            <div class="gds-navigation-hamburger" onClick={onHamburgerClick}>
+              <slot name="hamburger-icon"></slot>
+
+              {!this.hasHamburgerIconSlot && <gds-text-button size="l">{this.menuIcon}</gds-text-button>}
             </div>
           </div>
         </header>
