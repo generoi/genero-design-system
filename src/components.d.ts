@@ -147,10 +147,6 @@ export namespace Components {
         "active": boolean;
     }
     interface GdsNavigation {
-        /**
-          * Does the navigation appear as transparent.
-         */
-        "transparent": boolean;
     }
     interface GdsParagraph {
         /**
@@ -450,10 +446,6 @@ declare namespace LocalJSX {
         "active"?: boolean;
     }
     interface GdsNavigation {
-        /**
-          * Does the navigation appear as transparent.
-         */
-        "transparent"?: boolean;
     }
     interface GdsParagraph {
         /**

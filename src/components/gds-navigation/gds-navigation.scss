@@ -4,11 +4,7 @@ $grid-item-desktop-size: 263px;
 $grid-item-mobile-size: 180px;
 
 header.gds-navigation-header {
-  background-color: var(--navigation-background-color);
-}
-header.gds-navigation-transparent {
-  background-color: transparent;
-  --navigation-color: var(--navigation-color-transparent, white);
+  background: var(--navigation-background, transparent);
 }
 
 .gds-navigation-container {
@@ -35,15 +31,19 @@ header.gds-navigation-transparent {
 
 .gds-navigation-content {
   display: flex;
+  flex-grow: 1;
+  justify-content: center;
+  background: var(--navigation-content-background, transparent);
 
   @include mobileAndTablet {
     display: none;
     position: absolute;
     background-color: white;
-    top: var(--navigation-mobile-height);
+    padding-top: var(--navigation-mobile-height);
+    top: 0;
     left: 0;
     right: 0;
-    border-top: 2px solid var(--body-background-color);
+    // border-top: 2px solid var(--body-background-color);
     z-index: 100;
   }
 }
@@ -76,12 +76,37 @@ nav.gds-navigation-nav {
   --text-button-l-font-size: 30px;
   --text-button-l-padding: var(--spacing-s);
 
-  [slot='hamburger-icon'] {
-    padding-right: var(--spacing-s);
-  }
+  z-index: 101;
+  position: relative;
 
   @include desktopOnly {
     display: none;
+  }
+}
+
+[slot='menu-icon'],
+[slot='close-menu-icon'] {
+  padding-right: var(--spacing-s);
+}
+
+.close {
+  [slot='menu-icon'] {
+    display: block;
+  }
+  [slot='close-menu-icon'] {
+    display: none;
+  }
+}
+
+.open {
+  z-index: 1000;
+  position: relative;
+
+  [slot='menu-icon'] {
+    display: none;
+  }
+  [slot='close-menu-icon'] {
+    display: block;
   }
 }
 
@@ -89,12 +114,15 @@ nav.gds-navigation-nav {
   display: flex;
   align-items: center;
   padding-left: var(--spacing-s);
-
+  z-index: 101;
+  position: relative;
   height: var(--navigation-mobile-height);
   & img {
     height: 32px;
   }
+
   @include desktopOnly {
+    flex-grow: 0;
     padding-left: var(--spacing-l);
     height: var(--navigation-desktop-height);
     & img {

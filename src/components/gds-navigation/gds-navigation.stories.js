@@ -83,8 +83,49 @@ export const Navigation = () => html`
         --icon-font-size: 44px;
       }
     </style>
-    <gds-icon name="hamburger" slot="hamburger-icon" />
+    <gds-icon name="hamburger" slot="menu-icon"></gds-icon>
+    <gds-icon name="times" light slot="close-menu-icon"></gds-icon>
   </gds-navigation>
 
   <gds-paragraph>Mobile navigation can have custom hamburger icon.</gds-paragraph>
+
+  <style>
+    .custom-menu-background .open {
+      --navigation-color: var(--color-white);
+      --icon-color: var(--navigation-color);
+      --icon-color-hover: var(--navigation-color);
+      --navigation-content-background: repeating-linear-gradient(to right, #166e3b, #166e3b 10px, #146635 10px, #146635 20px);
+      --menu-item-background-color-active: transparent;
+      --menu-item-underline-display: block;
+      --label-text-transform: none;
+    }
+    .custom-menu-background gds-icon {
+      --icon-color: var(--navigation-color);
+    }
+  </style>
+  <gds-navigation class="custom-menu-background">
+    <a slot="logo" href="/">
+      <img src="images/genero-logo.png" />
+    </a>
+    <div slot="menu">
+      <gds-menu key="123">
+        <a slot="item" href="#first">
+          <gds-menu-item>First item</gds-menu-item>
+        </a>
+        <a slot="item" href="#2">
+          <gds-menu-item active>Second item</gds-menu-item>
+        </a>
+        <a slot="item" href="#short">
+          <gds-menu-item>Short</gds-menu-item>
+        </a>
+        <a slot="item" href="#4">
+          <gds-menu-item>And with ÖÄÅ</gds-menu-item>
+        </a>
+      </gds-menu>
+    </div>
+    <gds-icon name="hamburger" slot="menu-icon"></gds-icon>
+    <gds-icon name="times" light slot="close-menu-icon"></gds-icon>
+  </gds-navigation>
+
+  <gds-paragraph>Mobile navigation can have custom styles for opened mobile menu.</gds-paragraph>
 `

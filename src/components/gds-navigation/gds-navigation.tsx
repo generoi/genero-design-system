@@ -1,4 +1,4 @@
-import { Component, h, Host, State, Prop, Element } from '@stencil/core'
+import { Component, h, Host, State, Element } from '@stencil/core'
 import { HTMLStencilElement } from '@stencil/core/internal'
 
 /**
@@ -15,17 +15,13 @@ import { HTMLStencilElement } from '@stencil/core/internal'
 })
 export class GdsNavigation {
   /**
-   * Does the navigation appear as transparent.
-   */
-  @Prop() transparent: boolean
-  /**
-   * Mobile menu icon.
+   * Mobile menu icon. Can be overridden by slots (menu-icon, close-menu-icon).
    */
   @State() menuIcon: string = '☰'
   /**
-   *
+   * True if the mobile menu is open.
    */
-  @State() open: boolean
+  @State() open: boolean = false
   /**
    * Content element that get's hidden in mobile menu.
    */
@@ -37,10 +33,14 @@ export class GdsNavigation {
    */
   @Element() hostElement: HTMLStencilElement
 
-  hasHamburgerIconSlot: boolean
+  hasMenuIconSlot: boolean
+  hasMobileExtensionsSlot: boolean
+  hasDesktopExtensionsSlot: boolean
 
   componentWillRender() {
-    this.hasHamburgerIconSlot = !!this.hostElement.querySelector('[slot="hamburger-icon"]')
+    this.hasMenuIconSlot = !!this.hostElement.querySelector('[slot="menu-icon"]')
+    this.hasMobileExtensionsSlot = !!this.hostElement.querySelector('[slot="mobile-extensions"]')
+    this.hasDesktopExtensionsSlot = !!this.hostElement.querySelector('[slot="desktop-extensions"]')
   }
 
   render() {
@@ -63,7 +63,8 @@ export class GdsNavigation {
         <header
           class={{
             'gds-navigation-header': true,
-            'gds-navigation-transparent': this.transparent,
+            open: this.open,
+            close: !this.open,
           }}>
           <div class="gds-navigation-container">
             <div class="gds-navigation-logo">
@@ -75,19 +76,24 @@ export class GdsNavigation {
                 <slot name="menu"></slot>
               </nav>
 
-              <div class="gds-navigation-mobile-extensions">
-                <slot name="mobile-extensions"></slot>
-              </div>
+              {this.hasMobileExtensionsSlot && (
+                <div class="gds-navigation-mobile-extensions">
+                  <slot name="mobile-extensions"></slot>
+                </div>
+              )}
             </div>
 
-            <div class="gds-navigation-desktop-extensions">
-              <slot name="desktop-extensions"></slot>
-            </div>
+            {this.hasDesktopExtensionsSlot && (
+              <div class="gds-navigation-desktop-extensions">
+                <slot name="desktop-extensions"></slot>
+              </div>
+            )}
 
             <div class="gds-navigation-hamburger" onClick={onHamburgerClick}>
-              <slot name="hamburger-icon"></slot>
+              <slot name="menu-icon"></slot>
+              <slot name="close-menu-icon"></slot>
 
-              {!this.hasHamburgerIconSlot && <gds-text-button size="l">{this.menuIcon}</gds-text-button>}
+              {!this.hasMenuIconSlot && <gds-text-button size="l">{this.menuIcon}</gds-text-button>}
             </div>
           </div>
         </header>

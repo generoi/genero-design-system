@@ -3,13 +3,6 @@
 <!-- Auto Generated Below -->
 
 
-## Properties
-
-| Property      | Attribute     | Description                                | Type      | Default     |
-| ------------- | ------------- | ------------------------------------------ | --------- | ----------- |
-| `transparent` | `transparent` | Does the navigation appear as transparent. | `boolean` | `undefined` |
-
-
 ## Dependencies
 
 ### Depends on
