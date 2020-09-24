@@ -6,6 +6,16 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
+    interface GdsAccordion {
+        /**
+          * Content floats.
+         */
+        "contentFloats": boolean;
+        /**
+          * Opens automatically when hovered (desktop only).
+         */
+        "openOnHover": boolean;
+    }
     interface GdsButton {
         "disabled": boolean;
         /**
@@ -189,6 +199,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLGdsAccordionElement extends Components.GdsAccordion, HTMLStencilElement {
+    }
+    var HTMLGdsAccordionElement: {
+        prototype: HTMLGdsAccordionElement;
+        new (): HTMLGdsAccordionElement;
+    };
     interface HTMLGdsButtonElement extends Components.GdsButton, HTMLStencilElement {
     }
     var HTMLGdsButtonElement: {
@@ -286,6 +302,7 @@ declare global {
         new (): HTMLGdsTextButtonElement;
     };
     interface HTMLElementTagNameMap {
+        "gds-accordion": HTMLGdsAccordionElement;
         "gds-button": HTMLGdsButtonElement;
         "gds-card": HTMLGdsCardElement;
         "gds-heading": HTMLGdsHeadingElement;
@@ -305,6 +322,16 @@ declare global {
     }
 }
 declare namespace LocalJSX {
+    interface GdsAccordion {
+        /**
+          * Content floats.
+         */
+        "contentFloats"?: boolean;
+        /**
+          * Opens automatically when hovered (desktop only).
+         */
+        "openOnHover"?: boolean;
+    }
     interface GdsButton {
         "disabled"?: boolean;
         /**
@@ -487,6 +514,7 @@ declare namespace LocalJSX {
         "size"?: string;
     }
     interface IntrinsicElements {
+        "gds-accordion": GdsAccordion;
         "gds-button": GdsButton;
         "gds-card": GdsCard;
         "gds-heading": GdsHeading;
@@ -509,6 +537,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "gds-accordion": LocalJSX.GdsAccordion & JSXBase.HTMLAttributes<HTMLGdsAccordionElement>;
             "gds-button": LocalJSX.GdsButton & JSXBase.HTMLAttributes<HTMLGdsButtonElement>;
             "gds-card": LocalJSX.GdsCard & JSXBase.HTMLAttributes<HTMLGdsCardElement>;
             "gds-heading": LocalJSX.GdsHeading & JSXBase.HTMLAttributes<HTMLGdsHeadingElement>;

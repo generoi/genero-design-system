@@ -1,7 +1,7 @@
 import { html } from 'lit-html'
 
 export default {
-  title: 'Atomic Elements',
+  title: 'Complex Components',
   component: 'gds-tag',
 }
 

@@ -1,7 +1,7 @@
 import { html } from 'lit-html'
 
 export default {
-  title: 'Containers',
+  title: 'Atomic Elements',
   component: 'gds-card',
 }
 
