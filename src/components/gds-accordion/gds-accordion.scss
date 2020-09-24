@@ -1,0 +1,77 @@
+@use "../../styles/breakpoints" as *;
+
+.accordion {
+  color: var(--accordion-color, inherit);
+  background: var(--accordion-background, var(--color-white));
+  border: var(--accordion-border);
+  border-radius: var(--accordion-border-radius);
+  box-shadow: var(--accordion-box-shadow);
+  position: relative;
+  // Can't have this with floating.
+  // overflow: hidden;
+
+  .content {
+    box-sizing: border-box;
+    display: none;
+    background: var(--accordion-content-background, var(--color-white));
+    padding: var(--accordion-padding, var(--spacing-s));
+
+    // These are required because we can't have overflow: hidden with floating.
+    border-bottom-right-radius: var(--accordion-border-radius);
+    border-bottom-left-radius: var(--accordion-border-radius);
+  }
+
+  .contentFloats {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    box-shadow: var(--accordion-box-shadow);
+  }
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    padding: var(--accordion-padding, var(--spacing-s));
+
+    // These are required because we can't have overflow: hidden with floating.
+    border-top-right-radius: var(--accordion-border-radius);
+    border-top-left-radius: var(--accordion-border-radius);
+  }
+
+  .iconCollapse {
+    display: none;
+  }
+  .iconExpand {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  @mixin expanded {
+    .iconCollapse {
+      display: block;
+    }
+    .iconExpand {
+      display: none;
+    }
+    .header {
+      background: var(--accordion-expanded-header-background, var(--color-white));
+    }
+    .content {
+      display: block;
+    }
+  }
+
+  // Logic for expanding by clicking.
+  &.expanded {
+    @include expanded;
+  }
+
+  // Logic for expanding by hovering on desktop.
+  @include desktopOnly {
+    &.openOnHover:hover {
+      @include expanded;
+    }
+  }
+}
