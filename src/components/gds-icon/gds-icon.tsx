@@ -2,6 +2,14 @@ import { Component, Prop, h } from '@stencil/core'
 
 /**
  * Wraps Font Awesome icons.
+ *
+ * There is a small problem with Fontawesome and shadow dom. So when you load the fontawesome script
+ * in the top of the page, it won't be able to access the icon inside the shadow dom and thus won't be
+ * able to display the icon. So there are two options I think:
+ *
+ * 1) Use icons via slots. Then the fontawesome script can properly transform the i elements to svgs.
+ * 2) Investigate how to use this inside gds-icon:
+ * https://fontawesome.com/how-to-use/on-the-web/advanced/svg-javascript-core
  */
 @Component({
   tag: 'gds-icon',
