@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.38.0](https://github.com/generoi/genero-design-system/compare/v0.37.0...v0.38.0) (2020-09-24)
+
+
+### Features
+
+* **accordion:** add gds-accordion ([1c1eee0](https://github.com/generoi/genero-design-system/commit/1c1eee0c8d971ee9ba36d83e78fba6a3fc5c2384))
+* **storybook:** rename component classifications ([4df47be](https://github.com/generoi/genero-design-system/commit/4df47be2194c52fe0504681b493b39d1ec96800c))
+
 ## [0.37.0](https://github.com/generoi/genero-design-system/compare/v0.36.0...v0.37.0) (2020-09-18)
 
 
