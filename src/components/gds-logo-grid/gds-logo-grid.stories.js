@@ -3,7 +3,8 @@ import { html } from 'lit-html'
 import { getMockImageUrl } from '../../stories/utils'
 
 export default {
-  title: 'Containers',
+  // NOTE: This is now classified like this since it requires the gds-logo-grid-item children to function properly.
+  title: 'Complex Components',
   component: 'gds-logo-grid',
 }
 

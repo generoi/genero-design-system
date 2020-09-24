@@ -1,7 +1,8 @@
 import { html } from 'lit-html'
 
 export default {
-  title: 'Containers',
+  // NOTE: This is now classified like this since it requires the gds-menu-item children to function properly.
+  title: 'Complex Components',
   component: 'gds-menu',
 }
 

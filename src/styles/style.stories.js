@@ -1,7 +1,7 @@
 import { html } from 'lit-html'
 
 export default {
-  title: 'Atomic Elements',
+  title: 'Design Tokens',
   component: 'gds-paragraph',
 }
 
