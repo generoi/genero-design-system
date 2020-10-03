@@ -3,3 +3,7 @@
 :host {
   @include card;
 }
+
+:host(:hover) {
+  box-shadow: var(--card-box-shadow-hover);
+}

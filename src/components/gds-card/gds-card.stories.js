@@ -27,6 +27,7 @@ export const Card = () => html`
       padding: 40px;
       --card-background-color: transparent;
       --card-box-shadow: none;
+      --card-box-shadow-hover: none;
     }
     .variation-3 {
       padding: 40px;
