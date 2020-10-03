@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.39.0](https://github.com/generoi/genero-design-system/compare/v0.35.0...v0.39.0) (2020-10-03)
+
+
+### Features
+
+* **accordion:** add gds-accordion ([1c1eee0](https://github.com/generoi/genero-design-system/commit/1c1eee0c8d971ee9ba36d83e78fba6a3fc5c2384))
+* **card:** add --card-box-shadow-hover css variable ([fa9d2a5](https://github.com/generoi/genero-design-system/commit/fa9d2a5d04ee3ef2e3a8efc89e0bb39c66714833))
+* **icon:** better default value for hover ([e1dbce2](https://github.com/generoi/genero-design-system/commit/e1dbce256c31a2042b702e20edc3010e209780c2))
+* **label:** add --label-text-transform css variable ([5e1be19](https://github.com/generoi/genero-design-system/commit/5e1be19e106b052711570de4e025d0f8e6ac8b3b))
+* **menu, menu-item:** add 4 css variables ([ced896a](https://github.com/generoi/genero-design-system/commit/ced896a89b24dcdc000f6d1e88444f9c2d0020e7))
+* **navigation:** add styling customizations especially for mobile ([9c0b02a](https://github.com/generoi/genero-design-system/commit/9c0b02abe4569ae1c89956b19e3495824bc61085))
+* **navigation:** can slot anything for the mobile hamburger icon ([db08d1d](https://github.com/generoi/genero-design-system/commit/db08d1dec3be221c7725dfffb1910868cf357adc))
+* **storybook:** rename component classifications ([4df47be](https://github.com/generoi/genero-design-system/commit/4df47be2194c52fe0504681b493b39d1ec96800c))
+
 ## [0.38.0](https://github.com/generoi/genero-design-system/compare/v0.37.0...v0.38.0) (2020-09-24)
 
 
