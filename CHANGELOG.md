@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.40.0](https://github.com/generoi/genero-design-system/compare/v0.39.0...v0.40.0) (2020-10-05)
+
+
+### Bug Fixes
+
+* **card:** add transition for box-shadow hover ([a28df8f](https://github.com/generoi/genero-design-system/commit/a28df8f856a587fd49f3f33eb08f713001e899d4))
+
 ## [0.39.0](https://github.com/generoi/genero-design-system/compare/v0.35.0...v0.39.0) (2020-10-03)
 
 
