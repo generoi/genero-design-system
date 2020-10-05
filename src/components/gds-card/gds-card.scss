@@ -2,6 +2,7 @@
 
 :host {
   @include card;
+  transition: box-shadow 0.3s;
 }
 
 :host(:hover) {
