@@ -8,3 +8,10 @@
 :host(:hover) {
   box-shadow: var(--card-box-shadow-hover);
 }
+
+:host(:active),
+:host(:focus),
+:host(:focus-within) {
+  outline: none;
+  box-shadow: var(--card-box-shadow-active);
+}

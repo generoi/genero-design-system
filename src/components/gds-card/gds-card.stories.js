@@ -28,6 +28,7 @@ export const Card = () => html`
       --card-background-color: transparent;
       --card-box-shadow: none;
       --card-box-shadow-hover: none;
+      --card-box-shadow-active: none;
     }
     .variation-3 {
       padding: 40px;
