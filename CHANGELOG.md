@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.41.0](https://github.com/generoi/genero-design-system/compare/v0.40.0...v0.41.0) (2020-10-08)
+
+
+### Features
+
+* **card:** add --card-box-shadow-active css variable ([13577c2](https://github.com/generoi/genero-design-system/commit/13577c249101eff743e24ff77d2ada887a271e95))
+
+
+### Bug Fixes
+
+* **tag-group:** fix tag-group mobile gutters ([826004d](https://github.com/generoi/genero-design-system/commit/826004d1522e25bc913c21c32520ce0ddd961884))
+
 ## [0.40.0](https://github.com/generoi/genero-design-system/compare/v0.39.0...v0.40.0) (2020-10-05)
 
 
