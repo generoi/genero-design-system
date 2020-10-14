@@ -1,0 +1,17 @@
+@use "../gds-paragraph/index" as *;
+
+span {
+  @include size-m;
+}
+
+span.size-l {
+  @include size-l;
+}
+
+span.size-s {
+  @include size-s;
+}
+
+span.size-xs {
+  @include size-xs;
+}
