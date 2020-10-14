@@ -1,0 +1,26 @@
+.hint {
+  position: relative;
+  display: inline-block;
+}
+
+.icon {
+  cursor: pointer;
+}
+
+.content {
+  min-width: var(--gds-hint-min-width);
+  max-width: var(--gds-hint-max-width);
+  position: absolute;
+  bottom: 100%;
+  left: 100%;
+  color: var(--gds-hint-color);
+  background: var(--gds-hint-background);
+  padding: var(--spacing-xxs);
+  border: var(--gds-hint-border);
+  border-radius: var(--gds-hint-border-radius);
+  display: none;
+
+  &.open {
+    display: block;
+  }
+}

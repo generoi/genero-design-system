@@ -241,4 +241,16 @@
   --accordion-border-radius: 8px;
   --accordion-box-shadow: 0px 0px 8px #0000001f;
   --accordion-padding: var(--spacing-s);
+
+  /* Hint */
+  --gds-hint-color: var(--body-text-color);
+  --gds-hint-background: var(--color-white);
+  --gds-hint-border: 1px solid var(--color-ui-01);
+  --gds-hint-border-radius: 4px 4px 4px 0;
+  --gds-hint-min-width: 10vw;
+  --gds-hint-max-width: 80vw;
+
+  @include mobileAndTablet {
+    --gds-hint-min-width: 50vw;
+  }
 }
