@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/generoi/genero-design-system/compare/v1.0.0...v1.1.0) (2020-10-14)
+
+
+### Features
+
+* **heading:** add size specific font-family override ([3648164](https://github.com/generoi/genero-design-system/commit/3648164adacba09de3fe98d6f800ecb6c711034e))
+* **heading:** reorganize heading and paragraph css variables ([924f9c8](https://github.com/generoi/genero-design-system/commit/924f9c851a52d6a5e968f22a13099a7079fbdefa))
+* **input-wrapper:** use host element so it can be styled from outside ([a59117d](https://github.com/generoi/genero-design-system/commit/a59117d76e1b390b1bf962f2fc200c67c18f54b8))
+
 ## [1.0.0](https://github.com/generoi/genero-design-system/compare/v0.41.0...v1.0.0) (2020-10-14)
 
 
