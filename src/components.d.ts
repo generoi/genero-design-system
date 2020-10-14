@@ -45,6 +45,8 @@ export namespace Components {
          */
         "size": string;
     }
+    interface GdsHint {
+    }
     interface GdsIcon {
         /**
           * Style overrides.
@@ -61,6 +63,16 @@ export namespace Components {
          */
         "regular": boolean;
         "solid": boolean;
+    }
+    interface GdsInputWrapper {
+        /**
+          * TODO: Add this feature.
+         */
+        "error": string;
+        /**
+          * Display the label above the input element.
+         */
+        "label": string;
     }
     interface GdsLabel {
         /**
@@ -180,6 +192,12 @@ export namespace Components {
     }
     interface GdsTagGroup {
     }
+    interface GdsText {
+        /**
+          * Size of the text.
+         */
+        "size": string;
+    }
     interface GdsTextButton {
         "disabled": boolean;
         /**
@@ -223,11 +241,23 @@ declare global {
         prototype: HTMLGdsHeadingElement;
         new (): HTMLGdsHeadingElement;
     };
+    interface HTMLGdsHintElement extends Components.GdsHint, HTMLStencilElement {
+    }
+    var HTMLGdsHintElement: {
+        prototype: HTMLGdsHintElement;
+        new (): HTMLGdsHintElement;
+    };
     interface HTMLGdsIconElement extends Components.GdsIcon, HTMLStencilElement {
     }
     var HTMLGdsIconElement: {
         prototype: HTMLGdsIconElement;
         new (): HTMLGdsIconElement;
+    };
+    interface HTMLGdsInputWrapperElement extends Components.GdsInputWrapper, HTMLStencilElement {
+    }
+    var HTMLGdsInputWrapperElement: {
+        prototype: HTMLGdsInputWrapperElement;
+        new (): HTMLGdsInputWrapperElement;
     };
     interface HTMLGdsLabelElement extends Components.GdsLabel, HTMLStencilElement {
     }
@@ -295,6 +325,12 @@ declare global {
         prototype: HTMLGdsTagGroupElement;
         new (): HTMLGdsTagGroupElement;
     };
+    interface HTMLGdsTextElement extends Components.GdsText, HTMLStencilElement {
+    }
+    var HTMLGdsTextElement: {
+        prototype: HTMLGdsTextElement;
+        new (): HTMLGdsTextElement;
+    };
     interface HTMLGdsTextButtonElement extends Components.GdsTextButton, HTMLStencilElement {
     }
     var HTMLGdsTextButtonElement: {
@@ -306,7 +342,9 @@ declare global {
         "gds-button": HTMLGdsButtonElement;
         "gds-card": HTMLGdsCardElement;
         "gds-heading": HTMLGdsHeadingElement;
+        "gds-hint": HTMLGdsHintElement;
         "gds-icon": HTMLGdsIconElement;
+        "gds-input-wrapper": HTMLGdsInputWrapperElement;
         "gds-label": HTMLGdsLabelElement;
         "gds-link": HTMLGdsLinkElement;
         "gds-logo-grid": HTMLGdsLogoGridElement;
@@ -318,6 +356,7 @@ declare global {
         "gds-paragraph": HTMLGdsParagraphElement;
         "gds-tag": HTMLGdsTagElement;
         "gds-tag-group": HTMLGdsTagGroupElement;
+        "gds-text": HTMLGdsTextElement;
         "gds-text-button": HTMLGdsTextButtonElement;
     }
 }
@@ -361,6 +400,8 @@ declare namespace LocalJSX {
          */
         "size"?: string;
     }
+    interface GdsHint {
+    }
     interface GdsIcon {
         /**
           * Style overrides.
@@ -377,6 +418,16 @@ declare namespace LocalJSX {
          */
         "regular"?: boolean;
         "solid"?: boolean;
+    }
+    interface GdsInputWrapper {
+        /**
+          * TODO: Add this feature.
+         */
+        "error"?: string;
+        /**
+          * Display the label above the input element.
+         */
+        "label"?: string;
     }
     interface GdsLabel {
         /**
@@ -496,6 +547,12 @@ declare namespace LocalJSX {
     }
     interface GdsTagGroup {
     }
+    interface GdsText {
+        /**
+          * Size of the text.
+         */
+        "size"?: string;
+    }
     interface GdsTextButton {
         "disabled"?: boolean;
         /**
@@ -518,7 +575,9 @@ declare namespace LocalJSX {
         "gds-button": GdsButton;
         "gds-card": GdsCard;
         "gds-heading": GdsHeading;
+        "gds-hint": GdsHint;
         "gds-icon": GdsIcon;
+        "gds-input-wrapper": GdsInputWrapper;
         "gds-label": GdsLabel;
         "gds-link": GdsLink;
         "gds-logo-grid": GdsLogoGrid;
@@ -530,6 +589,7 @@ declare namespace LocalJSX {
         "gds-paragraph": GdsParagraph;
         "gds-tag": GdsTag;
         "gds-tag-group": GdsTagGroup;
+        "gds-text": GdsText;
         "gds-text-button": GdsTextButton;
     }
 }
@@ -541,7 +601,9 @@ declare module "@stencil/core" {
             "gds-button": LocalJSX.GdsButton & JSXBase.HTMLAttributes<HTMLGdsButtonElement>;
             "gds-card": LocalJSX.GdsCard & JSXBase.HTMLAttributes<HTMLGdsCardElement>;
             "gds-heading": LocalJSX.GdsHeading & JSXBase.HTMLAttributes<HTMLGdsHeadingElement>;
+            "gds-hint": LocalJSX.GdsHint & JSXBase.HTMLAttributes<HTMLGdsHintElement>;
             "gds-icon": LocalJSX.GdsIcon & JSXBase.HTMLAttributes<HTMLGdsIconElement>;
+            "gds-input-wrapper": LocalJSX.GdsInputWrapper & JSXBase.HTMLAttributes<HTMLGdsInputWrapperElement>;
             "gds-label": LocalJSX.GdsLabel & JSXBase.HTMLAttributes<HTMLGdsLabelElement>;
             "gds-link": LocalJSX.GdsLink & JSXBase.HTMLAttributes<HTMLGdsLinkElement>;
             "gds-logo-grid": LocalJSX.GdsLogoGrid & JSXBase.HTMLAttributes<HTMLGdsLogoGridElement>;
@@ -553,6 +615,7 @@ declare module "@stencil/core" {
             "gds-paragraph": LocalJSX.GdsParagraph & JSXBase.HTMLAttributes<HTMLGdsParagraphElement>;
             "gds-tag": LocalJSX.GdsTag & JSXBase.HTMLAttributes<HTMLGdsTagElement>;
             "gds-tag-group": LocalJSX.GdsTagGroup & JSXBase.HTMLAttributes<HTMLGdsTagGroupElement>;
+            "gds-text": LocalJSX.GdsText & JSXBase.HTMLAttributes<HTMLGdsTextElement>;
             "gds-text-button": LocalJSX.GdsTextButton & JSXBase.HTMLAttributes<HTMLGdsTextButtonElement>;
         }
     }
