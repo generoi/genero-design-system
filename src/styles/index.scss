@@ -43,53 +43,62 @@
 
   /* Headings */
   --heading-font-family: Gilroy, Arial, Helvetica, sans-serif;
+
   --heading-xs-font-family: var(--heading-font-family);
-  --heading-s-font-family: var(--heading-font-family);
-  --heading-m-font-family: var(--heading-font-family);
-  --heading-l-font-family: var(--heading-font-family);
-  --heading-xl-font-family: var(--heading-font-family);
-  --heading-xxl-font-family: var(--heading-font-family);
-  --heading-xs-font-size: 20px;
-  --heading-s-font-size: 19px;
-  --heading-m-font-size: 20px;
-  --heading-l-font-size: 36px;
-  --heading-xl-font-size: 60px;
-  --heading-xxl-font-size: 62px;
   --heading-xs-font-weight: 600;
-  --heading-s-font-weight: 500;
-  --heading-m-font-weight: 800;
-  --heading-l-font-weight: 600;
-  --heading-xl-font-weight: 600;
-  --heading-xxl-font-weight: 800;
+  --heading-xs-font-size: 20px;
   --heading-xs-line-height: 24px;
-  --heading-s-line-height: 23px;
-  --heading-m-line-height: 24px;
-  --heading-l-line-height: 36px;
-  --heading-xl-line-height: 60px;
-  --heading-xxl-line-height: 67px;
   --heading-xs-text-transform: uppercase;
-  --heading-s-text-transform: uppercase;
-  --heading-m-text-transform: uppercase;
-  --heading-l-text-transform: none;
-  --heading-xl-text-transform: none;
-  --heading-xxl-text-transform: uppercase;
   --heading-xs-letter-spacing: 1.6px;
+
+  --heading-s-font-family: var(--heading-font-family);
+  --heading-s-font-weight: 500;
+  --heading-s-font-size: 19px;
+  --heading-s-line-height: 23px;
+  --heading-s-text-transform: uppercase;
   --heading-s-letter-spacing: 3.8px;
+
+  --heading-m-font-family: var(--heading-font-family);
+  --heading-m-font-weight: 800;
+  --heading-m-font-size: 20px;
+  --heading-m-line-height: 24px;
+  --heading-m-text-transform: uppercase;
   --heading-m-letter-spacing: 1.6px;
+
+  --heading-l-font-family: var(--heading-font-family);
+  --heading-l-font-weight: 600;
+  --heading-l-font-size: 36px;
+  --heading-l-line-height: 36px;
+  --heading-l-text-transform: none;
   --heading-l-letter-spacing: 0px;
+
+  --heading-xl-font-family: var(--heading-font-family);
+  --heading-xl-font-weight: 600;
+  --heading-xl-font-size: 60px;
+  --heading-xl-line-height: 60px;
+  --heading-xl-text-transform: none;
   --heading-xl-letter-spacing: 0px;
+
+  --heading-xxl-font-family: var(--heading-font-family);
+  --heading-xxl-font-weight: 800;
+  --heading-xxl-font-size: 62px;
+  --heading-xxl-line-height: 67px;
+  --heading-xxl-text-transform: uppercase;
   --heading-xxl-letter-spacing: 0px;
 
   @include mobileAndTablet {
     --heading-xs-font-size: 16px;
-    --heading-l-font-size: 30px;
-    --heading-xl-font-size: 30px;
-    --heading-xxl-font-size: 30px;
     --heading-xs-line-height: 24px;
-    --heading-l-line-height: 30px;
-    --heading-xl-line-height: 30px;
-    --heading-xxl-line-height: 30px;
     --heading-xs-letter-spacing: 0;
+
+    --heading-l-font-size: 30px;
+    --heading-l-line-height: 30px;
+
+    --heading-xl-font-size: 30px;
+    --heading-xl-line-height: 30px;
+
+    --heading-xxl-font-size: 30px;
+    --heading-xxl-line-height: 30px;
   }
 
   /* Labels */
@@ -110,13 +119,17 @@
 
   /* Paragraph, Text */
   --paragraph-gutter: var(--spacing-l);
+
   --paragraph-xs-font-size: 13px;
-  --paragraph-s-font-size: 15px;
-  --paragraph-m-font-size: 17px;
-  --paragraph-l-font-size: 20px;
   --paragraph-xs-line-height: 17px;
+
+  --paragraph-s-font-size: 15px;
   --paragraph-s-line-height: 25px;
+
+  --paragraph-m-font-size: 17px;
   --paragraph-m-line-height: 27px;
+
+  --paragraph-l-font-size: 20px;
   --paragraph-l-line-height: 24px;
 
   @include mobileAndTablet {
