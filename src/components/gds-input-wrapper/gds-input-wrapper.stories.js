@@ -13,6 +13,9 @@ export const Examples = () => html`
         padding: 24px;
         background: white;
       }
+      .block {
+        display: block;
+      }
     </style>
     <p>
       <gds-input-wrapper label="This is a label">
@@ -38,6 +41,11 @@ export const Examples = () => html`
         <input slot="input" />
       </gds-input-wrapper>
       <gds-input-wrapper label="As inline-blocks">
+        <input slot="input" />
+      </gds-input-wrapper>
+    </p>
+    <p>
+      <gds-input-wrapper class="block" label="It can alse be styled to take full width">
         <input slot="input" />
       </gds-input-wrapper>
     </p>

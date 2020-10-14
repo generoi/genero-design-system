@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core'
+import { Component, Host, h, Prop } from '@stencil/core'
 
 /**
  * A wrapper component for input/textarea that handles labels, hints, and errors.
@@ -34,11 +34,11 @@ export class GdsInputWrapper {
     )
 
     return (
-      <div class="gds-input-wrapper">
+      <Host>
         {this.label ? <gds-text size="s">{this.label}</gds-text> : null}
         <slot name="hint"></slot>
         {content}
-      </div>
+      </Host>
     )
   }
 }

@@ -1,6 +1,6 @@
 @use "../gds-paragraph/index" as paragraph;
 
-.gds-input-wrapper {
+:host {
   display: inline-block;
 }
 
