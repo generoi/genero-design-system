@@ -43,6 +43,12 @@
 
   /* Headings */
   --heading-font-family: Gilroy, Arial, Helvetica, sans-serif;
+  --heading-xs-font-family: var(--heading-font-family);
+  --heading-s-font-family: var(--heading-font-family);
+  --heading-m-font-family: var(--heading-font-family);
+  --heading-l-font-family: var(--heading-font-family);
+  --heading-xl-font-family: var(--heading-font-family);
+  --heading-xxl-font-family: var(--heading-font-family);
   --heading-xs-font-size: 20px;
   --heading-s-font-size: 19px;
   --heading-m-font-size: 20px;

@@ -13,6 +13,7 @@
 // H1
 @mixin size-xxl {
   @include base;
+  font-family: var(--heading-xxl-font-family, var(--heading-font-family));
   font-size: var(--heading-xxl-font-size);
   font-weight: var(--heading-xxl-font-weight);
   line-height: var(--heading-xxl-line-height);
@@ -23,6 +24,7 @@
 // H2
 @mixin size-xl {
   @include base;
+  font-family: var(--heading-xl-font-family, var(--heading-font-family));
   font-size: var(--heading-xl-font-size);
   font-weight: var(--heading-xl-font-weight);
   line-height: var(--heading-xl-line-height);
@@ -33,6 +35,7 @@
 // H3
 @mixin size-l {
   @include base;
+  font-family: var(--heading-l-font-family, var(--heading-font-family));
   font-size: var(--heading-l-font-size);
   font-weight: var(--heading-l-font-weight);
   line-height: var(--heading-l-line-height);
@@ -43,6 +46,7 @@
 // H4
 @mixin size-m {
   @include base;
+  font-family: var(--heading-m-font-family, var(--heading-font-family));
   font-size: var(--heading-m-font-size);
   font-weight: var(--heading-m-font-weight);
   line-height: var(--heading-m-line-height);
@@ -53,6 +57,7 @@
 // H5
 @mixin size-s {
   @include base;
+  font-family: var(--heading-s-font-family, var(--heading-font-family));
   font-size: var(--heading-s-font-size);
   font-weight: var(--heading-s-font-weight);
   line-height: var(--heading-s-line-height);
@@ -63,6 +68,7 @@
 // H6
 @mixin size-xs {
   @include base;
+  font-family: var(--heading-xs-font-family, var(--heading-font-family));
   font-size: var(--heading-xs-font-size);
   font-weight: var(--heading-xs-font-weight);
   line-height: var(--heading-xs-line-height);
