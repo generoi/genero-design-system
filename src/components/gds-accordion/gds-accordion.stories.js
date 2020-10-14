@@ -2,11 +2,11 @@ import { html } from 'lit-html'
 
 export default {
   // This is the folder where this component shows in Storybook.
-  title: 'Complex Components',
+  title: 'Complex Components/Accordion',
   component: 'gds-accordion',
 }
 
-export const Accordion = () => html`
+export const Examples = () => html`
   <div>
     <gds-accordion>
       <gds-label slot="label">This is an accordion</gds-label>

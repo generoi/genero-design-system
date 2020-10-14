@@ -2,10 +2,10 @@ import { html } from 'lit-html'
 
 export default {
   // This is the folder where this component shows in Storybook.
-  title: 'Atomic Elements',
+  title: 'Atomic Elements/Icon',
 }
 
-export const Icon = () => html`
+export const Examples = () => html`
   <div>
     <style>
       gds-icon {

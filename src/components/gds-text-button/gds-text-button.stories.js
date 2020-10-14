@@ -2,10 +2,10 @@ import { html } from 'lit-html'
 
 export default {
   // This is the folder where this component shows in Storybook.
-  title: 'Atomic Elements',
+  title: 'Atomic Elements/TextButton',
 }
 
-export const TextButton = () => html`
+export const Examples = () => html`
   <p>
     <gds-text-button size="s" left-icon="➞">Text Button S</gds-text-button>
   </p>

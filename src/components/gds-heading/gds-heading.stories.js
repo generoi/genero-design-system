@@ -1,12 +1,12 @@
 import { html } from 'lit-html'
 
 export default {
-  title: 'Atomic Elements',
+  title: 'Atomic Elements/Heading',
   component: 'gds-heading',
 }
 
 // prettier-ignore
-export const Heading = () => html`
+export const Examples = () => html`
   <gds-heading size="xxl">XXL Heading</gds-heading>
   <gds-heading size="xl">XL Heading</gds-heading>
   <gds-heading size="l">L Heading</gds-heading>

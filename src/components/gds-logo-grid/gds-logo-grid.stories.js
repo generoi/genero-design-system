@@ -4,7 +4,7 @@ import { getMockImageUrl } from '../../stories/utils'
 
 export default {
   // NOTE: This is now classified like this since it requires the gds-logo-grid-item children to function properly.
-  title: 'Complex Components',
+  title: 'Complex Components/LogoGrid',
   component: 'gds-logo-grid',
 }
 
@@ -14,7 +14,7 @@ const item = html`<gds-logo-grid-item
   ></gds-logo-grid-item>`
 
 // prettier-ignore
-export const LogoGrid = () => html`
+export const Examples = () => html`
   <gds-logo-grid>
     <gds-logo-grid-item
       href="https://www.genero.fi"

@@ -1,12 +1,12 @@
 import { html } from 'lit-html'
 
 export default {
-  title: 'Atomic Elements',
+  title: 'Atomic Elements/Label',
   component: 'gds-label',
 }
 
 // prettier-ignore
-export const Label = () => html`
+export const Examples = () => html`
   <p>
     <gds-label size="l">L Label</gds-label>
   </p>

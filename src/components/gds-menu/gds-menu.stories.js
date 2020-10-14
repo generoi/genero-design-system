@@ -2,7 +2,7 @@ import { html } from 'lit-html'
 
 export default {
   // NOTE: This is now classified like this since it requires the gds-menu-item children to function properly.
-  title: 'Complex Components',
+  title: 'Complex Components/Menu',
   component: 'gds-menu',
 }
 
@@ -24,7 +24,7 @@ const getMenu = direction => html`
 `
 
 // prettier-ignore
-export const Menu = () => html`
+export const Examples = () => html`
   <gds-paragraph>Menu can adjust to the screen width.</gds-paragraph>
   ${getMenu()}
   <gds-paragraph>Menu be forced to horizontal.</gds-paragraph>

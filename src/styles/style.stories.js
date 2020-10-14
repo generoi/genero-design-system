@@ -1,7 +1,7 @@
 import { html } from 'lit-html'
 
 export default {
-  title: 'Design Tokens',
+  title: 'Common/Design Tokens',
   component: 'gds-paragraph',
 }
 

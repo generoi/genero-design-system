@@ -1,12 +1,12 @@
 import { html } from 'lit-html'
 
 export default {
-  title: 'Atomic Elements',
+  title: 'Atomic Elements/Card',
   component: 'gds-card',
 }
 
 // prettier-ignore
-export const Card = () => html`
+export const Examples = () => html`
   <p>
     <gds-card>
       A card that renders content in a container that has * white background and border shadows. Comes without

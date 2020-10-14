@@ -1,12 +1,12 @@
 import { html } from 'lit-html'
 
 export default {
-  title: 'Complex Components',
+  title: 'Complex Components/Tag',
   component: 'gds-tag',
 }
 
 // prettier-ignore
-export const Tag = () => html`
+export const Examples = () => html`
   <style>
     .override {
       --tag-color: red;

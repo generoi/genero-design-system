@@ -1,12 +1,12 @@
 import { html } from 'lit-html'
 
 export default {
-  title: 'Complex Components',
+  title: 'Complex Components/Navigation',
   component: 'gds-navigation',
 }
 
 // prettier-ignore
-export const Navigation = () => html`
+export const Examples = () => html`
   <gds-navigation>
     <a slot="logo" href="/">
       <img src="images/genero-logo.png" />

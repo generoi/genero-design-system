@@ -3,12 +3,12 @@ import { html } from 'lit-html'
 import { getMockImageUrl } from '../../stories/utils'
 
 export default {
-  title: 'Complex Components',
+  title: 'Complex Components/MediaCard',
   component: 'gds-media-card',
 }
 
 // prettier-ignore
-export const MediaCard = () => html`
+export const Examples = () => html`
   <div style="margin-bottom: 40px;">
     <gds-media-card
       href="https://google.com"
