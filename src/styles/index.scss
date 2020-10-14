@@ -102,11 +102,13 @@
   --label-l-letter-spacing: 1.28px;
   --label-xl-letter-spacing: 1.28px;
 
-  /* Paragraphs */
+  /* Paragraph, Text */
   --paragraph-gutter: var(--spacing-l);
+  --paragraph-xs-font-size: 13px;
   --paragraph-s-font-size: 15px;
   --paragraph-m-font-size: 17px;
   --paragraph-l-font-size: 20px;
+  --paragraph-xs-line-height: 17px;
   --paragraph-s-line-height: 25px;
   --paragraph-m-line-height: 27px;
   --paragraph-l-line-height: 24px;

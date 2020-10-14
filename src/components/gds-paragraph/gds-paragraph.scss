@@ -20,3 +20,7 @@ p {
 :host-context([size='s']) {
   @include size-s;
 }
+
+:host-context([size='xs']) {
+  @include size-xs;
+}

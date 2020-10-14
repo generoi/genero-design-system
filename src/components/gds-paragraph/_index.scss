@@ -22,3 +22,9 @@
   font-size: var(--paragraph-s-font-size);
   line-height: var(--paragraph-s-line-height);
 }
+
+@mixin size-xs {
+  @include base;
+  font-size: var(--paragraph-xs-font-size);
+  line-height: var(--paragraph-xs-line-height);
+}
