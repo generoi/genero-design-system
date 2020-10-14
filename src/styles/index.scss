@@ -242,6 +242,19 @@
   --accordion-box-shadow: 0px 0px 8px #0000001f;
   --accordion-padding: var(--spacing-s);
 
+  /* Input Wrapper */
+  --gds-input-wrapper-label-color: var(--color-ui-02);
+
+  /* Input and textarea elements inside of Input Wrapper */
+  --gds-input-color: inherit;
+  --gds-input-background: var(--color-ui-background-01);
+  --gds-input-border: 1px solid var(--gds-input-background);
+  --gds-input-border-focus: 1px solid #4573ae;
+  --gds-input-border-radius: none;
+  --gds-input-font-size: inherit;
+  // Tweak the padding here, to get your font vertically aligned exactly.
+  --gds-input-padding: var(--spacing-xs) var(--spacing-s) calc(var(--spacing-xs) - 3px) var(--spacing-s);
+
   /* Hint */
   --gds-hint-color: var(--body-text-color);
   --gds-hint-background: var(--color-white);
