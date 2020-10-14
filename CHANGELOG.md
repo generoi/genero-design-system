@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.0.0](https://github.com/generoi/genero-design-system/compare/v0.41.0...v1.0.0) (2020-10-14)
+
+
+### Features
+
+* **hint:** add gds-hint ([888c61c](https://github.com/generoi/genero-design-system/commit/888c61c86c8ed0baeeb0707eb050ffb0eeefa456))
+* **input-wrapper:** add gds-input-wrapper ([7e25654](https://github.com/generoi/genero-design-system/commit/7e25654f30042c1c41b80684f3c548c0893a49c3))
+* **paragraph:** add xs size to cover special cases with smaller text ([01818a6](https://github.com/generoi/genero-design-system/commit/01818a6a6d7876807f0721840613fd21b93c4edc))
+* **text:** add gds-text ([eb55409](https://github.com/generoi/genero-design-system/commit/eb55409b15b7f8262d774bcd0938114471721f3f))
+
 ## [0.41.0](https://github.com/generoi/genero-design-system/compare/v0.40.0...v0.41.0) (2020-10-08)
 
 
