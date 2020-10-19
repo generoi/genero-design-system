@@ -2,8 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/generoi/genero-design-system/compare/v1.1.0...v2.0.0) (2020-10-19)
+
+This version change should not require any modofications to the code, however, this will remove default support for older browsers (IE11, Edge 16-18, Safari 10, and ES5). If you need support for this, you need to follow these instructions:
+https://github.com/ionic-team/stencil/blob/master/CHANGELOG.md#-200-2020-08-31
+
+Also if you find any problems with loading the `.mjs` file, then look into this:
+https://github.com/ionic-team/stencil/blob/master/CHANGELOG.md#dist-packagejson
+
+### Features
+
+* **stencil:** update to version 2 ([e5f50d1](https://github.com/generoi/genero-design-system/commit/e5f50d133814fd78ca65f09ecacdeb192f1ddd91)), closes [/github.com/ionic-team/stencil/blob/master/CHANGELOG.md#-200-2020-08-31](https://github.com/generoi//github.com/ionic-team/stencil/blob/master/CHANGELOG.md/issues/-200-2020-08-31)
+
 ## [1.1.0](https://github.com/generoi/genero-design-system/compare/v1.0.0...v1.1.0) (2020-10-14)
 
+From version 1 onwards `semver` should be used as intended.
 
 ### Features
 
