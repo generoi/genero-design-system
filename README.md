@@ -11,7 +11,7 @@ Using lazy loaded ES modules.
 <html lang="en">
   <head>
     <script type="module">
-      import { applyPolyfills, defineCustomElements } from 'https://unpkg.com/genero-design-system/loader/index.mjs'
+      import { applyPolyfills, defineCustomElements } from 'https://unpkg.com/genero-design-system/loader/index.js'
       
       applyPolyfills().then(() => {
         defineCustomElements()
