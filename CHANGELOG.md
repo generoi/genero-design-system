@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file. See [standa
 
 ## [2.0.0](https://github.com/generoi/genero-design-system/compare/v1.1.0...v2.0.0) (2020-10-19)
 
-This version change should not require any modofications to the code, however, this will remove default support for older browsers (IE11, Edge 16-18, Safari 10, and ES5). If you need support for this, you need to follow these instructions:
+This version change should not require any modifications to the code, however, this will remove default support for older browsers (IE11, Edge 16-18, Safari 10, and ES5). If you need support for this, you need to follow these instructions:
 https://github.com/ionic-team/stencil/blob/master/CHANGELOG.md#-200-2020-08-31
 
 Also if you find any problems with loading the `.mjs` file, then look into this:
