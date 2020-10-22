@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.2.0](https://github.com/generoi/genero-design-system/compare/v2.1.0...v2.2.0) (2020-10-22)
+
+
+### Features
+
+* **gds-youtube-player:** displays an iframe based youtube player ([6bb6140](https://github.com/generoi/genero-design-system/commit/6bb614086dde55879f3adcae79c4a0c2eb73d80e))
+
 ## [2.1.0](https://github.com/generoi/genero-design-system/compare/v2.0.0...v2.1.0) (2020-10-22)
 
 
