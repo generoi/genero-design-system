@@ -215,6 +215,16 @@ export namespace Components {
          */
         "size": string;
     }
+    interface GdsYoutubePlayer {
+        /**
+          * Indicates whether the video player controls are displayed.
+         */
+        "controls": boolean;
+        /**
+          * Video ID
+         */
+        "videoId": string;
+    }
 }
 declare global {
     interface HTMLGdsAccordionElement extends Components.GdsAccordion, HTMLStencilElement {
@@ -337,6 +347,12 @@ declare global {
         prototype: HTMLGdsTextButtonElement;
         new (): HTMLGdsTextButtonElement;
     };
+    interface HTMLGdsYoutubePlayerElement extends Components.GdsYoutubePlayer, HTMLStencilElement {
+    }
+    var HTMLGdsYoutubePlayerElement: {
+        prototype: HTMLGdsYoutubePlayerElement;
+        new (): HTMLGdsYoutubePlayerElement;
+    };
     interface HTMLElementTagNameMap {
         "gds-accordion": HTMLGdsAccordionElement;
         "gds-button": HTMLGdsButtonElement;
@@ -358,6 +374,7 @@ declare global {
         "gds-tag-group": HTMLGdsTagGroupElement;
         "gds-text": HTMLGdsTextElement;
         "gds-text-button": HTMLGdsTextButtonElement;
+        "gds-youtube-player": HTMLGdsYoutubePlayerElement;
     }
 }
 declare namespace LocalJSX {
@@ -570,6 +587,16 @@ declare namespace LocalJSX {
          */
         "size"?: string;
     }
+    interface GdsYoutubePlayer {
+        /**
+          * Indicates whether the video player controls are displayed.
+         */
+        "controls"?: boolean;
+        /**
+          * Video ID
+         */
+        "videoId"?: string;
+    }
     interface IntrinsicElements {
         "gds-accordion": GdsAccordion;
         "gds-button": GdsButton;
@@ -591,6 +618,7 @@ declare namespace LocalJSX {
         "gds-tag-group": GdsTagGroup;
         "gds-text": GdsText;
         "gds-text-button": GdsTextButton;
+        "gds-youtube-player": GdsYoutubePlayer;
     }
 }
 export { LocalJSX as JSX };
@@ -617,6 +645,7 @@ declare module "@stencil/core" {
             "gds-tag-group": LocalJSX.GdsTagGroup & JSXBase.HTMLAttributes<HTMLGdsTagGroupElement>;
             "gds-text": LocalJSX.GdsText & JSXBase.HTMLAttributes<HTMLGdsTextElement>;
             "gds-text-button": LocalJSX.GdsTextButton & JSXBase.HTMLAttributes<HTMLGdsTextButtonElement>;
+            "gds-youtube-player": LocalJSX.GdsYoutubePlayer & JSXBase.HTMLAttributes<HTMLGdsYoutubePlayerElement>;
         }
     }
 }
