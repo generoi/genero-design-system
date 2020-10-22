@@ -58,5 +58,32 @@ export const Examples = () => html`
         <gds-paragraph>Can be put here.</gds-paragraph>
       </div>
     </gds-accordion>
+    <br />
+
+    <style>
+      .plain {
+        --accordion-color: inherit;
+        --accordion-background: var(--color-white);
+        --accordion-content-background: var(--color-white);
+        --accordion-expanded-header-background: transparent;
+        --accordion-border: none;
+        --accordion-border-radius: none;
+        --accordion-box-shadow: none;
+        --accordion-padding: var(--spacing-s) 0;
+        --accordion-header-padding: 0;
+        --accordion-justify-content: start;
+      }
+      .plain > gds-text {
+        text-decoration: underline;
+      }
+    </style>
+    <gds-accordion class="plain">
+      <gds-text slot="label" size="s">Plain text accordion</gds-text>
+      <gds-icon slot="icon-collapse" name="caret-circle-up" regular></gds-icon>
+      <gds-icon slot="icon-expand" name="caret-circle-down" regular></gds-icon>
+      <div slot="content">
+        <gds-text size="s">Some content</gds-text>
+      </div>
+    </gds-accordion>
   </div>
 `

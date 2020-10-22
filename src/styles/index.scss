@@ -260,6 +260,9 @@
   --accordion-border-radius: 8px;
   --accordion-box-shadow: 0px 0px 8px #0000001f;
   --accordion-padding: var(--spacing-s);
+  --accordion-header-padding: var(--accordion-padding);
+  --accordion-justify-content: justify-content;
+  --accordion-heading-margin-left: var(--spacing-xxs);
 
   /* Input Wrapper */
   --gds-input-wrapper-label-color: var(--color-ui-02);

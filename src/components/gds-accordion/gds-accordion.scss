@@ -30,14 +30,18 @@
 
   .header {
     display: flex;
-    justify-content: space-between;
+    justify-content: var(--accordion-justify-content, space-between);
     align-items: center;
     cursor: pointer;
-    padding: var(--accordion-padding, var(--spacing-s));
+    padding: var(--accordion-header-padding, var(--accordion-padding));
 
     // These are required because we can't have overflow: hidden with floating.
     border-top-right-radius: var(--accordion-border-radius);
     border-top-left-radius: var(--accordion-border-radius);
+  }
+
+  .heading {
+    margin-right: var(--accordion-heading-margin-left, var(--spacing-xxs));
   }
 
   .iconCollapse {
