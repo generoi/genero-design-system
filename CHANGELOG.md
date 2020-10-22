@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.1.0](https://github.com/generoi/genero-design-system/compare/v2.0.0...v2.1.0) (2020-10-22)
+
+
+### Features
+
+* **gds-accordion:** add css variables for plain text accordion ([aad6ffd](https://github.com/generoi/genero-design-system/commit/aad6ffd33f9671233f4a301d5fe39d5e447504f7))
+
 ## [2.0.0](https://github.com/generoi/genero-design-system/compare/v1.1.0...v2.0.0) (2020-10-19)
 
 This version change should not require any modifications to the code, however, this will remove default support for older browsers (IE11, Edge 16-18, Safari 10, and ES5). If you need support for this, you need to follow these instructions:
