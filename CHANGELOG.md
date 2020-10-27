@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.3.0](https://github.com/generoi/genero-design-system/compare/v2.2.0...v2.3.0) (2020-10-27)
+
+
+### Features
+
+* **gds-google-maps:** add Google Maps wrapper component ([34f2f3d](https://github.com/generoi/genero-design-system/commit/34f2f3d4290b18b1a75c46f9018a48dead06e423))
+
 ## [2.2.0](https://github.com/generoi/genero-design-system/compare/v2.1.0...v2.2.0) (2020-10-22)
 
 
