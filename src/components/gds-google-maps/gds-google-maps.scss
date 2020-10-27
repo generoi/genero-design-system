@@ -1,0 +1,12 @@
+:host {
+  display: block;
+  position: relative;
+  width: 100%;
+  // This is just a default height. Override for gds-google-maps element.
+  height: 400px;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+}

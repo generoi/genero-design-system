@@ -35,6 +35,29 @@ export namespace Components {
     }
     interface GdsCard {
     }
+    interface GdsGoogleMaps {
+        "addMarker": (lat: string, lng: string) => Promise<void>;
+        /**
+          * API key from GCP.
+         */
+        "apiKey": string;
+        /**
+          * Add marker to the initial center.
+         */
+        "initialMarker": boolean;
+        /**
+          * Latitude.
+         */
+        "lat": string;
+        /**
+          * Longitude.
+         */
+        "lng": string;
+        /**
+          * Zoom level for maps.
+         */
+        "zoom": number;
+    }
     interface GdsHeading {
         /**
           * Render the heading as a h element for SEO purposes.  Those h element should be visible to GoogleBot: https://www.searchenginejournal.com/shadow-dom/353644/
@@ -245,6 +268,12 @@ declare global {
         prototype: HTMLGdsCardElement;
         new (): HTMLGdsCardElement;
     };
+    interface HTMLGdsGoogleMapsElement extends Components.GdsGoogleMaps, HTMLStencilElement {
+    }
+    var HTMLGdsGoogleMapsElement: {
+        prototype: HTMLGdsGoogleMapsElement;
+        new (): HTMLGdsGoogleMapsElement;
+    };
     interface HTMLGdsHeadingElement extends Components.GdsHeading, HTMLStencilElement {
     }
     var HTMLGdsHeadingElement: {
@@ -357,6 +386,7 @@ declare global {
         "gds-accordion": HTMLGdsAccordionElement;
         "gds-button": HTMLGdsButtonElement;
         "gds-card": HTMLGdsCardElement;
+        "gds-google-maps": HTMLGdsGoogleMapsElement;
         "gds-heading": HTMLGdsHeadingElement;
         "gds-hint": HTMLGdsHintElement;
         "gds-icon": HTMLGdsIconElement;
@@ -406,6 +436,32 @@ declare namespace LocalJSX {
         "size"?: string;
     }
     interface GdsCard {
+    }
+    interface GdsGoogleMaps {
+        /**
+          * API key from GCP.
+         */
+        "apiKey"?: string;
+        /**
+          * Add marker to the initial center.
+         */
+        "initialMarker"?: boolean;
+        /**
+          * Latitude.
+         */
+        "lat"?: string;
+        /**
+          * Longitude.
+         */
+        "lng"?: string;
+        /**
+          * Emits Google Maps SDK once map is loaded.
+         */
+        "onReady"?: (event: CustomEvent<any>) => void;
+        /**
+          * Zoom level for maps.
+         */
+        "zoom"?: number;
     }
     interface GdsHeading {
         /**
@@ -601,6 +657,7 @@ declare namespace LocalJSX {
         "gds-accordion": GdsAccordion;
         "gds-button": GdsButton;
         "gds-card": GdsCard;
+        "gds-google-maps": GdsGoogleMaps;
         "gds-heading": GdsHeading;
         "gds-hint": GdsHint;
         "gds-icon": GdsIcon;
@@ -628,6 +685,7 @@ declare module "@stencil/core" {
             "gds-accordion": LocalJSX.GdsAccordion & JSXBase.HTMLAttributes<HTMLGdsAccordionElement>;
             "gds-button": LocalJSX.GdsButton & JSXBase.HTMLAttributes<HTMLGdsButtonElement>;
             "gds-card": LocalJSX.GdsCard & JSXBase.HTMLAttributes<HTMLGdsCardElement>;
+            "gds-google-maps": LocalJSX.GdsGoogleMaps & JSXBase.HTMLAttributes<HTMLGdsGoogleMapsElement>;
             "gds-heading": LocalJSX.GdsHeading & JSXBase.HTMLAttributes<HTMLGdsHeadingElement>;
             "gds-hint": LocalJSX.GdsHint & JSXBase.HTMLAttributes<HTMLGdsHintElement>;
             "gds-icon": LocalJSX.GdsIcon & JSXBase.HTMLAttributes<HTMLGdsIconElement>;
