@@ -83,7 +83,12 @@ There's no main entrypoint for all mixins, you are instead encouraged to encapsu
 
 ```sh
 npm install
-npm run build
+```
+
+Build and watch changes. Also checks dependencies for updates.
+
+```sh
+npm start
 ```
 
 Run storybook
