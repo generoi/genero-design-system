@@ -8,7 +8,7 @@
   background-color: var(--card-background-color, white);
   box-shadow: var(--card-box-shadow);
   overflow: hidden;
-  width: 100vw;
-  max-width: var(--card-width);
+  width: var(--card-width);
+  max-width: var(--card-max-width, var(--card-width));
   flex-direction: column;
 }
