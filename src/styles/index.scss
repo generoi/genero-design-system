@@ -50,6 +50,8 @@
   --heading-xs-line-height: 24px;
   --heading-xs-text-transform: uppercase;
   --heading-xs-letter-spacing: 1.6px;
+  --heading-xs-margin-top: auto;
+  --heading-xs-margin-bottom: auto;
 
   --heading-s-font-family: var(--heading-font-family);
   --heading-s-font-weight: 500;
@@ -57,6 +59,8 @@
   --heading-s-line-height: 23px;
   --heading-s-text-transform: uppercase;
   --heading-s-letter-spacing: 3.8px;
+  --heading-s-margin-top: auto;
+  --heading-s-margin-bottom: auto;
 
   --heading-m-font-family: var(--heading-font-family);
   --heading-m-font-weight: 800;
@@ -64,6 +68,8 @@
   --heading-m-line-height: 24px;
   --heading-m-text-transform: uppercase;
   --heading-m-letter-spacing: 1.6px;
+  --heading-m-margin-top: auto;
+  --heading-m-margin-bottom: auto;
 
   --heading-l-font-family: var(--heading-font-family);
   --heading-l-font-weight: 600;
@@ -71,6 +77,8 @@
   --heading-l-line-height: 36px;
   --heading-l-text-transform: none;
   --heading-l-letter-spacing: 0px;
+  --heading-l-margin-top: auto;
+  --heading-l-margin-bottom: auto;
 
   --heading-xl-font-family: var(--heading-font-family);
   --heading-xl-font-weight: 600;
@@ -78,6 +86,8 @@
   --heading-xl-line-height: 60px;
   --heading-xl-text-transform: none;
   --heading-xl-letter-spacing: 0px;
+  --heading-xl-margin-top: auto;
+  --heading-xl-margin-bottom: auto;
 
   --heading-xxl-font-family: var(--heading-font-family);
   --heading-xxl-font-weight: 800;
@@ -85,6 +95,8 @@
   --heading-xxl-line-height: 67px;
   --heading-xxl-text-transform: uppercase;
   --heading-xxl-letter-spacing: 0px;
+  --heading-xxl-margin-top: auto;
+  --heading-xxl-margin-bottom: auto;
 
   @include mobileAndTablet {
     --heading-xs-font-size: 16px;

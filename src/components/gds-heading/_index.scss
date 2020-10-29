@@ -19,6 +19,8 @@
   line-height: var(--heading-xxl-line-height);
   text-transform: var(--heading-xxl-text-transform);
   letter-spacing: var(--heading-xxl-letter-spacing);
+  margin-top: var(--heading-xxl-margin-top);
+  margin-bottom: var(--heading-xxl-margin-bottom);
 }
 
 // H2
@@ -30,6 +32,8 @@
   line-height: var(--heading-xl-line-height);
   text-transform: var(--heading-xl-text-transform);
   letter-spacing: var(--heading-xl-letter-spacing);
+  margin-top: var(--heading-xl-margin-top);
+  margin-bottom: var(--heading-xl-margin-bottom);
 }
 
 // H3
@@ -41,6 +45,8 @@
   line-height: var(--heading-l-line-height);
   text-transform: var(--heading-l-text-transform);
   letter-spacing: var(--heading-l-letter-spacing);
+  margin-top: var(--heading-l-margin-top);
+  margin-bottom: var(--heading-l-margin-bottom);
 }
 
 // H4
@@ -52,6 +58,8 @@
   line-height: var(--heading-m-line-height);
   text-transform: var(--heading-m-text-transform);
   letter-spacing: var(--heading-m-letter-spacing);
+  margin-top: var(--heading-m-margin-top);
+  margin-bottom: var(--heading-m-margin-bottom);
 }
 
 // H5
@@ -63,6 +71,8 @@
   line-height: var(--heading-s-line-height);
   text-transform: var(--heading-s-text-transform);
   letter-spacing: var(--heading-s-letter-spacing);
+  margin-top: var(--heading-s-margin-top);
+  margin-bottom: var(--heading-s-margin-bottom);
 }
 
 // H6
@@ -74,4 +84,6 @@
   line-height: var(--heading-xs-line-height);
   text-transform: var(--heading-xs-text-transform);
   letter-spacing: var(--heading-xs-letter-spacing);
+  margin-top: var(--heading-xs-margin-top);
+  margin-bottom: var(--heading-xs-margin-bottom);
 }
