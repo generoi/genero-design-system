@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.0.0](https://github.com/generoi/genero-design-system/compare/v2.3.0...v3.0.0) (2020-10-29)
+
+--card-width, --card-max-width change could potentially be a breaking change for some projects since they might have relied on --card-width actually defining max-width.
+
+Maybe in the future we should try to postpone minor breaking changes to limit major version numbers for bigger changes.
+
+### Features
+
+* **gds-heading:** can define top and bottom margins ([d350172](https://github.com/generoi/genero-design-system/commit/d35017273cfe95608886eff04a0b49434bfbe23c))
+
+
+### Bug Fixes
+
+* **gds-card:** --card-width, --card-max-width now define correct props ([a1d6c98](https://github.com/generoi/genero-design-system/commit/a1d6c98d2ea1aa2339776ae1884bcb9c9956fef9))
+
 ## [2.3.0](https://github.com/generoi/genero-design-system/compare/v2.2.0...v2.3.0) (2020-10-27)
 
 
