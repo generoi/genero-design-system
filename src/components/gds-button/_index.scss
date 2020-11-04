@@ -37,7 +37,7 @@
     outline: var(--button-outline);
   }
   &:disabled {
-    background-color: var(--button-background-color-hover);
+    background-color: var(--button-background-color-disabled);
   }
 
   & > * + * {

@@ -1,5 +1,5 @@
 import { Component, Prop, h, Host, Element } from '@stencil/core'
-import { HTMLStencilElement } from '@stencil/core/internal'
+import { HTMLStencilElement, Listen } from '@stencil/core/internal'
 
 /**
  * This is a button with optional left and right icons.
@@ -36,6 +36,17 @@ export class GdsButton {
    *
    */
   @Prop() leftIconRotate: number
+  /**
+   * Prevent click if button is disabled.
+   */
+  @Listen('click', { passive: false })
+  onClickHandler(event: MouseEvent) {
+    if (this.disabled) {
+      event.preventDefault()
+      event.stopPropagation()
+      event.stopImmediatePropagation()
+    }
+  }
 
   /**
    * Used to hide icon slots if they are empty:
@@ -63,7 +74,11 @@ export class GdsButton {
 
     return (
       <Host>
-        <button class={`button size-${this.size}`} disabled={this.disabled} style={iconStyleVariables}>
+        <button
+          class={`button size-${this.size}`}
+          disabled={this.disabled}
+          style={iconStyleVariables}
+          onClick={this.onClickHandler}>
           {(this.hasLeftIconSlot || this.leftIcon) && (
             <slot name="left-icon">{this.leftIcon && <span>{this.leftIcon}</span>}</slot>
           )}
