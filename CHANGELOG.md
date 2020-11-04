@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.1.0](https://github.com/generoi/genero-design-system/compare/v3.0.0...v3.1.0) (2020-11-04)
+
+
+### Features
+
+* **gds-button:** disabled button won't trigger click events ([c7b992d](https://github.com/generoi/genero-design-system/commit/c7b992d64943726114ba35345d55b2783d88ca06))
+
 ## [3.0.0](https://github.com/generoi/genero-design-system/compare/v2.3.0...v3.0.0) (2020-10-29)
 
 --card-width, --card-max-width change could potentially be a breaking change for some projects since they might have relied on --card-width actually defining max-width.
