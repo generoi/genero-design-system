@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.2.0](https://github.com/generoi/genero-design-system/compare/v3.1.0...v3.2.0) (2020-11-06)
+
+
+### Features
+
+* **gds-google-maps:** can pass options to addMarker ([2a87e35](https://github.com/generoi/genero-design-system/commit/2a87e35f335d9d808e3794c07d744e8392345c81))
+
 ## [3.1.0](https://github.com/generoi/genero-design-system/compare/v3.0.0...v3.1.0) (2020-11-04)
 
 
