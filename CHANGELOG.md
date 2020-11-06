@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.3.0](https://github.com/generoi/genero-design-system/compare/v3.2.0...v3.3.0) (2020-11-06)
+
+
+### Features
+
+* **gds-navigation:** add method to close menu ([57afc5e](https://github.com/generoi/genero-design-system/commit/57afc5e1a692be44a8808d90c05ea1415d5a17f2))
+
 ## [3.2.0](https://github.com/generoi/genero-design-system/compare/v3.1.0...v3.2.0) (2020-11-06)
 
 
