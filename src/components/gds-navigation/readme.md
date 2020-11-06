@@ -3,6 +3,19 @@
 <!-- Auto Generated Below -->
 
 
+## Methods
+
+### `closeMenu() => Promise<void>`
+
+
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+
 ## Dependencies
 
 ### Depends on

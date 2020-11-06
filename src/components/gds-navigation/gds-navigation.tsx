@@ -1,5 +1,5 @@
 import { Component, h, Host, State, Element } from '@stencil/core'
-import { HTMLStencilElement } from '@stencil/core/internal'
+import { HTMLStencilElement, Method } from '@stencil/core/internal'
 
 /**
  * gds-navigation takes 4 slots: logo, menu, mobile-extensions, and desktop-extensions.
@@ -43,18 +43,26 @@ export class GdsNavigation {
     this.hasDesktopExtensionsSlot = !!this.hostElement.querySelector('[slot="desktop-extensions"]')
   }
 
+  closeHamburgerMenu() {
+    this.content.style.display = 'none'
+    this.menuIcon = '☰'
+    this.open = false
+  }
+
+  openHamburgerMenu() {
+    this.content.style.display = 'block'
+    this.menuIcon = '✕'
+    this.open = true
+  }
+
   render() {
     // Toggle manu open (mobile only).
     const onHamburgerClick = () => {
       var style = window.getComputedStyle(this.content)
       if (style.display === 'none') {
-        this.content.style.display = 'block'
-        this.menuIcon = '✕'
-        this.open = true
+        this.openHamburgerMenu()
       } else {
-        this.content.style.display = 'none'
-        this.menuIcon = '☰'
-        this.open = false
+        this.closeHamburgerMenu()
       }
     }
 
@@ -99,5 +107,10 @@ export class GdsNavigation {
         </header>
       </Host>
     )
+  }
+
+  @Method()
+  async closeMenu() {
+    this.closeHamburgerMenu()
   }
 }

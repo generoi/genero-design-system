@@ -192,6 +192,7 @@ export namespace Components {
         "active": boolean;
     }
     interface GdsNavigation {
+        "closeMenu": () => Promise<void>;
     }
     interface GdsParagraph {
         /**
