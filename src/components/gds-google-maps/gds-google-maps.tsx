@@ -69,7 +69,10 @@ export class GdsGoogleMaps {
       if (!this.google) {
         await this.loadGoogleMapsSdk()
         this.initMap()
-        this.ready.emit(this.google)
+        this.ready.emit({
+          google: this.google,
+          map: this.map,
+        })
       }
     } catch (err) {
       console.log(err)
@@ -114,15 +117,18 @@ export class GdsGoogleMaps {
   }
 
   @Method()
-  async addMarker(lat: string, lng: string) {
+  async addMarker(lat: string, lng: string, options?: object) {
     let latLng = new this.google.maps.LatLng(lat, lng)
 
     let marker = new this.google.maps.Marker({
       map: this.map,
       animation: this.google.maps.Animation.DROP,
       position: latLng,
+      ...options,
     })
 
     this.markers.push(marker)
+
+    return marker
   }
 }

@@ -25,13 +25,13 @@
 
 ## Methods
 
-### `addMarker(lat: string, lng: string) => Promise<void>`
+### `addMarker(lat: string, lng: string, options?: object) => Promise<any>`
 
 
 
 #### Returns
 
-Type: `Promise<void>`
+Type: `Promise<any>`
 
 
 

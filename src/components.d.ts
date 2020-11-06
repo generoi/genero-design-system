@@ -36,7 +36,7 @@ export namespace Components {
     interface GdsCard {
     }
     interface GdsGoogleMaps {
-        "addMarker": (lat: string, lng: string) => Promise<void>;
+        "addMarker": (lat: string, lng: string, options?: object) => Promise<any>;
         /**
           * API key from GCP.
          */
