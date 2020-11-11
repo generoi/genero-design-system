@@ -219,6 +219,10 @@
   --navigation-desktop-height: 100px;
   --navigation-mobile-height: 70px;
 
+  gds-navigation:not(.hydrated) {
+    visibility: hidden;
+  }
+
   /* Menu */
   --menu-text-align: left;
   --menu-item-background-color-active: var(--background-color-primary);
