@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.3.1](https://github.com/generoi/genero-design-system/compare/v3.3.0...v3.3.1) (2020-11-11)
+
+
+### Bug Fixes
+
+* **gds-navigation:** hide before hydration ([666c299](https://github.com/generoi/genero-design-system/commit/666c299dd723e3c6c69e12fac21bfd93442dd465))
+
 ## [3.3.0](https://github.com/generoi/genero-design-system/compare/v3.2.0...v3.3.0) (2020-11-06)
 
 
