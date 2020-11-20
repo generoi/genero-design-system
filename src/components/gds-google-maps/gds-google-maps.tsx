@@ -80,6 +80,11 @@ export class GdsGoogleMaps {
   }
 
   loadGoogleMapsSdk(): Promise<any> {
+    if (window['google'] && window['google']['maps']) {
+      console.log('Google Maps SDK already loaded.')
+      return Promise.resolve()
+    }
+
     return new Promise(resolve => {
       window['mapInit'] = () => {
         console.log('Google Maps SDK loaded.')
@@ -92,7 +97,6 @@ export class GdsGoogleMaps {
       } else {
         script.src = 'https://maps.googleapis.com/maps/api/js?callback=mapInit'
       }
-
       document.body.appendChild(script)
     })
   }
