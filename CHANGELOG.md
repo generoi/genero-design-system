@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.4.0](https://github.com/generoi/genero-design-system/compare/v3.3.1...v3.4.0) (2020-11-20)
+
+
+### Features
+
+* **gds-input-wrapper:** add styles also for select element ([34c3661](https://github.com/generoi/genero-design-system/commit/34c36616031a0990a9a5a46d99eb77745e1bd908))
+
 ### [3.3.1](https://github.com/generoi/genero-design-system/compare/v3.3.0...v3.3.1) (2020-11-11)
 
 
