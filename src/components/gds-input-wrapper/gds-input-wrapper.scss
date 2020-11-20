@@ -6,6 +6,7 @@
 
 /* Style slotted input and textarea elements */
 ::slotted(input),
+::slotted(select),
 ::slotted(textarea) {
   box-sizing: border-box;
   display: block;
@@ -26,6 +27,7 @@
 }
 
 ::slotted(input:focus),
+::slotted(select:focus),
 ::slotted(textarea:focus) {
   border: var(--gds-input-border-focus);
 }
