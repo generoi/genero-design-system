@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.4.1](https://github.com/generoi/genero-design-system/compare/v3.4.0...v3.4.1) (2020-11-20)
+
+
+### Bug Fixes
+
+* **gds-google-maps:** don't load Google Maps SDK if it's already loaded ([8959954](https://github.com/generoi/genero-design-system/commit/8959954e04c5936315b3e5107ae77835b7e9d64f))
+
 ## [3.4.0](https://github.com/generoi/genero-design-system/compare/v3.3.1...v3.4.0) (2020-11-20)
 
 
