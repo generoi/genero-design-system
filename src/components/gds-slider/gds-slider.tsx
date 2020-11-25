@@ -30,7 +30,7 @@ export class GdsSlider {
           max={this.max}
           value={this.value}
           class="slider"
-          onChange={(event) => this.valueChangedHandler(event)}
+          onChange={event => this.valueChangedHandler(event)}
         />
       </Host>
     )
