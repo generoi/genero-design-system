@@ -204,6 +204,11 @@ export namespace Components {
          */
         "size": string;
     }
+    interface GdsSlider {
+        "max": number;
+        "min": number;
+        "value": number;
+    }
     interface GdsTag {
         /**
           * If defined, the tag will be a link.
@@ -353,6 +358,12 @@ declare global {
         prototype: HTMLGdsParagraphElement;
         new (): HTMLGdsParagraphElement;
     };
+    interface HTMLGdsSliderElement extends Components.GdsSlider, HTMLStencilElement {
+    }
+    var HTMLGdsSliderElement: {
+        prototype: HTMLGdsSliderElement;
+        new (): HTMLGdsSliderElement;
+    };
     interface HTMLGdsTagElement extends Components.GdsTag, HTMLStencilElement {
     }
     var HTMLGdsTagElement: {
@@ -401,6 +412,7 @@ declare global {
         "gds-menu-item": HTMLGdsMenuItemElement;
         "gds-navigation": HTMLGdsNavigationElement;
         "gds-paragraph": HTMLGdsParagraphElement;
+        "gds-slider": HTMLGdsSliderElement;
         "gds-tag": HTMLGdsTagElement;
         "gds-tag-group": HTMLGdsTagGroupElement;
         "gds-text": HTMLGdsTextElement;
@@ -609,6 +621,12 @@ declare namespace LocalJSX {
          */
         "size"?: string;
     }
+    interface GdsSlider {
+        "max"?: number;
+        "min"?: number;
+        "onValue-changed"?: (event: CustomEvent<any>) => void;
+        "value"?: number;
+    }
     interface GdsTag {
         /**
           * If defined, the tag will be a link.
@@ -672,6 +690,7 @@ declare namespace LocalJSX {
         "gds-menu-item": GdsMenuItem;
         "gds-navigation": GdsNavigation;
         "gds-paragraph": GdsParagraph;
+        "gds-slider": GdsSlider;
         "gds-tag": GdsTag;
         "gds-tag-group": GdsTagGroup;
         "gds-text": GdsText;
@@ -700,6 +719,7 @@ declare module "@stencil/core" {
             "gds-menu-item": LocalJSX.GdsMenuItem & JSXBase.HTMLAttributes<HTMLGdsMenuItemElement>;
             "gds-navigation": LocalJSX.GdsNavigation & JSXBase.HTMLAttributes<HTMLGdsNavigationElement>;
             "gds-paragraph": LocalJSX.GdsParagraph & JSXBase.HTMLAttributes<HTMLGdsParagraphElement>;
+            "gds-slider": LocalJSX.GdsSlider & JSXBase.HTMLAttributes<HTMLGdsSliderElement>;
             "gds-tag": LocalJSX.GdsTag & JSXBase.HTMLAttributes<HTMLGdsTagElement>;
             "gds-tag-group": LocalJSX.GdsTagGroup & JSXBase.HTMLAttributes<HTMLGdsTagGroupElement>;
             "gds-text": LocalJSX.GdsText & JSXBase.HTMLAttributes<HTMLGdsTextElement>;
