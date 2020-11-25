@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.5.0](https://github.com/generoi/genero-design-system/compare/v3.4.1...v3.5.0) (2020-11-25)
+
+
+### Features
+
+* **gds-slider:** add gds-slider component that encapsulates input range ([8f126cc](https://github.com/generoi/genero-design-system/commit/8f126cc7e97b08ef3ced7c404947522e22388cc2))
+
 ### [3.4.1](https://github.com/generoi/genero-design-system/compare/v3.4.0...v3.4.1) (2020-11-20)
 
 
