@@ -12,6 +12,10 @@ export namespace Components {
          */
         "contentFloats": boolean;
         /**
+          * Keeps track of when the user has actively collapsed or expanded the accordion.
+         */
+        "expanded": boolean;
+        /**
           * Opens automatically when hovered (desktop only).
          */
         "openOnHover": boolean;
@@ -426,6 +430,10 @@ declare namespace LocalJSX {
           * Content floats.
          */
         "contentFloats"?: boolean;
+        /**
+          * Keeps track of when the user has actively collapsed or expanded the accordion.
+         */
+        "expanded"?: boolean;
         /**
           * Opens automatically when hovered (desktop only).
          */

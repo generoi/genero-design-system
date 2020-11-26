@@ -1,4 +1,4 @@
-import { Component, Prop, h, Host, State } from '@stencil/core'
+import { Component, Prop, h, Host } from '@stencil/core'
 
 /**
  * This is an accordion.
@@ -22,7 +22,11 @@ export class GdsAccordion {
   /**
    * Keeps track of when the user has actively collapsed or expanded the accordion.
    */
-  @State() expanded: boolean = false
+  @Prop({
+    reflect: true,
+    mutable: true,
+  })
+  expanded: boolean = false
 
   render() {
     return (
