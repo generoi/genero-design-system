@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.6.0](https://github.com/generoi/genero-design-system/compare/v3.5.0...v3.6.0) (2020-11-26)
+
+
+### Features
+
+* **gds-accordion:** can use `expanded` attribute to control expanding ([51672cd](https://github.com/generoi/genero-design-system/commit/51672cdfef151332d10b0591852e3d1100307b74))
+
 ## [3.5.0](https://github.com/generoi/genero-design-system/compare/v3.4.1...v3.5.0) (2020-11-25)
 
 
