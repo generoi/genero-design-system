@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.7.0](https://github.com/generoi/genero-design-system/compare/v3.6.0...v3.7.0) (2020-11-28)
+
+
+### Features
+
+* **gds-label:** add variables for line-height ([9ba3446](https://github.com/generoi/genero-design-system/commit/9ba3446f1497e5a2510b26cf36176cb58d5a884d))
+
 ## [3.6.0](https://github.com/generoi/genero-design-system/compare/v3.5.0...v3.6.0) (2020-11-26)
 
 
