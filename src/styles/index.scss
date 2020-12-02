@@ -176,8 +176,10 @@
   --button-background-color: var(--color-black);
   --button-background-color-hover: var(--color-ui-02);
   --button-background-color-disabled: var(--color-ui-02);
+  --button-background-color-active: var(--color-ui-02);
   --button-background-image: none;
   --button-background-image-hover: var(--button-background-image, none);
+  --button-background-image-active: var(--button-background-image, none);
   --button-font-weight: 500;
   --button-text-transform: uppercase;
   --button-s-letter-spacing: 1.6px;

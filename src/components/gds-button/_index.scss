@@ -32,8 +32,8 @@
     outline: var(--button-outline-hover, var(--button-outline));
   }
   &:active {
-    background-color: var(--button-background-color);
-    background-image: var(--button-background-image);
+    background-color: var(--button-background-color-active, var(--button-background-color));
+    background-image: var(--button-background-image-active, var(--button-background-image));
     outline: var(--button-outline);
   }
   &:disabled {
