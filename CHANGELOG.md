@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.9.0](https://github.com/generoi/genero-design-system/compare/v3.8.0...v3.9.0) (2020-12-02)
+
+
+### Features
+
+* **gds-button:** add :active background color and image variables ([d2ca3fa](https://github.com/generoi/genero-design-system/commit/d2ca3fa34ed152ab58f60723d1905868dc1d0f66))
+
 ## [3.8.0](https://github.com/generoi/genero-design-system/compare/v3.7.0...v3.8.0) (2020-12-02)
 
 
