@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.8.0](https://github.com/generoi/genero-design-system/compare/v3.7.0...v3.8.0) (2020-12-02)
+
+
+### Features
+
+* **gds-media-card:** add --media-card-display variable ([9877e2d](https://github.com/generoi/genero-design-system/commit/9877e2d7ad10df98b165d1f012bfb1df1ab522f1))
+
 ## [3.7.0](https://github.com/generoi/genero-design-system/compare/v3.6.0...v3.7.0) (2020-11-28)
 
 
