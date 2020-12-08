@@ -5,6 +5,17 @@ import { reactOutputTarget } from '@stencil/react-output-target'
 export const config: Config = {
   namespace: 'gds',
   taskQueue: 'async',
+  buildEs5: 'prod',
+  extras: {
+    cssVarsShim: true,
+    dynamicImportShim: true,
+    shadowDomShim: true,
+    safari10: true,
+    scriptDataOpts: true,
+    appendChildSlotFix: false,
+    cloneNodeFix: false,
+    slotChildNodesFix: true,
+  },
   outputTargets: [
     reactOutputTarget({
       componentCorePackage: 'genero-design-system',
