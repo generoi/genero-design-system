@@ -2,6 +2,34 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.11.0](https://github.com/generoi/genero-design-system/compare/v2.0.0...v3.11.0) (2021-01-13)
+
+
+### Features
+
+* **gds-accordion:** add css variables for plain text accordion ([aad6ffd](https://github.com/generoi/genero-design-system/commit/aad6ffd33f9671233f4a301d5fe39d5e447504f7))
+* **gds-accordion:** can use `expanded` attribute to control expanding ([51672cd](https://github.com/generoi/genero-design-system/commit/51672cdfef151332d10b0591852e3d1100307b74))
+* **gds-button:** add :active background color and image variables ([d2ca3fa](https://github.com/generoi/genero-design-system/commit/d2ca3fa34ed152ab58f60723d1905868dc1d0f66))
+* **gds-button:** disabled button won't trigger click events ([c7b992d](https://github.com/generoi/genero-design-system/commit/c7b992d64943726114ba35345d55b2783d88ca06))
+* **gds-google-maps:** add Google Maps wrapper component ([34f2f3d](https://github.com/generoi/genero-design-system/commit/34f2f3d4290b18b1a75c46f9018a48dead06e423))
+* **gds-google-maps:** can pass options to addMarker ([2a87e35](https://github.com/generoi/genero-design-system/commit/2a87e35f335d9d808e3794c07d744e8392345c81))
+* **gds-heading:** can define top and bottom margins ([d350172](https://github.com/generoi/genero-design-system/commit/d35017273cfe95608886eff04a0b49434bfbe23c))
+* **gds-input-wrapper:** add styles also for select element ([34c3661](https://github.com/generoi/genero-design-system/commit/34c36616031a0990a9a5a46d99eb77745e1bd908))
+* **gds-label:** add variables for line-height ([9ba3446](https://github.com/generoi/genero-design-system/commit/9ba3446f1497e5a2510b26cf36176cb58d5a884d))
+* **gds-media-card:** add --media-card-display variable ([9877e2d](https://github.com/generoi/genero-design-system/commit/9877e2d7ad10df98b165d1f012bfb1df1ab522f1))
+* **gds-media-card:** add --media-card-media-padding variable ([7dd87dc](https://github.com/generoi/genero-design-system/commit/7dd87dce3c7558f607edf3a1ec53ff3e1ee75301))
+* **gds-media-card:** add --media-card-width variable ([1d1b411](https://github.com/generoi/genero-design-system/commit/1d1b41174ce87f4107c83ffc95731b401f75b10f))
+* **gds-navigation:** add method to close menu ([57afc5e](https://github.com/generoi/genero-design-system/commit/57afc5e1a692be44a8808d90c05ea1415d5a17f2))
+* **gds-slider:** add gds-slider component that encapsulates input range ([8f126cc](https://github.com/generoi/genero-design-system/commit/8f126cc7e97b08ef3ced7c404947522e22388cc2))
+* **gds-youtube-player:** displays an iframe based youtube player ([6bb6140](https://github.com/generoi/genero-design-system/commit/6bb614086dde55879f3adcae79c4a0c2eb73d80e))
+
+
+### Bug Fixes
+
+* **gds-card:** --card-width, --card-max-width now define correct props ([a1d6c98](https://github.com/generoi/genero-design-system/commit/a1d6c98d2ea1aa2339776ae1884bcb9c9956fef9))
+* **gds-google-maps:** don't load Google Maps SDK if it's already loaded ([8959954](https://github.com/generoi/genero-design-system/commit/8959954e04c5936315b3e5107ae77835b7e9d64f))
+* **gds-navigation:** hide before hydration ([666c299](https://github.com/generoi/genero-design-system/commit/666c299dd723e3c6c69e12fac21bfd93442dd465))
+
 ## [3.10.0](https://github.com/generoi/genero-design-system/compare/v3.9.0...v3.10.0) (2021-01-05)
 
 
