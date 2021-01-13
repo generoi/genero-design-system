@@ -254,6 +254,7 @@
   --media-card-overlay-color: var(--color-white);
   --media-card-overlay-opacity: 0.75;
   --media-card-content-padding: var(--spacing-m) var(--spacing-m) var(--spacing-l) var(--spacing-m);
+  --media-card-media-padding: 0;
   --media-card-paragraph-gutter: var(--spacing-xxs);
 
   @include mobileAndTablet {
