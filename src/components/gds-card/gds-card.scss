@@ -3,6 +3,7 @@
 :host {
   @include card;
   transition: box-shadow 0.3s;
+  height: var(--card-height);
 }
 
 :host(:hover) {

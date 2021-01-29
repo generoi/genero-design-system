@@ -2,6 +2,7 @@
 
 :host {
   display: block;
+  height: var(--media-card-height, auto);
 }
 
 .media-card {

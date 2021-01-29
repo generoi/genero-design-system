@@ -90,4 +90,25 @@ export const Examples = () => html`
       <gds-paragraph size="s">which appears after after the other slots</gds-paragraph>
     </div>
   </div>
+  <div style="margin-bottom: 40px; height: 700px; border: 1px dashed black;">
+    <style>
+      .full-height {
+        --card-height: 100%;
+        --media-card-height: 100%;
+        height: 100%;
+      }
+    </style>
+    <gds-media-card
+      class="full-height"
+      headline="Card Headline"
+      image-url="${getMockImageUrl('product', 500, 500)}"
+      overlay
+      style="--media-card-overlay-color: var(--color-ui-04)"
+      description="You can also apply only an overlay and keep the image sharp"
+    />
+    <div slot="content">
+      <gds-paragraph size="s">There's also a freeform content slot</gds-paragraph>
+      <gds-paragraph size="s">which appears after after the other slots</gds-paragraph>
+    </div>
+  </div>
 `
