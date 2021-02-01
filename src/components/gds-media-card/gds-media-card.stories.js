@@ -95,16 +95,17 @@ export const Examples = () => html`
       .full-height {
         --card-height: 100%;
         --media-card-height: 100%;
+        --gds-link-height: 100%
       }
     </style>
     <gds-media-card
       href="https://google.com"
       class="full-height"
       headline="Card Headline"
-      image-url="${getMockImageUrl('product', 500, 500)}"
+      image-url="${getMockImageUrl('house', 500, 500)}"
       overlay
       style="--media-card-overlay-color: var(--color-ui-04)"
-      description="You can override the card-height variable and media-card-height to ensure equal height of multiple cards."
+      description="You can override the card-height to extend the height of its parent container."
     />
     <div slot="content">
       <gds-paragraph size="s">There's also a freeform content slot</gds-paragraph>
