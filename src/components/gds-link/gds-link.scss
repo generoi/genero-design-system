@@ -3,9 +3,11 @@
 a {
   @include base;
   display: inline-block;
+  height: var(--gds-link-height);
 }
 
 :host-context([block]),
 :host-context([block] > a) {
   display: block;
+  height: var(--gds-link-height);
 }

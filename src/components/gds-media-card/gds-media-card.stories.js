@@ -99,12 +99,13 @@ export const Examples = () => html`
       }
     </style>
     <gds-media-card
+      href="https://google.com"
       class="full-height"
       headline="Card Headline"
       image-url="${getMockImageUrl('product', 500, 500)}"
       overlay
       style="--media-card-overlay-color: var(--color-ui-04)"
-      description="You can also apply only an overlay and keep the image sharp"
+      description="You can override the card-height variable and media-card-height to ensure equal height of multiple cards."
     />
     <div slot="content">
       <gds-paragraph size="s">There's also a freeform content slot</gds-paragraph>

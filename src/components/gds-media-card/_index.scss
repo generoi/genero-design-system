@@ -1,6 +1,7 @@
 @mixin media-card {
   position: relative;
   display: var(--media-card-display, inline-block);
+  height: var(--media-card-height, auto);
   width: var(--media-card-width, auto);
   max-width: 100%;
   margin-top: max(0px, var(--superimposed-top));
