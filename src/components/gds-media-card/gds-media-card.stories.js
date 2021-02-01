@@ -95,7 +95,6 @@ export const Examples = () => html`
       .full-height {
         --card-height: 100%;
         --media-card-height: 100%;
-        height: 100%;
       }
     </style>
     <gds-media-card
