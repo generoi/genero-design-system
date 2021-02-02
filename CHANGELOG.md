@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.13.0](https://github.com/generoi/genero-design-system/compare/v3.12.0...v3.13.0) (2021-02-02)
+
+
+### Features
+
+* **gds-media-card:** add --media card height variable ([30deaef](https://github.com/generoi/genero-design-system/commit/30deaefabcbf46ee10546ab4ba98db4529ca9c69))
+* **gsd-media-card:** add --media-card-height variable ([75219e2](https://github.com/generoi/genero-design-system/commit/75219e22fbeb268593ae072457964d59f4a45274))
+
 ## [3.12.0](https://github.com/generoi/genero-design-system/compare/v3.11.0...v3.12.0) (2021-01-26)
 
 ## [3.11.0](https://github.com/generoi/genero-design-system/compare/v2.0.0...v3.11.0) (2021-01-13)
