@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [3.13.1](https://github.com/generoi/genero-design-system/compare/v3.13.0...v3.13.1) (2021-02-02)
+
+
+### Bug Fixes
+
+* **audit:** update commit lint and standard version ([5cda963](https://github.com/generoi/genero-design-system/commit/5cda963ffa4722a438793d109f5f465133b9a54f))
+* **audit:** update dependencies ([67e9e06](https://github.com/generoi/genero-design-system/commit/67e9e060da8500cc1a649cacde2f28806b4e7910))
+
 ## [3.13.0](https://github.com/generoi/genero-design-system/compare/v3.12.0...v3.13.0) (2021-02-02)
 
 
