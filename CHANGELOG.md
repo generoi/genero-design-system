@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.14.0](https://github.com/generoi/genero-design-system/compare/v3.13.1...v3.14.0) (2021-02-12)
+
+
+### Features
+
+* **gds-navigation:** add more css variables ([9145b40](https://github.com/generoi/genero-design-system/commit/9145b40cf8d668d51d74e6698afec949fc507cb3))
+
 ### [3.13.1](https://github.com/generoi/genero-design-system/compare/v3.13.0...v3.13.1) (2021-02-02)
 
 
