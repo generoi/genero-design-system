@@ -32,13 +32,13 @@ header.gds-navigation-header {
 .gds-navigation-content {
   display: flex;
   flex-grow: 1;
-  justify-content: center;
+  justify-content: var(--navigation-content-justify-content, center);
   background: var(--navigation-content-background, transparent);
 
   @include mobileAndTablet {
     display: none;
     position: absolute;
-    background-color: white;
+    background: var(--navigation-content-background, white);
     padding-top: var(--navigation-mobile-height);
     top: 0;
     left: 0;
@@ -50,7 +50,7 @@ header.gds-navigation-header {
 
 .gds-navigation-mobile-extensions {
   display: block;
-  border-top: 2px solid var(--body-background-color);
+  border-top: var(--navigation-mobile-extensions-border-top, 2px solid var(--body-background-color));
   padding: var(--spacing-l) 0;
 
   @include desktopOnly {
@@ -113,20 +113,21 @@ nav.gds-navigation-nav {
 .gds-navigation-logo {
   display: flex;
   align-items: center;
-  padding-left: var(--spacing-s);
+  padding: var(--navigation-logo-padding, 0 0 0 var(--spacing-s));
   z-index: 101;
   position: relative;
   height: var(--navigation-mobile-height);
   & img {
-    height: 32px;
+    width: var(--navigation-logo-width);
+    height: var(--navigation-logo-height, 32px);
   }
 
   @include desktopOnly {
     flex-grow: 0;
-    padding-left: var(--spacing-l);
+    padding: var(--navigation-logo-padding, 0 0 0 var(--spacing-l));
     height: var(--navigation-desktop-height);
     & img {
-      height: 48px;
+      height: var(--navigation-logo-height, 48px);
     }
   }
 }
