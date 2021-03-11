@@ -25,7 +25,7 @@
   "scripts": {
     "lint": "npm-run-all lint:*",
     "lint:eslint": "eslint .",
-    "lint:prettier": "prettier --write .",
+    "lint:prettier": "prettier --debug-check .",
     "build": "npm-run-all lint:prettier build:*",
     "build:stencil": "stencil build --docs",
     "build:storybook": "build-storybook -s public -o docs --loglevel verbose",
