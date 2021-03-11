@@ -32,3 +32,40 @@ export const Examples = () => html`
   <gds-paragraph>Menu be forced to vertical.</gds-paragraph>
   ${getMenu('vertical')}
 `
+
+// prettier-ignore
+export const Submenus = () => html`
+  <gds-menu>
+    <gds-menu-item-nested slot="item" submenu-icon="❯">
+      <a slot="link" href="#first">
+        First item
+      </a>
+      <gds-submenu slot="submenu">
+        <a slot="submenu-item" href="#first-submenu">
+          <gds-menu-item>First submenu item</gds-menu-item>
+        </a>
+        <a slot="submenu-item" href="#second-submenu">
+          <gds-menu-item>Second submenu item</gds-menu-item>
+        </a>
+      </gds-submenu>
+    </gds-menu-item-nested>
+    <a slot="item" href="#2">
+      <gds-menu-item>
+        Second item
+      </gds-menu-item>
+    </a>
+    <a slot="item" href="#short">
+      <gds-menu-item>Short</gds-menu-item>
+    </a>
+    <a slot="item" href="#4">
+      <gds-menu-item>And with ÖÄÅ</gds-menu-item>
+    </a>
+  </gds-menu>
+  <gds-paragraph>Can have second level submenu.</gds-paragraph>
+`
+
+// TODO: Add css variables here
+// Submenus.args = { count: 3, label: 'reflow' }
+// Submenus.argTypes = {
+//   count: { control: { type: 'range', min: 0, max: 20 } },
+// }

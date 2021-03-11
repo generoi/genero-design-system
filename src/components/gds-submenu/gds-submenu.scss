@@ -1,0 +1,19 @@
+
+:host {
+  display: block;
+  position: absolute;
+}
+
+ul {
+  padding: var(--gds-submenu-padding, 0);
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  text-align: var(--menu-text-align, left);
+  background: var(--gds-submenu-background);
+}
+
+::slotted(a) {
+  color: unset;
+  text-decoration: none;
+}

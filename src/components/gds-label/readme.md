@@ -15,13 +15,11 @@
 
 ### Used by
 
- - [gds-menu-item](../gds-menu-item)
  - [gds-tag](../gds-tag)
 
 ### Graph
 ```mermaid
 graph TD;
-  gds-menu-item --> gds-label
   gds-tag --> gds-label
   style gds-label fill:#f9f,stroke:#333,stroke-width:4px
 ```

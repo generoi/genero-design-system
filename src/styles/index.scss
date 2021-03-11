@@ -236,6 +236,25 @@
   // By default this is visible on desktop and hidden on mobile.
   // --menu-item-underline-display: none;
 
+  --gds-menu-item-font-family: var(--label-font-family);
+  --gds-menu-item-font-size: var(--label-l-font-size);
+  --gds-menu-item-line-height: var(--label-l-line-height);
+  --gds-menu-item-letter-spacing: var(--label-l-letter-spacing);
+  --gds-menu-item-font-weight: var(--label-l-font-weight);
+  --gds-menu-item-text-transform: var(--label-text-transform);
+
+  --gds-submenu-padding: 0;
+  --gds-submenu-background: var(--color-white);
+
+  gds-submenu {
+    --gds-menu-item-font-family: var(--body-font-family);
+    --gds-menu-item-font-size: var(--paragraph-font-size);
+    --gds-menu-item-line-height: var(--paragraph-line-height);
+    --gds-menu-item-letter-spacing: 0;
+    --gds-menu-item-font-weight: normal;
+    --gds-menu-item-text-transform: none;
+  }
+
   /* Card */
   --card-border: none;
   --card-border-radius: 40px;

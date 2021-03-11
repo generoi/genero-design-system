@@ -40,6 +40,16 @@ li {
   }
 }
 
+.item {
+  // For historical reasons, fallback to gds-label size="l"
+  font-family: var(--gds-menu-item-font-family, var(--label-font-family));
+  font-size: var(--gds-menu-item-font-size, var(--label-l-font-size));
+  line-height: var(--gds-menu-item-line-height, var(--label-l-line-height));
+  letter-spacing: var(--gds-menu-item-letter-spacing, var(--label-l-letter-spacing));
+  font-weight: var(--gds-menu-item-font-weight, var(--label-l-font-weight));
+  text-transform: var(--gds-menu-item-text-transform, var(--label-text-transform));
+}
+
 .underline-container {
   position: relative;
   width: 100%;

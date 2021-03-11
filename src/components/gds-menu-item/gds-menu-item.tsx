@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core'
+import { Component, h, Listen, Prop } from '@stencil/core'
 
 @Component({
   tag: 'gds-menu-item',
@@ -11,6 +11,26 @@ export class GdsMenuItem {
    */
   @Prop({ reflect: true }) active: boolean
 
+  /**
+   * Show undeline on mouse enter.
+   */
+   @Listen('mouseenter')
+   handleEnter() {
+     if (!this.active) {
+       this.active = true
+     }
+   }
+
+  /**
+   * Hide undeline on mouse leave.
+   */
+   @Listen('mouseleave')
+   handleLeave() {
+     if (this.active) {
+       this.active = false
+     }
+   }
+
   render() {
     return (
       <li
@@ -19,9 +39,9 @@ export class GdsMenuItem {
           active: this.active,
         }}>
         <div class="content">
-          <gds-label size="l">
+          <div class="item">
             <slot></slot>
-          </gds-label>
+          </div>
           {this.active && (
             <div class="underline-container">
               <div class="underline"></div>

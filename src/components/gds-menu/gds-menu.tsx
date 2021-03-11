@@ -1,4 +1,4 @@
-import { Component, h, Prop } from '@stencil/core'
+import { Component, h, Prop, Host } from '@stencil/core'
 
 /**
  * This component can be used in on a webpage direct with good SEO since anchors are rendered outside of the component.
@@ -17,9 +17,11 @@ export class GdsMenu {
 
   render() {
     return (
-      <ul class={this.direction}>
-        <slot name="item"></slot>
-      </ul>
+      <Host>
+        <ul class={this.direction}>
+          <slot name="item"></slot>
+        </ul>
+      </Host>
     )
   }
 }

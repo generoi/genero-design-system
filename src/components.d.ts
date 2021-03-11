@@ -195,6 +195,20 @@ export namespace Components {
          */
         "active": boolean;
     }
+    interface GdsMenuItemNested {
+        /**
+          * Is menu item appear active.
+         */
+        "active": boolean;
+        /**
+          * Keeps track of when the user has actively collapsed or expanded the submenu.
+         */
+        "expanded": boolean;
+        /**
+          * Submenu icon.
+         */
+        "submenuIcon": string;
+    }
     interface GdsNavigation {
         "closeMenu": () => Promise<void>;
     }
@@ -212,6 +226,8 @@ export namespace Components {
         "max": number;
         "min": number;
         "value": number;
+    }
+    interface GdsSubmenu {
     }
     interface GdsTag {
         /**
@@ -350,6 +366,12 @@ declare global {
         prototype: HTMLGdsMenuItemElement;
         new (): HTMLGdsMenuItemElement;
     };
+    interface HTMLGdsMenuItemNestedElement extends Components.GdsMenuItemNested, HTMLStencilElement {
+    }
+    var HTMLGdsMenuItemNestedElement: {
+        prototype: HTMLGdsMenuItemNestedElement;
+        new (): HTMLGdsMenuItemNestedElement;
+    };
     interface HTMLGdsNavigationElement extends Components.GdsNavigation, HTMLStencilElement {
     }
     var HTMLGdsNavigationElement: {
@@ -367,6 +389,12 @@ declare global {
     var HTMLGdsSliderElement: {
         prototype: HTMLGdsSliderElement;
         new (): HTMLGdsSliderElement;
+    };
+    interface HTMLGdsSubmenuElement extends Components.GdsSubmenu, HTMLStencilElement {
+    }
+    var HTMLGdsSubmenuElement: {
+        prototype: HTMLGdsSubmenuElement;
+        new (): HTMLGdsSubmenuElement;
     };
     interface HTMLGdsTagElement extends Components.GdsTag, HTMLStencilElement {
     }
@@ -414,9 +442,11 @@ declare global {
         "gds-media-card": HTMLGdsMediaCardElement;
         "gds-menu": HTMLGdsMenuElement;
         "gds-menu-item": HTMLGdsMenuItemElement;
+        "gds-menu-item-nested": HTMLGdsMenuItemNestedElement;
         "gds-navigation": HTMLGdsNavigationElement;
         "gds-paragraph": HTMLGdsParagraphElement;
         "gds-slider": HTMLGdsSliderElement;
+        "gds-submenu": HTMLGdsSubmenuElement;
         "gds-tag": HTMLGdsTagElement;
         "gds-tag-group": HTMLGdsTagGroupElement;
         "gds-text": HTMLGdsTextElement;
@@ -617,6 +647,20 @@ declare namespace LocalJSX {
          */
         "active"?: boolean;
     }
+    interface GdsMenuItemNested {
+        /**
+          * Is menu item appear active.
+         */
+        "active"?: boolean;
+        /**
+          * Keeps track of when the user has actively collapsed or expanded the submenu.
+         */
+        "expanded"?: boolean;
+        /**
+          * Submenu icon.
+         */
+        "submenuIcon"?: string;
+    }
     interface GdsNavigation {
     }
     interface GdsParagraph {
@@ -634,6 +678,8 @@ declare namespace LocalJSX {
         "min"?: number;
         "onValue-changed"?: (event: CustomEvent<any>) => void;
         "value"?: number;
+    }
+    interface GdsSubmenu {
     }
     interface GdsTag {
         /**
@@ -696,9 +742,11 @@ declare namespace LocalJSX {
         "gds-media-card": GdsMediaCard;
         "gds-menu": GdsMenu;
         "gds-menu-item": GdsMenuItem;
+        "gds-menu-item-nested": GdsMenuItemNested;
         "gds-navigation": GdsNavigation;
         "gds-paragraph": GdsParagraph;
         "gds-slider": GdsSlider;
+        "gds-submenu": GdsSubmenu;
         "gds-tag": GdsTag;
         "gds-tag-group": GdsTagGroup;
         "gds-text": GdsText;
@@ -725,9 +773,11 @@ declare module "@stencil/core" {
             "gds-media-card": LocalJSX.GdsMediaCard & JSXBase.HTMLAttributes<HTMLGdsMediaCardElement>;
             "gds-menu": LocalJSX.GdsMenu & JSXBase.HTMLAttributes<HTMLGdsMenuElement>;
             "gds-menu-item": LocalJSX.GdsMenuItem & JSXBase.HTMLAttributes<HTMLGdsMenuItemElement>;
+            "gds-menu-item-nested": LocalJSX.GdsMenuItemNested & JSXBase.HTMLAttributes<HTMLGdsMenuItemNestedElement>;
             "gds-navigation": LocalJSX.GdsNavigation & JSXBase.HTMLAttributes<HTMLGdsNavigationElement>;
             "gds-paragraph": LocalJSX.GdsParagraph & JSXBase.HTMLAttributes<HTMLGdsParagraphElement>;
             "gds-slider": LocalJSX.GdsSlider & JSXBase.HTMLAttributes<HTMLGdsSliderElement>;
+            "gds-submenu": LocalJSX.GdsSubmenu & JSXBase.HTMLAttributes<HTMLGdsSubmenuElement>;
             "gds-tag": LocalJSX.GdsTag & JSXBase.HTMLAttributes<HTMLGdsTagElement>;
             "gds-tag-group": LocalJSX.GdsTagGroup & JSXBase.HTMLAttributes<HTMLGdsTagGroupElement>;
             "gds-text": LocalJSX.GdsText & JSXBase.HTMLAttributes<HTMLGdsTextElement>;
