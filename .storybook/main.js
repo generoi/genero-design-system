@@ -2,12 +2,15 @@ const path = require('path');
 
 module.exports = {
   stories: ['../src/**/*.stories.js'],
-  addons: [{
-    name: '@storybook/addon-essentials',
-    options: {
-      backgrounds: false,
-    }
-  }],
+  addons: [
+    {
+      name: '@storybook/addon-essentials',
+      options: {
+        backgrounds: false,
+      }
+    },
+    '@storybook/addon-controls'
+  ],
 
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of 'DEVELOPMENT' or 'PRODUCTION'
