@@ -2,6 +2,19 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.16.0](https://github.com/generoi/genero-design-system/compare/v3.15.0...v3.16.0) (2021-03-12)
+
+
+### Features
+
+* **storybook:** Add support for story controls ([bd51bf8](https://github.com/generoi/genero-design-system/commit/bd51bf82576725d7c747ce774791f69b7660c2d2))
+* **submenu:** add submenu and related components ([9408cad](https://github.com/generoi/genero-design-system/commit/9408cad892d5400262baf81fe4a757de3d0ce7b3))
+
+
+### Bug Fixes
+
+* **audit:** update dependencies ([fe9b644](https://github.com/generoi/genero-design-system/commit/fe9b6440e780e5e7f5cc1e39e35c816bf263075a))
+
 ## [3.15.0](https://github.com/generoi/genero-design-system/compare/v3.14.0...v3.15.0) (2021-02-12)
 
 ## [3.14.0](https://github.com/generoi/genero-design-system/compare/v3.13.1...v3.14.0) (2021-02-12)
