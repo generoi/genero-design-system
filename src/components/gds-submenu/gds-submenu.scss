@@ -13,6 +13,7 @@ ul {
   text-align: var(--menu-text-align, left);
   background: var(--gds-submenu-background, white);
   box-shadow: var(--gds-submenu-box-shadow, 0 5px 10px #0000000c);
+  list-style-type: none;
 }
 
 // Mobile and tablet behaves a bit differently
@@ -26,7 +27,7 @@ ul {
   }
 }
 
-::slotted(a) {
+a {
   color: unset;
   text-decoration: none;
 }

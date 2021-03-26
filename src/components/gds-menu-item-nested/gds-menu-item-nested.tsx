@@ -1,4 +1,7 @@
-import { Component, h, Host, Listen, Prop } from '@stencil/core'
+import { Component, h, Host, Listen, Prop, Element } from '@stencil/core'
+
+// Global counter to generate unique IDs.
+let idCounter = 0
 
 @Component({
   tag: 'gds-menu-item-nested',
@@ -6,6 +9,9 @@ import { Component, h, Host, Listen, Prop } from '@stencil/core'
   shadow: true,
 })
 export class GdsMenuItemNested {
+  @Element() host: HTMLElement
+  private linkSlot: HTMLElement
+
   /**
    * Is menu item appear active.
    */
@@ -24,6 +30,17 @@ export class GdsMenuItemNested {
     mutable: true,
   })
   expanded: boolean = false
+
+  /**
+   * Accessible label of the submenu.
+   * Defaults to textContent of the link slot.
+   */
+  @Prop() accessibleLabel: string
+
+  /**
+   * HTML ID for the submenu used by aria attributes.
+   */
+  private submenuId: string
 
   /**
    * Expand on mouse enter.
@@ -62,10 +79,23 @@ export class GdsMenuItemNested {
     this.expanded = !this.expanded
   }
 
+  componentWillLoad() {
+    this.submenuId = `gds-menu-item-nested-${++idCounter}`
+    this.linkSlot = this.host.querySelector(':scope > [slot="link"]')
+    this.linkSlot.setAttribute('role', 'menuitem')
+    this.linkSlot.setAttribute('aria-haspopup', 'true')
+
+    if (!this.accessibleLabel) {
+      this.accessibleLabel = this.linkSlot.textContent.trim()
+    }
+  }
+
   render() {
+    this.linkSlot.setAttribute('aria-expanded', this.expanded ? 'true' : 'false')
+
     return (
       <Host>
-        <li
+        <div
           class={{
             item: true,
             active: this.active,
@@ -74,22 +104,35 @@ export class GdsMenuItemNested {
             <div class="item">
               <slot name="link"></slot>
               {this.submenuIcon ?
-                <span class={{
-                  'submenu-icon': true,
-                  'submenu-icon-expanded': this.expanded,
-                }} onClick={e => this.handleToggleSubmenuClick(e)}>{this.submenuIcon}</span>
+                <button
+                  role="menuitem"
+                  aria-expanded={ this.expanded ? 'true' : 'false' }
+                  aria-haspopup="true"
+                  aria-controls={ this.submenuId }
+                  aria-label={ this.accessibleLabel }
+                  class={{
+                    'submenu-icon': true,
+                    'submenu-icon-expanded': this.expanded,
+                  }}
+                  onClick={e => this.handleToggleSubmenuClick(e)}
+                >
+                  {this.submenuIcon}
+                </button>
               : null}
             </div>
           </div>
-          <div class={{
-            'submenu-positioner': true,
-            'submenu-expanded': this.expanded,
-          }}>
+          <div
+            id={ this.submenuId }
+            class={{
+              'submenu-positioner': true,
+              'submenu-expanded': this.expanded,
+            }}
+          >
             <div class="submenu-container">
               <slot name="submenu"></slot>
             </div>
           </div>
-        </li>
+        </div>
       </Host>
     )
   }

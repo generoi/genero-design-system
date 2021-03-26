@@ -205,6 +205,10 @@ export namespace Components {
          */
         "active": boolean;
         /**
+          * Aria label of the submenu. Defaults to textContent of the link slot.
+         */
+        "ariaLabel": string;
+        /**
           * Keeps track of when the user has actively collapsed or expanded the submenu.
          */
         "expanded": boolean;
@@ -232,6 +236,10 @@ export namespace Components {
         "value": number;
     }
     interface GdsSubmenu {
+        /**
+          * Aria role Defaults to "menu".
+         */
+        "role": string;
     }
     interface GdsTag {
         /**
@@ -661,6 +669,10 @@ declare namespace LocalJSX {
          */
         "active"?: boolean;
         /**
+          * Aria label of the submenu. Defaults to textContent of the link slot.
+         */
+        "ariaLabel"?: string;
+        /**
           * Keeps track of when the user has actively collapsed or expanded the submenu.
          */
         "expanded"?: boolean;
@@ -688,6 +700,10 @@ declare namespace LocalJSX {
         "value"?: number;
     }
     interface GdsSubmenu {
+        /**
+          * Aria role Defaults to "menu".
+         */
+        "role"?: string;
     }
     interface GdsTag {
         /**

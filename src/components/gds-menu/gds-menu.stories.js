@@ -35,12 +35,12 @@ export const Examples = () => html`
 
 // prettier-ignore
 export const Submenus = () => html`
-  <gds-menu>
+  <gds-menu role="menubar" aria-label="Primary navigation">
     <gds-menu-item-nested slot="item" submenu-icon="❯">
       <a slot="link" href="#first">
         First item
       </a>
-      <gds-submenu slot="submenu">
+      <gds-submenu slot="submenu" aria-label="First item submenu">
         <a slot="submenu-item" href="#first-submenu">
           <gds-menu-item>First submenu item</gds-menu-item>
         </a>
@@ -49,11 +49,19 @@ export const Submenus = () => html`
         </a>
       </gds-submenu>
     </gds-menu-item-nested>
-    <a slot="item" href="#2">
-      <gds-menu-item>
+    <gds-menu-item-nested slot="item" submenu-icon="❯">
+      <a slot="link" href="#second">
         Second item
-      </gds-menu-item>
-    </a>
+      </a>
+      <gds-submenu slot="submenu" aria-label="First item submenu">
+        <a slot="submenu-item" href="#first-submenu">
+          <gds-menu-item>First submenu item</gds-menu-item>
+        </a>
+        <a slot="submenu-item" href="#second-submenu">
+          <gds-menu-item>Second submenu item</gds-menu-item>
+        </a>
+      </gds-submenu>
+    </gds-menu-item-nested>
     <a slot="item" href="#short">
       <gds-menu-item>Short</gds-menu-item>
     </a>
