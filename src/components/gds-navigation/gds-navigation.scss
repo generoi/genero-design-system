@@ -67,6 +67,9 @@ header.gds-navigation-header {
 }
 
 nav.gds-navigation-nav {
+  // Span full width
+  flex: 1 1 auto;
+
   @include mobileAndTablet {
     margin: var(--spacing-l) 0;
   }
