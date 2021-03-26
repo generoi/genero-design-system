@@ -7,9 +7,9 @@ export default {
 
 // prettier-ignore
 export const Examples = () => html`
-  <gds-navigation>
-    <a slot="logo" href="/">
-      <img src="images/genero-logo.png" />
+  <gds-navigation accessible-navigation-label="Primary navigation">
+    <a slot="logo" href="/" aria-label="Genero">
+      <img src="images/genero-logo.png" alt="" />
     </a>
     <div slot="menu">
       <gds-menu key="123" role="menubar" aria-label="Primary navigation">
@@ -57,9 +57,9 @@ export const Examples = () => html`
 
   <gds-paragraph>Navigation adjusts to the screen width.</gds-paragraph>
 
-  <gds-navigation>
-    <a slot="logo" href="/">
-      <img src="images/genero-logo.png" />
+  <gds-navigation accessible-navigation-label="Primary navigation 2">
+    <a slot="logo" href="/" aria-label="Genero">
+      <img src="images/genero-logo.png" alt="" />
     </a>
     <div slot="menu">
       <gds-menu key="123">
@@ -103,9 +103,9 @@ export const Examples = () => html`
       --icon-color: var(--navigation-color);
     }
   </style>
-  <gds-navigation class="custom-menu-background">
-    <a slot="logo" href="/">
-      <img src="images/genero-logo.png" />
+  <gds-navigation class="custom-menu-background" accessible-navigation-label="Primary navigation 3">
+    <a slot="logo" href="/" aria-label="Genero">
+      <img src="images/genero-logo.png" alt="" />
     </a>
     <div slot="menu">
       <gds-menu key="123">

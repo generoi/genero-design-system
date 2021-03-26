@@ -3,6 +3,13 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property                    | Attribute                     | Description                               | Type     | Default     |
+| --------------------------- | ----------------------------- | ----------------------------------------- | -------- | ----------- |
+| `navigationAccessibleLabel` | `navigation-accessible-label` | Accessible label for the inner navigation | `string` | `undefined` |
+
+
 ## Methods
 
 ### `closeMenu() => Promise<void>`

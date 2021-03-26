@@ -1,4 +1,4 @@
-import { Component, h, Host, State, Element } from '@stencil/core'
+import { Component, h, Host, State, Element, Prop } from '@stencil/core'
 import { HTMLStencilElement, Method } from '@stencil/core/internal'
 
 /**
@@ -15,6 +15,10 @@ import { HTMLStencilElement, Method } from '@stencil/core/internal'
 })
 export class GdsNavigation {
   /**
+   * Accessible label for the inner navigation
+   */
+  @Prop() navigationAccessibleLabel: string
+  /**
    * Mobile menu icon. Can be overridden by slots (menu-icon, close-menu-icon).
    */
   @State() menuIcon: string = '☰'
@@ -23,7 +27,7 @@ export class GdsNavigation {
    */
   @State() open: boolean = false
   /**
-   * Content element that get's hidden in mobile menu.
+   * Content element that gets hidden in mobile menu.
    */
   private content: HTMLElement
 
@@ -80,7 +84,7 @@ export class GdsNavigation {
             </div>
 
             <div class="gds-navigation-content" ref={el => (this.content = el)}>
-              <nav class="gds-navigation-nav">
+              <nav class="gds-navigation-nav" aria-label={this.navigationAccessibleLabel}>
                 <slot name="menu"></slot>
               </nav>
 
