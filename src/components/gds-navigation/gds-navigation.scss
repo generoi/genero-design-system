@@ -13,14 +13,14 @@ header.gds-navigation-header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-right: 0;
 
   // Mobile as default.
   height: var(--navigation-mobile-height);
+  padding: var(--navigation-padding, 0 0 0 var(--spacing-xs));
 
   // Desktop from viewport width.
   @include desktopOnly {
-    padding-right: var(--spacing-xs);
+    padding: var(--navigation-padding, 0 var(--spacing-l));
     height: var(--navigation-desktop-height);
   }
 
@@ -67,6 +67,9 @@ header.gds-navigation-header {
 }
 
 nav.gds-navigation-nav {
+  // Span full width
+  flex: 1 1 auto;
+
   @include mobileAndTablet {
     margin: var(--spacing-l) 0;
   }
@@ -113,18 +116,22 @@ nav.gds-navigation-nav {
 .gds-navigation-logo {
   display: flex;
   align-items: center;
-  padding: var(--navigation-logo-padding, 0 0 0 var(--spacing-s));
+  padding: var(--navigation-logo-padding, 0);
   z-index: 101;
   position: relative;
   height: var(--navigation-mobile-height);
+
   & img {
     width: var(--navigation-logo-width);
     height: var(--navigation-logo-height, 32px);
   }
 
+  a:focus {
+    outline: var(--gds-link-outline-focus);
+  }
+
   @include desktopOnly {
     flex-grow: 0;
-    padding: var(--navigation-logo-padding, 0 0 0 var(--spacing-l));
     height: var(--navigation-desktop-height);
     & img {
       height: var(--navigation-logo-height, 48px);

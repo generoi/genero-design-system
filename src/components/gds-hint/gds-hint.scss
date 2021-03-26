@@ -1,10 +1,23 @@
-.hint {
+:host {
   position: relative;
   display: inline-block;
 }
 
 .icon {
   cursor: pointer;
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 0;
+  outline: none;
+
+  &-content {
+    outline: none;
+  }
+
+  &:focus > .icon-content {
+    outline: var(--gds-hint-outline-focus);
+  }
 }
 
 .content {
@@ -18,9 +31,13 @@
   padding: var(--spacing-xxs);
   border: var(--gds-hint-border);
   border-radius: var(--gds-hint-border-radius);
-  display: none;
+  visibility: hidden;
 
   &.open {
-    display: block;
+    visibility: visible;
+  }
+
+  &:focus {
+    outline: var(--gds-hint-outline-focus);
   }
 }

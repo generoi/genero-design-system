@@ -43,6 +43,10 @@
       transform: translateX(calc(var(--text-button-icon-hover-offset) * -1));
     }
   }
+
+  &:focus {
+    outline: var(--text-button-outline-focus);
+  }
 }
 
 @mixin size-s {

@@ -16,6 +16,10 @@ export class GdsYouTubePlayer {
    */
   @Prop() videoId: string
   /**
+   * Accessible Label
+   */
+  @Prop() accessibleLabel: string
+  /**
    * Indicates whether the video player controls are displayed.
    */
   @Prop() controls: boolean = true
@@ -30,7 +34,12 @@ export class GdsYouTubePlayer {
 
     return (
       <div class="gds-youtube-player">
-        <iframe class="gds-youtube-player-iframe" src={src} frameborder="0" allowFullScreen></iframe>
+        <iframe
+          class="gds-youtube-player-iframe"
+          src={src}
+          title={this.accessibleLabel}
+          frameborder="0"
+          allowFullScreen></iframe>
       </div>
     )
   }

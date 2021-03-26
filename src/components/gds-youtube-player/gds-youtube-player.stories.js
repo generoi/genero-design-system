@@ -10,14 +10,14 @@ export const Examples = () => html`
   <gds-paragraph>This player takes all available width and keeps the aspect ratio.</gds-paragaph>
   <gds-paragraph>Here it has 300px.</gds-paragaph>
   <div style="margin-bottom: 50px; width: 300px;">
-    <gds-youtube-player video-id="A0FZIwabctw" autoplay />
+    <gds-youtube-player video-id="A0FZIwabctw" accessible-label="video 1" autoplay />
   </div>
   <gds-paragraph>Here controls are hidden which forces to display YouTube logo.</gds-paragaph>
   <div style="margin-bottom: 50px; width: 300px;">
-    <gds-youtube-player video-id="A0FZIwabctw" controls="false" />
+    <gds-youtube-player video-id="A0FZIwabctw" controls="false" accessible-label="video 2" />
   </div>
   <gds-paragraph>Here it has 100% width.</gds-paragaph>
   <div style="margin-bottom: 50px;">
-    <gds-youtube-player video-id="A0FZIwabctw" />
+    <gds-youtube-player video-id="A0FZIwabctw" accessible-label="video 3" />
   </div>
 `

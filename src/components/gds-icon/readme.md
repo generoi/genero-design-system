@@ -5,14 +5,15 @@
 
 ## Properties
 
-| Property  | Attribute | Description                        | Type      | Default     |
-| --------- | --------- | ---------------------------------- | --------- | ----------- |
-| `class`   | `class`   | Style overrides.                   | `string`  | `undefined` |
-| `duotone` | `duotone` |                                    | `boolean` | `undefined` |
-| `light`   | `light`   |                                    | `boolean` | `undefined` |
-| `name`    | `name`    | FA icon name.                      | `string`  | `undefined` |
-| `regular` | `regular` | FA icon style. Only use one style. | `boolean` | `undefined` |
-| `solid`   | `solid`   |                                    | `boolean` | `undefined` |
+| Property          | Attribute          | Description                        | Type      | Default     |
+| ----------------- | ------------------ | ---------------------------------- | --------- | ----------- |
+| `accessibleLabel` | `accessible-label` | Accessible Label                   | `string`  | `undefined` |
+| `class`           | `class`            | Style overrides.                   | `string`  | `undefined` |
+| `duotone`         | `duotone`          |                                    | `boolean` | `undefined` |
+| `light`           | `light`            |                                    | `boolean` | `undefined` |
+| `name`            | `name`             | FA icon name.                      | `string`  | `undefined` |
+| `regular`         | `regular`          | FA icon style. Only use one style. | `boolean` | `undefined` |
+| `solid`           | `solid`            |                                    | `boolean` | `undefined` |
 
 
 ----------------------------------------------

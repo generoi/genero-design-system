@@ -24,10 +24,18 @@ export class GdsLink {
    * Block element.
    */
   @Prop({ reflect: true }) block: boolean
+  /**
+   * Expand across container.
+   */
+  @Prop({ reflect: true }) full: boolean
+  /**
+   * Accessible label.
+   */
+  @Prop({ reflect: true }) accessibleLabel: string
 
   render() {
     return (
-      <a href={this.href} target={this.target} rel={this.rel}>
+      <a href={this.href} target={this.target} rel={this.rel} aria-label={this.accessibleLabel}>
         <slot></slot>
       </a>
     )

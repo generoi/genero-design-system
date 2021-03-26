@@ -2,121 +2,111 @@
 
 :host {
   display: block;
+  position: relative;
 }
 
-li {
-  box-sizing: border-box;
-  list-style: none;
-}
-
-.active {
-  @include mobileOnly {
-    background-color: var(--menu-item-background-color-active, var(--background-color-primary));
-  }
-}
-
-.content {
-  height: var(--spacing-xxl);
+// Item containing link and toggler
+.menu-item {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  // Mobile as default.
-  padding: 0 var(--spacing-m);
-
-  // Desktop from viewport width.
-  @include desktopOnly {
-    padding: 0 var(--spacing-s);
-  }
-}
-
-// Vertical direction explicitly defined.
-:host-context(.vertical) {
-  & .content {
-    padding: 0 var(--spacing-m);
-  }
-}
-
-// Horizontal direction explicitly defined.
-:host-context(.horizontal) {
-  & .content {
-    padding: 0 var(--spacing-s);
-  }
-}
-
-.item {
-  font-family: var(--gds-menu-item-font-family);
-  font-size: var(--gds-menu-item-font-size);
-  line-height: var(--gds-menu-item-line-height);
-  letter-spacing: var(--gds-menu-item-letter-spacing);
-  font-weight: var(--gds-menu-item-font-weight);
-  text-transform: var(--gds-menu-item-text-transform);
-}
-
-.divider {
-  margin: var(--spacing-m) 0;
-  border-top: 2px solid var(--background-color-primary);
+  flex-direction: row;
+  align-items: stretch;
 }
 
 .submenu-icon {
   display: inline-block;
   text-align: center;
-  height: 1em;
-  width: 1em;
-  padding: var(--spacing-xs);
   cursor: pointer;
-  transform: rotate(90deg);
-  transition: transform 0.3s ease;
-}
+  padding: 0;
 
-.submenu-positioner {
-  position: relative;
-  top: 0px;
-  overflow: hidden;
-  max-height: 0px;
+  // Reset browser default button styles
+  appearance: none;
+  background: none;
+  border: 0;
+  outline: none;
+  font-size: inherit;
+  line-height: inherit;
+  margin-left: calc(-1 * var(--spacing-xxs));
+  margin-right: var(--spacing-xs);
 
-  .submenu-container {
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    white-space: nowrap;
+  .submenu-icon-content {
+    //  Since the element is rotated we need it to be square
+    padding: var(--spacing-xxxs);
+    width: 1em;
+    height: 1em;
+    box-sizing: content-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    outline: none;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
   }
 
-  &.submenu-expanded {
-    overflow: visible;
+  // Only visible when focused through the keyboard, focusing by clicking the
+  // button doesn't show focus styles
+  &:focus > .submenu-icon-content {
+    outline: var(--gds-menu-item-nested-submenu-icon-outline-focus);
+  }
+}
 
-    .submenu-container {
-      opacity: 1;
-    }
+// Submenu is hidden until set to expanded on the host element
+.submenu {
+  overflow: hidden;
+  max-height: 0px;
+  visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  display: block;
+  // Expand to the size of the menu-item itself so that <gds-submenu> has the
+  // correct container width.
+  width: 100%;
+
+  :host([expanded]) & {
+    overflow: visible;
+    visibility: visible;
+    opacity: 1;
   }
 }
 
 // Mobile and tablet behaves a bit differently
 @include mobileAndTablet {
-  .submenu-icon {
-    &.submenu-icon-expanded {
-      transform: rotate(-90deg);
-    }
+  :host([active]) .menu-item {
+    background-color: var(--gds-menu-item-background-color-active, var(--background-color-primary));
   }
 
-  .submenu-positioner {
+  .submenu {
     max-height: 0px;
     transition: max-height 0.3s ease;
+    position: relative;
+    opacity: 1;
+  }
 
-    .submenu-container {
-      position: relative;
-      opacity: 1;
+  :host([expanded]) {
+    .submenu-icon-content {
+      transform: rotate(-90deg);
     }
 
-    &.submenu-expanded {
-      overflow: hidden;
+    .submenu {
       max-height: 300px;
     }
   }
 }
 
 ::slotted(a) {
+  // Reset menu link styles
   color: unset;
   text-decoration: none;
-  padding: var(--gds-menu-item-nested-a-padding, var(--spacing-xs) 0);
+  // Span
+  flex: 1 0 auto;
+  display: block;
+
+  --gds-menu-item-underline-active: var(--gds-menu-item-nested-underline-active);
+}
+
+// Focus link styles
+::slotted(a:focus) {
+  outline: var(--gds-menu-link-outline-focus);
+  z-index: 1; // go above the submenu button
 }

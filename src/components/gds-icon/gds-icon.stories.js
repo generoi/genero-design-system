@@ -15,7 +15,7 @@ export const Examples = () => html`
     <gds-heading>These icons use FontAwesome</gds-heading>
 
     <gds-paragraph>Default</gds-paragraph>
-    <gds-icon name="books"></gds-icon>
+    <gds-icon name="books" accessible-label="Books"></gds-icon>
 
     <gds-paragraph>Regular</gds-paragraph>
     <gds-icon regular name="books"></gds-icon>

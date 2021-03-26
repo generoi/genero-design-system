@@ -1,33 +1,40 @@
 @use "../../styles/breakpoints" as *;
 
 :host {
-  display: block;
-}
-
-ul {
   padding: 0;
   margin: 0;
   display: flex;
-  text-align: var(--menu-text-align, left);
+  text-align: var(--gds-menu-text-align, left);
+  list-style-type: none;
+  justify-content: var(--gds-menu-justify-content);
 
   // Direction derived from viewport width.
   flex-direction: column;
+
   @include desktopOnly {
     flex-direction: row;
   }
 }
 
 // Vertical direction explicitly defined.
-.vertical {
+:host([direction="vertical"]) {
   flex-direction: column;
 }
 
 // Horizontal direction explicitly defined.
-.horizontal {
+:host([direction="horizontal"]) {
   flex-direction: row;
 }
 
+// Reset menu link styles
 ::slotted(a) {
   color: unset;
   text-decoration: none;
+  display: inline-block;
+}
+
+// Set menu link focus style
+::slotted(a:focus) {
+  outline: var(--gds-menu-link-outline-focus);
+  z-index: 1; // go above the submenu button
 }

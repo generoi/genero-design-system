@@ -45,6 +45,8 @@
 
 ::slotted([slot='tags']) {
   display: block;
+  position: relative;
+  z-index: 2;
 
   @include tags;
 }

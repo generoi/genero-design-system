@@ -5,11 +5,13 @@
 
 ## Properties
 
-| Property   | Attribute   | Description                          | Type     | Default     |
-| ---------- | ----------- | ------------------------------------ | -------- | ----------- |
-| `href`     | `href`      | If defined, the logo will be a link. | `string` | `undefined` |
-| `imageUrl` | `image-url` | Image url.                           | `string` | `undefined` |
-| `target`   | `target`    | Link open target.                    | `string` | `undefined` |
+| Property          | Attribute          | Description                                                            | Type     | Default     |
+| ----------------- | ------------------ | ---------------------------------------------------------------------- | -------- | ----------- |
+| `accessibleLabel` | `accessible-label` | Accessible label.                                                      | `string` | `undefined` |
+| `alt`             | `alt`              | Image alternative text. Defaults to "" which makes it decorative only. | `string` | `''`        |
+| `href`            | `href`             | If defined, the logo will be a link.                                   | `string` | `undefined` |
+| `imageUrl`        | `image-url`        | Image url.                                                             | `string` | `undefined` |
+| `target`          | `target`           | Link open target.                                                      | `string` | `undefined` |
 
 
 ## Dependencies

@@ -34,9 +34,16 @@ export class GdsIcon {
    */
   @Prop() class: string
 
+  /**
+   * Accessible Label
+   */
+  @Prop() accessibleLabel: string
+
   render() {
     return (
       <i
+        aria-hidden={ this.accessibleLabel ? null : 'true' }
+        title={ this.accessibleLabel }
         class={{
           fa: true,
           far: this.regular,

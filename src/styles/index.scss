@@ -36,6 +36,8 @@
   --spacing-xxl: 48px;
   --spacing-xxxl: 80px;
 
+  --gds-global-outline-focus: auto var(--color-ui-04);
+
   /* Body */
   --body-font-family: Gilroy, Arial, Helvetica, sans-serif;
   --body-background-color: var(--background-color-primary);
@@ -191,6 +193,7 @@
   --button-box-shadow: none;
   --button-border: none;
   --button-outline: none;
+  --button-outline-focus: var(--gds-global-outline-focus);
   /* Can also define this: --button-outline-hover: none; */
   /* Precise vertical position is dependent on the font. So you might need to adjust this. */
   --button-s-padding: 12px 24px 8px 24px;
@@ -218,30 +221,42 @@
   --text-button-l-font-size: var(--button-l-font-size);
   --text-button-icon-transition: transform 0.1s ease-out;
   --text-button-icon-hover-offset: var(--spacing-xxs);
+  --text-button-outline-focus: var(--gds-global-outline-focus);
 
   /* Navigation */
   --navigation-color: var(--color-black);
-  --navigation-underline-color: var(--color-black);
   --navigation-background: var(--color-white);
   --navigation-desktop-height: 100px;
   --navigation-mobile-height: 70px;
+  // --navigation-padding: 0 var(--spacing-l);
 
   gds-navigation:not(.hydrated) {
     visibility: hidden;
   }
 
   /* Menu */
-  --menu-text-align: left;
-  --menu-item-background-color-active: var(--background-color-primary);
+  --gds-menu-text-align: left;
+  --gds-menu-justify-content: flex-start;
+  --gds-menu-item-background-color-active: var(--background-color-primary);
+  --gds-menu-link-outline-focus: var(--gds-global-outline-focus);
   // By default this is visible on desktop and hidden on mobile.
-  // --menu-item-underline-display: none;
-
+  // --gds-menu-item-underline-active: underline;
+  // --gds-menu-item-underline-thickness-active: 3px;
+  // --gds-menu-item-underline-color-active: currentColor;
+  --gds-menu-item-underline-offset-active: var(--spacing-xxs);
   --gds-menu-item-font-family: var(--label-font-family);
   --gds-menu-item-font-size: var(--label-l-font-size);
   --gds-menu-item-line-height: var(--label-l-line-height);
   --gds-menu-item-letter-spacing: var(--label-l-letter-spacing);
   --gds-menu-item-font-weight: var(--label-l-font-weight);
   --gds-menu-item-text-transform: var(--label-text-transform);
+  --gds-menu-item-nested-underline-active: none;
+  --gds-menu-item-nested-submenu-icon-outline-focus: var(--gds-global-outline-focus);
+  --gds-menu-item-padding-horizontal: var(--spacing-s) var(--spacing-s) calc(var(--spacing-s) - 0.15em) var(--spacing-s);
+  --gds-menu-item-padding-vertical: var(--spacing-s) var(--spacing-m) calc(var(--spacing-s) - 0.15em) var(--spacing-m);
+
+  // --gds-submenu-max-width: 200px;
+  --gds-submenu-a-outline-focus: var(--gds-menu-link-outline-focus);
 
   gds-submenu {
     --gds-menu-item-font-family: var(--body-font-family);
@@ -305,6 +320,7 @@
   --accordion-header-padding: var(--accordion-padding);
   --accordion-justify-content: space-between;
   --accordion-heading-margin-left: var(--spacing-xxs);
+  --accordion-outline-focus: var(--gds-global-outline-focus);
 
   /* Input Wrapper */
   --gds-input-wrapper-label-color: var(--color-ui-02);
@@ -317,7 +333,7 @@
   --gds-input-border-radius: none;
   --gds-input-font-size: inherit;
   // Tweak the padding here, to get your font vertically aligned exactly.
-  --gds-input-padding: var(--spacing-xs) var(--spacing-s) calc(var(--spacing-xs) - 3px) var(--spacing-s);
+  --gds-input-padding: var(--spacing-xs) var(--spacing-s) calc(var(--spacing-xs) - 0.15em) var(--spacing-s);
 
   /* Hint */
   --gds-hint-color: var(--body-text-color);
@@ -326,10 +342,15 @@
   --gds-hint-border-radius: 4px 4px 4px 0;
   --gds-hint-min-width: 10vw;
   --gds-hint-max-width: 80vw;
+  --gds-hint-outline-focus: var(--gds-global-outline-focus);
+
+  /* Link */
+  --gds-link-outline-focus: var(--gds-global-outline-focus);
 
   @include mobileAndTablet {
     --gds-hint-min-width: 50vw;
   }
 
   /* Slider */
+  --gds-slider-outline-focus: var(--gds-global-outline-focus);
 }

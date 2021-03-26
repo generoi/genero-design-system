@@ -1,46 +1,22 @@
 @use "../../styles/breakpoints" as *;
 
-li {
-  box-sizing: border-box;
-  list-style: none;
-}
-
-.active {
-  @include mobileOnly {
-    background-color: var(--menu-item-background-color-active, var(--background-color-primary));
-  }
-}
-
-.content {
-  height: var(--spacing-xxl);
-  display: flex;
+:host {
+  display: inline-flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  // Take up available space, especially important on mobile
+  width: 100%;
+  box-sizing: border-box;
 
   // Mobile as default.
-  padding: 0 var(--spacing-m);
+  padding: var(--gds-menu-item-padding-vertical, var(--spacing-s) var(--spacing-m));
 
   // Desktop from viewport width.
   @include desktopOnly {
-    padding: 0 var(--spacing-s);
+    padding: var(--gds-menu-item-padding-horizontal, var(--spacing-s) var(--spacing-s));
   }
-}
 
-// Vertical direction explicitly defined.
-:host-context(.vertical) {
-  & .content {
-    padding: 0 var(--spacing-m);
-  }
-}
-
-// Horizontal direction explicitly defined.
-:host-context(.horizontal) {
-  & .content {
-    padding: 0 var(--spacing-s);
-  }
-}
-
-.item {
   // For historical reasons, fallback to gds-label size="l"
   font-family: var(--gds-menu-item-font-family, var(--label-font-family));
   font-size: var(--gds-menu-item-font-size, var(--label-l-font-size));
@@ -50,26 +26,31 @@ li {
   text-transform: var(--gds-menu-item-text-transform, var(--label-text-transform));
 }
 
-.underline-container {
-  position: relative;
-  width: 100%;
-  height: 0;
-  display: var(--menu-item-underline-display, block);
+// Active style
+:host([active]) {
+  // @todo safari doesn't support this on :host nor does it support the shorthand
+  .content {
+    text-decoration: var(--gds-menu-item-underline-active, underline);
+    text-decoration-thickness: var(--gds-menu-item-underline-thickness-active, 3px);
+    text-decoration-color: var(--gds-menu-item-underline-color-active, currentColor);
+    text-underline-offset: var(--gds-menu-item-underline-offset-active, 5px);
+  }
 
-  // Hide underline on mobile.
   @include mobileAndTablet {
-    display: var(--menu-item-underline-display, none);
+    background-color: var(--gds-menu-item-background-color-active, var(--background-color-primary));
+
+    .content {
+      text-decoration: var(--gds-menu-item-underline-active, none);
+    }
   }
 }
 
-.underline {
-  position: absolute;
-  width: 100%;
-  top: 4px;
-  border-bottom: 3px solid var(--navigation-underline-color, var(--navigation-color));
+// Vertical direction explicitly defined.
+:host-context([direction="vertical"]) {
+  padding: var(--gds-menu-item-padding-vertical, var(--spacing-s) var(--spacing-m));
 }
 
-.divider {
-  margin: var(--spacing-m) 0;
-  border-top: 2px solid var(--background-color-primary);
+// Horizontal direction explicitly defined.
+:host-context([direction="horizontal"]) {
+  padding: var(--gds-menu-item-padding-horizontal, var(--spacing-s) var(--spacing-m));
 }

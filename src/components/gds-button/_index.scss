@@ -39,6 +39,9 @@
   &:disabled {
     background-color: var(--button-background-color-disabled);
   }
+  &:focus {
+    outline: var(--button-outline-focus, var(--button-outline));
+  }
 
   & > * + * {
     display: inline-block;

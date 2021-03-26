@@ -9,6 +9,8 @@
   position: relative;
   // Can't have this with floating.
   // overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
   .content {
     box-sizing: border-box;
@@ -24,16 +26,37 @@
   .contentFloats {
     position: absolute;
     width: 100%;
+    top: 100%;
     z-index: 10;
     box-shadow: var(--accordion-box-shadow);
   }
 
   .header {
-    display: flex;
-    justify-content: var(--accordion-justify-content, space-between);
-    align-items: center;
-    cursor: pointer;
-    padding: var(--accordion-header-padding, var(--accordion-padding));
+    // Reset button styles
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    padding: 0;
+    margin: 0; // safari
+    color: inherit; // safari
+    // Span full width
+    flex: 1 1 auto;
+    outline: none;
+
+    &-content {
+      position: relative;
+      display: flex;
+      justify-content: var(--accordion-justify-content, space-between);
+      align-items: center;
+      cursor: pointer;
+      padding: var(--accordion-header-padding, var(--accordion-padding));
+      outline: none;
+    }
+
+    &:focus > .header-content {
+      outline: var(--accordion-outline-focus);
+      z-index: 1;
+    }
 
     // These are required because we can't have overflow: hidden with floating.
     border-top-right-radius: var(--accordion-border-radius);

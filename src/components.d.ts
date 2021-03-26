@@ -76,6 +76,10 @@ export namespace Components {
     }
     interface GdsIcon {
         /**
+          * Accessible Label
+         */
+        "accessibleLabel": string;
+        /**
           * Style overrides.
          */
         "class": string;
@@ -113,9 +117,17 @@ export namespace Components {
     }
     interface GdsLink {
         /**
+          * Accessible label.
+         */
+        "accessibleLabel": string;
+        /**
           * Block element.
          */
         "block": boolean;
+        /**
+          * Expand across container.
+         */
+        "full": boolean;
         /**
           * Link url.
          */
@@ -133,6 +145,14 @@ export namespace Components {
     }
     interface GdsLogoGridItem {
         /**
+          * Accessible label.
+         */
+        "accessibleLabel": string;
+        /**
+          * Image alternative text. Defaults to "" which makes it decorative only.
+         */
+        "alt": string;
+        /**
           * If defined, the logo will be a link.
          */
         "href": string;
@@ -146,6 +166,7 @@ export namespace Components {
         "target": string;
     }
     interface GdsMediaCard {
+        "accessibleLabel": string;
         "description": string;
         /**
           * Title for the card (note: title is a reserved word).
@@ -155,6 +176,10 @@ export namespace Components {
           * If defined, the card will be a link.
          */
         "href": string;
+        /**
+          * Image alt. Defaults to "" representing a decorative image.
+         */
+        "imageAlt": string;
         /**
           * Image url.
          */
@@ -188,6 +213,10 @@ export namespace Components {
           * Direction: "horizontal" or "vertial". Defaults to "vertical".
          */
         "direction": string;
+        /**
+          * Aria role Defaults to "".
+         */
+        "role": string;
     }
     interface GdsMenuItem {
         /**
@@ -196,6 +225,10 @@ export namespace Components {
         "active": boolean;
     }
     interface GdsMenuItemNested {
+        /**
+          * Accessible label of the submenu. Defaults to textContent of the link slot.
+         */
+        "accessibleLabel": string;
         /**
           * Is menu item appear active.
          */
@@ -210,6 +243,10 @@ export namespace Components {
         "submenuIcon": string;
     }
     interface GdsNavigation {
+        /**
+          * Accessible label for the inner navigation
+         */
+        "accessibleNavigationLabel": string;
         "closeMenu": () => Promise<void>;
     }
     interface GdsParagraph {
@@ -223,11 +260,16 @@ export namespace Components {
         "size": string;
     }
     interface GdsSlider {
+        "accessibleLabel": string;
         "max": number;
         "min": number;
         "value": number;
     }
     interface GdsSubmenu {
+        /**
+          * Aria role
+         */
+        "role": string;
     }
     interface GdsTag {
         /**
@@ -265,6 +307,10 @@ export namespace Components {
         "size": string;
     }
     interface GdsYoutubePlayer {
+        /**
+          * Accessible Label
+         */
+        "accessibleLabel": string;
         /**
           * Indicates whether the video player controls are displayed.
          */
@@ -528,6 +574,10 @@ declare namespace LocalJSX {
     }
     interface GdsIcon {
         /**
+          * Accessible Label
+         */
+        "accessibleLabel"?: string;
+        /**
           * Style overrides.
          */
         "class"?: string;
@@ -565,9 +615,17 @@ declare namespace LocalJSX {
     }
     interface GdsLink {
         /**
+          * Accessible label.
+         */
+        "accessibleLabel"?: string;
+        /**
           * Block element.
          */
         "block"?: boolean;
+        /**
+          * Expand across container.
+         */
+        "full"?: boolean;
         /**
           * Link url.
          */
@@ -585,6 +643,14 @@ declare namespace LocalJSX {
     }
     interface GdsLogoGridItem {
         /**
+          * Accessible label.
+         */
+        "accessibleLabel"?: string;
+        /**
+          * Image alternative text. Defaults to "" which makes it decorative only.
+         */
+        "alt"?: string;
+        /**
           * If defined, the logo will be a link.
          */
         "href"?: string;
@@ -598,6 +664,7 @@ declare namespace LocalJSX {
         "target"?: string;
     }
     interface GdsMediaCard {
+        "accessibleLabel"?: string;
         "description"?: string;
         /**
           * Title for the card (note: title is a reserved word).
@@ -607,6 +674,10 @@ declare namespace LocalJSX {
           * If defined, the card will be a link.
          */
         "href"?: string;
+        /**
+          * Image alt. Defaults to "" representing a decorative image.
+         */
+        "imageAlt"?: string;
         /**
           * Image url.
          */
@@ -640,6 +711,10 @@ declare namespace LocalJSX {
           * Direction: "horizontal" or "vertial". Defaults to "vertical".
          */
         "direction"?: string;
+        /**
+          * Aria role Defaults to "".
+         */
+        "role"?: string;
     }
     interface GdsMenuItem {
         /**
@@ -648,6 +723,10 @@ declare namespace LocalJSX {
         "active"?: boolean;
     }
     interface GdsMenuItemNested {
+        /**
+          * Accessible label of the submenu. Defaults to textContent of the link slot.
+         */
+        "accessibleLabel"?: string;
         /**
           * Is menu item appear active.
          */
@@ -662,6 +741,10 @@ declare namespace LocalJSX {
         "submenuIcon"?: string;
     }
     interface GdsNavigation {
+        /**
+          * Accessible label for the inner navigation
+         */
+        "accessibleNavigationLabel"?: string;
     }
     interface GdsParagraph {
         /**
@@ -674,12 +757,18 @@ declare namespace LocalJSX {
         "size"?: string;
     }
     interface GdsSlider {
+        "accessibleLabel"?: string;
         "max"?: number;
         "min"?: number;
         "onValue-changed"?: (event: CustomEvent<any>) => void;
         "value"?: number;
     }
     interface GdsSubmenu {
+        "onClose"?: (event: CustomEvent<HTMLElement>) => void;
+        /**
+          * Aria role
+         */
+        "role"?: string;
     }
     interface GdsTag {
         /**
@@ -717,6 +806,10 @@ declare namespace LocalJSX {
         "size"?: string;
     }
     interface GdsYoutubePlayer {
+        /**
+          * Accessible Label
+         */
+        "accessibleLabel"?: string;
         /**
           * Indicates whether the video player controls are displayed.
          */
