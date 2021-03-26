@@ -4,6 +4,11 @@
   display: inline-block;
 }
 
+gds-text {
+  // Same state as <label>
+  cursor: default;
+}
+
 /* Style slotted input and textarea elements */
 ::slotted(input),
 ::slotted(select),

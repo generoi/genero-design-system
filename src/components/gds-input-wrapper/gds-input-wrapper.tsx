@@ -1,4 +1,4 @@
-import { Component, Host, h, Prop } from '@stencil/core'
+import { Component, Host, h, Prop, Element } from '@stencil/core'
 
 /**
  * A wrapper component for input/textarea that handles labels, hints, and errors.
@@ -14,6 +14,10 @@ import { Component, Host, h, Prop } from '@stencil/core'
   shadow: true,
 })
 export class GdsInputWrapper {
+  @Element() host: HTMLElement
+
+  private inputSlot: HTMLElement
+
   /**
    * Display the label above the input element.
    */
@@ -22,6 +26,15 @@ export class GdsInputWrapper {
    * TODO: Add this feature.
    */
   @Prop() error: string
+
+  componentWillLoad() {
+    this.inputSlot = this.host.querySelector('[slot="input"]')
+    this.inputSlot.setAttribute('aria-label', this.label)
+  }
+
+  private focusInput() {
+    this.inputSlot.focus();
+  }
 
   render() {
     const content = (
@@ -35,7 +48,11 @@ export class GdsInputWrapper {
 
     return (
       <Host>
-        {this.label ? <gds-text size="s">{this.label}</gds-text> : null}
+        { this.label && (
+          <gds-text onClick={() => this.focusInput()} size="s" aria-hidden="true">
+            {this.label}
+          </gds-text>
+        ) }
         <slot name="hint"></slot>
         {content}
       </Host>

@@ -38,7 +38,7 @@ export const Examples = () => html`
     <p>
       <gds-input-wrapper label="This is a label with a hint">
         <gds-hint slot="hint">
-          <gds-icon slot="icon" name="info-circle" light></gds-icon>
+          <gds-icon slot="icon" name="info-circle" light accessible-label="Read more about label"></gds-icon>
           <gds-text slot="content" size="xs">I am a hint box with some text.</gds-text>
         </gds-hint>
         <input slot="input" value="Some value" />
