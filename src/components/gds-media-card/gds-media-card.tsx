@@ -30,6 +30,11 @@ export class GdsMediaCard {
    */
   @Prop() imageUrl: string
   /**
+   * Image alt.
+   * Defaults to "" representing a decorative image.
+   */
+  @Prop() imageAlt: string = ''
+  /**
    * superimpose image url.
    */
   @Prop() superimposedUrl: string
@@ -86,6 +91,7 @@ export class GdsMediaCard {
         <div class="superimposed-image">
           <img
             src={this.superimposedUrl}
+            alt={this.imageAlt}
             style={{
               'object-position': `${objectFitY} ${objectFitX}`,
             }}
@@ -105,6 +111,8 @@ export class GdsMediaCard {
           }}>
           <img
             src={this.imageUrl}
+            // If there's a superimposed image the background one is purely decorative
+            alt={this.superimposedUrl ? '' : this.imageAlt}
             class={{
               image: true,
               [`has-${this.overlayEffect}-effect`]: !!this.overlayEffect,

@@ -13,6 +13,7 @@ export const Examples = () => html`
     <gds-media-card
       href="https://google.com"
       image-url="${getMockImageUrl('product', 500, 500)}"
+      image-alt="Product"
     >
       <gds-heading size="s" slot="headline">This is a headline</gds-heading>
       <gds-paragraph size="l" slot="description">
@@ -30,6 +31,7 @@ export const Examples = () => html`
       superimposed-url="images/superimpose.png"
       superimposed-top="50"
       superimposed-bottom="50"
+      image-alt="Superimposed product"
       onclick="console.log('clicked media card')"
     >
       <gds-link href="https://google.com" slot="headline">
