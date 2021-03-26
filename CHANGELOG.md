@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [3.17.0](https://github.com/generoi/genero-design-system/compare/v3.16.0...v3.17.0) (2021-03-26)
+
+
+### Features
+
+* **submenu:** add support for mobile submenu ([544e8bd](https://github.com/generoi/genero-design-system/commit/544e8bd0f1303d2abc666cce59e383c376647b10))
+
 ## [3.16.0](https://github.com/generoi/genero-design-system/compare/v3.15.0...v3.16.0) (2021-03-12)
 
 
