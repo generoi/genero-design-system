@@ -22,6 +22,15 @@ export class GdsLogoGridItem {
    * Image url.
    */
   @Prop() imageUrl: string
+  /**
+   * Accessible label.
+   */
+  @Prop() accessibleLabel: string
+  /**
+   * Image alternative text.
+   * Defaults to "" which makes it decorative only.
+   */
+  @Prop() alt: string = ''
 
   render() {
     // Main content
@@ -29,7 +38,7 @@ export class GdsLogoGridItem {
       <figure>
         <picture>
           <source srcSet={this.imageUrl} />
-          <img src={this.imageUrl} />
+          <img src={this.imageUrl} alt={this.alt} title={this.accessibleLabel} />
         </picture>
       </figure>
     )
@@ -40,7 +49,7 @@ export class GdsLogoGridItem {
     // Render with a link
     // FIXME: Not vertically aligns now that gds-link is using shadown dom.
     return (
-      <gds-link block href={this.href} target={this.target}>
+      <gds-link block href={this.href} target={this.target} aria-label={this.accessibleLabel}>
         {content}
       </gds-link>
     )

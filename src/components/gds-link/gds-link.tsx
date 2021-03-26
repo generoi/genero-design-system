@@ -24,10 +24,14 @@ export class GdsLink {
    * Block element.
    */
   @Prop({ reflect: true }) block: boolean
+  /**
+   * Block element.
+   */
+  @Prop({ reflect: true }) ariaLabel: string
 
   render() {
     return (
-      <a href={this.href} target={this.target} rel={this.rel}>
+      <a href={this.href} target={this.target} rel={this.rel} aria-label={this.ariaLabel}>
         <slot></slot>
       </a>
     )
