@@ -61,18 +61,23 @@ li {
 .submenu-icon {
   display: inline-block;
   text-align: center;
-  height: 1em;
-  width: 1em;
-  padding: var(--spacing-xs);
   cursor: pointer;
+  padding: 0;
   transform: rotate(90deg);
   transition: transform 0.3s ease;
   appearance: none;
   border: 0;
-  box-sizing: content-box;
+  outline: none;
 
-  &:focus {
+  .submenu-item-content {
+    padding: var(--spacing-xs);
+    height: 1em;
+    width: 1em;
+    box-sizing: content-box;
     outline: none;
+  }
+
+  &:focus > .submenu-item-content {
     box-shadow: var(--gds-menu-item-nested-icon-box-shadow-focus);
   }
 }

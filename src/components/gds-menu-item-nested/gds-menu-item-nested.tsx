@@ -116,7 +116,9 @@ export class GdsMenuItemNested {
                   }}
                   onClick={e => this.handleToggleSubmenuClick(e)}
                 >
-                  {this.submenuIcon}
+                  <span class="submenu-item-content" tabindex="-1">
+                    {this.submenuIcon}
+                  </span>
                 </button>
               : null}
             </div>
