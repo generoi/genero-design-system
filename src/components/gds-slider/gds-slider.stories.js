@@ -22,9 +22,9 @@ const executeJS = directive(() => part => {
 
 export const Examples = () => html`
   <div class="form">
-    <p>
-      <gds-slider min="1" max="10" value="5" step="1" />
-    </p>
+    <gds-input-wrapper label="Slider">
+      <gds-slider slot="input" min="1" max="10" value="5" step="1" />
+    </gds-input-wrapper>
     <gds-paragraph>${executeJS()}</gds-paragraph>
   </div>
 `
