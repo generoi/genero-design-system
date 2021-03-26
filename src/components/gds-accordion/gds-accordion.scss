@@ -9,6 +9,8 @@
   position: relative;
   // Can't have this with floating.
   // overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
   .content {
     box-sizing: border-box;
@@ -24,6 +26,7 @@
   .contentFloats {
     position: absolute;
     width: 100%;
+    top: 100%;
     z-index: 10;
     box-shadow: var(--accordion-box-shadow);
   }
@@ -34,6 +37,12 @@
     align-items: center;
     cursor: pointer;
     padding: var(--accordion-header-padding, var(--accordion-padding));
+    // Reset button styles
+    appearance: none;
+    background-color: transparent;
+    border: 0;
+    // Span full width
+    flex: 1 1 auto;
 
     // These are required because we can't have overflow: hidden with floating.
     border-top-right-radius: var(--accordion-border-radius);
