@@ -8,6 +8,7 @@
 | Property    | Attribute   | Description                                                   | Type     | Default     |
 | ----------- | ----------- | ------------------------------------------------------------- | -------- | ----------- |
 | `direction` | `direction` | Direction: "horizontal" or "vertial". Defaults to "vertical". | `string` | `undefined` |
+| `role`      | `role`      | Aria role Defaults to "menu".                                 | `string` | `'menu'`    |
 
 
 ----------------------------------------------

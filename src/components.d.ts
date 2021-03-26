@@ -188,6 +188,10 @@ export namespace Components {
           * Direction: "horizontal" or "vertial". Defaults to "vertical".
          */
         "direction": string;
+        /**
+          * Aria role Defaults to "menu".
+         */
+        "role": string;
     }
     interface GdsMenuItem {
         /**
@@ -640,6 +644,10 @@ declare namespace LocalJSX {
           * Direction: "horizontal" or "vertial". Defaults to "vertical".
          */
         "direction"?: string;
+        /**
+          * Aria role Defaults to "menu".
+         */
+        "role"?: string;
     }
     interface GdsMenuItem {
         /**

@@ -12,7 +12,7 @@ export const Examples = () => html`
       <img src="images/genero-logo.png" />
     </a>
     <div slot="menu">
-      <gds-menu key="123">
+      <gds-menu key="123" role="menubar" aria-label="Primary navigation">
         <a slot="item" href="#first">
           <gds-menu-item>First item</gds-menu-item>
         </a>

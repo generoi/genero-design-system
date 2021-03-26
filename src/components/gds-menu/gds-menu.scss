@@ -9,6 +9,7 @@ ul {
   margin: 0;
   display: flex;
   text-align: var(--menu-text-align, left);
+  list-style-type: none;
 
   // Direction derived from viewport width.
   flex-direction: column;
@@ -27,7 +28,7 @@ ul {
   flex-direction: row;
 }
 
-::slotted(a) {
+a {
   color: unset;
   text-decoration: none;
 }

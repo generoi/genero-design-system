@@ -33,7 +33,7 @@ export class GdsMenuItem {
 
   render() {
     return (
-      <li
+      <div
         class={{
           item: true,
           active: this.active,
@@ -48,7 +48,7 @@ export class GdsMenuItem {
             </div>
           )}
         </div>
-      </li>
+      </div>
     )
   }
 }
