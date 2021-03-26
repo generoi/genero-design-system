@@ -9,9 +9,9 @@ export default {
 export const Examples = () => html`
   <style>
     .override {
-      --tag-color: red;
+      --tag-color: darkred;
       --tag-background-color: transparent;
-      --tag-border-color: red;
+      --tag-border-color: currentColor;
     }
     .sharp {
       --tag-color: black;
