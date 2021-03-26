@@ -28,10 +28,12 @@ export class GdsMenuItemNested {
   /**
    * Expand on mouse enter.
    */
-   @Listen('mouseenter')
-   handleEnter(ev: Event) {
+  @Listen('mouseenter')
+  handleEnter() {
+    // Skip this event on mobile devices.
+    if (window.innerWidth <= 1024) return
+
      if (!this.expanded) {
-       console.log('enter', ev);
        this.expanded = true
        this.active = true
      }
@@ -40,10 +42,12 @@ export class GdsMenuItemNested {
   /**
    * Collapse on mouse leave.
    */
-   @Listen('mouseleave')
-   handleLeave(ev: Event) {
-     if (this.expanded) {
-       console.log('leave', ev);
+  @Listen('mouseleave')
+  handleLeave() {
+    // Skip this event on mobile devices.
+    if (window.innerWidth <= 1024) return
+
+    if (this.expanded) {
        this.expanded = false
        this.active = false
      }
@@ -56,11 +60,9 @@ export class GdsMenuItemNested {
     event.preventDefault()
     event.stopPropagation()
     this.expanded = !this.expanded
-    console.log(this.expanded)
   }
 
   render() {
-    console.log('this.expanded', this.expanded)
     return (
       <Host>
         <li

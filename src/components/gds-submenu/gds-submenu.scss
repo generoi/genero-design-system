@@ -1,3 +1,4 @@
+@use "../../styles/breakpoints" as *;
 
 :host {
   display: block;
@@ -10,7 +11,19 @@ ul {
   display: flex;
   flex-direction: column;
   text-align: var(--menu-text-align, left);
-  background: var(--gds-submenu-background);
+  background: var(--gds-submenu-background, white);
+  box-shadow: var(--gds-submenu-box-shadow, 0 5px 10px #0000000c);
+}
+
+// Mobile and tablet behaves a bit differently
+@include mobileAndTablet {
+  :host {
+    position: relative;
+  }
+  ul {
+    background: var(--gds-submenu-background, transparent);
+    box-shadow: var(--gds-submenu-box-shadow, none);
+  }
 }
 
 ::slotted(a) {

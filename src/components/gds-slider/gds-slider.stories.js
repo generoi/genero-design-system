@@ -14,8 +14,6 @@ const executeJS = directive(() => part => {
     part.commit()
 
     slider.addEventListener('value-changed', event => {
-      console.log('Changed', event)
-
       part.setValue('Slider value: ' + event.detail)
       part.commit()
     })
