@@ -22,6 +22,11 @@
   border-radius: var(--gds-slider-border-radius, 0);
   background-color: var(--gds-slider-background-color, #d4d4d4);
 
+  &:focus {
+    outline: var(--gds-slider-outline-focus);
+    box-shadow: var(--gds-slider-box-shadow-focus);
+  }
+
   &::-webkit-slider-thumb {
     @include thumb;
   }

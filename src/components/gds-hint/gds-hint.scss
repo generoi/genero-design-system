@@ -9,6 +9,12 @@
   border: 0;
   background: none;
   padding: 0;
+
+  &:focus {
+    outline: none;
+
+    --icon-color: var(--gds-hint-icon-color-focus);
+  }
 }
 
 .content {

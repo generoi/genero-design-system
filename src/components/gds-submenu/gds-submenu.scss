@@ -30,4 +30,10 @@ ul {
 a {
   color: unset;
   text-decoration: none;
+  display: block;
+
+  &:focus {
+    outline: none;
+    box-shadow: var(--menu-submenu-link-box-shadow-focus);
+  }
 }

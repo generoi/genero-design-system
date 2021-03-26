@@ -32,4 +32,10 @@ ul {
 a {
   color: unset;
   text-decoration: none;
+  display: inline-block;
+
+  &:focus {
+    outline: none;
+    box-shadow: var(--menu-link-box-shadow-focus);
+  }
 }

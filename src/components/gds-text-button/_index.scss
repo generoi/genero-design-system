@@ -43,6 +43,11 @@
       transform: translateX(calc(var(--text-button-icon-hover-offset) * -1));
     }
   }
+
+  &:focus {
+    outline: var(--text-button-outline-focus);
+    box-shadow: var(--text-button-box-shadow-focus);
+  }
 }
 
 @mixin size-s {
