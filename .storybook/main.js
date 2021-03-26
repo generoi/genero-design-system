@@ -11,6 +11,7 @@ module.exports = {
     },
     '@storybook/addon-controls',
     '@panosvoudouris/addon-versions',
+    '@storybook/addon-a11y',
   ],
 
   webpackFinal: async (config, { configType }) => {
