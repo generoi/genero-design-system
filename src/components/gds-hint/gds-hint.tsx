@@ -1,5 +1,7 @@
 import { Component, h, State } from '@stencil/core'
 
+let idCounter = 0
+
 /**
  * A component for diplaying hints when clicking an icon.
  *
@@ -16,13 +18,24 @@ export class GdsHint {
    */
   @State() open: boolean = false
 
+  private contentId: string
+
+  componentWillLoad() {
+    this.contentId = `gds-hint-${++idCounter}`
+  }
+
   render() {
     return (
       <div class="hint" onClick={() => (this.open = !this.open)}>
-        <span class="icon">
+        <button
+          class="icon"
+          aria-describedby={ this.contentId }
+        >
           <slot name="icon"></slot>
-        </span>
+        </button>
         <div
+          id={ this.contentId }
+          aria-hidden={ this.open ? 'false' : 'true' }
           class={{
             content: true,
             open: this.open,
