@@ -225,7 +225,8 @@
 
   /* Navigation */
   --navigation-color: var(--color-black);
-  --navigation-underline-color: var(--color-black);
+
+
   --navigation-background: var(--color-white);
   --navigation-desktop-height: 100px;
   --navigation-mobile-height: 70px;
@@ -244,6 +245,10 @@
   // --menu-item-underline-display: none;
 
   --gds-menu-item-nested-submenu-icon-outline-focus: var(--gds-global-outline-focus);
+
+  // By default this is visible on desktop and hidden on mobile.
+  // --gds-menu-item-underline-active: underline solid currentColor 3px;
+  --gds-menu-item-underline-offset-active: 5px;
 
   --gds-menu-item-font-family: var(--label-font-family);
   --gds-menu-item-font-size: var(--label-l-font-size);

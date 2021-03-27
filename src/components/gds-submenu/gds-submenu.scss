@@ -1,11 +1,7 @@
 @use "../../styles/breakpoints" as *;
 
 :host {
-  display: block;
   position: absolute;
-}
-
-.submenu {
   padding: var(--gds-submenu-padding, 0);
   margin: 0;
   display: flex;
@@ -20,19 +16,19 @@
 @include mobileAndTablet {
   :host {
     position: relative;
-  }
-  .submenu {
     background: var(--gds-submenu-background, transparent);
     box-shadow: var(--gds-submenu-box-shadow, none);
   }
 }
 
+// Reset menu link styles
 ::slotted(a) {
   color: unset;
   text-decoration: none;
   display: block;
 }
 
+// Focus link styles
 ::slotted(a:focus) {
   outline: var(--gds-submenu-a-outline-focus);
 }

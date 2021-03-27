@@ -1,16 +1,11 @@
 @use "../../styles/breakpoints" as *;
 
-.active {
-  @include mobileOnly {
-    background-color: var(--menu-item-background-color-active, var(--background-color-primary));
-  }
-}
-
-.content {
+:host {
   height: var(--spacing-xxl);
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 
   // Mobile as default.
   padding: 0 var(--spacing-m);
@@ -19,23 +14,7 @@
   @include desktopOnly {
     padding: 0 var(--spacing-s);
   }
-}
 
-// Vertical direction explicitly defined.
-:host-context(.vertical) {
-  & .content {
-    padding: 0 var(--spacing-m);
-  }
-}
-
-// Horizontal direction explicitly defined.
-:host-context(.horizontal) {
-  & .content {
-    padding: 0 var(--spacing-s);
-  }
-}
-
-.item {
   // For historical reasons, fallback to gds-label size="l"
   font-family: var(--gds-menu-item-font-family, var(--label-font-family));
   font-size: var(--gds-menu-item-font-size, var(--label-l-font-size));
@@ -45,26 +24,23 @@
   text-transform: var(--gds-menu-item-text-transform, var(--label-text-transform));
 }
 
-.underline-container {
-  position: relative;
-  width: 100%;
-  height: 0;
-  display: var(--menu-item-underline-display, block);
+// Active style
+:host([active]) {
+  text-decoration: var(--gds-menu-item-underline-active, underline solid currentColor 3px);
+  text-underline-offset: var(--gds-menu-item-underline-offset-active, 5px);
 
-  // Hide underline on mobile.
-  @include mobileAndTablet {
-    display: var(--menu-item-underline-display, none);
+  @include mobileOnly {
+    background-color: var(--menu-item-background-color-active, var(--background-color-primary));
+    text-decoration: var(--gds-menu-item-underline-active, none);
   }
 }
 
-.underline {
-  position: absolute;
-  width: 100%;
-  top: 4px;
-  border-bottom: 3px solid var(--navigation-underline-color, var(--navigation-color));
+// Vertical direction explicitly defined.
+:host-context([direction="vertical"]) {
+  padding: 0 var(--spacing-m);
 }
 
-.divider {
-  margin: var(--spacing-m) 0;
-  border-top: 2px solid var(--background-color-primary);
+// Horizontal direction explicitly defined.
+:host-context([direction="horizontal"]) {
+  padding: 0 var(--spacing-s);
 }

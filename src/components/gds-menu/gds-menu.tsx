@@ -23,24 +23,18 @@ export class GdsMenu {
    */
   @Prop() role: string = 'menu'
 
-  private children: Element[];
-
   componentWillLoad() {
-    this.children = Array.from(this.host.children)
-    this.children
+    Array.from(this.host.children)
       .filter(child => child.tagName === 'A')
       .map(child => child.setAttribute('role', 'menuitem'))
   }
 
   render() {
     return (
-      <Host role={this.role}>
-        <div class={{
-          menu: true,
-          [this.direction]: true,
-        }}>
+      <Host
+        role={this.role}
+        class={this.direction}>
           <slot name="item"></slot>
-        </div>
       </Host>
     )
   }

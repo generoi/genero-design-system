@@ -95,45 +95,27 @@ export class GdsMenuItemNested {
 
     return (
       <Host>
-        <div
-          class={{
-            item: true,
-            active: this.active,
-          }}>
-          <div class="content">
-            <div class="item">
-              <slot name="link"></slot>
-              {this.submenuIcon ?
-                <button
-                  role="menuitem"
-                  aria-expanded={ this.expanded ? 'true' : 'false' }
-                  aria-haspopup="true"
-                  aria-controls={ this.submenuId }
-                  aria-label={ this.accessibleLabel }
-                  class={{
-                    'submenu-icon': true,
-                    'submenu-icon-expanded': this.expanded,
-                  }}
-                  onClick={e => this.handleToggleSubmenuClick(e)}
-                >
-                  <span class="submenu-item-content" tabindex="-1">
-                    {this.submenuIcon}
-                  </span>
-                </button>
-              : null}
-            </div>
-          </div>
-          <div
-            id={ this.submenuId }
-            class={{
-              'submenu-positioner': true,
-              'submenu-expanded': this.expanded,
-            }}
-          >
-            <div class="submenu-container">
-              <slot name="submenu"></slot>
-            </div>
-          </div>
+        <div class="menu-item">
+          <slot name="link"></slot>
+
+          {this.submenuIcon && (
+            <button
+              role="menuitem"
+              aria-expanded={ this.expanded ? 'true' : 'false' }
+              aria-haspopup="true"
+              aria-controls={ this.submenuId }
+              aria-label={ this.accessibleLabel }
+              class="submenu-icon"
+              onClick={e => this.handleToggleSubmenuClick(e)}
+            >
+              <span class="submenu-icon-content" tabindex="-1">
+                {this.submenuIcon}
+              </span>
+            </button>
+          )}
+        </div>
+        <div id={ this.submenuId } class="submenu">
+          <slot name="submenu"></slot>
         </div>
       </Host>
     )

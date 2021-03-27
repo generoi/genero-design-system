@@ -17,24 +17,17 @@ export class GdsSubmenu {
    */
   @Prop() role: string = 'menu'
 
-  private children: Element[]
-
   componentWillLoad() {
-    this.children = Array.from(this.host.children)
     // Add role="menuitem" to all children that are links
-    this.children
+    Array.from(this.host.children)
       .filter(child => child.tagName === 'A')
-      .map(child => {
-        child.setAttribute('role', 'menuitem')
-      })
+      .map(child => child.setAttribute('role', 'menuitem'))
   }
 
   render() {
     return (
       <Host role={this.role}>
-        <div class="submenu">
-          <slot name="submenu-item"></slot>
-        </div>
+        <slot name="submenu-item"></slot>
       </Host>
     )
   }

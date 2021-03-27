@@ -2,44 +2,20 @@
 
 :host {
   display: block;
+  position: relative;
 }
 
-.active {
-  @include mobileOnly {
+@include mobileOnly {
+  :host([active]) {
     background-color: var(--menu-item-background-color-active, var(--background-color-primary));
   }
 }
 
-.content {
-  height: var(--spacing-xxl);
+// Item containing link and toggler
+.menu-item {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  // Mobile as default.
-  padding: 0 var(--spacing-m);
-
-  // Desktop from viewport width.
-  @include desktopOnly {
-    padding: 0 var(--spacing-s);
-  }
-}
-
-// Vertical direction explicitly defined.
-:host-context(.vertical) {
-  & .content {
-    padding: 0 var(--spacing-m);
-  }
-}
-
-// Horizontal direction explicitly defined.
-:host-context(.horizontal) {
-  & .content {
-    padding: 0 var(--spacing-s);
-  }
-}
-
-.item {
+  flex-direction: row;
+  align-items: center;
   font-family: var(--gds-menu-item-font-family);
   font-size: var(--gds-menu-item-font-size);
   line-height: var(--gds-menu-item-line-height);
@@ -48,77 +24,71 @@
   text-transform: var(--gds-menu-item-text-transform);
 }
 
-.divider {
-  margin: var(--spacing-m) 0;
-  border-top: 2px solid var(--background-color-primary);
-}
-
 .submenu-icon {
   display: inline-block;
   text-align: center;
   cursor: pointer;
   padding: 0;
-  transform: rotate(90deg);
-  transition: transform 0.3s ease;
+
+  // Reset browser default button styles
   appearance: none;
+  background: none;
   border: 0;
   outline: none;
+  font-size: inherit;
+  line-height: inherit;
+  margin-left: -1em;
 
-  .submenu-item-content {
+  .submenu-icon-content {
+    display: block;
     padding: var(--spacing-xs);
     height: 1em;
     width: 1em;
     box-sizing: content-box;
     outline: none;
+    transform: rotate(90deg);
+    transition: transform 0.3s ease;
   }
 
-  &:focus > .submenu-item-content {
+  // Only visible when focused through the keyboard, focusing by clicking the
+  // button doesn't show focus styles
+  &:focus > .submenu-icon-content {
     outline: var(--gds-menu-item-nested-submenu-icon-outline-focus);
   }
 }
 
-.submenu-positioner {
-  position: relative;
-  top: 0px;
+// Submenu is hidden until set to expanded on the host element
+.submenu {
   overflow: hidden;
   max-height: 0px;
   visibility: hidden;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  white-space: nowrap;
 
-  .submenu-container {
-    position: absolute;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    white-space: nowrap;
-  }
-
-  &.submenu-expanded {
+  :host([expanded]) & {
     overflow: visible;
     visibility: visible;
-
-    .submenu-container {
-      opacity: 1;
-    }
+    opacity: 1;
   }
 }
 
 // Mobile and tablet behaves a bit differently
 @include mobileAndTablet {
-  .submenu-icon {
-    &.submenu-icon-expanded {
-      transform: rotate(-90deg);
-    }
-  }
-
-  .submenu-positioner {
+  .submenu {
     max-height: 0px;
     transition: max-height 0.3s ease;
+    position: relative;
+    opacity: 1;
+  }
 
-    .submenu-container {
-      position: relative;
-      opacity: 1;
+  :host([expanded]) {
+    .submenu-icon-content {
+      transform: rotate(-90deg);
     }
 
-    &.submenu-expanded {
+    .submenu {
       overflow: hidden;
       max-height: 300px;
     }
@@ -126,12 +96,22 @@
 }
 
 ::slotted(a) {
+  // Reset menu link styles
   color: unset;
   text-decoration: none;
-  padding: var(--gds-menu-item-nested-a-padding, var(--spacing-xs) 0);
+  // Note that the link should have a padding all around for the focus styles
+  // to look good.
+  padding: var(--gds-menu-item-nested-a-padding, var(--spacing-xs) var(--spacing-m));
+
+  // Desktop from viewport width.
+  @include desktopOnly {
+    padding-left: var(--spacing-s);
+    padding-right: var(--spacing-s);
+  }
 }
 
+// Focus link styles
 ::slotted(a:focus) {
   outline: var(--menu-link-outline-focus);
-  z-index: 1; //  // go above the submenu icon button
+  z-index: 1; // go above the submenu button
 }

@@ -1,4 +1,4 @@
-import { Component, h, Listen, Prop } from '@stencil/core'
+import { Component, h, Listen, Prop, Host } from '@stencil/core'
 
 @Component({
   tag: 'gds-menu-item',
@@ -33,22 +33,9 @@ export class GdsMenuItem {
 
   render() {
     return (
-      <div
-        class={{
-          item: true,
-          active: this.active,
-        }}>
-        <div class="content">
-          <div class="item">
-            <slot></slot>
-          </div>
-          {this.active && (
-            <div class="underline-container">
-              <div class="underline"></div>
-            </div>
-          )}
-        </div>
-      </div>
+      <Host>
+        <slot></slot>
+      </Host>
     )
   }
 }
