@@ -5,7 +5,7 @@
   position: absolute;
 }
 
-ul {
+.submenu {
   padding: var(--gds-submenu-padding, 0);
   margin: 0;
   display: flex;
@@ -21,19 +21,19 @@ ul {
   :host {
     position: relative;
   }
-  ul {
+  .submenu {
     background: var(--gds-submenu-background, transparent);
     box-shadow: var(--gds-submenu-box-shadow, none);
   }
 }
 
-a {
+::slotted(a) {
   color: unset;
   text-decoration: none;
   display: block;
+}
 
-  &:focus {
-    outline: none;
-    box-shadow: var(--menu-submenu-link-box-shadow-focus);
-  }
+::slotted(a:focus) {
+  outline: var(--gds-submenu-a-outline-focus);
+  box-shadow: var(--gds-submenu-a-box-shadow-focus);
 }

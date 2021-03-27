@@ -30,23 +30,17 @@ export class GdsMenu {
     this.children
       .filter(child => child.tagName === 'A')
       .map(child => child.setAttribute('role', 'menuitem'))
-
-    // Empty out the inner content and recreate it in the render function using
-    // the saved child elements so that we can wrap each in a <li>.
-    this.host.innerHTML = ''
   }
 
   render() {
     return (
       <Host role={this.role}>
-        <ul
-          class={this.direction}
-          role="none"
-        >
-          { this.children.map(child => {
-            return <li role="none" innerHTML={child.outerHTML} />
-          } )}
-        </ul>
+        <div class={{
+          menu: true,
+          [this.direction]: true,
+        }}>
+          <slot name="item"></slot>
+        </div>
       </Host>
     )
   }

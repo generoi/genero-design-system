@@ -4,7 +4,7 @@
   display: block;
 }
 
-ul {
+.menu {
   padding: 0;
   margin: 0;
   display: flex;
@@ -29,13 +29,13 @@ ul {
   flex-direction: row;
 }
 
-a {
+::slotted(a) {
   color: unset;
   text-decoration: none;
   display: inline-block;
+}
 
-  &:focus {
-    outline: none;
-    box-shadow: var(--menu-link-box-shadow-focus);
-  }
+::slotted(a:focus) {
+  outline: var(--menu-link-outline-focus);
+  box-shadow: var(--menu-link-box-shadow-focus);
 }

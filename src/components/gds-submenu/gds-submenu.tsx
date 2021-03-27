@@ -27,19 +27,14 @@ export class GdsSubmenu {
       .map(child => {
         child.setAttribute('role', 'menuitem')
       })
-    this.host.innerHTML = ''
   }
 
   render() {
     return (
       <Host role={this.role}>
-        <ul
-          role="none"
-        >
-          { this.children.map(child => {
-            return <li role="none" innerHTML={child.outerHTML} />
-          } )}
-        </ul>
+        <div class="submenu">
+          <slot name="submenu-item"></slot>
+        </div>
       </Host>
     )
   }
