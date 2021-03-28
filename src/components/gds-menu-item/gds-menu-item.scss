@@ -30,7 +30,7 @@
   text-underline-offset: var(--gds-menu-item-underline-offset-active, 5px);
 
   @include mobileOnly {
-    background-color: var(--menu-item-background-color-active, var(--background-color-primary));
+    background-color: var(--gds-menu-item-background-color-active, var(--background-color-primary));
     text-decoration: var(--gds-menu-item-underline-active, none);
   }
 }

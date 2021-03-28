@@ -1,0 +1,6 @@
+:root {
+  --gds-menu-text-align: var(--menu-text-align, left);
+  --gds-menu-justify-content: var(--menu-justify-content, flex-start);
+  --gds-menu-item-background-color-active: var(--menu-item-background-color, var(--background-color-primary));
+  --gds-menu-link-outline-focus: var(--menu-link-outline-focus, var(--gds-global-outline-focus));
+}

@@ -7,7 +7,7 @@
 
 @include mobileOnly {
   :host([active]) {
-    background-color: var(--menu-item-background-color-active, var(--background-color-primary));
+    background-color: var(--gds-menu-item-background-color-active);
   }
 }
 
@@ -112,6 +112,6 @@
 
 // Focus link styles
 ::slotted(a:focus) {
-  outline: var(--menu-link-outline-focus);
+  outline: var(--gds-menu-link-outline-focus);
   z-index: 1; // go above the submenu button
 }

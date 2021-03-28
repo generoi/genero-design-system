@@ -225,8 +225,6 @@
 
   /* Navigation */
   --navigation-color: var(--color-black);
-
-
   --navigation-background: var(--color-white);
   --navigation-desktop-height: 100px;
   --navigation-mobile-height: 70px;
@@ -236,16 +234,11 @@
   }
 
   /* Menu */
-  --menu-text-align: left;
-  --menu-justify-content: flex-start;
-  --menu-item-background-color-active: var(--background-color-primary);
-  --menu-link-outline-focus: var(--gds-global-outline-focus);
-  --gds-submenu-a-outline-focus: var(--menu-link-outline-focus);
-  // By default this is visible on desktop and hidden on mobile.
-  // --menu-item-underline-display: none;
-
+  --gds-menu-text-align: left;
+  --gds-menu-justify-content: flex-start;
+  --gds-menu-item-background-color-active: var(--background-color-primary);
+  --gds-menu-link-outline-focus: var(--gds-global-outline-focus);
   --gds-menu-item-nested-submenu-icon-outline-focus: var(--gds-global-outline-focus);
-
   // By default this is visible on desktop and hidden on mobile.
   // --gds-menu-item-underline-active: underline solid currentColor 3px;
   --gds-menu-item-underline-offset-active: 5px;
@@ -256,6 +249,8 @@
   --gds-menu-item-letter-spacing: var(--label-l-letter-spacing);
   --gds-menu-item-font-weight: var(--label-l-font-weight);
   --gds-menu-item-text-transform: var(--label-text-transform);
+
+  --gds-submenu-a-outline-focus: var(--menu-link-outline-focus);
 
   gds-submenu {
     --gds-menu-item-font-family: var(--body-font-family);

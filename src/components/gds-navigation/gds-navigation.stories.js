@@ -95,8 +95,8 @@ export const Examples = () => html`
       --icon-color: var(--navigation-color);
       --icon-color-hover: var(--navigation-color);
       --navigation-content-background: repeating-linear-gradient(to right, #166e3b, #166e3b 10px, #146635 10px, #146635 20px);
-      --menu-item-background-color-active: transparent;
-      --navigation-underline-active: underline solid currentColor 3px;
+      --gds-menu-item-background-color-active: transparent;
+      --gds-menu-item-underline-active: underline solid currentColor 3px;
       --label-text-transform: none;
     }
     .custom-menu-background gds-icon {

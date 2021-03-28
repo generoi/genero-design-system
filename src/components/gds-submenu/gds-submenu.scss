@@ -6,7 +6,7 @@
   margin: 0;
   display: flex;
   flex-direction: column;
-  text-align: var(--menu-text-align, left);
+  text-align: var(--gds-menu-text-align, left);
   background: var(--gds-submenu-background, white);
   box-shadow: var(--gds-submenu-box-shadow, 0 5px 10px #0000000c);
   list-style-type: none;
