@@ -128,7 +128,6 @@ nav.gds-navigation-nav {
 
   a:focus {
     outline: var(--gds-link-outline-focus);
-    box-shadow: var(--gds-link-box-shadow-focus);
   }
 
   @include desktopOnly {

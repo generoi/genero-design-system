@@ -41,7 +41,6 @@
   }
   &:focus {
     outline: var(--button-outline-focus, var(--button-outline));
-    box-shadow: var(--button-box-shadow-focus);
   }
 
   & > * + * {

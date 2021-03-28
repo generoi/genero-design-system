@@ -36,8 +36,7 @@
   --spacing-xxl: 48px;
   --spacing-xxxl: 80px;
 
-  // --gds-global-outline-focus: none;
-  --gds-global-box-shadow-focus: 0 0 3px 1px var(--color-ui-04);
+  --gds-global-outline-focus: auto var(--color-ui-04);
 
   /* Body */
   --body-font-family: Gilroy, Arial, Helvetica, sans-serif;
@@ -192,7 +191,6 @@
   --button-transition: background-color 0.1s ease-out;
   --button-border-radius: 8px;
   --button-box-shadow: none;
-  --button-box-shadow-focus: var(--gds-global-box-shadow-focus);
   --button-border: none;
   --button-outline: none;
   --button-outline-focus: var(--gds-global-outline-focus);
@@ -224,7 +222,6 @@
   --text-button-icon-transition: transform 0.1s ease-out;
   --text-button-icon-hover-offset: var(--spacing-xxs);
   --text-button-outline-focus: var(--gds-global-outline-focus);
-  --text-button-box-shadow-focus: var(--gds-global-box-shadow-focus);
 
   /* Navigation */
   --navigation-color: var(--color-black);
@@ -242,14 +239,11 @@
   --menu-justify-content: flex-start;
   --menu-item-background-color-active: var(--background-color-primary);
   --menu-link-outline-focus: var(--gds-global-outline-focus);
-  --menu-link-box-shadow-focus: var(--gds-global-box-shadow-focus);
   --gds-submenu-a-outline-focus: var(--menu-link-outline-focus);
-  --gds-submenu-a-box-shadow-focus: var(--menu-link-box-shadow-focus);
   // By default this is visible on desktop and hidden on mobile.
   // --menu-item-underline-display: none;
 
   --gds-menu-item-nested-submenu-icon-outline-focus: var(--gds-global-outline-focus);
-  --gds-menu-item-nested-submenu-icon-box-shadow-focus: var(--gds-global-box-shadow-focus);
 
   --gds-menu-item-font-family: var(--label-font-family);
   --gds-menu-item-font-size: var(--label-l-font-size);
@@ -321,7 +315,6 @@
   --accordion-justify-content: space-between;
   --accordion-heading-margin-left: var(--spacing-xxs);
   --accordion-outline-focus: var(--gds-global-outline-focus);
-  --accordion-box-shadow-focus: var(--gds-global-box-shadow-focus);
 
   /* Input Wrapper */
   --gds-input-wrapper-label-color: var(--color-ui-02);
@@ -346,7 +339,6 @@
   --gds-hint-icon-color-focus: var(--color-primary);
 
   /* Link */
-  --gds-link-box-shadow-focus: var(--gds-global-box-shadow-focus);
   --gds-link-outline-focus: var(--gds-global-outline-focus);
 
   @include mobileAndTablet {
@@ -354,6 +346,5 @@
   }
 
   /* Slider */
-  --gds-slider-box-shadow-focus: var(--gds-global-box-shadow-focus);
   --gds-slider-outline-focus: var(--gds-global-outline-focus);
 }

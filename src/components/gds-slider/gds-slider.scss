@@ -24,7 +24,6 @@
 
   &:focus {
     outline: var(--gds-slider-outline-focus);
-    box-shadow: var(--gds-slider-box-shadow-focus);
   }
 
   &::-webkit-slider-thumb {

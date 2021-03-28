@@ -74,7 +74,6 @@
 
   &:focus > .submenu-item-content {
     outline: var(--gds-menu-item-nested-submenu-icon-outline-focus);
-    box-shadow: var(--gds-menu-item-nested-submenu-icon-box-shadow-focus);
   }
 }
 
@@ -134,6 +133,5 @@
 
 ::slotted(a:focus) {
   outline: var(--menu-link-outline-focus);
-  box-shadow: var(--menu-link-box-shadow-focus);
   z-index: 1; //  // go above the submenu icon button
 }
