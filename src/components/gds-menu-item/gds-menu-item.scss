@@ -22,6 +22,9 @@
   letter-spacing: var(--gds-menu-item-letter-spacing, var(--label-l-letter-spacing));
   font-weight: var(--gds-menu-item-font-weight, var(--label-l-font-weight));
   text-transform: var(--gds-menu-item-text-transform, var(--label-text-transform));
+  // Provides a possibility to offset text content when the font has incorrect
+  // vertical alignment for glyphs.
+  transform: var(--gds-menu-item-transform);
 }
 
 // Active style
