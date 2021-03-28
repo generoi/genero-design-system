@@ -15,13 +15,7 @@
 .menu-item {
   display: flex;
   flex-direction: row;
-  align-items: center;
-  font-family: var(--gds-menu-item-font-family);
-  font-size: var(--gds-menu-item-font-size);
-  line-height: var(--gds-menu-item-line-height);
-  letter-spacing: var(--gds-menu-item-letter-spacing);
-  font-weight: var(--gds-menu-item-font-weight);
-  text-transform: var(--gds-menu-item-text-transform);
+  align-items: stretch;
 }
 
 .submenu-icon {
@@ -37,14 +31,19 @@
   outline: none;
   font-size: inherit;
   line-height: inherit;
-  margin-left: -1em;
+  margin-left: calc(-1 * var(--spacing-xxs));
+  margin-right: var(--spacing-xs);
 
   .submenu-icon-content {
-    display: block;
-    padding: var(--spacing-xs);
-    height: 1em;
+    //  Since the element is rotated we need it to be square
+    padding: var(--spacing-xxxs);
     width: 1em;
+    height: 1em;
     box-sizing: content-box;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
     outline: none;
     transform: rotate(90deg);
     transition: transform 0.3s ease;
@@ -99,15 +98,8 @@
   // Reset menu link styles
   color: unset;
   text-decoration: none;
-  // Note that the link should have a padding all around for the focus styles
-  // to look good.
-  padding: var(--gds-menu-item-nested-a-padding, var(--spacing-xs) var(--spacing-m));
 
-  // Desktop from viewport width.
-  @include desktopOnly {
-    padding-left: var(--spacing-s);
-    padding-right: var(--spacing-s);
-  }
+  --gds-menu-item-underline-active: var(--gds-menu-item-nested-underline-active);
 }
 
 // Focus link styles

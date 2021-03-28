@@ -38,7 +38,7 @@ export const Submenus = () => html`
   <gds-menu role="menubar" aria-label="Primary navigation">
     <gds-menu-item-nested slot="item" submenu-icon="❯">
       <a slot="link" href="#first">
-        First item
+        <gds-menu-item>First item</gds-menu-item>
       </a>
       <gds-submenu slot="submenu" aria-label="First item submenu">
         <a slot="submenu-item" href="#first-submenu">
@@ -51,7 +51,7 @@ export const Submenus = () => html`
     </gds-menu-item-nested>
     <gds-menu-item-nested slot="item" submenu-icon="❯">
       <a slot="link" href="#second">
-        Second item
+        <gds-menu-item>Second item</gds-menu-item>
       </a>
       <gds-submenu slot="submenu" aria-label="First item submenu">
         <a slot="submenu-item" href="#first-submenu">
