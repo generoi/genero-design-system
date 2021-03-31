@@ -138,6 +138,7 @@ nav.gds-navigation-nav {
   z-index: 101;
   position: relative;
   height: var(--navigation-mobile-height);
+  flex: 1 0 auto;
 
   & img {
     width: var(--navigation-logo-width);

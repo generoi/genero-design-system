@@ -1,6 +1,7 @@
 import { Config } from '@stencil/core'
 import { sass } from '@stencil/sass'
 import { reactOutputTarget } from '@stencil/react-output-target'
+import { inlineSvg } from 'stencil-inline-svg';
 
 export const config: Config = {
   namespace: 'gds',
@@ -25,6 +26,6 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
-  plugins: [sass()],
+  plugins: [sass(), inlineSvg()],
   globalStyle: 'src/styles/index.scss',
 }

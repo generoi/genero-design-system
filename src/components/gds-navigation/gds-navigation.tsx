@@ -45,6 +45,7 @@ export class GdsNavigation {
   hasMenuIconSlot: boolean
   hasMobileExtensionsSlot: boolean
   hasDesktopExtensionsSlot: boolean
+  hasSearchSlot: boolean
 
   @Listen('keyup')
   handleKeyup(event: KeyboardEvent) {
@@ -68,6 +69,7 @@ export class GdsNavigation {
     this.hasMenuIconSlot = !!this.hostElement.querySelector('[slot="menu-icon"]')
     this.hasMobileExtensionsSlot = !!this.hostElement.querySelector('[slot="mobile-extensions"]')
     this.hasDesktopExtensionsSlot = !!this.hostElement.querySelector('[slot="desktop-extensions"]')
+    this.hasSearchSlot = !!this.hostElement.querySelector('[slot="search"]')
   }
 
   componentWillLoad() {
@@ -147,6 +149,11 @@ export class GdsNavigation {
               </div>
             )}
 
+            {this.hasSearchSlot && (
+              <div class="gds-navigation-search">
+                <slot name="search"></slot>
+              </div>
+            )}
           </div>
         </header>
       </Host>

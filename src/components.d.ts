@@ -259,6 +259,15 @@ export namespace Components {
          */
         "size": string;
     }
+    interface GdsSearchForm {
+        "accessibleInputLabel": string;
+        "accessibleSubmitLabel": string;
+        "action": string;
+        "collapsed": boolean;
+        "floating": boolean;
+        "placeholder": string;
+        "query": string;
+    }
     interface GdsSlider {
         "accessibleLabel": string;
         "max": number;
@@ -755,6 +764,15 @@ declare namespace LocalJSX {
           * Size of the text.
          */
         "size"?: string;
+    }
+    interface GdsSearchForm {
+        "accessibleInputLabel"?: string;
+        "accessibleSubmitLabel"?: string;
+        "action"?: string;
+        "collapsed"?: boolean;
+        "floating"?: boolean;
+        "placeholder"?: string;
+        "query"?: string;
     }
     interface GdsSlider {
         "accessibleLabel"?: string;
