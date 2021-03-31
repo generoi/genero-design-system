@@ -62,6 +62,11 @@ export namespace Components {
          */
         "zoom": number;
     }
+    interface GdsHamburger {
+        "accessibleLabel": string;
+        "active": boolean;
+        "label": string;
+    }
     interface GdsHeading {
         /**
           * Render the heading as a h element for SEO purposes.  Those h element should be visible to GoogleBot: https://www.searchenginejournal.com/shadow-dom/353644/
@@ -100,6 +105,10 @@ export namespace Components {
           * TODO: Add this feature.
          */
         "error": string;
+        /**
+          * Visually hide the label
+         */
+        "hideLabelVisually": boolean;
         /**
           * Display the label above the input element.
          */
@@ -244,7 +253,11 @@ export namespace Components {
     }
     interface GdsNavigation {
         /**
-          * Accessible label for the inner navigation
+          * Accessible label for the hamburger menu
+         */
+        "accessibleHamburgerLabel": string;
+        /**
+          * Accessible name for the inner navigation
          */
         "accessibleNavigationLabel": string;
         "closeMenu": () => Promise<void>;
@@ -315,6 +328,9 @@ export namespace Components {
          */
         "size": string;
     }
+    interface GdsVisuallyHidden {
+        "focusable": Boolean;
+    }
     interface GdsYoutubePlayer {
         /**
           * Accessible Label
@@ -354,6 +370,12 @@ declare global {
     var HTMLGdsGoogleMapsElement: {
         prototype: HTMLGdsGoogleMapsElement;
         new (): HTMLGdsGoogleMapsElement;
+    };
+    interface HTMLGdsHamburgerElement extends Components.GdsHamburger, HTMLStencilElement {
+    }
+    var HTMLGdsHamburgerElement: {
+        prototype: HTMLGdsHamburgerElement;
+        new (): HTMLGdsHamburgerElement;
     };
     interface HTMLGdsHeadingElement extends Components.GdsHeading, HTMLStencilElement {
     }
@@ -439,6 +461,12 @@ declare global {
         prototype: HTMLGdsParagraphElement;
         new (): HTMLGdsParagraphElement;
     };
+    interface HTMLGdsSearchFormElement extends Components.GdsSearchForm, HTMLStencilElement {
+    }
+    var HTMLGdsSearchFormElement: {
+        prototype: HTMLGdsSearchFormElement;
+        new (): HTMLGdsSearchFormElement;
+    };
     interface HTMLGdsSliderElement extends Components.GdsSlider, HTMLStencilElement {
     }
     var HTMLGdsSliderElement: {
@@ -475,6 +503,12 @@ declare global {
         prototype: HTMLGdsTextButtonElement;
         new (): HTMLGdsTextButtonElement;
     };
+    interface HTMLGdsVisuallyHiddenElement extends Components.GdsVisuallyHidden, HTMLStencilElement {
+    }
+    var HTMLGdsVisuallyHiddenElement: {
+        prototype: HTMLGdsVisuallyHiddenElement;
+        new (): HTMLGdsVisuallyHiddenElement;
+    };
     interface HTMLGdsYoutubePlayerElement extends Components.GdsYoutubePlayer, HTMLStencilElement {
     }
     var HTMLGdsYoutubePlayerElement: {
@@ -486,6 +520,7 @@ declare global {
         "gds-button": HTMLGdsButtonElement;
         "gds-card": HTMLGdsCardElement;
         "gds-google-maps": HTMLGdsGoogleMapsElement;
+        "gds-hamburger": HTMLGdsHamburgerElement;
         "gds-heading": HTMLGdsHeadingElement;
         "gds-hint": HTMLGdsHintElement;
         "gds-icon": HTMLGdsIconElement;
@@ -500,12 +535,14 @@ declare global {
         "gds-menu-item-nested": HTMLGdsMenuItemNestedElement;
         "gds-navigation": HTMLGdsNavigationElement;
         "gds-paragraph": HTMLGdsParagraphElement;
+        "gds-search-form": HTMLGdsSearchFormElement;
         "gds-slider": HTMLGdsSliderElement;
         "gds-submenu": HTMLGdsSubmenuElement;
         "gds-tag": HTMLGdsTagElement;
         "gds-tag-group": HTMLGdsTagGroupElement;
         "gds-text": HTMLGdsTextElement;
         "gds-text-button": HTMLGdsTextButtonElement;
+        "gds-visually-hidden": HTMLGdsVisuallyHiddenElement;
         "gds-youtube-player": HTMLGdsYoutubePlayerElement;
     }
 }
@@ -569,6 +606,11 @@ declare namespace LocalJSX {
          */
         "zoom"?: number;
     }
+    interface GdsHamburger {
+        "accessibleLabel"?: string;
+        "active"?: boolean;
+        "label"?: string;
+    }
     interface GdsHeading {
         /**
           * Render the heading as a h element for SEO purposes.  Those h element should be visible to GoogleBot: https://www.searchenginejournal.com/shadow-dom/353644/
@@ -607,6 +649,10 @@ declare namespace LocalJSX {
           * TODO: Add this feature.
          */
         "error"?: string;
+        /**
+          * Visually hide the label
+         */
+        "hideLabelVisually"?: boolean;
         /**
           * Display the label above the input element.
          */
@@ -751,7 +797,11 @@ declare namespace LocalJSX {
     }
     interface GdsNavigation {
         /**
-          * Accessible label for the inner navigation
+          * Accessible label for the hamburger menu
+         */
+        "accessibleHamburgerLabel"?: string;
+        /**
+          * Accessible name for the inner navigation
          */
         "accessibleNavigationLabel"?: string;
     }
@@ -823,6 +873,9 @@ declare namespace LocalJSX {
          */
         "size"?: string;
     }
+    interface GdsVisuallyHidden {
+        "focusable"?: Boolean;
+    }
     interface GdsYoutubePlayer {
         /**
           * Accessible Label
@@ -842,6 +895,7 @@ declare namespace LocalJSX {
         "gds-button": GdsButton;
         "gds-card": GdsCard;
         "gds-google-maps": GdsGoogleMaps;
+        "gds-hamburger": GdsHamburger;
         "gds-heading": GdsHeading;
         "gds-hint": GdsHint;
         "gds-icon": GdsIcon;
@@ -856,12 +910,14 @@ declare namespace LocalJSX {
         "gds-menu-item-nested": GdsMenuItemNested;
         "gds-navigation": GdsNavigation;
         "gds-paragraph": GdsParagraph;
+        "gds-search-form": GdsSearchForm;
         "gds-slider": GdsSlider;
         "gds-submenu": GdsSubmenu;
         "gds-tag": GdsTag;
         "gds-tag-group": GdsTagGroup;
         "gds-text": GdsText;
         "gds-text-button": GdsTextButton;
+        "gds-visually-hidden": GdsVisuallyHidden;
         "gds-youtube-player": GdsYoutubePlayer;
     }
 }
@@ -873,6 +929,7 @@ declare module "@stencil/core" {
             "gds-button": LocalJSX.GdsButton & JSXBase.HTMLAttributes<HTMLGdsButtonElement>;
             "gds-card": LocalJSX.GdsCard & JSXBase.HTMLAttributes<HTMLGdsCardElement>;
             "gds-google-maps": LocalJSX.GdsGoogleMaps & JSXBase.HTMLAttributes<HTMLGdsGoogleMapsElement>;
+            "gds-hamburger": LocalJSX.GdsHamburger & JSXBase.HTMLAttributes<HTMLGdsHamburgerElement>;
             "gds-heading": LocalJSX.GdsHeading & JSXBase.HTMLAttributes<HTMLGdsHeadingElement>;
             "gds-hint": LocalJSX.GdsHint & JSXBase.HTMLAttributes<HTMLGdsHintElement>;
             "gds-icon": LocalJSX.GdsIcon & JSXBase.HTMLAttributes<HTMLGdsIconElement>;
@@ -887,12 +944,14 @@ declare module "@stencil/core" {
             "gds-menu-item-nested": LocalJSX.GdsMenuItemNested & JSXBase.HTMLAttributes<HTMLGdsMenuItemNestedElement>;
             "gds-navigation": LocalJSX.GdsNavigation & JSXBase.HTMLAttributes<HTMLGdsNavigationElement>;
             "gds-paragraph": LocalJSX.GdsParagraph & JSXBase.HTMLAttributes<HTMLGdsParagraphElement>;
+            "gds-search-form": LocalJSX.GdsSearchForm & JSXBase.HTMLAttributes<HTMLGdsSearchFormElement>;
             "gds-slider": LocalJSX.GdsSlider & JSXBase.HTMLAttributes<HTMLGdsSliderElement>;
             "gds-submenu": LocalJSX.GdsSubmenu & JSXBase.HTMLAttributes<HTMLGdsSubmenuElement>;
             "gds-tag": LocalJSX.GdsTag & JSXBase.HTMLAttributes<HTMLGdsTagElement>;
             "gds-tag-group": LocalJSX.GdsTagGroup & JSXBase.HTMLAttributes<HTMLGdsTagGroupElement>;
             "gds-text": LocalJSX.GdsText & JSXBase.HTMLAttributes<HTMLGdsTextElement>;
             "gds-text-button": LocalJSX.GdsTextButton & JSXBase.HTMLAttributes<HTMLGdsTextButtonElement>;
+            "gds-visually-hidden": LocalJSX.GdsVisuallyHidden & JSXBase.HTMLAttributes<HTMLGdsVisuallyHiddenElement>;
             "gds-youtube-player": LocalJSX.GdsYoutubePlayer & JSXBase.HTMLAttributes<HTMLGdsYoutubePlayerElement>;
         }
     }
