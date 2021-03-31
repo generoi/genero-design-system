@@ -7,7 +7,10 @@ export default {
 
 // prettier-ignore
 export const Examples = () => html`
-  <gds-navigation accessible-navigation-label="Primary navigation">
+  <gds-navigation
+    accessible-navigation-label="Primary navigation"
+    accessible-hamburger-label="Menu"
+  >
     <a slot="logo" href="/" aria-label="Genero frontpage" rel="home">
       <img src="images/genero-logo.png" alt="" />
     </a>

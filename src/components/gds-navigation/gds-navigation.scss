@@ -3,8 +3,29 @@
 $grid-item-desktop-size: 263px;
 $grid-item-mobile-size: 180px;
 
-header.gds-navigation-header {
+.gds-navigation-header {
   background: var(--navigation-background, transparent);
+
+  &.close {
+    [slot='menu-icon'] {
+      display: block;
+    }
+    [slot='close-menu-icon'] {
+      display: none;
+    }
+  }
+
+  &.open {
+    z-index: 1000;
+    position: relative;
+
+    [slot='menu-icon'] {
+      display: none;
+    }
+    [slot='close-menu-icon'] {
+      display: block;
+    }
+  }
 }
 
 .gds-navigation-container {
@@ -36,7 +57,8 @@ header.gds-navigation-header {
   background: var(--navigation-content-background, transparent);
 
   @include mobileAndTablet {
-    display: none;
+    display: block;
+    visibility: hidden;
     position: absolute;
     background: var(--navigation-content-background, white);
     padding-top: var(--navigation-mobile-height);
@@ -45,6 +67,13 @@ header.gds-navigation-header {
     right: 0;
     // border-top: 2px solid var(--body-background-color);
     z-index: 100;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+
+    &.open {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 }
 
@@ -76,40 +105,29 @@ nav.gds-navigation-nav {
 }
 
 .gds-navigation-hamburger {
-  --text-button-l-font-size: 30px;
-  --text-button-l-padding: var(--spacing-s);
-
   z-index: 101;
   position: relative;
+  // reset button styles
+  appearance: none;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  outline: none;
+  height: 100%;
+  cursor: pointer;
+  order: 2;
+
+  &-content {
+    outline: none;
+    padding: var(--spacing-s);
+  }
+
+  &:focus > &-content {
+    outline: var(--gds-link-outline-focus);
+  }
 
   @include desktopOnly {
     display: none;
-  }
-}
-
-[slot='menu-icon'],
-[slot='close-menu-icon'] {
-  padding-right: var(--spacing-s);
-}
-
-.close {
-  [slot='menu-icon'] {
-    display: block;
-  }
-  [slot='close-menu-icon'] {
-    display: none;
-  }
-}
-
-.open {
-  z-index: 1000;
-  position: relative;
-
-  [slot='menu-icon'] {
-    display: none;
-  }
-  [slot='close-menu-icon'] {
-    display: block;
   }
 }
 
