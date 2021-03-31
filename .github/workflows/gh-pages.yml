@@ -3,6 +3,8 @@ on:
   push:
     branches:
       - master
+      # @todo remove once merged
+      - a11y
     tags:
       - 'v*.*.0'
 
