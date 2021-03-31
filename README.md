@@ -155,7 +155,24 @@ You can test static version locally.
 npx http-server docs
 ```
 
-The storybooks are automatically built on commits to `master` and when versions are tagged.
+The storybooks are automatically built on commits to `master` and when versions are tagged. For now you'll need to edit the[`docs/storybook-config.json`](https://github.com/generoi/genero-design-system/blob/gh-pages/docs/storybook-config.json) file and add versions you want to be displayed. _TODO: this should be done with a script in the github action._
+
+If you want to manually add a version to the storybooks docs:
+
+```sh
+# Build the storybook
+npm run build
+npm run build:storybook
+
+# Clone the gh-pages branch
+git clone --single-branch -b gh-pages git@github.com:generoi/genero-design-system.git gds-gh-pages
+cd gds-gh-pages
+cp -r ../docs docs/my-custom-build
+
+# Edit the storybook.config.json to include the version
+vim docs/storybook.config.json
+```
+
 
 ### Tips, tricks, and gotchas
 
