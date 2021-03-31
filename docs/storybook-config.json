@@ -1,0 +1,12 @@
+{
+  "storybook": {
+    "versions": {
+      "availableVersions": [
+        "master",
+        "v3.13.1"
+      ],
+      "localhost": "localhost:6006",
+      "regex": "\/([^\/]+?)\/?$"
+    }
+  }
+}
