@@ -9,7 +9,8 @@ module.exports = {
         backgrounds: false,
       }
     },
-    '@storybook/addon-controls'
+    '@storybook/addon-controls',
+    '@panosvoudouris/addon-versions',
   ],
 
   webpackFinal: async (config, { configType }) => {

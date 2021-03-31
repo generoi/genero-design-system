@@ -140,14 +140,13 @@ While we don't have our internal Style Guide, let's use the same as Stencil core
 - On Properties: https://stenciljs.com/docs/properties
 - On Shadow DOM: https://developers.google.com/web/fundamentals/web-components/shadowdom
 
-### Build and deploy Storybook to Github Pages
+### Build Storybook
 
-TODO: Move to gh-pages branch.
-
-Build static storybook to /docs folder. This is the folder from where Github Pages will render.
+Build static storybook to /docs folder.
 
 ```sh
 npm run build
+npm run build:storybook
 ```
 
 You can test static version locally.
@@ -155,6 +154,8 @@ You can test static version locally.
 ```sh
 npx http-server docs
 ```
+
+The storybooks are automatically built on commits to `master` and when versions are tagged.
 
 ### Tips, tricks, and gotchas
 
