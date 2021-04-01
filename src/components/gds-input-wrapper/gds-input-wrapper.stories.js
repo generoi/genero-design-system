@@ -41,6 +41,15 @@ export const Examples = () => html`
       </gds-input-wrapper>
     </p>
     <p>
+      <gds-input-wrapper label="Using requires and disabled first option looks like a placholder">
+        <select slot="input" required>
+          <option value="" selected disabled hidden>With placeholder</option>
+          <option value="a1">Option 1</option>
+          <option value="a2">Option 2</option>
+        </select>
+      </gds-input-wrapper>
+    </p>
+    <p>
       <gds-input-wrapper label="This is a label with a hint">
         <gds-hint slot="hint">
           <gds-icon slot="icon" name="info-circle" light accessible-label="Read more about label"></gds-icon>

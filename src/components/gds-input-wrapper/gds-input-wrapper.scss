@@ -46,6 +46,12 @@ gds-text {
   background-repeat: no-repeat;
 }
 
+::slotted(select:invalid),
+::slotted(input::placeholder),
+::slotted(textarea::placeholder) {
+  color: var(--gds-input-placeholder-color);
+}
+
 ::slotted(input:focus),
 ::slotted(select:focus),
 ::slotted(textarea:focus) {
