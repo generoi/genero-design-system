@@ -13,6 +13,7 @@ gds-text {
 ::slotted(input),
 ::slotted(select),
 ::slotted(textarea) {
+  all: unset;
   box-sizing: border-box;
   display: block;
   width: 100%;

@@ -105,13 +105,9 @@ nav.gds-navigation-nav {
 }
 
 .gds-navigation-hamburger {
+  all: unset; // reset button styles
   z-index: 101;
   position: relative;
-  // reset button styles
-  appearance: none;
-  background-color: transparent;
-  border: 0;
-  padding: 0;
   outline: none;
   height: 100%;
   cursor: pointer;

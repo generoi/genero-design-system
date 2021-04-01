@@ -13,18 +13,12 @@
 }
 
 .submenu-icon {
+  all: unset; // Reset button styles
+
   display: inline-block;
   text-align: center;
   cursor: pointer;
   padding: 0;
-
-  // Reset browser default button styles
-  appearance: none;
-  background: none;
-  border: 0;
-  outline: none;
-  font-size: inherit;
-  line-height: inherit;
   margin-left: calc(-1 * var(--spacing-xxs));
   margin-right: var(--spacing-xs);
 

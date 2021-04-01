@@ -67,6 +67,7 @@ form {
 
 
 [type="submit"] {
+  all: unset; // reset button styles
   // Position below input field
   position: absolute;
   right: 0;
@@ -74,10 +75,6 @@ form {
   bottom: 0;
   z-index: 0;
 
-  // Reset button style
-  background-color: transparent;
-  appearance: none;
-  border: 0;
   cursor: pointer;
   color: var(--color-black);
   padding: var(--gds-search-form-input-padding);
