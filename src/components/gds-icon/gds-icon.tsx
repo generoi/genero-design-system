@@ -15,6 +15,7 @@ import { Component, Prop, h } from '@stencil/core'
   tag: 'gds-icon',
   styleUrl: 'gds-icon.scss',
   shadow: false,
+  scoped: true,
 })
 export class GdsIcon {
   /**
