@@ -116,6 +116,7 @@ nav.gds-navigation-nav {
   &-content {
     outline: none;
     padding: var(--spacing-s);
+    display: inline-flex;
   }
 
   &:focus > &-content {

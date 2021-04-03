@@ -369,6 +369,7 @@
   --gds-search-form-input-font-size: var(--gds-input-font-size);
   --gds-search-form-input-color: var(--gds-input-color);
   --gds-search-form-input-padding: var(--spacing-xxs) var(--spacing-xxs) calc(var(--spacing-xxs) - 3px) var(--spacing-xxs);
+  --gds-search-form-button-padding: var(--spacing-xxs);
   --gds-search-form-button-width: calc(1em + var(--spacing-xxs) * 2); // 1em icon + 2 padding
   --gds-search-form-background: transparent;
   --gds-search-form-border: 0;

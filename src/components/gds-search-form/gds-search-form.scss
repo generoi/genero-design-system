@@ -36,6 +36,7 @@ form {
   color: var(--gds-search-form-input-color);
   background: transparent;
   font-size: var(--gds-search-form-input-font-size);
+  font-weight: var(--gds-search-form-input-font-weight);
   max-width: var(--gds-search-form-input-width);
   transition: max-width 0.2s ease-out;
   // Place above button
@@ -77,7 +78,7 @@ form {
 
   cursor: pointer;
   color: var(--color-black);
-  padding: var(--gds-search-form-input-padding);
+  padding: var(--gds-search-form-button-padding);
   width: var(--gds-search-form-button-width);
   box-sizing: border-box;
   // Add a delay on transitioning away from focus-within to z-index: 0 so that
