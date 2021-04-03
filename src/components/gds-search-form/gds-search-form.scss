@@ -48,7 +48,6 @@ form {
   min-height: auto;
   // Make room for button
   padding-right: var(--gds-search-form-button-width);
-  box-sizing: content-box;
 
   &::placeholder {
     color: var(--color-black);

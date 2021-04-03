@@ -364,8 +364,8 @@
   /* Search form */
   --gds-search-form-input-font-family: var(--body-font-family);
   --gds-search-form-outline-focus: var(--gds-global-outline-focus);
-  --gds-search-form-input-width: 7ch;
-  --gds-search-form-input-width-focus: 15ch;
+  --gds-search-form-input-width: calc(7ch + var(--gds-search-form-button-width));
+  --gds-search-form-input-width-focus: calc(15ch + var(--gds-search-form-button-width));
   --gds-search-form-input-font-size: var(--gds-input-font-size);
   --gds-search-form-input-color: var(--gds-input-color);
   --gds-search-form-input-padding: var(--spacing-xxs) var(--spacing-xxs) calc(var(--spacing-xxs) - 3px) var(--spacing-xxs);
