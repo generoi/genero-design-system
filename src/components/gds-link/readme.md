@@ -7,7 +7,7 @@
 
 | Property          | Attribute          | Description                                          | Type      | Default     |
 | ----------------- | ------------------ | ---------------------------------------------------- | --------- | ----------- |
-| `ariaLabel`       | `aria-label`       | Block element.                                       | `string`  | `undefined` |
+| `accessibleLabel` | `accessible-label` | Accessible label.                                    | `string`  | `undefined` |
 | `block`           | `block`            | Block element.                                       | `boolean` | `undefined` |
 | `full`            | `full`             | Expand across container.                             | `boolean` | `undefined` |
 | `href`            | `href`             | Link url.                                            | `string`  | `undefined` |
