@@ -276,6 +276,7 @@ export namespace Components {
         "accessibleInputLabel": string;
         "accessibleSubmitLabel": string;
         "action": string;
+        "collapseOn": string;
         "collapsed": boolean;
         "floating": boolean;
         "placeholder": string;
@@ -819,6 +820,7 @@ declare namespace LocalJSX {
         "accessibleInputLabel"?: string;
         "accessibleSubmitLabel"?: string;
         "action"?: string;
+        "collapseOn"?: string;
         "collapsed"?: boolean;
         "floating"?: boolean;
         "placeholder"?: string;

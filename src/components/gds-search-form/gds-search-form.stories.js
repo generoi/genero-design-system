@@ -13,6 +13,10 @@ export const Examples = () => html`
     <gds-search-form></gds-search-form>
     <gds-search-form collapsed></gds-search-form>
   </div>
+  <div>
+    <gds-paragraph>Search form can collapse on media queries.</gds-paragraph>
+    <gds-search-form action="https://www.google.com" query="q" collapse-on="(max-width: 600px)"></gds-search-form>
+  </div>
   <div style="margin-top: 2rem;">
     <gds-paragraph>Border style examples</gds-paragraph>
     <style>

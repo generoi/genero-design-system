@@ -110,15 +110,13 @@ export const Examples = () => html`
     <gds-icon name="times" light slot="close-menu-icon"></gds-icon>
 
     <div slot="search">
-      <gds-search-form action="https://www.google.com" query="q"></gds-search-form>
+      <gds-search-form
+        action="https://www.google.com"
+        query="q"
+        collapse-on="(max-width: 600px)"
+      ></gds-search-form>
     </div>
   </gds-navigation>
-  <script>
-    let mediaQuery = window.matchMedia('(max-width: 600px)')
-    let setCollapsed = value => document.querySelector('.responsive gds-search-form').collapsed = value
-    mediaQuery.addEventListener('change', (event) => setCollapsed(event.matches))
-    setCollapsed(mediaQuery.matches)
-  </script>
 
   <gds-paragraph>Mobile navigation can have custom hamburger icon.</gds-paragraph>
 

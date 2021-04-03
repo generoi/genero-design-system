@@ -12,6 +12,7 @@
 | `accessibleInputLabel`  | `accessible-input-label`  |             | `string`  | `'Search'`  |
 | `accessibleSubmitLabel` | `accessible-submit-label` |             | `string`  | `'Search'`  |
 | `action`                | `action`                  |             | `string`  | `undefined` |
+| `collapseOn`            | `collapse-on`             |             | `string`  | `undefined` |
 | `collapsed`             | `collapsed`               |             | `boolean` | `false`     |
 | `floating`              | `floating`                |             | `boolean` | `false`     |
 | `placeholder`           | `placeholder`             |             | `string`  | `'Search'`  |
