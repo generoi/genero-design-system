@@ -327,12 +327,15 @@
 
   /* Input and textarea elements inside of Input Wrapper */
   --gds-input-color: inherit;
+  --gds-input-font-family: var(--body-font-family);
+  --gds-input-font-weight: normal;
   --gds-input-background: var(--color-ui-background-01);
   --gds-input-border: 1px solid var(--gds-input-background);
   --gds-input-border-focus: 1px solid #4573ae;
   --gds-input-border-radius: none;
   --gds-input-font-size: inherit;
   --gds-input-placeholder-color: darkgray;
+  --gds-input-min-height: 36px;
   // Tweak the padding here, to get your font vertically aligned exactly.
   --gds-input-padding: var(--spacing-xs) var(--spacing-s) calc(var(--spacing-xs) - 0.15em) var(--spacing-s);
 

@@ -1,61 +1,34 @@
-@use "../gds-paragraph/index" as paragraph;
+@use "index" as *;
 
 :host {
   display: inline-block;
 }
 
 gds-text {
-  // Same state as <label>
-  cursor: default;
+  @include label;
 }
 
 /* Style slotted input and textarea elements */
 ::slotted(input),
 ::slotted(select),
 ::slotted(textarea) {
-  all: unset;
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  min-width: 100%;
-  min-height: 36px;
-  margin: 0;
-  outline: none;
-  font-family: var(--body-font-family);
-  font-weight: normal;
-  border: var(--gds-input-border);
-  padding: var(--gds-input-padding);
-  border-radius: var(--gds-input-border-radius);
-  color: var(--gds-input-color);
-  background: var(--gds-input-background);
-  font-size: var(--gds-input-font-size);
+  @include form-element-base;
 }
 
 ::slotted(select) {
-  appearance: none; // safari
-  padding-right: var(--gds-select-input-padding-right, calc(
-    /* input needs a padding so content ends before arrow starts */
-    var(--gds-select-arrow-padding-right, var(--spacing-xs)) + var(--gds-select-arrow-size, 10px) + var(--spacing-xxs)
-  ));
-  background-image: var(--gds-select-arrow-image, url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 448 512'%3E%3C!-- Font Awesome Pro 5.15.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) --%3E%3Cpath d='M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z'/%3E%3C/svg%3E"));
-  background-size: var(--gds-select-arrow-size, 10px);
-  background-position: var(--gds-select-arrow-position, calc(
-    100% - var(--gds-select-arrow-padding-right, var(--spacing-xs))
-  ) center);
-  background-repeat: no-repeat;
+  @include form-select;
 }
 
 ::slotted(select:invalid),
 ::slotted(input::placeholder),
 ::slotted(textarea::placeholder) {
-  color: var(--gds-input-placeholder-color);
+  @include placeholder;
 }
 
 ::slotted(input:focus),
 ::slotted(select:focus),
 ::slotted(textarea:focus) {
-  border: var(--gds-input-border-focus);
+  @include on-focus;
 }
 
 ::slotted(gds-hint) {
@@ -65,8 +38,5 @@ gds-text {
 }
 
 .error {
-  display: block;
-  color: red;
-  font-size: 14px;
-  font-weight: bold;
+  @include error;
 }
