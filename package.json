@@ -20,6 +20,8 @@
     "loader/",
     "react/",
     "src/**/*.scss",
+    "src/**/*.tsx",
+    "src/**/*.svg",
     "src/**/*.css",
     "stencil.config.ts",
     "tsconfig.json"
