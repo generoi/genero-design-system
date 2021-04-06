@@ -87,6 +87,15 @@ form {
   transition-property: z-index;
   transition-delay: 0.1s;
 
+  // Center content
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ::slotted(*) {
+    display: flex;
+  }
+
   svg {
     width: 1em;
     height: 1em;
