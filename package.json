@@ -20,7 +20,9 @@
     "loader/",
     "react/",
     "src/**/*.scss",
-    "src/**/*.css"
+    "src/**/*.css",
+    "stencil.config.ts",
+    "tsconfig.json"
   ],
   "scripts": {
     "lint": "npm-run-all lint:*",
