@@ -24,6 +24,12 @@ form {
       z-index: 1;
     }
   }
+
+  &:not(:focus-within) {
+    [type="search"] {
+      --gds-input-placeholder-color: var(--gds-search-form-color);
+    }
+  }
 }
 
 :host [type="search"] {
@@ -48,10 +54,6 @@ form {
   min-height: auto;
   // Make room for button
   padding-right: var(--gds-search-form-button-width);
-
-  &::placeholder {
-    color: var(--color-black);
-  }
 
   &:focus {
     outline: var(--gds-search-form-outline-focus);
