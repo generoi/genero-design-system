@@ -24,6 +24,20 @@
   letter-spacing: var(--gds-menu-item-letter-spacing, var(--label-l-letter-spacing));
   font-weight: var(--gds-menu-item-font-weight, var(--label-l-font-weight));
   text-transform: var(--gds-menu-item-text-transform, var(--label-text-transform));
+
+  .content {
+    text-decoration: var(--gds-menu-item-underline, none);
+    text-decoration-thickness: var(--gds-menu-item-underline-thickness, auto);
+    text-decoration-color: var(--gds-menu-item-underline-color, currentColor);
+    text-underline-offset: var(--gds-menu-item-underline-offset, auto);
+  }
+
+  &:hover .content {
+    text-decoration: var(--gds-menu-item-underline-hover, none);
+    text-decoration-thickness: var(--gds-menu-item-underline-thickness-hover, auto);
+    text-decoration-color: var(--gds-menu-item-underline-color-hover, currentColor);
+    text-underline-offset: var(--gds-menu-item-underline-offset-hover, auto);
+  }
 }
 
 // Active style
