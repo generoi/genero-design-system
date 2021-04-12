@@ -109,9 +109,7 @@ export class GdsHint {
           aria-expanded={ this.open ? 'true' : 'false' }
           ref={el => (this.triggerEl = el as HTMLElement)}
         >
-          <div class="icon-content" tabindex="-1">
-            <slot name="icon"></slot>
-          </div>
+          <slot name="icon"></slot>
         </button>
         <div
           id={ this.contentId }

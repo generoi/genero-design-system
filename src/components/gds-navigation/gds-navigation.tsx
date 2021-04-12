@@ -114,14 +114,12 @@ export class GdsNavigation {
               aria-expanded={this.open ? 'true' : 'false'}
               aria-label={this.accessibleHamburgerLabel}
             >
-              <div class="gds-navigation-hamburger-content" tabindex="-1">
-                <slot name="menu-icon"></slot>
-                <slot name="close-menu-icon"></slot>
+              <slot name="menu-icon"></slot>
+              <slot name="close-menu-icon"></slot>
 
-                {!this.hasMenuIconSlot && (
-                  this.menuIcon ? this.menuIcon : <gds-hamburger active={this.open} />
-                )}
-              </div>
+              {!this.hasMenuIconSlot && (
+                this.menuIcon ? this.menuIcon : <gds-hamburger active={this.open} />
+              )}
             </button>
 
             <div

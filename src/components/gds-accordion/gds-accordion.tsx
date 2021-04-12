@@ -68,19 +68,17 @@ export class GdsAccordion {
             aria-controls={ this.contentId }
             aria-expanded={ this.expanded ? 'true' : 'false' }
           >
-            <div class="header-content" tabindex="-1">
-              <div class="heading" id={ this.titleId }>
-                <slot name="label"></slot>
-              </div>
-              <div class="iconCollapse">
-                <slot name="icon-collapse">
-                  {/* TODO: Once gds-icon can render inside shadow dom, then use these defaults. */}
-                  {/* <gds-icon name="caret-circle-up" regular></gds-icon> */}
-                </slot>
-              </div>
-              <div class="iconExpand">
-                <slot name="icon-expand">{/* <gds-icon name="caret-circle-down" regular></gds-icon> */}</slot>
-              </div>
+            <div class="heading" id={ this.titleId }>
+              <slot name="label"></slot>
+            </div>
+            <div class="iconCollapse">
+              <slot name="icon-collapse">
+                {/* TODO: Once gds-icon can render inside shadow dom, then use these defaults. */}
+                {/* <gds-icon name="caret-circle-up" regular></gds-icon> */}
+              </slot>
+            </div>
+            <div class="iconExpand">
+              <slot name="icon-expand">{/* <gds-icon name="caret-circle-down" regular></gds-icon> */}</slot>
             </div>
           </button>
           <div

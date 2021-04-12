@@ -105,6 +105,11 @@ form {
   &:focus {
     outline: var(--gds-search-form-outline-focus);
     z-index: 1;
+
+    // Until :focus-visible has proper cross-browser support.
+    &:not(:focus-visible) {
+      outline: none;
+    }
   }
 }
 

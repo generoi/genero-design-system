@@ -5,5 +5,10 @@
 
   &:focus {
     outline: var(--gds-link-outline-focus);
+
+    // Until :focus-visible has proper cross-browser support.
+    &:not(:focus-visible) {
+      outline: none;
+    }
   }
 }

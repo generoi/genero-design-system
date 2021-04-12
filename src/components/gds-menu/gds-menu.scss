@@ -38,3 +38,8 @@
   outline: var(--gds-menu-link-outline-focus);
   z-index: 1; // go above the submenu button
 }
+
+// Until :focus-visible has proper cross-browser support.
+::slotted(a:focus:not(:focus-visible)) {
+  outline: none;
+}

@@ -39,3 +39,8 @@
 ::slotted(a:focus) {
   outline: var(--gds-submenu-a-outline-focus);
 }
+
+// Until :focus-visible has proper cross-browser support.
+::slotted(a:focus:not(:focus-visible)) {
+  outline: none;
+}

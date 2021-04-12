@@ -112,16 +112,18 @@ nav.gds-navigation-nav {
   height: 100%;
   cursor: pointer;
   order: 2;
+  padding: var(--spacing-s);
+  box-sizing: border-box;
 
-  &-content {
-    outline: none;
-    padding: var(--spacing-s);
-    display: inline-flex;
-  }
-
-  &:focus > &-content {
+  &:focus {
     outline: var(--gds-link-outline-focus);
+
+    // Until :focus-visible has proper cross-browser support.
+    &:not(:focus-visible) {
+      outline: none;
+    }
   }
+
 
   @include desktopOnly {
     display: none;

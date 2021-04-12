@@ -37,19 +37,22 @@
     flex: 1 1 auto;
     outline: none;
 
-    &-content {
-      position: relative;
-      display: flex;
-      justify-content: var(--accordion-justify-content, space-between);
-      align-items: center;
-      cursor: pointer;
-      padding: var(--accordion-header-padding, var(--accordion-padding));
-      outline: none;
-    }
+    position: relative;
+    display: flex;
+    justify-content: var(--accordion-justify-content, space-between);
+    align-items: center;
+    cursor: pointer;
+    padding: var(--accordion-header-padding, var(--accordion-padding));
+    outline: none;
 
-    &:focus > .header-content {
+    &:focus {
       outline: var(--accordion-outline-focus);
       z-index: 1;
+
+      // Until :focus-visible has proper cross-browser support.
+      &:not(:focus-visible) {
+        outline: none;
+      }
     }
 
     // These are required because we can't have overflow: hidden with floating.

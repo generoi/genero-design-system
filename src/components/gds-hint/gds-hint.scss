@@ -12,12 +12,13 @@
   outline: none;
   height: var(--icon-font-size);
 
-  &-content {
-    outline: none;
-  }
-
-  &:focus > .icon-content {
+  &:focus {
     outline: var(--gds-hint-outline-focus);
+
+    // Until :focus-visible has proper cross-browser support.
+    &:not(:focus-visible) {
+      outline: none;
+    }
   }
 }
 

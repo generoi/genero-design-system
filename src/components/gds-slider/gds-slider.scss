@@ -24,6 +24,11 @@
 
   &:focus {
     outline: var(--gds-slider-outline-focus);
+
+    // Until :focus-visible has proper cross-browser support.
+    &:not(:focus-visible) {
+      outline: none;
+    }
   }
 
   &::-webkit-slider-thumb {

@@ -41,6 +41,11 @@
   }
   &:focus {
     outline: var(--button-outline-focus, var(--button-outline));
+
+    // Until :focus-visible has proper cross-browser support.
+    &:not(:focus-visible) {
+      outline: none;
+    }
   }
 
   & > * + * {
