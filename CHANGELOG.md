@@ -2,6 +2,205 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.0](https://github.com/generoi/genero-design-system/compare/v3.13.1...v4.0.0-beta.0) (2021-04-14)
+
+
+### ⚠ BREAKING CHANGES
+
+* **variables:** All variables have now been prefixed with `--gds-`. You can use the following commands to rename them in your theme
+
+```bash
+find -E . -type f -not -path "./node_modules/*" -not -path "./vendor/*" -regex ".*\.(js|css|scss|tsx|php)" -exec sed -i '' -E 's/--(color|spacing|body|heading|label|paragraph|tag|button|text-button|navigation|card|media-card|logo-grid-item|icon|accordion|menu-item)/--gds-\1/g' {} +
+
+find -E . -type f -not -path "./node_modules/*" -not -path "./vendor/*" -regex ".*\.(js|css|scss|tsx|php)" -exec sed -i '' -E 's/(spacing|heading)-xxxs/\1-3xs/g' {} +
+find -E . -type f -not -path "./node_modules/*" -not -path "./vendor/*" -regex ".*\.(js|css|scss|tsx|php)" -exec sed -i '' -E 's/(spacing|heading)-xxs/\1-2xs/g' {} +
+find -E . -type f -not -path "./node_modules/*" -not -path "./vendor/*" -regex ".*\.(js|css|scss|tsx|php)" -exec sed -i '' -E 's/(spacing|heading)-xxl/\1-2xl/g' {} +
+find -E . -type f -not -path "./node_modules/*" -not -path "./vendor/*" -regex ".*\.(js|css|scss|tsx|php)" -exec sed -i '' -E 's/(spacing|heading)-xxxl/\1-3xl/g' {} +
+```
+* **variables:** The following variables have changed name:
+
+```css
+--heading-2xl-font-family: var(--heading-xxl-font-family);
+--heading-2xl-font-weight: var(--heading-xxl-font-weight);
+--heading-2xl-font-size: var(--heading-xxl-font-size);
+--heading-2xl-line-height: var(--heading-xxl-line-height);
+--heading-2xl-text-transform: var(--heading-xxl-text-transform);
+--heading-2xl-letter-spacing: var(--heading-xxl-letter-spacing);
+--heading-2xl-margin-top: var(--heading-xxl-margin-top);
+--heading-2xl-margin-bottom: var(--heading-xxl-margin-bottom);
+
+--spacing-3xs: var(--spacing-xxxs);
+--spacing-2xs: var(--spacing-xxs);
+--spacing-2xl: var(--spacing-xxl);
+--spacing-3xl: var(--spacing-xxxl);
+```
+* **variables:** The following variables have been deprecated, please use the specific colors instead.
+
+```css
+--color-primary: var(--color-ui-03);
+--color-secondary: var(--color-ui-04);
+--border-color-light: #dddddd;
+--background-color-primary: var(--color-ui-background-01);
+--background-color-secondary: var(--color-ui-background-02);
+--text-color-primary: var(--color-black);
+```
+* **gds-paragraph:** The `paragraph.base` mixin has been deprecated since it's quite common for
+paragraph sizes to have both different font families and font weights.
+
+Consuming projects that happen to use the SASS mixins can simply remove the
+mixin wherever it's used and things should keep working based on the size only.
+* **a11y:** **Menu item underline**
+
+`--menu-item-underline-display` has been replaced by
+`--gds-menu-item-underline-active` and the underlines are no longer spanning
+the entire block, only the text content. Additionally you can modify the offset and thickness; and
+`--navigation-underline-color` is now called `--gds-menu-item-underline-color-active`.
+
+```scss
+// BEFORE:
+--menu-item-underline-display: none;
+--navigation-underline-color: var(--color-black);
+
+// AFTER:
+--gds-menu-item-underline-active: underline;
+--gds-menu-item-underline-thickness-active: 3px;
+--gds-menu-item-underline-color-active: currentColor;
+--gds-menu-item-underline-offset-active: var(--spacing-xxs);
+```
+
+**Menu variables renamed**
+
+All `--menu-*` variables have been prefixed with `--gds-menu` instead.
+
+```scss
+// BEFORE:
+--menu-text-align: left;
+--menu-item-background-color-active: var(--background-color-primary);
+
+// AFTER:
+--gds-menu-text-align: left;
+--gds-menu-item-background-color-active: var(--background-color-primary);
+```
+
+**Markup change for ´<gds-menu-nested-item>`**
+
+Using `<gds-menu-nested-item>` should now wrap the link content in `<gds-menu-item>`.
+
+```diff
+ <gds-menu>
+   <gds-menu-item-nested slot="item" submenu-icon="❯">
+     <a slot="link" href="#first">
+-      First item
++      <gds-menu-item>First item</gds-menu-item>
+     </a>
+   </gds-menu-item-nested>
+ </gds-menu>
+```
+
+With the above change, the `--gds-menu-item-nested-a-padding` variable has now
+been removed and the padding is instead styled from the `<gds-menu-item>`
+component.
+
+```scss
+// REMOVED:
+--gds-menu-item-nested-a-padding: var(--spacing-xs) 0;
+```
+
+**Navigation gutters**
+
+Durings this refactoring the fixed menu height that used to be set
+`var(--spacing-xxl)`, is now fluid and instead uses the following variables for
+adjusting the padding on `<gds-menu-item>` depending on the direction of the
+`<gds-menu>` component:
+
+```scss
+--gds-menu-item-padding-horizontal: var(--spacing-s) var(--spacing-s) calc(var(--spacing-s) - 0.15em) var(--spacing-s);
+--gds-menu-item-padding-vertical: var(--spacing-s) var(--spacing-m) calc(var(--spacing-s) - 0.15em) var(--spacing-m);
+```
+
+This is likely to break some implementations or at least change the height of the navigation by a few pixels.
+
+The navigation containers now supports `--navigation-padding` to consistently
+set left/right padding. You most likely need to change some theme styles for
+the right padding of the navigation as well as reduce the left padding for the
+navigation logo `--navigation-logo-padding`. By default the
+`--navigation-padding` sets the same values as before, making spacing identical
+as it used to on both desktop and mobile. If you override the variable you
+should consider the spacing both for desktop and for mobile.
+
+```scss
+// Before
+--navigation-logo-padding: 0 0 0 var(--spacing-s);
+
+// After
+--navigation-logo-padding: 0;
+```
+
+**Navigation hamburger icon**
+
+The navigations default mobile hamburger has now been changed to an animated
+`<gds-hamburger>` component, if you applied color styling to this in your theme
+you might need to make adjustments.
+
+**Navigation menu item justification**
+
+`<gds-menu>` used within a `<gds-navigation>` needs to specify
+that the menu items should be centered to maintain the previous behavior
+otherwise the menu will be aligned to the left.
+
+Add this to your css:
+
+```scss
+// NEW VARIABLE:
+--gds-menu-justify-content: center;
+```
+
+**`<gds-input-wrapper>` no longer using shadow-dom**
+
+Due to accessibility issues and it not being possible to reference input fields
+in a slot from a `<label>` inside a component, the `<gds-input-wrapper>` is now
+using light-dom and scoped styles instead of shadow-dom. This could cause
+high specificity global styles to pollute the component.
+
+### Features
+
+* **a11y:** make all components accessible ([b5b069c](https://github.com/generoi/genero-design-system/commit/b5b069c62b207ed1af69cef778bacb8540f14783))
+* **build:** allow building from git ([e37e94c](https://github.com/generoi/genero-design-system/commit/e37e94cd33358b371ba32545b276cc0286384f25))
+* **gds-hamburger:** add component ([3a290c4](https://github.com/generoi/genero-design-system/commit/3a290c4d803724c0ce96456568ca44c3d6490d8e))
+* **gds-input-wrapper:** add placeholder color variable ([51a265b](https://github.com/generoi/genero-design-system/commit/51a265b7820fb0f32ef97e19db5928dd7aa77ffe))
+* **gds-input-wrapper:** split styling into mixins so they can be used in wordpress ([ca44de5](https://github.com/generoi/genero-design-system/commit/ca44de589700814340ac2bac158bef9c139914e8))
+* **gds-input-wrapper:** style select inputs on safari ([68d7923](https://github.com/generoi/genero-design-system/commit/68d7923c3ac4e44796bc4a128ada5e01e8d440be))
+* **gds-link:** add full mode ([b0c68f7](https://github.com/generoi/genero-design-system/commit/b0c68f7ca140038c2c8e03d8b8b3fbaf4ead20ce))
+* **gds-menu-item:** add variables for underline in all item states ([59c9960](https://github.com/generoi/genero-design-system/commit/59c9960cba6a1070c7ea14616e923a15331b942a))
+* **gds-navigation:** add more css variables ([9145b40](https://github.com/generoi/genero-design-system/commit/9145b40cf8d668d51d74e6698afec949fc507cb3))
+* **gds-paragraph:** add per size variables and deprecate base mixing ([4168276](https://github.com/generoi/genero-design-system/commit/416827646feb824e36fd0b60edf9c75db3304b90))
+* **gds-search-form:** add component ([f89aec0](https://github.com/generoi/genero-design-system/commit/f89aec0e8fc47dd18f2da22d0ac8d96950a2e984))
+* **gds-search-form:** add native mediaquery support ([2e41747](https://github.com/generoi/genero-design-system/commit/2e417475b3d03be269b2ce70c757c026b730a711))
+* **gds-visually-hidden:** add component ([e9bf15b](https://github.com/generoi/genero-design-system/commit/e9bf15bf21efe954ede47915ab1356ad3bf7af28))
+* **storybook:** Add support for story controls ([bd51bf8](https://github.com/generoi/genero-design-system/commit/bd51bf82576725d7c747ce774791f69b7660c2d2))
+* **submenu:** add submenu and related components ([9408cad](https://github.com/generoi/genero-design-system/commit/9408cad892d5400262baf81fe4a757de3d0ce7b3))
+* **submenu:** add support for mobile submenu ([544e8bd](https://github.com/generoi/genero-design-system/commit/544e8bd0f1303d2abc666cce59e383c376647b10))
+
+
+### Bug Fixes
+
+* **a11y:** respect reduced motion user preference ([ee5bfcf](https://github.com/generoi/genero-design-system/commit/ee5bfcf333af514d6c6e82d5729757a648ee361a))
+* **audit:** update dependencies ([fe9b644](https://github.com/generoi/genero-design-system/commit/fe9b6440e780e5e7f5cc1e39e35c816bf263075a))
+* **build:** allow building from git ([9765eb8](https://github.com/generoi/genero-design-system/commit/9765eb82b05ace47120fa8420f94f115b7782aee))
+* **build:** incorrect types property set in package.json ([8d77ec9](https://github.com/generoi/genero-design-system/commit/8d77ec9922001feec4c177f5294666babc2fc77f))
+* **gds-hint:** fix overflow in safari ([36bc0b7](https://github.com/generoi/genero-design-system/commit/36bc0b77e201ef61b740e7fa55ce0ed5e36b1d27))
+* **gds-navigation:** escape doesnt close mobile navigation ([2ea7ba4](https://github.com/generoi/genero-design-system/commit/2ea7ba4645d2f7c8b8726d70c1caa83c36f105dc))
+* **gds-search-form:** add color variable for label before focused ([e142ec7](https://github.com/generoi/genero-design-system/commit/e142ec7166289c0a4090d786fbfa7a14d6a32176))
+* **gds-search-form:** mobile safari overflow ([0fa50bf](https://github.com/generoi/genero-design-system/commit/0fa50bf21cf751680a936b2cdb54c94a42bba5b3))
+* **gds-search-form:** properly center button icon ([acf2223](https://github.com/generoi/genero-design-system/commit/acf2223f48a04567965e987af4f4b3311a98de47))
+* spacing errors and support custom font weight in search form ([c42c566](https://github.com/generoi/genero-design-system/commit/c42c5666a6dcb540763b0cf95b0fd9464dc4a131))
+* **safari:** use all:unset to reset button and input styling ([0671da8](https://github.com/generoi/genero-design-system/commit/0671da8d9115ee1c951b04b884a5cf28c3c05bd8))
+
+
+* **variables:** prefix all variables with gds ([f6f2dca](https://github.com/generoi/genero-design-system/commit/f6f2dcac4c461915da26773d3a1e70121fd1bda3))
+* **variables:** remove confusing duplicate color variables ([8d9df14](https://github.com/generoi/genero-design-system/commit/8d9df14a402ac4eeaa2ef5c8c85ee708d980c7c9))
+* **variables:** rename xxs/xxl etc to use numeric names like 2xs/2xl ([9ef0886](https://github.com/generoi/genero-design-system/commit/9ef08869a727ab3c1c8ff746348e0c87b9965cc7))
+
 ## [3.17.0](https://github.com/generoi/genero-design-system/compare/v3.16.0...v3.17.0) (2021-03-26)
 
 
