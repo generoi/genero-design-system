@@ -282,10 +282,6 @@
   --media-card-media-padding: 0;
   --media-card-paragraph-gutter: var(--spacing-2xs);
 
-  @include mobileAndTablet {
-    --media-card-content-padding: var(--spacing-m) var(--spacing-m) var(--spacing-l) var(--spacing-m);
-  }
-
   /* Logo Grid */
   --logo-grid-item-desktop-count: 4;
   --logo-grid-item-tablet-count: 2;
