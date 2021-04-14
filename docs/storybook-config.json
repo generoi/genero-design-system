@@ -3,7 +3,6 @@
     "versions": {
       "availableVersions": [
         "master",
-        "a11y",
         "v3.13.1"
       ],
       "localhost": "localhost:6006",
