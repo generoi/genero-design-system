@@ -2,8 +2,11 @@
 
 :host {
   @include card;
-  transition: box-shadow 0.3s;
   height: var(--card-height);
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: box-shadow 0.3s;
+  }
 }
 
 :host(:hover) {

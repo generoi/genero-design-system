@@ -34,7 +34,10 @@
 
     outline: none;
     transform: rotate(90deg);
-    transition: transform 0.3s ease;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: transform 0.3s ease;
+    }
   }
 
   // Only visible when focused through the keyboard, focusing by clicking the
@@ -51,11 +54,14 @@
   visibility: hidden;
   position: absolute;
   opacity: 0;
-  transition: opacity 0.2s ease;
   display: block;
   // Expand to the size of the menu-item itself so that <gds-submenu> has the
   // correct container width.
   width: 100%;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: opacity 0.2s ease;
+  }
 
   :host([expanded]) & {
     overflow: visible;
@@ -72,9 +78,12 @@
 
   .submenu {
     max-height: 0px;
-    transition: max-height 0.3s ease;
     position: relative;
     opacity: 1;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: max-height 0.3s ease;
+    }
   }
 
   :host([expanded]) {

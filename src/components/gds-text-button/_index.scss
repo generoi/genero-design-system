@@ -24,8 +24,10 @@
     margin-left: var(--text-button-icon-gutter);
   }
 
-  > * {
-    transition: var(--text-button-icon-transition);
+  @media (prefers-reduced-motion: no-preference) {
+    > * {
+      transition: var(--text-button-icon-transition);
+    }
   }
 
   &:hover {

@@ -44,10 +44,13 @@ form {
   font-size: var(--gds-search-form-input-font-size);
   font-weight: var(--gds-search-form-input-font-weight);
   max-width: var(--gds-search-form-input-width);
-  transition: max-width 0.2s ease-out;
   // Place above button
   z-index: 1;
   position: relative;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: max-width 0.2s ease-out;
+  }
 
   // Reset from gds-input-wrapper
   min-width: auto;
@@ -121,10 +124,13 @@ form {
 
   [type="search"] {
     opacity: 0;
-    transition: all 200ms ease-out;
     cursor: pointer;
     z-index: 1;
     box-sizing: border-box;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: all 200ms ease-out;
+    }
   }
 
   form:focus-within  {
@@ -156,10 +162,12 @@ form {
   form {
     position: absolute;
     right: 0;
-
     box-sizing: border-box;
     width: 100%;
-    transition: width 0.2s ease-out;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: width 0.2s ease-out;
+    }
 
     &:focus-within {
       width: calc(
@@ -189,7 +197,10 @@ form {
 
     box-sizing: border-box;
     width: 100%;
-    transition: width 0.2s ease-out;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: width 0.2s ease-out;
+    }
 
     &:focus-within {
       width: calc(
