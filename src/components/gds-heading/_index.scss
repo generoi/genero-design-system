@@ -1,6 +1,6 @@
 @mixin base {
   display: block;
-  font-family: var(--heading-font-family);
+  font-family: var(--gds-heading-font-family);
   font-weight: 600;
   letter-spacing: 0px;
 
@@ -13,77 +13,77 @@
 // H1
 @mixin size-xxl {
   @include base;
-  font-family: var(--heading-2xl-font-family, var(--heading-font-family));
-  font-size: var(--heading-2xl-font-size);
-  font-weight: var(--heading-2xl-font-weight);
-  line-height: var(--heading-2xl-line-height);
-  text-transform: var(--heading-2xl-text-transform);
-  letter-spacing: var(--heading-2xl-letter-spacing);
-  margin-top: var(--heading-2xl-margin-top);
-  margin-bottom: var(--heading-2xl-margin-bottom);
+  font-family: var(--gds-heading-2xl-font-family, var(--gds-heading-font-family));
+  font-size: var(--gds-heading-2xl-font-size);
+  font-weight: var(--gds-heading-2xl-font-weight);
+  line-height: var(--gds-heading-2xl-line-height);
+  text-transform: var(--gds-heading-2xl-text-transform);
+  letter-spacing: var(--gds-heading-2xl-letter-spacing);
+  margin-top: var(--gds-heading-2xl-margin-top);
+  margin-bottom: var(--gds-heading-2xl-margin-bottom);
 }
 
 // H2
 @mixin size-xl {
   @include base;
-  font-family: var(--heading-xl-font-family, var(--heading-font-family));
-  font-size: var(--heading-xl-font-size);
-  font-weight: var(--heading-xl-font-weight);
-  line-height: var(--heading-xl-line-height);
-  text-transform: var(--heading-xl-text-transform);
-  letter-spacing: var(--heading-xl-letter-spacing);
-  margin-top: var(--heading-xl-margin-top);
-  margin-bottom: var(--heading-xl-margin-bottom);
+  font-family: var(--gds-heading-xl-font-family, var(--gds-heading-font-family));
+  font-size: var(--gds-heading-xl-font-size);
+  font-weight: var(--gds-heading-xl-font-weight);
+  line-height: var(--gds-heading-xl-line-height);
+  text-transform: var(--gds-heading-xl-text-transform);
+  letter-spacing: var(--gds-heading-xl-letter-spacing);
+  margin-top: var(--gds-heading-xl-margin-top);
+  margin-bottom: var(--gds-heading-xl-margin-bottom);
 }
 
 // H3
 @mixin size-l {
   @include base;
-  font-family: var(--heading-l-font-family, var(--heading-font-family));
-  font-size: var(--heading-l-font-size);
-  font-weight: var(--heading-l-font-weight);
-  line-height: var(--heading-l-line-height);
-  text-transform: var(--heading-l-text-transform);
-  letter-spacing: var(--heading-l-letter-spacing);
-  margin-top: var(--heading-l-margin-top);
-  margin-bottom: var(--heading-l-margin-bottom);
+  font-family: var(--gds-heading-l-font-family, var(--gds-heading-font-family));
+  font-size: var(--gds-heading-l-font-size);
+  font-weight: var(--gds-heading-l-font-weight);
+  line-height: var(--gds-heading-l-line-height);
+  text-transform: var(--gds-heading-l-text-transform);
+  letter-spacing: var(--gds-heading-l-letter-spacing);
+  margin-top: var(--gds-heading-l-margin-top);
+  margin-bottom: var(--gds-heading-l-margin-bottom);
 }
 
 // H4
 @mixin size-m {
   @include base;
-  font-family: var(--heading-m-font-family, var(--heading-font-family));
-  font-size: var(--heading-m-font-size);
-  font-weight: var(--heading-m-font-weight);
-  line-height: var(--heading-m-line-height);
-  text-transform: var(--heading-m-text-transform);
-  letter-spacing: var(--heading-m-letter-spacing);
-  margin-top: var(--heading-m-margin-top);
-  margin-bottom: var(--heading-m-margin-bottom);
+  font-family: var(--gds-heading-m-font-family, var(--gds-heading-font-family));
+  font-size: var(--gds-heading-m-font-size);
+  font-weight: var(--gds-heading-m-font-weight);
+  line-height: var(--gds-heading-m-line-height);
+  text-transform: var(--gds-heading-m-text-transform);
+  letter-spacing: var(--gds-heading-m-letter-spacing);
+  margin-top: var(--gds-heading-m-margin-top);
+  margin-bottom: var(--gds-heading-m-margin-bottom);
 }
 
 // H5
 @mixin size-s {
   @include base;
-  font-family: var(--heading-s-font-family, var(--heading-font-family));
-  font-size: var(--heading-s-font-size);
-  font-weight: var(--heading-s-font-weight);
-  line-height: var(--heading-s-line-height);
-  text-transform: var(--heading-s-text-transform);
-  letter-spacing: var(--heading-s-letter-spacing);
-  margin-top: var(--heading-s-margin-top);
-  margin-bottom: var(--heading-s-margin-bottom);
+  font-family: var(--gds-heading-s-font-family, var(--gds-heading-font-family));
+  font-size: var(--gds-heading-s-font-size);
+  font-weight: var(--gds-heading-s-font-weight);
+  line-height: var(--gds-heading-s-line-height);
+  text-transform: var(--gds-heading-s-text-transform);
+  letter-spacing: var(--gds-heading-s-letter-spacing);
+  margin-top: var(--gds-heading-s-margin-top);
+  margin-bottom: var(--gds-heading-s-margin-bottom);
 }
 
 // H6
 @mixin size-xs {
   @include base;
-  font-family: var(--heading-xs-font-family, var(--heading-font-family));
-  font-size: var(--heading-xs-font-size);
-  font-weight: var(--heading-xs-font-weight);
-  line-height: var(--heading-xs-line-height);
-  text-transform: var(--heading-xs-text-transform);
-  letter-spacing: var(--heading-xs-letter-spacing);
-  margin-top: var(--heading-xs-margin-top);
-  margin-bottom: var(--heading-xs-margin-bottom);
+  font-family: var(--gds-heading-xs-font-family, var(--gds-heading-font-family));
+  font-size: var(--gds-heading-xs-font-size);
+  font-weight: var(--gds-heading-xs-font-weight);
+  line-height: var(--gds-heading-xs-line-height);
+  text-transform: var(--gds-heading-xs-text-transform);
+  letter-spacing: var(--gds-heading-xs-letter-spacing);
+  margin-top: var(--gds-heading-xs-margin-top);
+  margin-bottom: var(--gds-heading-xs-margin-bottom);
 }

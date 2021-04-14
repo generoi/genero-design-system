@@ -10,20 +10,20 @@
   box-sizing: border-box;
 
   // Mobile as default.
-  padding: var(--gds-menu-item-padding-vertical, var(--spacing-s) var(--spacing-m));
+  padding: var(--gds-menu-item-padding-vertical, var(--gds-spacing-s) var(--gds-spacing-m));
 
   // Desktop from viewport width.
   @include desktopOnly {
-    padding: var(--gds-menu-item-padding-horizontal, var(--spacing-s) var(--spacing-s));
+    padding: var(--gds-menu-item-padding-horizontal, var(--gds-spacing-s) var(--gds-spacing-s));
   }
 
   // For historical reasons, fallback to gds-label size="l"
-  font-family: var(--gds-menu-item-font-family, var(--label-font-family));
-  font-size: var(--gds-menu-item-font-size, var(--label-l-font-size));
-  line-height: var(--gds-menu-item-line-height, var(--label-l-line-height));
-  letter-spacing: var(--gds-menu-item-letter-spacing, var(--label-l-letter-spacing));
-  font-weight: var(--gds-menu-item-font-weight, var(--label-l-font-weight));
-  text-transform: var(--gds-menu-item-text-transform, var(--label-text-transform));
+  font-family: var(--gds-menu-item-font-family, var(--gds-label-font-family));
+  font-size: var(--gds-menu-item-font-size, var(--gds-label-l-font-size));
+  line-height: var(--gds-menu-item-line-height, var(--gds-label-l-line-height));
+  letter-spacing: var(--gds-menu-item-letter-spacing, var(--gds-label-l-letter-spacing));
+  font-weight: var(--gds-menu-item-font-weight, var(--gds-label-l-font-weight));
+  text-transform: var(--gds-menu-item-text-transform, var(--gds-label-text-transform));
 
   .content {
     text-decoration: var(--gds-menu-item-underline, none);
@@ -51,7 +51,7 @@
   }
 
   @include mobileAndTablet {
-    background-color: var(--gds-menu-item-background-color-active, var(--color-ui-background-01));
+    background-color: var(--gds-menu-item-background-color-active, var(--gds-color-ui-background-01));
 
     .content {
       text-decoration: var(--gds-menu-item-underline-active, none);
@@ -61,10 +61,10 @@
 
 // Vertical direction explicitly defined.
 :host-context([direction="vertical"]) {
-  padding: var(--gds-menu-item-padding-vertical, var(--spacing-s) var(--spacing-m));
+  padding: var(--gds-menu-item-padding-vertical, var(--gds-spacing-s) var(--gds-spacing-m));
 }
 
 // Horizontal direction explicitly defined.
 :host-context([direction="horizontal"]) {
-  padding: var(--gds-menu-item-padding-horizontal, var(--spacing-s) var(--spacing-m));
+  padding: var(--gds-menu-item-padding-horizontal, var(--gds-spacing-s) var(--gds-spacing-m));
 }

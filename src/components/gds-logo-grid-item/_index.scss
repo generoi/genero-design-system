@@ -1,7 +1,7 @@
 @mixin base {
   display: block; /* by default, custom elements are display: inline */
   contain: content; /* CSS containment FTW. */
-  padding: var(--logo-grid-item-padding);
+  padding: var(--gds-logo-grid-item-padding);
 }
 
 @mixin container {

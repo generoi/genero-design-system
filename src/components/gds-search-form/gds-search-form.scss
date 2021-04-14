@@ -81,7 +81,7 @@ form {
   z-index: 0;
 
   cursor: pointer;
-  color: var(--color-black);
+  color: var(--gds-color-black);
   padding: var(--gds-search-form-button-padding);
   width: var(--gds-search-form-button-width);
   box-sizing: border-box;
@@ -146,8 +146,8 @@ form {
 
     [type="submit"] {
       z-index: 2;
-      color: var(--color-black);
-      padding-right: var(--spacing-2xs);
+      color: var(--gds-color-black);
+      padding-right: var(--gds-spacing-2xs);
     }
   }
 }

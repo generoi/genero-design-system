@@ -17,7 +17,7 @@ export const Examples = () => html`
 
   <br />
 
-  <div style="width: 300px; background-color: var(--color-ui-01); text-align: center; padding: var(--spacing-s);">
+  <div style="width: 300px; background-color: var(--gds-color-ui-01); text-align: center; padding: var(--gds-spacing-s);">
     <gds-tag-group>
       <gds-tag>Label</gds-tag>
       <gds-tag>Label</gds-tag>

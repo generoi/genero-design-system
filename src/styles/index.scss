@@ -6,222 +6,222 @@
 
 :root {
   /* Colors */
-  --color-white: #ffffff;
-  --color-black: #333031;
-  --color-ui-background-01: #eeeeee;
-  --color-ui-background-02: rgba(238, 238, 238, 0.75);
-  --color-ui-01: #acacac;
-  --color-ui-02: #646464;
-  --color-ui-03: #00a06e;
-  --color-ui-04: #00a3b7;
-  --color-ui-05: #f1615e;
-  --color-ui-06: #ffdcdd;
-  --color-ui-07: #9185db;
+  --gds-color-white: #ffffff;
+  --gds-color-black: #333031;
+  --gds-color-ui-background-01: #eeeeee;
+  --gds-color-ui-background-02: rgba(238, 238, 238, 0.75);
+  --gds-color-ui-01: #acacac;
+  --gds-color-ui-02: #646464;
+  --gds-color-ui-03: #00a06e;
+  --gds-color-ui-04: #00a3b7;
+  --gds-color-ui-05: #f1615e;
+  --gds-color-ui-06: #ffdcdd;
+  --gds-color-ui-07: #9185db;
 
   /* Spacing */
-  --spacing-3xs: 4px;
-  --spacing-2xs: 8px;
-  --spacing-xs: 12px;
-  --spacing-s: 16px;
-  --spacing-m: 24px;
-  --spacing-l: 32px;
-  --spacing-xl: 40px;
-  --spacing-2xl: 48px;
-  --spacing-3xl: 80px;
+  --gds-spacing-3xs: 4px;
+  --gds-spacing-2xs: 8px;
+  --gds-spacing-xs: 12px;
+  --gds-spacing-s: 16px;
+  --gds-spacing-m: 24px;
+  --gds-spacing-l: 32px;
+  --gds-spacing-xl: 40px;
+  --gds-spacing-2xl: 48px;
+  --gds-spacing-3xl: 80px;
 
-  --gds-global-outline-focus: auto var(--color-ui-04);
+  --gds-global-outline-focus: auto var(--gds-color-ui-04);
 
   /* Body */
-  --body-font-family: Gilroy, Arial, Helvetica, sans-serif;
-  --body-background-color: var(--color-ui-background-01);
-  --body-text-color: var(--color-black);
+  --gds-body-font-family: Gilroy, Arial, Helvetica, sans-serif;
+  --gds-body-background-color: var(--gds-color-ui-background-01);
+  --gds-body-text-color: var(--gds-color-black);
 
   /* Headings */
-  --heading-font-family: Gilroy, Arial, Helvetica, sans-serif;
+  --gds-heading-font-family: Gilroy, Arial, Helvetica, sans-serif;
 
-  --heading-xs-font-family: var(--heading-font-family);
-  --heading-xs-font-weight: 600;
-  --heading-xs-font-size: 20px;
-  --heading-xs-line-height: 24px;
-  --heading-xs-text-transform: uppercase;
-  --heading-xs-letter-spacing: 1.6px;
-  --heading-xs-margin-top: auto;
-  --heading-xs-margin-bottom: auto;
+  --gds-heading-xs-font-family: var(--gds-heading-font-family);
+  --gds-heading-xs-font-weight: 600;
+  --gds-heading-xs-font-size: 20px;
+  --gds-heading-xs-line-height: 24px;
+  --gds-heading-xs-text-transform: uppercase;
+  --gds-heading-xs-letter-spacing: 1.6px;
+  --gds-heading-xs-margin-top: auto;
+  --gds-heading-xs-margin-bottom: auto;
 
-  --heading-s-font-family: var(--heading-font-family);
-  --heading-s-font-weight: 500;
-  --heading-s-font-size: 19px;
-  --heading-s-line-height: 23px;
-  --heading-s-text-transform: uppercase;
-  --heading-s-letter-spacing: 3.8px;
-  --heading-s-margin-top: auto;
-  --heading-s-margin-bottom: auto;
+  --gds-heading-s-font-family: var(--gds-heading-font-family);
+  --gds-heading-s-font-weight: 500;
+  --gds-heading-s-font-size: 19px;
+  --gds-heading-s-line-height: 23px;
+  --gds-heading-s-text-transform: uppercase;
+  --gds-heading-s-letter-spacing: 3.8px;
+  --gds-heading-s-margin-top: auto;
+  --gds-heading-s-margin-bottom: auto;
 
-  --heading-m-font-family: var(--heading-font-family);
-  --heading-m-font-weight: 800;
-  --heading-m-font-size: 20px;
-  --heading-m-line-height: 24px;
-  --heading-m-text-transform: uppercase;
-  --heading-m-letter-spacing: 1.6px;
-  --heading-m-margin-top: auto;
-  --heading-m-margin-bottom: auto;
+  --gds-heading-m-font-family: var(--gds-heading-font-family);
+  --gds-heading-m-font-weight: 800;
+  --gds-heading-m-font-size: 20px;
+  --gds-heading-m-line-height: 24px;
+  --gds-heading-m-text-transform: uppercase;
+  --gds-heading-m-letter-spacing: 1.6px;
+  --gds-heading-m-margin-top: auto;
+  --gds-heading-m-margin-bottom: auto;
 
-  --heading-l-font-family: var(--heading-font-family);
-  --heading-l-font-weight: 600;
-  --heading-l-font-size: 36px;
-  --heading-l-line-height: 36px;
-  --heading-l-text-transform: none;
-  --heading-l-letter-spacing: 0px;
-  --heading-l-margin-top: auto;
-  --heading-l-margin-bottom: auto;
+  --gds-heading-l-font-family: var(--gds-heading-font-family);
+  --gds-heading-l-font-weight: 600;
+  --gds-heading-l-font-size: 36px;
+  --gds-heading-l-line-height: 36px;
+  --gds-heading-l-text-transform: none;
+  --gds-heading-l-letter-spacing: 0px;
+  --gds-heading-l-margin-top: auto;
+  --gds-heading-l-margin-bottom: auto;
 
-  --heading-xl-font-family: var(--heading-font-family);
-  --heading-xl-font-weight: 600;
-  --heading-xl-font-size: 60px;
-  --heading-xl-line-height: 60px;
-  --heading-xl-text-transform: none;
-  --heading-xl-letter-spacing: 0px;
-  --heading-xl-margin-top: auto;
-  --heading-xl-margin-bottom: auto;
+  --gds-heading-xl-font-family: var(--gds-heading-font-family);
+  --gds-heading-xl-font-weight: 600;
+  --gds-heading-xl-font-size: 60px;
+  --gds-heading-xl-line-height: 60px;
+  --gds-heading-xl-text-transform: none;
+  --gds-heading-xl-letter-spacing: 0px;
+  --gds-heading-xl-margin-top: auto;
+  --gds-heading-xl-margin-bottom: auto;
 
-  --heading-2xl-font-family: var(--heading-font-family);
-  --heading-2xl-font-weight: 800;
-  --heading-2xl-font-size: 62px;
-  --heading-2xl-line-height: 67px;
-  --heading-2xl-text-transform: uppercase;
-  --heading-2xl-letter-spacing: 0px;
-  --heading-2xl-margin-top: auto;
-  --heading-2xl-margin-bottom: auto;
+  --gds-heading-2xl-font-family: var(--gds-heading-font-family);
+  --gds-heading-2xl-font-weight: 800;
+  --gds-heading-2xl-font-size: 62px;
+  --gds-heading-2xl-line-height: 67px;
+  --gds-heading-2xl-text-transform: uppercase;
+  --gds-heading-2xl-letter-spacing: 0px;
+  --gds-heading-2xl-margin-top: auto;
+  --gds-heading-2xl-margin-bottom: auto;
 
   @include mobileAndTablet {
-    --heading-xs-font-size: 16px;
-    --heading-xs-line-height: 24px;
-    --heading-xs-letter-spacing: 0;
+    --gds-heading-xs-font-size: 16px;
+    --gds-heading-xs-line-height: 24px;
+    --gds-heading-xs-letter-spacing: 0;
 
-    --heading-l-font-size: 30px;
-    --heading-l-line-height: 30px;
+    --gds-heading-l-font-size: 30px;
+    --gds-heading-l-line-height: 30px;
 
-    --heading-xl-font-size: 30px;
-    --heading-xl-line-height: 30px;
+    --gds-heading-xl-font-size: 30px;
+    --gds-heading-xl-line-height: 30px;
 
-    --heading-2xl-font-size: 30px;
-    --heading-2xl-line-height: 30px;
+    --gds-heading-2xl-font-size: 30px;
+    --gds-heading-2xl-line-height: 30px;
   }
 
   /* Labels */
-  --label-font-family: Gilroy, Arial, Helvetica, sans-serif;
-  --label-text-transform: uppercase;
-  --label-s-font-weight: 600;
-  --label-m-font-weight: 500;
-  --label-l-font-weight: 400;
-  --label-xl-font-weight: 600;
-  --label-s-font-size: 10px;
-  --label-m-font-size: 12px;
-  --label-l-font-size: 16px;
-  --label-xl-font-size: 16px;
-  --label-s-letter-spacing: 0.5px;
-  --label-m-letter-spacing: 1px;
-  --label-l-letter-spacing: 1.28px;
-  --label-xl-letter-spacing: 1.28px;
-  --label-s-line-height: 14px;
-  --label-m-line-height: 16px;
-  --label-l-line-height: 19px;
-  --label-xl-line-height: 19px;
+  --gds-label-font-family: Gilroy, Arial, Helvetica, sans-serif;
+  --gds-label-text-transform: uppercase;
+  --gds-label-s-font-weight: 600;
+  --gds-label-m-font-weight: 500;
+  --gds-label-l-font-weight: 400;
+  --gds-label-xl-font-weight: 600;
+  --gds-label-s-font-size: 10px;
+  --gds-label-m-font-size: 12px;
+  --gds-label-l-font-size: 16px;
+  --gds-label-xl-font-size: 16px;
+  --gds-label-s-letter-spacing: 0.5px;
+  --gds-label-m-letter-spacing: 1px;
+  --gds-label-l-letter-spacing: 1.28px;
+  --gds-label-xl-letter-spacing: 1.28px;
+  --gds-label-s-line-height: 14px;
+  --gds-label-m-line-height: 16px;
+  --gds-label-l-line-height: 19px;
+  --gds-label-xl-line-height: 19px;
 
   /* Paragraph, Text */
-  --paragraph-gutter: var(--spacing-l);
+  --gds-paragraph-gutter: var(--gds-spacing-l);
 
-  --paragraph-xs-font-size: 13px;
-  --paragraph-xs-line-height: 17px;
+  --gds-paragraph-xs-font-size: 13px;
+  --gds-paragraph-xs-line-height: 17px;
 
-  --paragraph-s-font-size: 15px;
-  --paragraph-s-line-height: 25px;
+  --gds-paragraph-s-font-size: 15px;
+  --gds-paragraph-s-line-height: 25px;
 
-  --paragraph-m-font-size: 17px;
-  --paragraph-m-line-height: 27px;
+  --gds-paragraph-m-font-size: 17px;
+  --gds-paragraph-m-line-height: 27px;
 
-  --paragraph-l-font-size: 20px;
-  --paragraph-l-line-height: 24px;
+  --gds-paragraph-l-font-size: 20px;
+  --gds-paragraph-l-line-height: 24px;
 
   @include mobileAndTablet {
-    --paragraph-l-font-size: 18px;
+    --gds-paragraph-l-font-size: 18px;
   }
 
   /* Tags */
-  --tag-padding: 4px 12px 6px 12px;
-  --tag-color: var(--color-white);
-  --tag-background-color: var(--color-black);
-  /* Can also define this: --tag-border: none; */
-  --tag-border-color: transparent;
-  --tag-border-radius: 10px;
-  --tag-line-height: 1em;
+  --gds-tag-padding: 4px 12px 6px 12px;
+  --gds-tag-color: var(--gds-color-white);
+  --gds-tag-background-color: var(--gds-color-black);
+  /* Can also define this: --gds-tag-border: none; */
+  --gds-tag-border-color: transparent;
+  --gds-tag-border-radius: 10px;
+  --gds-tag-line-height: 1em;
 
   /* Tag Group */
-  --tag-group-gutter-x: var(--spacing-s);
-  --tag-group-gutter-y: var(--spacing-xs);
+  --gds-tag-group-gutter-x: var(--gds-spacing-s);
+  --gds-tag-group-gutter-y: var(--gds-spacing-xs);
 
   @include mobileAndTablet {
-    --tag-group-gutter-x: var(--spacing-2xs);
-    --tag-group-gutter-y: var(--spacing-2xs);
+    --gds-tag-group-gutter-x: var(--gds-spacing-2xs);
+    --gds-tag-group-gutter-y: var(--gds-spacing-2xs);
   }
 
   /* Buttons */
-  --button-font-family: Gilroy, Arial, Helvetica, sans-serif;
-  --button-color: var(--color-white);
-  --button-background-color: var(--color-black);
-  --button-background-color-hover: var(--color-ui-02);
-  --button-background-color-disabled: var(--color-ui-02);
-  --button-background-color-active: var(--color-ui-02);
-  --button-background-image: none;
-  --button-background-image-hover: var(--button-background-image, none);
-  --button-background-image-active: var(--button-background-image, none);
-  --button-font-weight: 500;
-  --button-text-transform: uppercase;
-  --button-s-letter-spacing: 1.6px;
-  --button-m-letter-spacing: 1.28px;
-  --button-l-letter-spacing: 1.28px;
-  --button-icon-gutter: 16px;
-  --button-transition: background-color 0.1s ease-out;
-  --button-border-radius: 8px;
-  --button-box-shadow: none;
-  --button-border: none;
-  --button-outline: none;
-  --button-outline-focus: var(--gds-global-outline-focus);
-  /* Can also define this: --button-outline-hover: none; */
+  --gds-button-font-family: Gilroy, Arial, Helvetica, sans-serif;
+  --gds-button-color: var(--gds-color-white);
+  --gds-button-background-color: var(--gds-color-black);
+  --gds-button-background-color-hover: var(--gds-color-ui-02);
+  --gds-button-background-color-disabled: var(--gds-color-ui-02);
+  --gds-button-background-color-active: var(--gds-color-ui-02);
+  --gds-button-background-image: none;
+  --gds-button-background-image-hover: var(--gds-button-background-image, none);
+  --gds-button-background-image-active: var(--gds-button-background-image, none);
+  --gds-button-font-weight: 500;
+  --gds-button-text-transform: uppercase;
+  --gds-button-s-letter-spacing: 1.6px;
+  --gds-button-m-letter-spacing: 1.28px;
+  --gds-button-l-letter-spacing: 1.28px;
+  --gds-button-icon-gutter: 16px;
+  --gds-button-transition: background-color 0.1s ease-out;
+  --gds-button-border-radius: 8px;
+  --gds-button-box-shadow: none;
+  --gds-button-border: none;
+  --gds-button-outline: none;
+  --gds-button-outline-focus: var(--gds-global-outline-focus);
+  /* Can also define this: --gds-button-outline-hover: none; */
   /* Precise vertical position is dependent on the font. So you might need to adjust this. */
-  --button-s-padding: 12px 24px 8px 24px;
-  --button-m-padding: 18px 32px 14px 32px;
-  --button-l-padding: 18px 32px 14px 32px;
-  --button-s-font-size: 16px;
-  --button-m-font-size: 20px;
-  --button-l-font-size: 24px;
+  --gds-button-s-padding: 12px 24px 8px 24px;
+  --gds-button-m-padding: 18px 32px 14px 32px;
+  --gds-button-l-padding: 18px 32px 14px 32px;
+  --gds-button-s-font-size: 16px;
+  --gds-button-m-font-size: 20px;
+  --gds-button-l-font-size: 24px;
 
   /* Text Buttons */
-  --text-button-font-family: var(--button-font-family);
-  --text-button-color: inherit;
-  --text-button-color-hover: var(--text-button-color);
-  --text-button-font-weight: 600;
-  --text-button-text-transform: var(--button-text-transform);
-  --text-button-s-letter-spacing: var(--button-s-letter-spacing);
-  --text-button-m-letter-spacing: var(--button-m-letter-spacing);
-  --text-button-l-letter-spacing: var(--button-l-letter-spacing);
-  --text-button-icon-gutter: var(--button-icon-gutter);
-  --text-button-s-padding: 12px 0 8px 0;
-  --text-button-m-padding: 18px 0 14px 0;
-  --text-button-l-padding: 18px 0 14px 0;
-  --text-button-s-font-size: var(--button-s-font-size);
-  --text-button-m-font-size: var(--button-m-font-size);
-  --text-button-l-font-size: var(--button-l-font-size);
-  --text-button-icon-transition: transform 0.1s ease-out;
-  --text-button-icon-hover-offset: var(--spacing-2xs);
-  --text-button-outline-focus: var(--gds-global-outline-focus);
+  --gds-text-button-font-family: var(--gds-button-font-family);
+  --gds-text-button-color: inherit;
+  --gds-text-button-color-hover: var(--gds-text-button-color);
+  --gds-text-button-font-weight: 600;
+  --gds-text-button-text-transform: var(--gds-button-text-transform);
+  --gds-text-button-s-letter-spacing: var(--gds-button-s-letter-spacing);
+  --gds-text-button-m-letter-spacing: var(--gds-button-m-letter-spacing);
+  --gds-text-button-l-letter-spacing: var(--gds-button-l-letter-spacing);
+  --gds-text-button-icon-gutter: var(--gds-button-icon-gutter);
+  --gds-text-button-s-padding: 12px 0 8px 0;
+  --gds-text-button-m-padding: 18px 0 14px 0;
+  --gds-text-button-l-padding: 18px 0 14px 0;
+  --gds-text-button-s-font-size: var(--gds-button-s-font-size);
+  --gds-text-button-m-font-size: var(--gds-button-m-font-size);
+  --gds-text-button-l-font-size: var(--gds-button-l-font-size);
+  --gds-text-button-icon-transition: transform 0.1s ease-out;
+  --gds-text-button-icon-hover-offset: var(--gds-spacing-2xs);
+  --gds-text-button-outline-focus: var(--gds-global-outline-focus);
 
   /* Navigation */
-  --navigation-color: var(--color-black);
-  --navigation-background: var(--color-white);
-  --navigation-desktop-height: 100px;
-  --navigation-mobile-height: 70px;
-  // --navigation-padding: 0 var(--spacing-l);
+  --gds-navigation-color: var(--gds-color-black);
+  --gds-navigation-background: var(--gds-color-white);
+  --gds-navigation-desktop-height: 100px;
+  --gds-navigation-mobile-height: 70px;
+  // --gds-navigation-padding: 0 var(--gds-spacing-l);
 
   gds-navigation:not(.hydrated) {
     visibility: hidden;
@@ -230,95 +230,95 @@
   /* Menu */
   --gds-menu-text-align: left;
   --gds-menu-justify-content: flex-start;
-  --gds-menu-item-background-color-active: var(--color-ui-background-01);
+  --gds-menu-item-background-color-active: var(--gds-color-ui-background-01);
   --gds-menu-link-outline-focus: var(--gds-global-outline-focus);
   // By default this is visible on desktop and hidden on mobile.
   // --gds-menu-item-underline-active: underline;
   // --gds-menu-item-underline-thickness-active: 3px;
   // --gds-menu-item-underline-color-active: currentColor;
-  --gds-menu-item-underline-offset-active: var(--spacing-2xs);
-  --gds-menu-item-font-family: var(--label-font-family);
-  --gds-menu-item-font-size: var(--label-l-font-size);
-  --gds-menu-item-line-height: var(--label-l-line-height);
-  --gds-menu-item-letter-spacing: var(--label-l-letter-spacing);
-  --gds-menu-item-font-weight: var(--label-l-font-weight);
-  --gds-menu-item-text-transform: var(--label-text-transform);
+  --gds-menu-item-underline-offset-active: var(--gds-spacing-2xs);
+  --gds-menu-item-font-family: var(--gds-label-font-family);
+  --gds-menu-item-font-size: var(--gds-label-l-font-size);
+  --gds-menu-item-line-height: var(--gds-label-l-line-height);
+  --gds-menu-item-letter-spacing: var(--gds-label-l-letter-spacing);
+  --gds-menu-item-font-weight: var(--gds-label-l-font-weight);
+  --gds-menu-item-text-transform: var(--gds-label-text-transform);
   --gds-menu-item-nested-underline-active: none;
   --gds-menu-item-nested-submenu-icon-outline-focus: var(--gds-global-outline-focus);
-  --gds-menu-item-padding-horizontal: var(--spacing-s) var(--spacing-s) calc(var(--spacing-s) - 0.15em) var(--spacing-s);
-  --gds-menu-item-padding-vertical: var(--spacing-s) var(--spacing-m) calc(var(--spacing-s) - 0.15em) var(--spacing-m);
+  --gds-menu-item-padding-horizontal: var(--gds-spacing-s) var(--gds-spacing-s) calc(var(--gds-spacing-s) - 0.15em) var(--gds-spacing-s);
+  --gds-menu-item-padding-vertical: var(--gds-spacing-s) var(--gds-spacing-m) calc(var(--gds-spacing-s) - 0.15em) var(--gds-spacing-m);
 
   // --gds-submenu-max-width: 200px;
   --gds-submenu-a-outline-focus: var(--gds-menu-link-outline-focus);
 
   gds-submenu {
-    --gds-menu-item-font-family: var(--body-font-family);
-    --gds-menu-item-font-size: var(--paragraph-font-size);
-    --gds-menu-item-line-height: var(--paragraph-line-height);
+    --gds-menu-item-font-family: var(--gds-body-font-family);
+    --gds-menu-item-font-size: var(--gds-paragraph-font-size);
+    --gds-menu-item-line-height: var(--gds-paragraph-line-height);
     --gds-menu-item-letter-spacing: 0;
     --gds-menu-item-font-weight: normal;
     --gds-menu-item-text-transform: none;
   }
 
   /* Card */
-  --card-border: none;
-  --card-border-radius: 40px;
-  --card-width: 100vw;
-  --card-max-width: 450px;
-  --card-background-color: white;
-  --card-text-align: center;
-  --card-box-shadow: 5px 5px 15px #64646426, -5px -5px 15px #ffffffcc;
-  --card-box-shadow-hover: 5px 5px 15px #64646426, -5px -5px 15px #ffffffcc;
-  --card-box-shadow-active: 5px 5px 15px #64646426, -5px -5px 15px #ffffffcc;
+  --gds-card-border: none;
+  --gds-card-border-radius: 40px;
+  --gds-card-width: 100vw;
+  --gds-card-max-width: 450px;
+  --gds-card-background-color: white;
+  --gds-card-text-align: center;
+  --gds-card-box-shadow: 5px 5px 15px #64646426, -5px -5px 15px #ffffffcc;
+  --gds-card-box-shadow-hover: 5px 5px 15px #64646426, -5px -5px 15px #ffffffcc;
+  --gds-card-box-shadow-active: 5px 5px 15px #64646426, -5px -5px 15px #ffffffcc;
 
   /* Media Card */
-  --media-card-media-height: 300px;
-  --media-card-object-fit: cover;
-  --media-card-blur-radius: 5px;
-  --media-card-blur-opacity: 0.5;
-  --media-card-overlay-color: var(--color-white);
-  --media-card-overlay-opacity: 0.75;
-  --media-card-content-padding: var(--spacing-m) var(--spacing-m) var(--spacing-l) var(--spacing-m);
-  --media-card-media-padding: 0;
-  --media-card-paragraph-gutter: var(--spacing-2xs);
+  --gds-media-card-media-height: 300px;
+  --gds-media-card-object-fit: cover;
+  --gds-media-card-blur-radius: 5px;
+  --gds-media-card-blur-opacity: 0.5;
+  --gds-media-card-overlay-color: var(--gds-color-white);
+  --gds-media-card-overlay-opacity: 0.75;
+  --gds-media-card-content-padding: var(--gds-spacing-m) var(--gds-spacing-m) var(--gds-spacing-l) var(--gds-spacing-m);
+  --gds-media-card-media-padding: 0;
+  --gds-media-card-paragraph-gutter: var(--gds-spacing-2xs);
 
   /* Logo Grid */
-  --logo-grid-item-desktop-count: 4;
-  --logo-grid-item-tablet-count: 2;
-  --logo-grid-item-mobile-count: 2;
-  --logo-grid-item-desktop-size: 336px;
-  --logo-grid-item-tablet-size: 180px;
-  --logo-grid-item-mobile-size: 180px;
-  --logo-grid-item-border-color: #ddd;
-  --logo-grid-item-padding: 15%;
+  --gds-logo-grid-item-desktop-count: 4;
+  --gds-logo-grid-item-tablet-count: 2;
+  --gds-logo-grid-item-mobile-count: 2;
+  --gds-logo-grid-item-desktop-size: 336px;
+  --gds-logo-grid-item-tablet-size: 180px;
+  --gds-logo-grid-item-mobile-size: 180px;
+  --gds-logo-grid-item-border-color: #ddd;
+  --gds-logo-grid-item-padding: 15%;
 
   /* Icon */
-  --icon-color: var(--color-black);
-  --icon-color-hover: var(--color-ui-01);
-  --icon-font-size: var(--paragraph-m-font-size);
+  --gds-icon-color: var(--gds-color-black);
+  --gds-icon-color-hover: var(--gds-color-ui-01);
+  --gds-icon-font-size: var(--gds-paragraph-m-font-size);
 
   /* Accordion */
-  --accordion-color: inherit;
-  --accordion-background: var(--color-white);
-  --accordion-content-background: var(--color-white);
-  --accordion-expanded-header-background: var(--color-ui-background-01);
-  --accordion-border: none;
-  --accordion-border-radius: 8px;
-  --accordion-box-shadow: 0px 0px 8px #0000001f;
-  --accordion-padding: var(--spacing-s);
-  --accordion-header-padding: var(--accordion-padding);
-  --accordion-justify-content: space-between;
-  --accordion-heading-margin-left: var(--spacing-2xs);
-  --accordion-outline-focus: var(--gds-global-outline-focus);
+  --gds-accordion-color: inherit;
+  --gds-accordion-background: var(--gds-color-white);
+  --gds-accordion-content-background: var(--gds-color-white);
+  --gds-accordion-expanded-header-background: var(--gds-color-ui-background-01);
+  --gds-accordion-border: none;
+  --gds-accordion-border-radius: 8px;
+  --gds-accordion-box-shadow: 0px 0px 8px #0000001f;
+  --gds-accordion-padding: var(--gds-spacing-s);
+  --gds-accordion-header-padding: var(--gds-accordion-padding);
+  --gds-accordion-justify-content: space-between;
+  --gds-accordion-heading-margin-left: var(--gds-spacing-2xs);
+  --gds-accordion-outline-focus: var(--gds-global-outline-focus);
 
   /* Input Wrapper */
-  --gds-input-wrapper-label-color: var(--color-ui-02);
+  --gds-input-wrapper-label-color: var(--gds-color-ui-02);
 
   /* Input and textarea elements inside of Input Wrapper */
   --gds-input-color: inherit;
-  --gds-input-font-family: var(--body-font-family);
+  --gds-input-font-family: var(--gds-body-font-family);
   --gds-input-font-weight: normal;
-  --gds-input-background: var(--color-ui-background-01);
+  --gds-input-background: var(--gds-color-ui-background-01);
   --gds-input-border: 1px solid var(--gds-input-background);
   --gds-input-border-focus: 1px solid #4573ae;
   --gds-input-border-radius: none;
@@ -326,12 +326,12 @@
   --gds-input-placeholder-color: darkgray;
   --gds-input-min-height: 36px;
   // Tweak the padding here, to get your font vertically aligned exactly.
-  --gds-input-padding: var(--spacing-xs) var(--spacing-s) calc(var(--spacing-xs) - 0.15em) var(--spacing-s);
+  --gds-input-padding: var(--gds-spacing-xs) var(--gds-spacing-s) calc(var(--gds-spacing-xs) - 0.15em) var(--gds-spacing-s);
 
   /* Hint */
-  --gds-hint-color: var(--color-black);
-  --gds-hint-background: var(--color-white);
-  --gds-hint-border: 1px solid var(--color-ui-01);
+  --gds-hint-color: var(--gds-color-black);
+  --gds-hint-background: var(--gds-color-white);
+  --gds-hint-border: 1px solid var(--gds-color-ui-01);
   --gds-hint-border-radius: 4px 4px 4px 0;
   --gds-hint-min-width: 10vw;
   --gds-hint-max-width: 80vw;
@@ -354,16 +354,16 @@
   --gds-hamburger-line-separation: 5px;
 
   /* Search form */
-  --gds-search-form-input-font-family: var(--body-font-family);
+  --gds-search-form-input-font-family: var(--gds-body-font-family);
   --gds-search-form-outline-focus: var(--gds-global-outline-focus);
   --gds-search-form-input-width: calc(7ch + var(--gds-search-form-button-width));
   --gds-search-form-input-width-focus: calc(15ch + var(--gds-search-form-button-width));
   --gds-search-form-input-font-size: var(--gds-input-font-size);
-  --gds-search-form-color: var(--color-black);
+  --gds-search-form-color: var(--gds-color-black);
   --gds-search-form-input-color: var(--gds-input-color);
-  --gds-search-form-input-padding: var(--spacing-2xs) var(--spacing-2xs) calc(var(--spacing-2xs) - 3px) var(--spacing-2xs);
-  --gds-search-form-button-padding: var(--spacing-2xs);
-  --gds-search-form-button-width: calc(1em + var(--spacing-2xs) * 2); // 1em icon + 2 padding
+  --gds-search-form-input-padding: var(--gds-spacing-2xs) var(--gds-spacing-2xs) calc(var(--gds-spacing-2xs) - 3px) var(--gds-spacing-2xs);
+  --gds-search-form-button-padding: var(--gds-spacing-2xs);
+  --gds-search-form-button-width: calc(1em + var(--gds-spacing-2xs) * 2); // 1em icon + 2 padding
   --gds-search-form-background: transparent;
   --gds-search-form-border: 0;
   --gds-search-form-border-radius: 0;

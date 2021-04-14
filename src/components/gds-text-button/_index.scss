@@ -10,44 +10,44 @@
   cursor: pointer;
   border: 0;
   background-color: inherit;
-  color: var(--text-button-color, inherit);
-  font-family: var(--text-button-font-family);
-  font-weight: var(--text-button-font-weight);
-  text-transform: var(--text-button-text-transform);
+  color: var(--gds-text-button-color, inherit);
+  font-family: var(--gds-text-button-font-family);
+  font-weight: var(--gds-text-button-font-weight);
+  text-transform: var(--gds-text-button-text-transform);
   line-height: 1em;
-  font-size: var(--text-button-m-font-size);
-  letter-spacing: var(--text-button-m-letter-spacing);
-  padding: var(--text-button-m-padding);
+  font-size: var(--gds-text-button-m-font-size);
+  letter-spacing: var(--gds-text-button-m-letter-spacing);
+  padding: var(--gds-text-button-m-padding);
 
   & > * + * {
     display: inline-block;
-    margin-left: var(--text-button-icon-gutter);
+    margin-left: var(--gds-text-button-icon-gutter);
   }
 
   @media (prefers-reduced-motion: no-preference) {
     > * {
-      transition: var(--text-button-icon-transition);
+      transition: var(--gds-text-button-icon-transition);
     }
   }
 
   &:hover {
-    color: var(--text-button-color-hover);
+    color: var(--gds-text-button-color-hover);
 
     // left icon
     & > :first-child:nth-last-child(3),
     & > :first-child:nth-last-child(2) {
-      transform: translateX(var(--text-button-icon-hover-offset));
+      transform: translateX(var(--gds-text-button-icon-hover-offset));
     }
 
     // right icon
     & > :last-child:nth-child(3),
     & > :last-child:nth-last-child(2) {
-      transform: translateX(calc(var(--text-button-icon-hover-offset) * -1));
+      transform: translateX(calc(var(--gds-text-button-icon-hover-offset) * -1));
     }
   }
 
   &:focus {
-    outline: var(--text-button-outline-focus);
+    outline: var(--gds-text-button-outline-focus);
 
     // Until :focus-visible has proper cross-browser support.
     &:not(:focus-visible) {
@@ -57,19 +57,19 @@
 }
 
 @mixin size-s {
-  font-size: var(--text-button-s-font-size);
-  letter-spacing: var(--text-button-s-letter-spacing);
-  padding: var(--text-button-s-padding);
+  font-size: var(--gds-text-button-s-font-size);
+  letter-spacing: var(--gds-text-button-s-letter-spacing);
+  padding: var(--gds-text-button-s-padding);
 }
 
 @mixin size-m {
-  font-size: var(--text-button-m-font-size);
-  letter-spacing: var(--text-button-m-letter-spacing);
-  padding: var(--text-button-m-padding);
+  font-size: var(--gds-text-button-m-font-size);
+  letter-spacing: var(--gds-text-button-m-letter-spacing);
+  padding: var(--gds-text-button-m-padding);
 }
 
 @mixin size-l {
-  font-size: var(--text-button-l-font-size);
-  letter-spacing: var(--text-button-l-letter-spacing);
-  padding: var(--text-button-l-padding);
+  font-size: var(--gds-text-button-l-font-size);
+  letter-spacing: var(--gds-text-button-l-letter-spacing);
+  padding: var(--gds-text-button-l-padding);
 }

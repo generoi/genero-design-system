@@ -1,35 +1,35 @@
 @mixin size-l {
-  font-size: var(--paragraph-l-font-size);
-  line-height: var(--paragraph-l-line-height);
-  font-family: var(--paragraph-l-font-family, var(--body-font-family));
-  font-weight: var(--paragraph-l-font-weight, var(--body-font-weight, 400));
-  color: var(--paragraph-l-color, var(--body-text-color));
-  letter-spacing: var(--paragraph-l-letter-spacing, var(--body-letter-spacing, 0px));
+  font-size: var(--gds-paragraph-l-font-size);
+  line-height: var(--gds-paragraph-l-line-height);
+  font-family: var(--gds-paragraph-l-font-family, var(--gds-body-font-family));
+  font-weight: var(--gds-paragraph-l-font-weight, var(--gds-body-font-weight, 400));
+  color: var(--gds-paragraph-l-color, var(--gds-body-text-color));
+  letter-spacing: var(--gds-paragraph-l-letter-spacing, var(--gds-body-letter-spacing, 0px));
 }
 
 @mixin size-m {
-  font-size: var(--paragraph-m-font-size);
-  line-height: var(--paragraph-m-line-height);
-  font-family: var(--paragraph-m-font-family, var(--body-font-family));
-  font-weight: var(--paragraph-m-font-weight, var(--body-font-weight, 400));
-  color: var(--paragraph-m-color, var(--body-text-color));
-  letter-spacing: var(--paragraph-m-letter-spacing, var(--body-letter-spacing, 0px));
+  font-size: var(--gds-paragraph-m-font-size);
+  line-height: var(--gds-paragraph-m-line-height);
+  font-family: var(--gds-paragraph-m-font-family, var(--gds-body-font-family));
+  font-weight: var(--gds-paragraph-m-font-weight, var(--gds-body-font-weight, 400));
+  color: var(--gds-paragraph-m-color, var(--gds-body-text-color));
+  letter-spacing: var(--gds-paragraph-m-letter-spacing, var(--gds-body-letter-spacing, 0px));
 }
 
 @mixin size-s {
-  font-size: var(--paragraph-s-font-size);
-  line-height: var(--paragraph-s-line-height);
-  font-family: var(--paragraph-s-font-family, var(--body-font-family));
-  font-weight: var(--paragraph-s-font-weight, var(--body-font-weight, 400));
-  color: var(--paragraph-s-color, var(--body-text-color));
-  letter-spacing: var(--paragraph-s-letter-spacing, var(--body-letter-spacing, 0px));
+  font-size: var(--gds-paragraph-s-font-size);
+  line-height: var(--gds-paragraph-s-line-height);
+  font-family: var(--gds-paragraph-s-font-family, var(--gds-body-font-family));
+  font-weight: var(--gds-paragraph-s-font-weight, var(--gds-body-font-weight, 400));
+  color: var(--gds-paragraph-s-color, var(--gds-body-text-color));
+  letter-spacing: var(--gds-paragraph-s-letter-spacing, var(--gds-body-letter-spacing, 0px));
 }
 
 @mixin size-xs {
-  font-size: var(--paragraph-xs-font-size);
-  line-height: var(--paragraph-xs-line-height);
-  font-family: var(--paragraph-xs-font-family, var(--body-font-family));
-  font-weight: var(--paragraph-xs-font-weight, var(--body-font-weight, 400));
-  color: var(--paragraph-xs-color, var(--body-text-color));
-  letter-spacing: var(--paragraph-xs-letter-spacing, var(--body-letter-spacing, 0px));
+  font-size: var(--gds-paragraph-xs-font-size);
+  line-height: var(--gds-paragraph-xs-line-height);
+  font-family: var(--gds-paragraph-xs-font-family, var(--gds-body-font-family));
+  font-weight: var(--gds-paragraph-xs-font-weight, var(--gds-body-font-weight, 400));
+  color: var(--gds-paragraph-xs-color, var(--gds-body-text-color));
+  letter-spacing: var(--gds-paragraph-xs-letter-spacing, var(--gds-body-letter-spacing, 0px));
 }

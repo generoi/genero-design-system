@@ -10,7 +10,7 @@
   background: none;
   padding: 0;
   outline: none;
-  height: var(--icon-font-size);
+  height: var(--gds-icon-font-size);
 
   &:focus {
     outline: var(--gds-hint-outline-focus);
@@ -30,7 +30,7 @@
   left: 100%;
   color: var(--gds-hint-color);
   background: var(--gds-hint-background);
-  padding: var(--spacing-2xs);
+  padding: var(--gds-spacing-2xs);
   border: var(--gds-hint-border);
   border-radius: var(--gds-hint-border-radius);
   visibility: hidden;
