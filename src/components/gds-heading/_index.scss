@@ -13,14 +13,14 @@
 // H1
 @mixin size-xxl {
   @include base;
-  font-family: var(--heading-xxl-font-family, var(--heading-font-family));
-  font-size: var(--heading-xxl-font-size);
-  font-weight: var(--heading-xxl-font-weight);
-  line-height: var(--heading-xxl-line-height);
-  text-transform: var(--heading-xxl-text-transform);
-  letter-spacing: var(--heading-xxl-letter-spacing);
-  margin-top: var(--heading-xxl-margin-top);
-  margin-bottom: var(--heading-xxl-margin-bottom);
+  font-family: var(--heading-2xl-font-family, var(--heading-font-family));
+  font-size: var(--heading-2xl-font-size);
+  font-weight: var(--heading-2xl-font-weight);
+  line-height: var(--heading-2xl-line-height);
+  text-transform: var(--heading-2xl-text-transform);
+  letter-spacing: var(--heading-2xl-letter-spacing);
+  margin-top: var(--heading-2xl-margin-top);
+  margin-bottom: var(--heading-2xl-margin-bottom);
 }
 
 // H2

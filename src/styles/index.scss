@@ -19,15 +19,15 @@
   --color-ui-07: #9185db;
 
   /* Spacing */
-  --spacing-xxxs: 4px;
-  --spacing-xxs: 8px;
+  --spacing-3xs: 4px;
+  --spacing-2xs: 8px;
   --spacing-xs: 12px;
   --spacing-s: 16px;
   --spacing-m: 24px;
   --spacing-l: 32px;
   --spacing-xl: 40px;
-  --spacing-xxl: 48px;
-  --spacing-xxxl: 80px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 80px;
 
   --gds-global-outline-focus: auto var(--color-ui-04);
 
@@ -84,14 +84,14 @@
   --heading-xl-margin-top: auto;
   --heading-xl-margin-bottom: auto;
 
-  --heading-xxl-font-family: var(--heading-font-family);
-  --heading-xxl-font-weight: 800;
-  --heading-xxl-font-size: 62px;
-  --heading-xxl-line-height: 67px;
-  --heading-xxl-text-transform: uppercase;
-  --heading-xxl-letter-spacing: 0px;
-  --heading-xxl-margin-top: auto;
-  --heading-xxl-margin-bottom: auto;
+  --heading-2xl-font-family: var(--heading-font-family);
+  --heading-2xl-font-weight: 800;
+  --heading-2xl-font-size: 62px;
+  --heading-2xl-line-height: 67px;
+  --heading-2xl-text-transform: uppercase;
+  --heading-2xl-letter-spacing: 0px;
+  --heading-2xl-margin-top: auto;
+  --heading-2xl-margin-bottom: auto;
 
   @include mobileAndTablet {
     --heading-xs-font-size: 16px;
@@ -104,8 +104,8 @@
     --heading-xl-font-size: 30px;
     --heading-xl-line-height: 30px;
 
-    --heading-xxl-font-size: 30px;
-    --heading-xxl-line-height: 30px;
+    --heading-2xl-font-size: 30px;
+    --heading-2xl-line-height: 30px;
   }
 
   /* Labels */
@@ -161,8 +161,8 @@
   --tag-group-gutter-y: var(--spacing-xs);
 
   @include mobileAndTablet {
-    --tag-group-gutter-x: var(--spacing-xxs);
-    --tag-group-gutter-y: var(--spacing-xxs);
+    --tag-group-gutter-x: var(--spacing-2xs);
+    --tag-group-gutter-y: var(--spacing-2xs);
   }
 
   /* Buttons */
@@ -213,7 +213,7 @@
   --text-button-m-font-size: var(--button-m-font-size);
   --text-button-l-font-size: var(--button-l-font-size);
   --text-button-icon-transition: transform 0.1s ease-out;
-  --text-button-icon-hover-offset: var(--spacing-xxs);
+  --text-button-icon-hover-offset: var(--spacing-2xs);
   --text-button-outline-focus: var(--gds-global-outline-focus);
 
   /* Navigation */
@@ -236,7 +236,7 @@
   // --gds-menu-item-underline-active: underline;
   // --gds-menu-item-underline-thickness-active: 3px;
   // --gds-menu-item-underline-color-active: currentColor;
-  --gds-menu-item-underline-offset-active: var(--spacing-xxs);
+  --gds-menu-item-underline-offset-active: var(--spacing-2xs);
   --gds-menu-item-font-family: var(--label-font-family);
   --gds-menu-item-font-size: var(--label-l-font-size);
   --gds-menu-item-line-height: var(--label-l-line-height);
@@ -280,7 +280,7 @@
   --media-card-overlay-opacity: 0.75;
   --media-card-content-padding: var(--spacing-m) var(--spacing-m) var(--spacing-l) var(--spacing-m);
   --media-card-media-padding: 0;
-  --media-card-paragraph-gutter: var(--spacing-xxs);
+  --media-card-paragraph-gutter: var(--spacing-2xs);
 
   @include mobileAndTablet {
     --media-card-content-padding: var(--spacing-m) var(--spacing-m) var(--spacing-l) var(--spacing-m);
@@ -312,7 +312,7 @@
   --accordion-padding: var(--spacing-s);
   --accordion-header-padding: var(--accordion-padding);
   --accordion-justify-content: space-between;
-  --accordion-heading-margin-left: var(--spacing-xxs);
+  --accordion-heading-margin-left: var(--spacing-2xs);
   --accordion-outline-focus: var(--gds-global-outline-focus);
 
   /* Input Wrapper */
@@ -365,9 +365,9 @@
   --gds-search-form-input-font-size: var(--gds-input-font-size);
   --gds-search-form-color: var(--color-black);
   --gds-search-form-input-color: var(--gds-input-color);
-  --gds-search-form-input-padding: var(--spacing-xxs) var(--spacing-xxs) calc(var(--spacing-xxs) - 3px) var(--spacing-xxs);
-  --gds-search-form-button-padding: var(--spacing-xxs);
-  --gds-search-form-button-width: calc(1em + var(--spacing-xxs) * 2); // 1em icon + 2 padding
+  --gds-search-form-input-padding: var(--spacing-2xs) var(--spacing-2xs) calc(var(--spacing-2xs) - 3px) var(--spacing-2xs);
+  --gds-search-form-button-padding: var(--spacing-2xs);
+  --gds-search-form-button-width: calc(1em + var(--spacing-2xs) * 2); // 1em icon + 2 padding
   --gds-search-form-background: transparent;
   --gds-search-form-border: 0;
   --gds-search-form-border-radius: 0;

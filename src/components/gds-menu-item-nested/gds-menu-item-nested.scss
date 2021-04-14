@@ -19,12 +19,12 @@
   text-align: center;
   cursor: pointer;
   padding: 0;
-  margin-left: calc(-1 * var(--spacing-xxs));
+  margin-left: calc(-1 * var(--spacing-2xs));
   margin-right: var(--spacing-xs);
 
   .submenu-icon-content {
     //  Since the element is rotated we need it to be square
-    padding: var(--spacing-xxxs);
+    padding: var(--spacing-3xs);
     width: 1em;
     height: 1em;
     box-sizing: content-box;
