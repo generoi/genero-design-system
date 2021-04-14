@@ -1,4 +1,7 @@
-import { Component, h, Host, Listen, Prop } from '@stencil/core'
+import { Component, h, Host, Listen, Prop, Element } from '@stencil/core'
+
+// Global counter to generate unique IDs.
+let idCounter = 0
 
 @Component({
   tag: 'gds-menu-item-nested',
@@ -6,6 +9,10 @@ import { Component, h, Host, Listen, Prop } from '@stencil/core'
   shadow: true,
 })
 export class GdsMenuItemNested {
+  @Element() host: HTMLElement
+  private linkSlot: HTMLSlotElement
+  private submenuButtonEl: HTMLElement
+
   /**
    * Is menu item appear active.
    */
@@ -26,6 +33,22 @@ export class GdsMenuItemNested {
   expanded: boolean = false
 
   /**
+   * Whether the submenu is opened by a click
+   */
+  private forced: boolean = false
+
+  /**
+   * Accessible label of the submenu.
+   * Defaults to textContent of the link slot.
+   */
+  @Prop() accessibleLabel: string
+
+  /**
+   * HTML ID for the submenu used by aria attributes.
+   */
+  private submenuId: string
+
+  /**
    * Expand on mouse enter.
    */
   @Listen('mouseenter')
@@ -33,10 +56,7 @@ export class GdsMenuItemNested {
     // Skip this event on mobile devices.
     if (window.innerWidth <= 1024) return
 
-     if (!this.expanded) {
-       this.expanded = true
-       this.active = true
-     }
+    this.open();
    }
 
   /**
@@ -46,12 +66,34 @@ export class GdsMenuItemNested {
   handleLeave() {
     // Skip this event on mobile devices.
     if (window.innerWidth <= 1024) return
+    // Skip when the menu item open was triggered by a click
+    if (this.forced) return
 
+    this.close();
+  }
+
+  @Listen('close')
+  handleClose() {
+    this.close();
+
+    if (this.host.contains(document.activeElement)) {
+      this.submenuButtonEl?.focus();
+    }
+  }
+
+  private open(): void {
+    if (!this.expanded) {
+      this.expanded = true;
+      this.active = true;
+    }
+  }
+
+  private close(): void {
     if (this.expanded) {
-       this.expanded = false
-       this.active = false
-     }
-   }
+      this.expanded = false;
+      this.active = false;
+    }
+  }
 
   /**
    * Toggle submenu visibility by clicking the chevron icon.
@@ -59,37 +101,59 @@ export class GdsMenuItemNested {
    private handleToggleSubmenuClick(event: MouseEvent) {
     event.preventDefault()
     event.stopPropagation()
-    this.expanded = !this.expanded
+
+    // First click always makes it sticky open
+    if (!this.forced) {
+      this.forced = true
+      this.open()
+      return
+    }
+
+    // Second time it toggles it off.
+    this.close()
+    this.forced = false;
+  }
+
+  componentWillLoad() {
+    ++idCounter;
+    this.submenuId = `gds-menu-item-nested-submenu-${idCounter}`
+    this.linkSlot = this.host.querySelector(':scope > [slot="link"]') as HTMLSlotElement
+
+    if (!this.accessibleLabel) {
+      this.accessibleLabel = this.linkSlot.textContent.trim()
+    }
   }
 
   render() {
     return (
       <Host>
-        <li
-          class={{
-            item: true,
-            active: this.active,
-          }}>
-          <div class="content">
-            <div class="item">
-              <slot name="link"></slot>
-              {this.submenuIcon ?
-                <span class={{
-                  'submenu-icon': true,
-                  'submenu-icon-expanded': this.expanded,
-                }} onClick={e => this.handleToggleSubmenuClick(e)}>{this.submenuIcon}</span>
-              : null}
-            </div>
-          </div>
-          <div class={{
-            'submenu-positioner': true,
-            'submenu-expanded': this.expanded,
-          }}>
-            <div class="submenu-container">
-              <slot name="submenu"></slot>
-            </div>
-          </div>
-        </li>
+        <div class="menu-item">
+          <slot name="link"></slot>
+
+          {this.submenuIcon && (
+            <button
+              aria-expanded={ this.expanded ? 'true' : 'false' }
+              aria-haspopup="true"
+              aria-controls={ this.submenuId }
+              aria-label={ this.accessibleLabel }
+              class="submenu-icon"
+              onClick={e => this.handleToggleSubmenuClick(e)}
+              ref={el => (this.submenuButtonEl = el as HTMLElement)}
+            >
+              <span class="submenu-icon-content" tabindex="-1" aria-hidden="true">
+                {this.submenuIcon}
+              </span>
+            </button>
+          )}
+        </div>
+        <div
+          id={ this.submenuId }
+          class="submenu"
+          role="region"
+          aria-label={ this.accessibleLabel }
+        >
+          <slot name="submenu"></slot>
+        </div>
       </Host>
     )
   }

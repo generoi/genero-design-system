@@ -1,32 +1,46 @@
 @use "../../styles/breakpoints" as *;
 
 :host {
-  display: block;
   position: absolute;
-}
-
-ul {
   padding: var(--gds-submenu-padding, 0);
   margin: 0;
   display: flex;
   flex-direction: column;
-  text-align: var(--menu-text-align, left);
+  text-align: var(--gds-menu-text-align, left);
   background: var(--gds-submenu-background, white);
   box-shadow: var(--gds-submenu-box-shadow, 0 5px 10px #0000000c);
+  list-style-type: none;
+  // Take as much space as possible up to defined max-width and not smaller
+  // than the parent menu-item itself.
+  width: max-content;
+  min-width: min(100%, var(--gds-submenu-max-width, 200px));
+  max-width: var(--gds-submenu-max-width, 200px);
 }
 
 // Mobile and tablet behaves a bit differently
 @include mobileAndTablet {
   :host {
     position: relative;
-  }
-  ul {
     background: var(--gds-submenu-background, transparent);
     box-shadow: var(--gds-submenu-box-shadow, none);
+    width: 100%;
+    max-width: var(--gds-submenu-max-width, 100%);
   }
 }
 
+// Reset menu link styles
 ::slotted(a) {
   color: unset;
   text-decoration: none;
+  display: block;
+}
+
+// Focus link styles
+::slotted(a:focus) {
+  outline: var(--gds-submenu-a-outline-focus);
+}
+
+// Until :focus-visible has proper cross-browser support.
+::slotted(a:focus:not(:focus-visible)) {
+  outline: none;
 }

@@ -10,56 +10,67 @@
   outline: none;
   text-decoration: none;
   cursor: pointer;
-  color: var(--button-color, inherit);
-  background-color: var(--button-background-color, inherit);
-  background-image: var(--button-background-image);
-  font-family: var(--button-font-family);
-  font-weight: var(--button-font-weight);
-  text-transform: var(--button-text-transform);
+  color: var(--gds-button-color, inherit);
+  background-color: var(--gds-button-background-color, inherit);
+  background-image: var(--gds-button-background-image);
+  font-family: var(--gds-button-font-family);
+  font-weight: var(--gds-button-font-weight);
+  text-transform: var(--gds-button-text-transform);
   line-height: 1em;
-  font-size: var(--button-m-font-size);
-  letter-spacing: var(--button-m-letter-spacing);
-  border: var(--button-border);
-  border-radius: var(--button-border-radius);
-  box-shadow: var(--button-box-shadow);
-  padding: var(--button-m-padding);
-  outline: var(--button-outline);
-  transition: var(--button-transition);
+  font-size: var(--gds-button-m-font-size);
+  letter-spacing: var(--gds-button-m-letter-spacing);
+  border: var(--gds-button-border);
+  border-radius: var(--gds-button-border-radius);
+  box-shadow: var(--gds-button-box-shadow);
+  padding: var(--gds-button-m-padding);
+  outline: var(--gds-button-outline);
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: var(--gds-button-transition);
+  }
 
   &:hover {
-    background-color: var(--button-background-color-hover, var(--button-background-color));
-    background-image: var(--button-background-image-hover, var(--button-background-image));
-    outline: var(--button-outline-hover, var(--button-outline));
+    background-color: var(--gds-button-background-color-hover, var(--gds-button-background-color));
+    background-image: var(--gds-button-background-image-hover, var(--gds-button-background-image));
+    outline: var(--gds-button-outline-hover, var(--gds-button-outline));
   }
   &:active {
-    background-color: var(--button-background-color-active, var(--button-background-color));
-    background-image: var(--button-background-image-active, var(--button-background-image));
-    outline: var(--button-outline);
+    background-color: var(--gds-button-background-color-active, var(--gds-button-background-color));
+    background-image: var(--gds-button-background-image-active, var(--gds-button-background-image));
+    outline: var(--gds-button-outline);
   }
   &:disabled {
-    background-color: var(--button-background-color-disabled);
+    background-color: var(--gds-button-background-color-disabled);
+  }
+  &:focus {
+    outline: var(--gds-button-outline-focus, var(--gds-button-outline));
+
+    // Until :focus-visible has proper cross-browser support.
+    &:not(:focus-visible) {
+      outline: none;
+    }
   }
 
   & > * + * {
     display: inline-block;
-    margin-left: var(--button-icon-gutter);
+    margin-left: var(--gds-button-icon-gutter);
   }
 }
 
 @mixin size-s {
-  font-size: var(--button-s-font-size);
-  letter-spacing: var(--button-s-letter-spacing);
-  padding: var(--button-s-padding);
+  font-size: var(--gds-button-s-font-size);
+  letter-spacing: var(--gds-button-s-letter-spacing);
+  padding: var(--gds-button-s-padding);
 }
 
 @mixin size-m {
-  font-size: var(--button-m-font-size);
-  letter-spacing: var(--button-m-letter-spacing);
-  padding: var(--button-m-padding);
+  font-size: var(--gds-button-m-font-size);
+  letter-spacing: var(--gds-button-m-letter-spacing);
+  padding: var(--gds-button-m-padding);
 }
 
 @mixin size-l {
-  font-size: var(--button-l-font-size);
-  letter-spacing: var(--button-l-letter-spacing);
-  padding: var(--button-l-padding);
+  font-size: var(--gds-button-l-font-size);
+  letter-spacing: var(--gds-button-l-letter-spacing);
+  padding: var(--gds-button-l-padding);
 }

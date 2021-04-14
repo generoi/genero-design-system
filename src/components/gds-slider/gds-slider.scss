@@ -22,6 +22,15 @@
   border-radius: var(--gds-slider-border-radius, 0);
   background-color: var(--gds-slider-background-color, #d4d4d4);
 
+  &:focus {
+    outline: var(--gds-slider-outline-focus);
+
+    // Until :focus-visible has proper cross-browser support.
+    &:not(:focus-visible) {
+      outline: none;
+    }
+  }
+
   &::-webkit-slider-thumb {
     @include thumb;
   }

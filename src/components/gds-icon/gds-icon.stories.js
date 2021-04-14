@@ -9,13 +9,13 @@ export const Examples = () => html`
   <div>
     <style>
       gds-icon {
-        --icon-font-size: 30px;
+        --gds-icon-font-size: 30px;
       }
     </style>
     <gds-heading>These icons use FontAwesome</gds-heading>
 
     <gds-paragraph>Default</gds-paragraph>
-    <gds-icon name="books"></gds-icon>
+    <gds-icon name="books" accessible-label="Books"></gds-icon>
 
     <gds-paragraph>Regular</gds-paragraph>
     <gds-icon regular name="books"></gds-icon>
@@ -32,7 +32,7 @@ export const Examples = () => html`
     <gds-paragraph>Duotone</gds-paragraph>
     <style>
       .red {
-        --icon-color: red;
+        --gds-icon-color: red;
       }
     </style>
     <gds-icon duotone name="books" class="red"></gds-icon>
@@ -40,9 +40,9 @@ export const Examples = () => html`
     <gds-paragraph>Colors (with hover) and sizes</gds-paragraph>
     <style>
       .colors gds-icon {
-        --icon-color: #4444cc;
-        --icon-color-hover: #000077;
-        --icon-font-size: 50px;
+        --gds-icon-color: #4444cc;
+        --gds-icon-color-hover: #000077;
+        --gds-icon-font-size: 50px;
       }
     </style>
     <div class="colors">

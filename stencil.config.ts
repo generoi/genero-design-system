@@ -1,6 +1,9 @@
 import { Config } from '@stencil/core'
 import { sass } from '@stencil/sass'
+import { postcss } from '@stencil/postcss';
 import { reactOutputTarget } from '@stencil/react-output-target'
+import { inlineSvg } from 'stencil-inline-svg';
+import autoprefixer from 'autoprefixer';
 
 export const config: Config = {
   namespace: 'gds',
@@ -25,6 +28,10 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
-  plugins: [sass()],
+  plugins: [
+    sass(),
+    inlineSvg(),
+    postcss({plugins: [autoprefixer()]}),
+  ],
   globalStyle: 'src/styles/index.scss',
 }

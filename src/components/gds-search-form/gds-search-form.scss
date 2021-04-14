@@ -1,0 +1,221 @@
+@use "../../styles/breakpoints" as *;
+
+:host {
+  display: flex;
+  justify-content: flex-end;
+}
+
+form {
+  display: inline-flex;
+  position: relative;
+  background: var(--gds-search-form-background);
+  border: var(--gds-search-form-border);
+  border-radius: var(--gds-search-form-border-radius);
+
+  &:focus-within {
+    [type="search"] {
+      max-width: var(--gds-search-form-input-width-focus);
+      // Override gds-input-wrapper
+      border: var(--gds-search-form-input-border);
+    }
+
+    // Once focused, move button above input
+    [type="submit"] {
+      z-index: 1;
+    }
+  }
+
+  &:not(:focus-within) {
+    [type="search"] {
+      --gds-input-placeholder-color: var(--gds-search-form-color);
+    }
+  }
+}
+
+:host [type="search"] {
+  box-sizing: border-box;
+  display: block;
+  font-family: var(--gds-search-form-input-font-family);
+  border: 0;
+  padding: var(--gds-search-form-input-padding);
+  border-radius: var(--gds-search-form-input-border-radius);
+  color: var(--gds-search-form-input-color);
+  background: transparent;
+  font-size: var(--gds-search-form-input-font-size);
+  font-weight: var(--gds-search-form-input-font-weight);
+  max-width: var(--gds-search-form-input-width);
+  // Place above button
+  z-index: 1;
+  position: relative;
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: max-width 0.2s ease-out;
+  }
+
+  // Reset from gds-input-wrapper
+  min-width: auto;
+  min-height: auto;
+  // Make room for button
+  padding-right: var(--gds-search-form-button-width);
+
+  &:focus {
+    outline: var(--gds-search-form-outline-focus);
+  }
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+
+[type="submit"] {
+  all: unset; // reset button styles
+  // Position below input field
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 0;
+
+  cursor: pointer;
+  color: var(--gds-color-black);
+  padding: var(--gds-search-form-button-padding);
+  width: var(--gds-search-form-button-width);
+  box-sizing: border-box;
+  // Add a delay on transitioning away from focus-within to z-index: 0 so that
+  // safari has time to register the click on the button.
+  transition-property: z-index;
+  transition-delay: 0.1s;
+
+  // Center content
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ::slotted(*) {
+    display: flex;
+  }
+
+  svg {
+    width: 1em;
+    height: 1em;
+    display: block;
+  }
+
+  &:focus {
+    outline: var(--gds-search-form-outline-focus);
+    z-index: 1;
+
+    // Until :focus-visible has proper cross-browser support.
+    &:not(:focus-visible) {
+      outline: none;
+    }
+  }
+}
+
+:host([collapsed]) {
+  form {
+    position: relative;
+    max-width: var(--gds-search-form-button-width);
+  }
+
+  [type="search"] {
+    opacity: 0;
+    cursor: pointer;
+    z-index: 1;
+    box-sizing: border-box;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: all 200ms ease-out;
+    }
+  }
+
+  form:focus-within  {
+    max-width: 100%;
+
+    [type="search"] {
+      max-width: var(--gds-search-form-input-width-focus);
+      opacity: 1;
+      right: 0;
+      cursor: initial;
+      position: relative;
+    }
+
+    [type="submit"] {
+      z-index: 2;
+      color: var(--gds-color-black);
+      padding-right: var(--gds-spacing-2xs);
+    }
+  }
+}
+
+:host([floating]:not([collapsed])) {
+  position: relative;
+  width: calc(
+    var(--gds-search-form-input-width) +
+    var(--gds-search-form-button-width) + 1em
+  );
+
+  form {
+    position: absolute;
+    right: 0;
+    box-sizing: border-box;
+    width: 100%;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: width 0.2s ease-out;
+    }
+
+    &:focus-within {
+      width: calc(
+        var(--gds-search-form-input-width-focus) +
+        var(--gds-search-form-button-width) + 1em
+      );
+
+      [type="search"] {
+        transition: none;
+        width: 100%;
+        max-width: none;
+        box-sizing: border-box;
+      }
+    }
+  }
+}
+
+:host([floating][collapsed]) {
+  position: relative;
+  width: calc(
+    var(--gds-search-form-button-width) + 1em
+  );
+
+  form {
+    position: absolute;
+    right: 0;
+
+    box-sizing: border-box;
+    width: 100%;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: width 0.2s ease-out;
+    }
+
+    &:focus-within {
+      width: calc(
+        var(--gds-search-form-input-width-focus) +
+        var(--gds-search-form-button-width) + 1em
+      );
+      max-width: none;
+      z-index: 1;
+
+      [type="search"] {
+        transition: none;
+        width: 100%;
+        max-width: none;
+        box-sizing: border-box;
+      }
+    }
+  }
+}

@@ -1,4 +1,4 @@
-import { Component, h, Prop, Watch } from '@stencil/core'
+import { Component, h, Prop, Watch, Element } from '@stencil/core'
 
 const isNumeric = x => !isNaN(x) && isFinite(x)
 
@@ -13,6 +13,9 @@ const isNumeric = x => !isNaN(x) && isFinite(x)
   shadow: true,
 })
 export class GdsMediaCard {
+  @Element() host: HTMLElement
+  private headlineSlot: HTMLSlotElement
+
   /**
    * If defined, the card will be a link.
    */
@@ -29,6 +32,11 @@ export class GdsMediaCard {
    * Image url.
    */
   @Prop() imageUrl: string
+  /**
+   * Image alt.
+   * Defaults to "" representing a decorative image.
+   */
+  @Prop() imageAlt: string = ''
   /**
    * superimpose image url.
    */
@@ -53,10 +61,20 @@ export class GdsMediaCard {
    */
   @Prop() description: string
 
+  @Prop() accessibleLabel: string
+
   @Watch('overlayEffect')
   validateOverlayEffect(newValue: string) {
     if (newValue && !['blur'].includes(newValue)) {
       throw new Error('overlay-effect: invalid effect')
+    }
+  }
+
+  componentWillLoad() {
+    this.headlineSlot = this.host.querySelector(':scope > [slot="headline"]') as HTMLSlotElement
+
+    if (!this.accessibleLabel) {
+      this.accessibleLabel = this.headline || this.headlineSlot.textContent.trim()
     }
   }
 
@@ -86,6 +104,8 @@ export class GdsMediaCard {
         <div class="superimposed-image">
           <img
             src={this.superimposedUrl}
+            alt={this.imageAlt}
+            aria-hidden="true"
             style={{
               'object-position': `${objectFitY} ${objectFitX}`,
             }}
@@ -105,6 +125,9 @@ export class GdsMediaCard {
           }}>
           <img
             src={this.imageUrl}
+            // If there's a superimposed image the background one is purely decorative
+            alt={this.superimposedUrl ? '' : this.imageAlt}
+            aria-hidden="true"
             class={{
               image: true,
               [`has-${this.overlayEffect}-effect`]: !!this.overlayEffect,
@@ -132,6 +155,10 @@ export class GdsMediaCard {
 
           <slot name="content"></slot>
         </div>
+        {this.href && (
+          <gds-link href={this.href} target={this.target} full accessible-label={ this.accessibleLabel }>
+          </gds-link>
+        )}
       </gds-card>
     )
 
@@ -149,14 +176,6 @@ export class GdsMediaCard {
       </div>
     )
 
-    // Render without a link
-    if (!this.href) return mediaCard
-
-    // Render with a link
-    return (
-      <gds-link href={this.href} target={this.target} block>
-        {mediaCard}
-      </gds-link>
-    )
+    return mediaCard
   }
 }

@@ -19,6 +19,7 @@ export const Examples = () => html`
     <gds-logo-grid-item
       href="https://www.genero.fi"
       image-url="images/genero-logo.svg"
+      accessible-label="Links should always have text"
     ></gds-logo-grid-item>
     ${item}${item}${item}${item}${item}${item}${item}${item}${item}${item}
   </gds-logo-grid>

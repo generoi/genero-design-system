@@ -1,5 +1,9 @@
 @use "index" as *;
 
+:host {
+  display: inline-block;
+}
+
 .icon {
   @include base;
 }

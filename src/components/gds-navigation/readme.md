@@ -3,6 +3,14 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property                    | Attribute                     | Description                              | Type     | Default     |
+| --------------------------- | ----------------------------- | ---------------------------------------- | -------- | ----------- |
+| `accessibleHamburgerLabel`  | `accessible-hamburger-label`  | Accessible label for the hamburger menu  | `string` | `undefined` |
+| `accessibleNavigationLabel` | `accessible-navigation-label` | Accessible name for the inner navigation | `string` | `undefined` |
+
+
 ## Methods
 
 ### `closeMenu() => Promise<void>`
@@ -20,12 +28,12 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [gds-text-button](../gds-text-button)
+- [gds-hamburger](../gds-hamburger)
 
 ### Graph
 ```mermaid
 graph TD;
-  gds-navigation --> gds-text-button
+  gds-navigation --> gds-hamburger
   style gds-navigation fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

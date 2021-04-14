@@ -2,17 +2,20 @@
 
 :host {
   @include card;
-  transition: box-shadow 0.3s;
-  height: var(--card-height);
+  height: var(--gds-card-height);
+
+  @media (prefers-reduced-motion: no-preference) {
+    transition: box-shadow 0.3s;
+  }
 }
 
 :host(:hover) {
-  box-shadow: var(--card-box-shadow-hover);
+  box-shadow: var(--gds-card-box-shadow-hover);
 }
 
 :host(:active),
 :host(:focus),
 :host(:focus-within) {
   outline: none;
-  box-shadow: var(--card-box-shadow-active);
+  box-shadow: var(--gds-card-box-shadow-active);
 }

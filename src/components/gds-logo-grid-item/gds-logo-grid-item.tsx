@@ -22,15 +22,29 @@ export class GdsLogoGridItem {
    * Image url.
    */
   @Prop() imageUrl: string
+  /**
+   * Accessible label.
+   */
+  @Prop() accessibleLabel: string
+  /**
+   * Image alternative text.
+   * Defaults to "" which makes it decorative only.
+   */
+  @Prop() alt: string = ''
 
   render() {
     // Main content
     const content = (
       <figure>
-        <picture>
+        <picture aria-hidden={ this.alt ? null : 'true' }>
           <source srcSet={this.imageUrl} />
-          <img src={this.imageUrl} />
+          <img src={this.imageUrl} alt={this.alt} title={this.accessibleLabel} />
         </picture>
+        { this.accessibleLabel && (
+          <figcaption>
+            {this.accessibleLabel}
+          </figcaption>
+        ) }
       </figure>
     )
 

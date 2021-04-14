@@ -15,6 +15,7 @@ import { Component, Prop, h } from '@stencil/core'
   tag: 'gds-icon',
   styleUrl: 'gds-icon.scss',
   shadow: false,
+  scoped: true,
 })
 export class GdsIcon {
   /**
@@ -34,9 +35,16 @@ export class GdsIcon {
    */
   @Prop() class: string
 
+  /**
+   * Accessible Label
+   */
+  @Prop() accessibleLabel: string
+
   render() {
     return (
       <i
+        aria-hidden={ this.accessibleLabel ? null : 'true' }
+        title={ this.accessibleLabel }
         class={{
           fa: true,
           far: this.regular,

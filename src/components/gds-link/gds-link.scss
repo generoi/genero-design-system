@@ -6,8 +6,20 @@ a {
   height: var(--gds-link-height, auto);
 }
 
-:host-context([block]),
-:host-context([block] > a) {
+:host([block]),
+:host([block] > a) {
   display: block;
   height: var(--gds-link-height, auto);
+}
+
+
+:host([full]),
+:host([full] > a) {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
 }

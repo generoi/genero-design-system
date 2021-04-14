@@ -1,47 +1,67 @@
 @use "../../styles/breakpoints" as *;
 
 .accordion {
-  color: var(--accordion-color, inherit);
-  background: var(--accordion-background, var(--color-white));
-  border: var(--accordion-border);
-  border-radius: var(--accordion-border-radius);
-  box-shadow: var(--accordion-box-shadow);
+  color: var(--gds-accordion-color, inherit);
+  background: var(--gds-accordion-background, var(--gds-color-white));
+  border: var(--gds-accordion-border);
+  border-radius: var(--gds-accordion-border-radius);
+  box-shadow: var(--gds-accordion-box-shadow);
   position: relative;
   // Can't have this with floating.
   // overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
   .content {
     box-sizing: border-box;
     display: none;
-    background: var(--accordion-content-background, var(--color-white));
-    padding: var(--accordion-padding, var(--spacing-s));
+    background: var(--gds-accordion-content-background, var(--gds-color-white));
+    padding: var(--gds-accordion-padding, var(--gds-spacing-s));
 
     // These are required because we can't have overflow: hidden with floating.
-    border-bottom-right-radius: var(--accordion-border-radius);
-    border-bottom-left-radius: var(--accordion-border-radius);
+    border-bottom-right-radius: var(--gds-accordion-border-radius);
+    border-bottom-left-radius: var(--gds-accordion-border-radius);
   }
 
   .contentFloats {
     position: absolute;
     width: 100%;
+    top: 100%;
     z-index: 10;
-    box-shadow: var(--accordion-box-shadow);
+    box-shadow: var(--gds-accordion-box-shadow);
   }
 
   .header {
+    all: unset; // reset button styles
+    // Span full width
+    flex: 1 1 auto;
+    outline: none;
+
+    position: relative;
     display: flex;
-    justify-content: var(--accordion-justify-content, space-between);
+    justify-content: var(--gds-accordion-justify-content, space-between);
     align-items: center;
     cursor: pointer;
-    padding: var(--accordion-header-padding, var(--accordion-padding));
+    padding: var(--gds-accordion-header-padding, var(--gds-accordion-padding));
+    outline: none;
+
+    &:focus {
+      outline: var(--gds-accordion-outline-focus);
+      z-index: 1;
+
+      // Until :focus-visible has proper cross-browser support.
+      &:not(:focus-visible) {
+        outline: none;
+      }
+    }
 
     // These are required because we can't have overflow: hidden with floating.
-    border-top-right-radius: var(--accordion-border-radius);
-    border-top-left-radius: var(--accordion-border-radius);
+    border-top-right-radius: var(--gds-accordion-border-radius);
+    border-top-left-radius: var(--gds-accordion-border-radius);
   }
 
   .heading {
-    margin-right: var(--accordion-heading-margin-left, var(--spacing-xxs));
+    margin-right: var(--gds-accordion-heading-margin-left, var(--gds-spacing-2xs));
   }
 
   .iconCollapse {
@@ -60,7 +80,7 @@
       display: none;
     }
     .header {
-      background: var(--accordion-expanded-header-background, var(--color-white));
+      background: var(--gds-accordion-expanded-header-background, var(--gds-color-white));
     }
     .content {
       display: block;

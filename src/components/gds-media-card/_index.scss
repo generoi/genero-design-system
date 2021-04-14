@@ -1,8 +1,8 @@
 @mixin media-card {
   position: relative;
-  display: var(--media-card-display, inline-block);
-  height: var(--media-card-height, auto);
-  width: var(--media-card-width, auto);
+  display: var(--gds-media-card-display, inline-block);
+  height: var(--gds-media-card-height, auto);
+  width: var(--gds-media-card-width, auto);
   max-width: 100%;
   margin-top: max(0px, var(--superimposed-top));
 }
@@ -10,8 +10,8 @@
 @mixin media {
   position: relative;
   height: 0;
-  padding-bottom: var(--media-card-media-height);
-  margin: var(--media-card-media-padding);
+  padding-bottom: var(--gds-media-card-media-height);
+  margin: var(--gds-media-card-media-padding);
   // Hide potential offset due to effects applied.
   overflow: hidden;
 }
@@ -22,14 +22,14 @@
   height: 100%;
 
   display: block;
-  object-fit: var(--media-card-object-fit, cover);
+  object-fit: var(--gds-media-card-object-fit, cover);
 }
 
 @mixin superimposed {
   width: 100%;
   height: 0;
-  padding-bottom: var(--media-card-media-height);
-  margin: var(--media-card-media-padding);
+  padding-bottom: var(--gds-media-card-media-height);
+  margin: var(--gds-media-card-media-padding);
   position: absolute;
   z-index: 1;
 
@@ -52,27 +52,27 @@
 
 @mixin headline {
   margin-top: 0;
-  margin-bottom: var(--media-card-paragraph-gutter);
+  margin-bottom: var(--gds-media-card-paragraph-gutter);
 }
 
 @mixin description {
-  margin-top: var(--media-card-paragraph-gutter);
+  margin-top: var(--gds-media-card-paragraph-gutter);
   margin-bottom: 0;
 }
 
 @mixin tags {
-  margin-top: var(--spacing-s);
+  margin-top: var(--gds-spacing-s);
 }
 
 @mixin content {
-  --paragraph-gutter: var(--media-card-paragraph-gutter);
+  --gds-paragraph-gutter: var(--gds-media-card-paragraph-gutter);
 
   margin-top: max(0px, var(--superimposed-bottom));
-  padding: var(--media-card-content-padding);
+  padding: var(--gds-media-card-content-padding);
 }
 
 @mixin overlay {
-  background-color: var(--media-card-overlay-color);
+  background-color: var(--gds-media-card-overlay-color);
 
   > img {
     mix-blend-mode: multiply;
@@ -81,8 +81,8 @@
 
 @mixin image-blur-effect {
   // until @stencil/sass 1.4.0 is released most likely
-  filter: #{'opacity(var(--media-card-blur-opacity, 0.5))'} blur(var(--media-card-blur-radius));
-  width: calc(100% + var(--media-card-blur-radius) * 2);
-  height: calc(100% + var(--media-card-blur-radius) * 2);
-  margin: calc(var(--media-card-blur-radius) * -1);
+  filter: #{'opacity(var(--gds-media-card-blur-opacity, 0.5))'} blur(var(--gds-media-card-blur-radius));
+  width: calc(100% + var(--gds-media-card-blur-radius) * 2);
+  height: calc(100% + var(--gds-media-card-blur-radius) * 2);
+  margin: calc(var(--gds-media-card-blur-radius) * -1);
 }

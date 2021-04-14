@@ -5,10 +5,11 @@
 
 ## Properties
 
-| Property   | Attribute  | Description                                                | Type      | Default     |
-| ---------- | ---------- | ---------------------------------------------------------- | --------- | ----------- |
-| `controls` | `controls` | Indicates whether the video player controls are displayed. | `boolean` | `true`      |
-| `videoId`  | `video-id` | Video ID                                                   | `string`  | `undefined` |
+| Property          | Attribute          | Description                                                | Type      | Default     |
+| ----------------- | ------------------ | ---------------------------------------------------------- | --------- | ----------- |
+| `accessibleLabel` | `accessible-label` | Accessible Label                                           | `string`  | `undefined` |
+| `controls`        | `controls`         | Indicates whether the video player controls are displayed. | `boolean` | `true`      |
+| `videoId`         | `video-id`         | Video ID                                                   | `string`  | `undefined` |
 
 
 ----------------------------------------------

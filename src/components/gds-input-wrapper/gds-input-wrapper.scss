@@ -1,46 +1,42 @@
-@use "../gds-paragraph/index" as paragraph;
+@use "index" as *;
 
 :host {
   display: inline-block;
+}
+
+gds-text {
+  @include label;
 }
 
 /* Style slotted input and textarea elements */
 ::slotted(input),
 ::slotted(select),
 ::slotted(textarea) {
-  box-sizing: border-box;
-  display: block;
-  width: 100%;
-  max-width: 100%;
-  min-width: 100%;
-  min-height: 36px;
-  margin: 0;
-  outline: none;
-  font-family: var(--body-font-family);
-  font-weight: normal;
-  border: var(--gds-input-border);
-  padding: var(--gds-input-padding);
-  border-radius: var(--gds-input-border-radius);
-  color: var(--gds-input-color);
-  background: var(--gds-input-background);
-  font-size: var(--gds-input-font-size);
+  @include form-element-base;
+}
+
+::slotted(select) {
+  @include form-select;
+}
+
+::slotted(select:invalid),
+::slotted(input::placeholder),
+::slotted(textarea::placeholder) {
+  @include placeholder;
 }
 
 ::slotted(input:focus),
 ::slotted(select:focus),
 ::slotted(textarea:focus) {
-  border: var(--gds-input-border-focus);
+  @include on-focus;
 }
 
 ::slotted(gds-hint) {
   margin-left: 10px;
-  --icon-color: inherit;
-  --icon-font-size: inherit;
+  --gds-icon-color: inherit;
+  --gds-icon-font-size: inherit;
 }
 
 .error {
-  display: block;
-  color: red;
-  font-size: 14px;
-  font-weight: bold;
+  @include error;
 }

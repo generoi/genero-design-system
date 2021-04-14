@@ -3,8 +3,29 @@
 $grid-item-desktop-size: 263px;
 $grid-item-mobile-size: 180px;
 
-header.gds-navigation-header {
-  background: var(--navigation-background, transparent);
+.gds-navigation-header {
+  background: var(--gds-navigation-background, transparent);
+
+  &.close {
+    [slot='menu-icon'] {
+      display: block;
+    }
+    [slot='close-menu-icon'] {
+      display: none;
+    }
+  }
+
+  &.open {
+    z-index: 1000;
+    position: relative;
+
+    [slot='menu-icon'] {
+      display: none;
+    }
+    [slot='close-menu-icon'] {
+      display: block;
+    }
+  }
 }
 
 .gds-navigation-container {
@@ -13,45 +34,56 @@ header.gds-navigation-header {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding-right: 0;
 
   // Mobile as default.
-  height: var(--navigation-mobile-height);
+  height: var(--gds-navigation-mobile-height);
+  padding: var(--gds-navigation-padding, 0 0 0 var(--gds-spacing-xs));
 
   // Desktop from viewport width.
   @include desktopOnly {
-    padding-right: var(--spacing-xs);
-    height: var(--navigation-desktop-height);
+    padding: var(--gds-navigation-padding, 0 var(--gds-spacing-l));
+    height: var(--gds-navigation-desktop-height);
   }
 
   a {
-    color: var(--navigation-color);
+    color: var(--gds-navigation-color);
   }
 }
 
 .gds-navigation-content {
   display: flex;
   flex-grow: 1;
-  justify-content: var(--navigation-content-justify-content, center);
-  background: var(--navigation-content-background, transparent);
+  justify-content: var(--gds-navigation-content-justify-content, center);
+  background: var(--gds-navigation-content-background, transparent);
 
   @include mobileAndTablet {
-    display: none;
+    display: block;
+    visibility: hidden;
     position: absolute;
-    background: var(--navigation-content-background, white);
-    padding-top: var(--navigation-mobile-height);
+    background: var(--gds-navigation-content-background, white);
+    padding-top: var(--gds-navigation-mobile-height);
     top: 0;
     left: 0;
     right: 0;
-    // border-top: 2px solid var(--body-background-color);
+    // border-top: 2px solid var(--gds-body-background-color);
     z-index: 100;
+    opacity: 0;
+
+    @media (prefers-reduced-motion: no-preference) {
+      transition: opacity 0.2s ease-out;
+    }
+
+    &.open {
+      visibility: visible;
+      opacity: 1;
+    }
   }
 }
 
 .gds-navigation-mobile-extensions {
   display: block;
-  border-top: var(--navigation-mobile-extensions-border-top, 2px solid var(--body-background-color));
-  padding: var(--spacing-l) 0;
+  border-top: var(--gds-navigation-mobile-extensions-border-top, 2px solid var(--gds-body-background-color));
+  padding: var(--gds-spacing-l) 0;
 
   @include desktopOnly {
     display: none;
@@ -67,67 +99,63 @@ header.gds-navigation-header {
 }
 
 nav.gds-navigation-nav {
+  // Span full width
+  flex: 1 1 auto;
+
   @include mobileAndTablet {
-    margin: var(--spacing-l) 0;
+    margin: var(--gds-spacing-l) 0;
   }
 }
 
 .gds-navigation-hamburger {
-  --text-button-l-font-size: 30px;
-  --text-button-l-padding: var(--spacing-s);
-
+  all: unset; // reset button styles
   z-index: 101;
   position: relative;
+  outline: none;
+  height: 100%;
+  cursor: pointer;
+  order: 2;
+  padding: var(--gds-spacing-s);
+  box-sizing: border-box;
+
+  &:focus {
+    outline: var(--gds-link-outline-focus);
+
+    // Until :focus-visible has proper cross-browser support.
+    &:not(:focus-visible) {
+      outline: none;
+    }
+  }
+
 
   @include desktopOnly {
     display: none;
-  }
-}
-
-[slot='menu-icon'],
-[slot='close-menu-icon'] {
-  padding-right: var(--spacing-s);
-}
-
-.close {
-  [slot='menu-icon'] {
-    display: block;
-  }
-  [slot='close-menu-icon'] {
-    display: none;
-  }
-}
-
-.open {
-  z-index: 1000;
-  position: relative;
-
-  [slot='menu-icon'] {
-    display: none;
-  }
-  [slot='close-menu-icon'] {
-    display: block;
   }
 }
 
 .gds-navigation-logo {
   display: flex;
   align-items: center;
-  padding: var(--navigation-logo-padding, 0 0 0 var(--spacing-s));
+  padding: var(--gds-navigation-logo-padding, 0);
   z-index: 101;
   position: relative;
-  height: var(--navigation-mobile-height);
+  height: var(--gds-navigation-mobile-height);
+  flex: 1 0 auto;
+
   & img {
-    width: var(--navigation-logo-width);
-    height: var(--navigation-logo-height, 32px);
+    width: var(--gds-navigation-logo-width);
+    height: var(--gds-navigation-logo-height, 32px);
+  }
+
+  a:focus {
+    outline: var(--gds-link-outline-focus);
   }
 
   @include desktopOnly {
     flex-grow: 0;
-    padding: var(--navigation-logo-padding, 0 0 0 var(--spacing-l));
-    height: var(--navigation-desktop-height);
+    height: var(--gds-navigation-desktop-height);
     & img {
-      height: var(--navigation-logo-height, 48px);
+      height: var(--gds-navigation-logo-height, 48px);
     }
   }
 }

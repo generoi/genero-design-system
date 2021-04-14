@@ -1,4 +1,7 @@
-import { Component, Prop, h, Host } from '@stencil/core'
+import { Component, Prop, h, Host, Listen } from '@stencil/core'
+
+// Global counter for generating unique IDs.
+let idCounter = 0
 
 /**
  * This is an accordion.
@@ -28,6 +31,29 @@ export class GdsAccordion {
   })
   expanded: boolean = false
 
+  /**
+   * HTML IDs
+   */
+  private contentId: string
+  private titleId: string
+
+  @Listen('keydown')
+  handleKeyDown(event: KeyboardEvent) {
+    switch (event.key) {
+      case 'Escape':
+        if (this.expanded) {
+          this.expanded = false
+        }
+        break
+    }
+  }
+
+  componentWillLoad() {
+    ++idCounter
+    this.contentId = `gds-accordion-content-${idCounter}`
+    this.titleId = `gds-accordion-title-${idCounter}`
+  }
+
   render() {
     return (
       <Host>
@@ -37,8 +63,12 @@ export class GdsAccordion {
             expanded: this.expanded,
             openOnHover: this.openOnHover,
           }}>
-          <div class="header" onClick={() => (this.expanded = !this.expanded)}>
-            <div class="heading">
+          <button
+            class="header" onClick={() => (this.expanded = !this.expanded)}
+            aria-controls={ this.contentId }
+            aria-expanded={ this.expanded ? 'true' : 'false' }
+          >
+            <div class="heading" id={ this.titleId }>
               <slot name="label"></slot>
             </div>
             <div class="iconCollapse">
@@ -50,8 +80,11 @@ export class GdsAccordion {
             <div class="iconExpand">
               <slot name="icon-expand">{/* <gds-icon name="caret-circle-down" regular></gds-icon> */}</slot>
             </div>
-          </div>
+          </button>
           <div
+            id={ this.contentId }
+            aria-labelledby={ this.titleId }
+            role="region"
             class={{
               content: true,
               contentFloats: this.contentFloats,

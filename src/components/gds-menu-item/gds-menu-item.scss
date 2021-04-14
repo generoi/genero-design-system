@@ -1,75 +1,70 @@
 @use "../../styles/breakpoints" as *;
 
-li {
-  box-sizing: border-box;
-  list-style: none;
-}
-
-.active {
-  @include mobileOnly {
-    background-color: var(--menu-item-background-color-active, var(--background-color-primary));
-  }
-}
-
-.content {
-  height: var(--spacing-xxl);
-  display: flex;
+:host {
+  display: inline-flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
+  // Take up available space, especially important on mobile
+  width: 100%;
+  box-sizing: border-box;
 
   // Mobile as default.
-  padding: 0 var(--spacing-m);
+  padding: var(--gds-menu-item-padding-vertical, var(--gds-spacing-s) var(--gds-spacing-m));
 
   // Desktop from viewport width.
   @include desktopOnly {
-    padding: 0 var(--spacing-s);
+    padding: var(--gds-menu-item-padding-horizontal, var(--gds-spacing-s) var(--gds-spacing-s));
+  }
+
+  // For historical reasons, fallback to gds-label size="l"
+  font-family: var(--gds-menu-item-font-family, var(--gds-label-font-family));
+  font-size: var(--gds-menu-item-font-size, var(--gds-label-l-font-size));
+  line-height: var(--gds-menu-item-line-height, var(--gds-label-l-line-height));
+  letter-spacing: var(--gds-menu-item-letter-spacing, var(--gds-label-l-letter-spacing));
+  font-weight: var(--gds-menu-item-font-weight, var(--gds-label-l-font-weight));
+  text-transform: var(--gds-menu-item-text-transform, var(--gds-label-text-transform));
+
+  .content {
+    text-decoration: var(--gds-menu-item-underline, none);
+    text-decoration-thickness: var(--gds-menu-item-underline-thickness, auto);
+    text-decoration-color: var(--gds-menu-item-underline-color, currentColor);
+    text-underline-offset: var(--gds-menu-item-underline-offset, auto);
+  }
+
+  &:hover .content {
+    text-decoration: var(--gds-menu-item-underline-hover, none);
+    text-decoration-thickness: var(--gds-menu-item-underline-thickness-hover, auto);
+    text-decoration-color: var(--gds-menu-item-underline-color-hover, currentColor);
+    text-underline-offset: var(--gds-menu-item-underline-offset-hover, auto);
+  }
+}
+
+// Active style
+:host([active]) {
+  // @todo safari doesn't support this on :host nor does it support the shorthand
+  .content {
+    text-decoration: var(--gds-menu-item-underline-active, underline);
+    text-decoration-thickness: var(--gds-menu-item-underline-thickness-active, 3px);
+    text-decoration-color: var(--gds-menu-item-underline-color-active, currentColor);
+    text-underline-offset: var(--gds-menu-item-underline-offset-active, 5px);
+  }
+
+  @include mobileAndTablet {
+    background-color: var(--gds-menu-item-background-color-active, var(--gds-color-ui-background-01));
+
+    .content {
+      text-decoration: var(--gds-menu-item-underline-active, none);
+    }
   }
 }
 
 // Vertical direction explicitly defined.
-:host-context(.vertical) {
-  & .content {
-    padding: 0 var(--spacing-m);
-  }
+:host-context([direction="vertical"]) {
+  padding: var(--gds-menu-item-padding-vertical, var(--gds-spacing-s) var(--gds-spacing-m));
 }
 
 // Horizontal direction explicitly defined.
-:host-context(.horizontal) {
-  & .content {
-    padding: 0 var(--spacing-s);
-  }
-}
-
-.item {
-  // For historical reasons, fallback to gds-label size="l"
-  font-family: var(--gds-menu-item-font-family, var(--label-font-family));
-  font-size: var(--gds-menu-item-font-size, var(--label-l-font-size));
-  line-height: var(--gds-menu-item-line-height, var(--label-l-line-height));
-  letter-spacing: var(--gds-menu-item-letter-spacing, var(--label-l-letter-spacing));
-  font-weight: var(--gds-menu-item-font-weight, var(--label-l-font-weight));
-  text-transform: var(--gds-menu-item-text-transform, var(--label-text-transform));
-}
-
-.underline-container {
-  position: relative;
-  width: 100%;
-  height: 0;
-  display: var(--menu-item-underline-display, block);
-
-  // Hide underline on mobile.
-  @include mobileAndTablet {
-    display: var(--menu-item-underline-display, none);
-  }
-}
-
-.underline {
-  position: absolute;
-  width: 100%;
-  top: 4px;
-  border-bottom: 3px solid var(--navigation-underline-color, var(--navigation-color));
-}
-
-.divider {
-  margin: var(--spacing-m) 0;
-  border-top: 2px solid var(--background-color-primary);
+:host-context([direction="horizontal"]) {
+  padding: var(--gds-menu-item-padding-horizontal, var(--gds-spacing-s) var(--gds-spacing-m));
 }

@@ -2,7 +2,7 @@
 
 :host {
   display: block;
-  height: var(--media-card-height, auto);
+  height: var(--gds-media-card-height, auto);
 }
 
 .media-card {
@@ -45,6 +45,8 @@
 
 ::slotted([slot='tags']) {
   display: block;
+  position: relative;
+  z-index: 2;
 
   @include tags;
 }

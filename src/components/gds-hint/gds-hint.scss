@@ -1,10 +1,25 @@
-.hint {
+:host {
   position: relative;
   display: inline-block;
 }
 
 .icon {
   cursor: pointer;
+  appearance: none;
+  border: 0;
+  background: none;
+  padding: 0;
+  outline: none;
+  height: var(--gds-icon-font-size);
+
+  &:focus {
+    outline: var(--gds-hint-outline-focus);
+
+    // Until :focus-visible has proper cross-browser support.
+    &:not(:focus-visible) {
+      outline: none;
+    }
+  }
 }
 
 .content {
@@ -15,12 +30,16 @@
   left: 100%;
   color: var(--gds-hint-color);
   background: var(--gds-hint-background);
-  padding: var(--spacing-xxs);
+  padding: var(--gds-spacing-2xs);
   border: var(--gds-hint-border);
   border-radius: var(--gds-hint-border-radius);
-  display: none;
+  visibility: hidden;
 
   &.open {
-    display: block;
+    visibility: visible;
+  }
+
+  &:focus {
+    outline: var(--gds-hint-outline-focus);
   }
 }

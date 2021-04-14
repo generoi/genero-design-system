@@ -1,0 +1,13 @@
+@use "index" as *;
+
+:host {
+  display: inline-block;
+}
+
+.icon {
+  @include base;
+}
+
+:host([active]) .icon {
+  @include active;
+}

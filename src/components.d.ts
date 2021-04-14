@@ -62,6 +62,11 @@ export namespace Components {
          */
         "zoom": number;
     }
+    interface GdsHamburger {
+        "accessibleLabel": string;
+        "active": boolean;
+        "label": string;
+    }
     interface GdsHeading {
         /**
           * Render the heading as a h element for SEO purposes.  Those h element should be visible to GoogleBot: https://www.searchenginejournal.com/shadow-dom/353644/
@@ -75,6 +80,10 @@ export namespace Components {
     interface GdsHint {
     }
     interface GdsIcon {
+        /**
+          * Accessible Label
+         */
+        "accessibleLabel": string;
         /**
           * Style overrides.
          */
@@ -97,6 +106,10 @@ export namespace Components {
          */
         "error": string;
         /**
+          * Visually hide the label
+         */
+        "hideLabelVisually": boolean;
+        /**
           * Display the label above the input element.
          */
         "label": string;
@@ -113,9 +126,17 @@ export namespace Components {
     }
     interface GdsLink {
         /**
+          * Accessible label.
+         */
+        "accessibleLabel": string;
+        /**
           * Block element.
          */
         "block": boolean;
+        /**
+          * Expand across container.
+         */
+        "full": boolean;
         /**
           * Link url.
          */
@@ -133,6 +154,14 @@ export namespace Components {
     }
     interface GdsLogoGridItem {
         /**
+          * Accessible label.
+         */
+        "accessibleLabel": string;
+        /**
+          * Image alternative text. Defaults to "" which makes it decorative only.
+         */
+        "alt": string;
+        /**
           * If defined, the logo will be a link.
          */
         "href": string;
@@ -146,6 +175,7 @@ export namespace Components {
         "target": string;
     }
     interface GdsMediaCard {
+        "accessibleLabel": string;
         "description": string;
         /**
           * Title for the card (note: title is a reserved word).
@@ -155,6 +185,10 @@ export namespace Components {
           * If defined, the card will be a link.
          */
         "href": string;
+        /**
+          * Image alt. Defaults to "" representing a decorative image.
+         */
+        "imageAlt": string;
         /**
           * Image url.
          */
@@ -188,6 +222,10 @@ export namespace Components {
           * Direction: "horizontal" or "vertial". Defaults to "vertical".
          */
         "direction": string;
+        /**
+          * Aria role Defaults to "".
+         */
+        "role": string;
     }
     interface GdsMenuItem {
         /**
@@ -196,6 +234,10 @@ export namespace Components {
         "active": boolean;
     }
     interface GdsMenuItemNested {
+        /**
+          * Accessible label of the submenu. Defaults to textContent of the link slot.
+         */
+        "accessibleLabel": string;
         /**
           * Is menu item appear active.
          */
@@ -210,6 +252,14 @@ export namespace Components {
         "submenuIcon": string;
     }
     interface GdsNavigation {
+        /**
+          * Accessible label for the hamburger menu
+         */
+        "accessibleHamburgerLabel": string;
+        /**
+          * Accessible name for the inner navigation
+         */
+        "accessibleNavigationLabel": string;
         "closeMenu": () => Promise<void>;
     }
     interface GdsParagraph {
@@ -222,12 +272,27 @@ export namespace Components {
          */
         "size": string;
     }
+    interface GdsSearchForm {
+        "accessibleInputLabel": string;
+        "accessibleSubmitLabel": string;
+        "action": string;
+        "collapseOn": string;
+        "collapsed": boolean;
+        "floating": boolean;
+        "placeholder": string;
+        "query": string;
+    }
     interface GdsSlider {
+        "accessibleLabel": string;
         "max": number;
         "min": number;
         "value": number;
     }
     interface GdsSubmenu {
+        /**
+          * Aria role
+         */
+        "role": string;
     }
     interface GdsTag {
         /**
@@ -264,7 +329,14 @@ export namespace Components {
          */
         "size": string;
     }
+    interface GdsVisuallyHidden {
+        "focusable": Boolean;
+    }
     interface GdsYoutubePlayer {
+        /**
+          * Accessible Label
+         */
+        "accessibleLabel": string;
         /**
           * Indicates whether the video player controls are displayed.
          */
@@ -299,6 +371,12 @@ declare global {
     var HTMLGdsGoogleMapsElement: {
         prototype: HTMLGdsGoogleMapsElement;
         new (): HTMLGdsGoogleMapsElement;
+    };
+    interface HTMLGdsHamburgerElement extends Components.GdsHamburger, HTMLStencilElement {
+    }
+    var HTMLGdsHamburgerElement: {
+        prototype: HTMLGdsHamburgerElement;
+        new (): HTMLGdsHamburgerElement;
     };
     interface HTMLGdsHeadingElement extends Components.GdsHeading, HTMLStencilElement {
     }
@@ -384,6 +462,12 @@ declare global {
         prototype: HTMLGdsParagraphElement;
         new (): HTMLGdsParagraphElement;
     };
+    interface HTMLGdsSearchFormElement extends Components.GdsSearchForm, HTMLStencilElement {
+    }
+    var HTMLGdsSearchFormElement: {
+        prototype: HTMLGdsSearchFormElement;
+        new (): HTMLGdsSearchFormElement;
+    };
     interface HTMLGdsSliderElement extends Components.GdsSlider, HTMLStencilElement {
     }
     var HTMLGdsSliderElement: {
@@ -420,6 +504,12 @@ declare global {
         prototype: HTMLGdsTextButtonElement;
         new (): HTMLGdsTextButtonElement;
     };
+    interface HTMLGdsVisuallyHiddenElement extends Components.GdsVisuallyHidden, HTMLStencilElement {
+    }
+    var HTMLGdsVisuallyHiddenElement: {
+        prototype: HTMLGdsVisuallyHiddenElement;
+        new (): HTMLGdsVisuallyHiddenElement;
+    };
     interface HTMLGdsYoutubePlayerElement extends Components.GdsYoutubePlayer, HTMLStencilElement {
     }
     var HTMLGdsYoutubePlayerElement: {
@@ -431,6 +521,7 @@ declare global {
         "gds-button": HTMLGdsButtonElement;
         "gds-card": HTMLGdsCardElement;
         "gds-google-maps": HTMLGdsGoogleMapsElement;
+        "gds-hamburger": HTMLGdsHamburgerElement;
         "gds-heading": HTMLGdsHeadingElement;
         "gds-hint": HTMLGdsHintElement;
         "gds-icon": HTMLGdsIconElement;
@@ -445,12 +536,14 @@ declare global {
         "gds-menu-item-nested": HTMLGdsMenuItemNestedElement;
         "gds-navigation": HTMLGdsNavigationElement;
         "gds-paragraph": HTMLGdsParagraphElement;
+        "gds-search-form": HTMLGdsSearchFormElement;
         "gds-slider": HTMLGdsSliderElement;
         "gds-submenu": HTMLGdsSubmenuElement;
         "gds-tag": HTMLGdsTagElement;
         "gds-tag-group": HTMLGdsTagGroupElement;
         "gds-text": HTMLGdsTextElement;
         "gds-text-button": HTMLGdsTextButtonElement;
+        "gds-visually-hidden": HTMLGdsVisuallyHiddenElement;
         "gds-youtube-player": HTMLGdsYoutubePlayerElement;
     }
 }
@@ -514,6 +607,11 @@ declare namespace LocalJSX {
          */
         "zoom"?: number;
     }
+    interface GdsHamburger {
+        "accessibleLabel"?: string;
+        "active"?: boolean;
+        "label"?: string;
+    }
     interface GdsHeading {
         /**
           * Render the heading as a h element for SEO purposes.  Those h element should be visible to GoogleBot: https://www.searchenginejournal.com/shadow-dom/353644/
@@ -527,6 +625,10 @@ declare namespace LocalJSX {
     interface GdsHint {
     }
     interface GdsIcon {
+        /**
+          * Accessible Label
+         */
+        "accessibleLabel"?: string;
         /**
           * Style overrides.
          */
@@ -549,6 +651,10 @@ declare namespace LocalJSX {
          */
         "error"?: string;
         /**
+          * Visually hide the label
+         */
+        "hideLabelVisually"?: boolean;
+        /**
           * Display the label above the input element.
          */
         "label"?: string;
@@ -565,9 +671,17 @@ declare namespace LocalJSX {
     }
     interface GdsLink {
         /**
+          * Accessible label.
+         */
+        "accessibleLabel"?: string;
+        /**
           * Block element.
          */
         "block"?: boolean;
+        /**
+          * Expand across container.
+         */
+        "full"?: boolean;
         /**
           * Link url.
          */
@@ -585,6 +699,14 @@ declare namespace LocalJSX {
     }
     interface GdsLogoGridItem {
         /**
+          * Accessible label.
+         */
+        "accessibleLabel"?: string;
+        /**
+          * Image alternative text. Defaults to "" which makes it decorative only.
+         */
+        "alt"?: string;
+        /**
           * If defined, the logo will be a link.
          */
         "href"?: string;
@@ -598,6 +720,7 @@ declare namespace LocalJSX {
         "target"?: string;
     }
     interface GdsMediaCard {
+        "accessibleLabel"?: string;
         "description"?: string;
         /**
           * Title for the card (note: title is a reserved word).
@@ -607,6 +730,10 @@ declare namespace LocalJSX {
           * If defined, the card will be a link.
          */
         "href"?: string;
+        /**
+          * Image alt. Defaults to "" representing a decorative image.
+         */
+        "imageAlt"?: string;
         /**
           * Image url.
          */
@@ -640,6 +767,10 @@ declare namespace LocalJSX {
           * Direction: "horizontal" or "vertial". Defaults to "vertical".
          */
         "direction"?: string;
+        /**
+          * Aria role Defaults to "".
+         */
+        "role"?: string;
     }
     interface GdsMenuItem {
         /**
@@ -648,6 +779,10 @@ declare namespace LocalJSX {
         "active"?: boolean;
     }
     interface GdsMenuItemNested {
+        /**
+          * Accessible label of the submenu. Defaults to textContent of the link slot.
+         */
+        "accessibleLabel"?: string;
         /**
           * Is menu item appear active.
          */
@@ -662,6 +797,14 @@ declare namespace LocalJSX {
         "submenuIcon"?: string;
     }
     interface GdsNavigation {
+        /**
+          * Accessible label for the hamburger menu
+         */
+        "accessibleHamburgerLabel"?: string;
+        /**
+          * Accessible name for the inner navigation
+         */
+        "accessibleNavigationLabel"?: string;
     }
     interface GdsParagraph {
         /**
@@ -673,13 +816,29 @@ declare namespace LocalJSX {
          */
         "size"?: string;
     }
+    interface GdsSearchForm {
+        "accessibleInputLabel"?: string;
+        "accessibleSubmitLabel"?: string;
+        "action"?: string;
+        "collapseOn"?: string;
+        "collapsed"?: boolean;
+        "floating"?: boolean;
+        "placeholder"?: string;
+        "query"?: string;
+    }
     interface GdsSlider {
+        "accessibleLabel"?: string;
         "max"?: number;
         "min"?: number;
         "onValue-changed"?: (event: CustomEvent<any>) => void;
         "value"?: number;
     }
     interface GdsSubmenu {
+        "onClose"?: (event: CustomEvent<HTMLElement>) => void;
+        /**
+          * Aria role
+         */
+        "role"?: string;
     }
     interface GdsTag {
         /**
@@ -716,7 +875,14 @@ declare namespace LocalJSX {
          */
         "size"?: string;
     }
+    interface GdsVisuallyHidden {
+        "focusable"?: Boolean;
+    }
     interface GdsYoutubePlayer {
+        /**
+          * Accessible Label
+         */
+        "accessibleLabel"?: string;
         /**
           * Indicates whether the video player controls are displayed.
          */
@@ -731,6 +897,7 @@ declare namespace LocalJSX {
         "gds-button": GdsButton;
         "gds-card": GdsCard;
         "gds-google-maps": GdsGoogleMaps;
+        "gds-hamburger": GdsHamburger;
         "gds-heading": GdsHeading;
         "gds-hint": GdsHint;
         "gds-icon": GdsIcon;
@@ -745,12 +912,14 @@ declare namespace LocalJSX {
         "gds-menu-item-nested": GdsMenuItemNested;
         "gds-navigation": GdsNavigation;
         "gds-paragraph": GdsParagraph;
+        "gds-search-form": GdsSearchForm;
         "gds-slider": GdsSlider;
         "gds-submenu": GdsSubmenu;
         "gds-tag": GdsTag;
         "gds-tag-group": GdsTagGroup;
         "gds-text": GdsText;
         "gds-text-button": GdsTextButton;
+        "gds-visually-hidden": GdsVisuallyHidden;
         "gds-youtube-player": GdsYoutubePlayer;
     }
 }
@@ -762,6 +931,7 @@ declare module "@stencil/core" {
             "gds-button": LocalJSX.GdsButton & JSXBase.HTMLAttributes<HTMLGdsButtonElement>;
             "gds-card": LocalJSX.GdsCard & JSXBase.HTMLAttributes<HTMLGdsCardElement>;
             "gds-google-maps": LocalJSX.GdsGoogleMaps & JSXBase.HTMLAttributes<HTMLGdsGoogleMapsElement>;
+            "gds-hamburger": LocalJSX.GdsHamburger & JSXBase.HTMLAttributes<HTMLGdsHamburgerElement>;
             "gds-heading": LocalJSX.GdsHeading & JSXBase.HTMLAttributes<HTMLGdsHeadingElement>;
             "gds-hint": LocalJSX.GdsHint & JSXBase.HTMLAttributes<HTMLGdsHintElement>;
             "gds-icon": LocalJSX.GdsIcon & JSXBase.HTMLAttributes<HTMLGdsIconElement>;
@@ -776,12 +946,14 @@ declare module "@stencil/core" {
             "gds-menu-item-nested": LocalJSX.GdsMenuItemNested & JSXBase.HTMLAttributes<HTMLGdsMenuItemNestedElement>;
             "gds-navigation": LocalJSX.GdsNavigation & JSXBase.HTMLAttributes<HTMLGdsNavigationElement>;
             "gds-paragraph": LocalJSX.GdsParagraph & JSXBase.HTMLAttributes<HTMLGdsParagraphElement>;
+            "gds-search-form": LocalJSX.GdsSearchForm & JSXBase.HTMLAttributes<HTMLGdsSearchFormElement>;
             "gds-slider": LocalJSX.GdsSlider & JSXBase.HTMLAttributes<HTMLGdsSliderElement>;
             "gds-submenu": LocalJSX.GdsSubmenu & JSXBase.HTMLAttributes<HTMLGdsSubmenuElement>;
             "gds-tag": LocalJSX.GdsTag & JSXBase.HTMLAttributes<HTMLGdsTagElement>;
             "gds-tag-group": LocalJSX.GdsTagGroup & JSXBase.HTMLAttributes<HTMLGdsTagGroupElement>;
             "gds-text": LocalJSX.GdsText & JSXBase.HTMLAttributes<HTMLGdsTextElement>;
             "gds-text-button": LocalJSX.GdsTextButton & JSXBase.HTMLAttributes<HTMLGdsTextButtonElement>;
+            "gds-visually-hidden": LocalJSX.GdsVisuallyHidden & JSXBase.HTMLAttributes<HTMLGdsVisuallyHiddenElement>;
             "gds-youtube-player": LocalJSX.GdsYoutubePlayer & JSXBase.HTMLAttributes<HTMLGdsYoutubePlayerElement>;
         }
     }

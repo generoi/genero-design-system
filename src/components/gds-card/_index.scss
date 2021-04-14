@@ -2,13 +2,13 @@
   box-sizing: border-box;
   display: flex;
   justify-content: flex-start;
-  text-align: var(--card-text-align, center);
-  border: var(--card-border);
-  border-radius: var(--card-border-radius, 8px);
-  background-color: var(--card-background-color, white);
-  box-shadow: var(--card-box-shadow);
+  text-align: var(--gds-card-text-align, center);
+  border: var(--gds-card-border);
+  border-radius: var(--gds-card-border-radius, 8px);
+  background-color: var(--gds-card-background-color, white);
+  box-shadow: var(--gds-card-box-shadow);
   overflow: hidden;
-  width: var(--card-width);
-  max-width: var(--card-max-width, var(--card-width));
+  width: var(--gds-card-width);
+  max-width: var(--gds-card-max-width, var(--gds-card-width));
   flex-direction: column;
 }

@@ -17,19 +17,6 @@
 | `size`            | `size`              | Button size.                                                                   | `string`  | `'m'`       |
 
 
-## Dependencies
-
-### Used by
-
- - [gds-navigation](../gds-navigation)
-
-### Graph
-```mermaid
-graph TD;
-  gds-navigation --> gds-text-button
-  style gds-text-button fill:#f9f,stroke:#333,stroke-width:4px
-```
-
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

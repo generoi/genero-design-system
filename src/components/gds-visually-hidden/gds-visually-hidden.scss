@@ -1,0 +1,9 @@
+@use "index" as *;
+
+:host([focusable]:not(:focus-within)) {
+  @include sr-only;
+}
+
+:host(:not([focusable])) {
+  @include sr-only;
+}

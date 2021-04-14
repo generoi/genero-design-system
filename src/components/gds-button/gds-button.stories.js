@@ -40,26 +40,26 @@ export const Examples = () => html`
   </p>
   <style>
     .inverted {
-      --button-color: black;
-      --button-background-color: white;
-      --button-border: 1px solid black;
+      --gds-button-color: black;
+      --gds-button-background-color: white;
+      --gds-button-border: 1px solid black;
     }
     .sharp {
-      --button-border-radius: 0;
+      --gds-button-border-radius: 0;
     }
     .outline {
-      --button-border: 1px solid white;
-      --button-outline: 4px solid black;
+      --gds-button-border: 1px solid white;
+      --gds-button-outline: 4px solid black;
     }
     .glow {
-      --button-outline: 4px solid #264534;
-      --button-outline-hover: 4px solid #264534;
-      --button-background-color: transparent;
-      --button-background-image: radial-gradient(#006e3b, #264534);
-      --button-background-image-hover: radial-gradient(#387c57, #334b3d);
+      --gds-button-outline: 4px solid #264534;
+      --gds-button-outline-hover: 4px solid #264534;
+      --gds-button-background-color: transparent;
+      --gds-button-background-image: radial-gradient(#006e3b, #264534);
+      --gds-button-background-image-hover: radial-gradient(#387c57, #334b3d);
     }
     .shadow {
-      --button-box-shadow: 8px 7px 0px 0px #fdc2c2;
+      --gds-button-box-shadow: 8px 7px 0px 0px #fdc2c2;
     }
   </style>
   <p>

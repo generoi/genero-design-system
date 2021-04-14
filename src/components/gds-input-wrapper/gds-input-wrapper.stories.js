@@ -23,6 +23,11 @@ export const Examples = () => html`
       </gds-input-wrapper>
     </p>
     <p>
+      <gds-input-wrapper label="Visually hidden label" hide-label-visually>
+        <input slot="input" placeholder="Can have a visually hidden label" />
+      </gds-input-wrapper>
+    </p>
+    <p>
       <gds-input-wrapper label="Can have a textarea">
         <textarea slot="input" placeholder="Some placeholder" rows="5"></textarea>
       </gds-input-wrapper>
@@ -36,9 +41,18 @@ export const Examples = () => html`
       </gds-input-wrapper>
     </p>
     <p>
+      <gds-input-wrapper label="Using requires and disabled first option looks like a placholder">
+        <select slot="input" required>
+          <option value="" selected disabled hidden>With placeholder</option>
+          <option value="a1">Option 1</option>
+          <option value="a2">Option 2</option>
+        </select>
+      </gds-input-wrapper>
+    </p>
+    <p>
       <gds-input-wrapper label="This is a label with a hint">
         <gds-hint slot="hint">
-          <gds-icon slot="icon" name="info-circle" light></gds-icon>
+          <gds-icon slot="icon" name="info-circle" light accessible-label="Read more about label"></gds-icon>
           <gds-text slot="content" size="xs">I am a hint box with some text.</gds-text>
         </gds-hint>
         <input slot="input" value="Some value" />
