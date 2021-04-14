@@ -102,8 +102,8 @@ export const Examples = () => html`
     </div>
     <style>
       gds-icon {
-        --icon-color: #4444cc;
-        --icon-font-size: 30px;
+        --gds-icon-color: #4444cc;
+        --gds-icon-font-size: 30px;
       }
     </style>
     <gds-icon name="hamburger" slot="menu-icon"></gds-icon>
@@ -122,16 +122,16 @@ export const Examples = () => html`
 
   <style>
     .custom-menu-background .open {
-      --navigation-color: var(--color-white);
-      --icon-color: var(--navigation-color);
-      --icon-color-hover: var(--navigation-color);
-      --navigation-content-background: repeating-linear-gradient(to right, #166e3b, #166e3b 10px, #146635 10px, #146635 20px);
+      --gds-navigation-color: var(--gds-color-white);
+      --gds-icon-color: var(--gds-navigation-color);
+      --gds-icon-color-hover: var(--gds-navigation-color);
+      --gds-navigation-content-background: repeating-linear-gradient(to right, #166e3b, #166e3b 10px, #146635 10px, #146635 20px);
       --gds-menu-item-background-color-active: transparent;
       --gds-menu-item-underline-active: underline solid currentColor 3px;
-      --label-text-transform: none;
+      --gds-label-text-transform: none;
     }
     .custom-menu-background gds-icon {
-      --icon-color: var(--navigation-color);
+      --gds-icon-color: var(--gds-navigation-color);
     }
   </style>
   <gds-navigation class="custom-menu-background" accessible-navigation-label="Primary navigation 3">

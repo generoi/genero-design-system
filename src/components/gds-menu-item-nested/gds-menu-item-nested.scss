@@ -19,12 +19,12 @@
   text-align: center;
   cursor: pointer;
   padding: 0;
-  margin-left: calc(-1 * var(--spacing-xxs));
-  margin-right: var(--spacing-xs);
+  margin-left: calc(-1 * var(--gds-spacing-2xs));
+  margin-right: var(--gds-spacing-xs);
 
   .submenu-icon-content {
     //  Since the element is rotated we need it to be square
-    padding: var(--spacing-xxxs);
+    padding: var(--gds-spacing-3xs);
     width: 1em;
     height: 1em;
     box-sizing: content-box;
@@ -73,7 +73,7 @@
 // Mobile and tablet behaves a bit differently
 @include mobileAndTablet {
   :host([active]) .menu-item {
-    background-color: var(--gds-menu-item-background-color-active, var(--background-color-primary));
+    background-color: var(--gds-menu-item-background-color-active, var(--gds-color-ui-background-01));
   }
 
   .submenu {

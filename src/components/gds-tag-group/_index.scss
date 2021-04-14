@@ -1,12 +1,12 @@
 @mixin base {
   display: block;
-  margin-right: calc(var(--tag-group-gutter-x) * -1);
-  margin-bottom: calc(var(--tag-group-gutter-y) * -1);
+  margin-right: calc(var(--gds-tag-group-gutter-x) * -1);
+  margin-bottom: calc(var(--gds-tag-group-gutter-y) * -1);
   font-size: 0;
 }
 
 @mixin item {
-  margin-right: var(--tag-group-gutter-x);
-  margin-bottom: var(--tag-group-gutter-y);
+  margin-right: var(--gds-tag-group-gutter-x);
+  margin-bottom: var(--gds-tag-group-gutter-y);
   font-size: initial;
 }

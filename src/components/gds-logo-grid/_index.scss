@@ -1,29 +1,29 @@
 @use "../../styles/breakpoints" as *;
 
 @mixin base {
-  --logo-grid-item-count: var(--logo-grid-item-mobile-count);
-  --logo-grid-item-size: var(--logo-grid-item-mobile-size);
+  --gds-logo-grid-item-count: var(--gds-logo-grid-item-mobile-count);
+  --gds-logo-grid-item-size: var(--gds-logo-grid-item-mobile-size);
 
   @include tabletOnly {
-    --logo-grid-item-count: var(--logo-grid-item-tablet-count);
-    --logo-grid-item-size: var(--logo-grid-item-tablet-size);
+    --gds-logo-grid-item-count: var(--gds-logo-grid-item-tablet-count);
+    --gds-logo-grid-item-size: var(--gds-logo-grid-item-tablet-size);
   }
 
   @include desktopOnly {
-    --logo-grid-item-count: var(--logo-grid-item-desktop-count);
-    --logo-grid-item-size: var(--logo-grid-item-desktop-size);
+    --gds-logo-grid-item-count: var(--gds-logo-grid-item-desktop-count);
+    --gds-logo-grid-item-size: var(--gds-logo-grid-item-desktop-size);
   }
 
   display: grid;
-  grid-template-columns: repeat(var(--logo-grid-item-count), minmax(auto, var(--logo-grid-item-size)));
+  grid-template-columns: repeat(var(--gds-logo-grid-item-count), minmax(auto, var(--gds-logo-grid-item-size)));
   grid-gap: 0;
-  max-width: calc(var(--logo-grid-item-size) * var(--logo-grid-item-count));
+  max-width: calc(var(--gds-logo-grid-item-size) * var(--gds-logo-grid-item-count));
   overflow: hidden;
 }
 
 @mixin item {
-  border-bottom: 1px solid var(--logo-grid-item-border-color);
-  border-right: 1px solid var(--logo-grid-item-border-color);
+  border-bottom: 1px solid var(--gds-logo-grid-item-border-color);
+  border-right: 1px solid var(--gds-logo-grid-item-border-color);
   margin-right: -1px;
   margin-bottom: -1px;
 }

@@ -68,7 +68,7 @@ export const Examples = () => html`
       superimposed-left="20"
       overlay
       overlay-effect="blur"
-      style="--media-card-overlay-color: var(--color-ui-03)"
+      style="--gds-media-card-overlay-color: var(--gds-color-ui-03)"
     >
       <gds-heading size="s" slot="headline">This heading is a link</gds-heading>
       <gds-paragraph size="l" lot="description">
@@ -85,7 +85,7 @@ export const Examples = () => html`
       headline="Card Headline"
       image-url="${getMockImageUrl('product', 500, 500)}"
       overlay
-      style="--media-card-overlay-color: var(--color-ui-04)"
+      style="--gds-media-card-overlay-color: var(--gds-color-ui-04)"
       description="You can also apply only an overlay and keep the image sharp"
     />
     <div slot="content">
@@ -96,8 +96,8 @@ export const Examples = () => html`
   <div style="margin-bottom: 40px; height: 700px; border: 1px dashed black;">
     <style>
       .full-height {
-        --card-height: 100%;
-        --media-card-height: 100%;
+        --gds-card-height: 100%;
+        --gds-media-card-height: 100%;
         --gds-link-height: 100%
       }
     </style>
@@ -107,7 +107,7 @@ export const Examples = () => html`
       headline="Card Headline"
       image-url="${getMockImageUrl('house', 500, 500)}"
       overlay
-      style="--media-card-overlay-color: var(--color-ui-04)"
+      style="--gds-media-card-overlay-color: var(--gds-color-ui-04)"
       description="You can override the card-height to extend the height of its parent container."
     />
     <div slot="content">

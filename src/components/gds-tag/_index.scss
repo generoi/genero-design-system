@@ -1,9 +1,9 @@
 @mixin base {
   display: inline-block;
-  color: var(--tag-color, white);
-  line-height: var(--tag-line-height, 1em);
-  background-color: var(--tag-background-color, black);
-  padding: var(--tag-padding, 4px 12px 6px 12px);
-  border-radius: var(--tag-border-radius, 10px);
-  border: var(--tag-border, 1px solid var(--tag-border-color, transparent));
+  color: var(--gds-tag-color, white);
+  line-height: var(--gds-tag-line-height, 1em);
+  background-color: var(--gds-tag-background-color, black);
+  padding: var(--gds-tag-padding, 4px 12px 6px 12px);
+  border-radius: var(--gds-tag-border-radius, 10px);
+  border: var(--gds-tag-border, 1px solid var(--gds-tag-border-color, transparent));
 }

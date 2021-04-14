@@ -2,8 +2,8 @@
 
 :host {
   display: block;
-  margin-block-start: var(--paragraph-gutter);
-  margin-block-end: var(--paragraph-gutter);
+  margin-block-start: var(--gds-paragraph-gutter);
+  margin-block-end: var(--gds-paragraph-gutter);
 
   @include size-m;
 }

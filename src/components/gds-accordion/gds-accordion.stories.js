@@ -53,10 +53,10 @@ export const Examples = () => html`
 
     <style>
       .custom {
-        --accordion-border: 1px solid black;
-        --accordion-border-radius: 0;
-        --accordion-box-shadow: 0;
-        --paragraph-gutter: var(--spacing-xs);
+        --gds-accordion-border: 1px solid black;
+        --gds-accordion-border-radius: 0;
+        --gds-accordion-box-shadow: 0;
+        --gds-paragraph-gutter: var(--gds-spacing-xs);
       }
     </style>
     <gds-accordion class="custom">
@@ -72,16 +72,16 @@ export const Examples = () => html`
 
     <style>
       .plain {
-        --accordion-color: inherit;
-        --accordion-background: var(--color-white);
-        --accordion-content-background: var(--color-white);
-        --accordion-expanded-header-background: transparent;
-        --accordion-border: none;
-        --accordion-border-radius: none;
-        --accordion-box-shadow: none;
-        --accordion-padding: var(--spacing-s) 0;
-        --accordion-header-padding: 0;
-        --accordion-justify-content: start;
+        --gds-accordion-color: inherit;
+        --gds-accordion-background: var(--gds-color-white);
+        --gds-accordion-content-background: var(--gds-color-white);
+        --gds-accordion-expanded-header-background: transparent;
+        --gds-accordion-border: none;
+        --gds-accordion-border-radius: none;
+        --gds-accordion-box-shadow: none;
+        --gds-accordion-padding: var(--gds-spacing-s) 0;
+        --gds-accordion-header-padding: 0;
+        --gds-accordion-justify-content: start;
       }
       .plain > gds-text {
         text-decoration: underline;

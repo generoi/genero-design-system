@@ -29,17 +29,17 @@ const COLORS = [
 // prettier-ignore
 export const Colors = () => html`
   <gds-paragraph>
-    <gds-card style="background-color: var(--color-primary); ${style}">
+    <gds-card style="background-color: var(--gds-color-ui-03); ${style}">
       Primary
     </gds-card>
-    <gds-card style="background-color: var(--color-secondary); ${style}">
+    <gds-card style="background-color: var(--gds-color-ui-04); ${style}">
       Secondary
     </gds-card>
-    <gds-card style="background-color: var(--body-background-color); ${style}">
+    <gds-card style="background-color: var(--gds-color-ui-background-01); ${style}">
       Body
     </gds-card>
     ${COLORS.map(color => html`
-      <gds-card style="background-color: var(--color-${color}); ${style}">
+      <gds-card style="background-color: var(--gds-color-${color}); ${style}">
         ${color}
       </gds-card>
     `)}

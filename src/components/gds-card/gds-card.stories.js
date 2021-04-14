@@ -21,22 +21,22 @@ export const Examples = () => html`
   <style>
     .variation-1 {
       padding: 40px;
-      --card-border: 1px solid black;
+      --gds-card-border: 1px solid black;
     }
     .variation-2 {
       padding: 40px;
-      --card-background-color: transparent;
-      --card-box-shadow: none;
-      --card-box-shadow-hover: none;
-      --card-box-shadow-active: none;
+      --gds-card-background-color: transparent;
+      --gds-card-box-shadow: none;
+      --gds-card-box-shadow-hover: none;
+      --gds-card-box-shadow-active: none;
     }
     .variation-3 {
       padding: 40px;
-      --card-background-color: transparent;
+      --gds-card-background-color: transparent;
     }
     .variation-4 {
       padding: 40px;
-      --card-border-radius: 0;
+      --gds-card-border-radius: 0;
     }
   </style>
   <p>
