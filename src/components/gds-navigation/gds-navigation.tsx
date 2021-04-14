@@ -35,6 +35,7 @@ export class GdsNavigation {
 
   private contentId: string
   private contentEl: HTMLDivElement
+  private hamburgerEl: HTMLButtonElement
 
   /**
    * Used to hide slots if they are empty:
@@ -54,8 +55,9 @@ export class GdsNavigation {
     }
 
     switch (event.key) {
-      case 'Esc':
+      case 'Escape':
         this.closeHamburgerMenu()
+        this.hamburgerEl.focus();
         break
       case 'Tab':
         if (!this.contentEl.contains(event.target as Node)) {
@@ -113,6 +115,7 @@ export class GdsNavigation {
               aria-controls={this.contentId}
               aria-expanded={this.open ? 'true' : 'false'}
               aria-label={this.accessibleHamburgerLabel}
+              ref={el => (this.hamburgerEl = el as HTMLButtonElement)}
             >
               <slot name="menu-icon"></slot>
               <slot name="close-menu-icon"></slot>
