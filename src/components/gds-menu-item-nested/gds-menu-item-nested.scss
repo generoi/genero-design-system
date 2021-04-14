@@ -73,7 +73,7 @@
 // Mobile and tablet behaves a bit differently
 @include mobileAndTablet {
   :host([active]) .menu-item {
-    background-color: var(--gds-menu-item-background-color-active, var(--background-color-primary));
+    background-color: var(--gds-menu-item-background-color-active, var(--color-ui-background-01));
   }
 
   .submenu {

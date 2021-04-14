@@ -6,13 +6,6 @@
 
 :root {
   /* Colors */
-  --color-primary: var(--color-ui-03);
-  --color-secondary: var(--color-ui-04);
-  --border-color-light: #dddddd;
-  --background-color-primary: var(--color-ui-background-01);
-  --background-color-secondary: var(--color-ui-background-02);
-  --text-color-primary: var(--color-black);
-
   --color-white: #ffffff;
   --color-black: #333031;
   --color-ui-background-01: #eeeeee;
@@ -40,8 +33,8 @@
 
   /* Body */
   --body-font-family: Gilroy, Arial, Helvetica, sans-serif;
-  --body-background-color: var(--background-color-primary);
-  --body-text-color: var(--text-color-primary);
+  --body-background-color: var(--color-ui-background-01);
+  --body-text-color: var(--color-black);
 
   /* Headings */
   --heading-font-family: Gilroy, Arial, Helvetica, sans-serif;
@@ -237,7 +230,7 @@
   /* Menu */
   --gds-menu-text-align: left;
   --gds-menu-justify-content: flex-start;
-  --gds-menu-item-background-color-active: var(--background-color-primary);
+  --gds-menu-item-background-color-active: var(--color-ui-background-01);
   --gds-menu-link-outline-focus: var(--gds-global-outline-focus);
   // By default this is visible on desktop and hidden on mobile.
   // --gds-menu-item-underline-active: underline;
@@ -300,12 +293,12 @@
   --logo-grid-item-desktop-size: 336px;
   --logo-grid-item-tablet-size: 180px;
   --logo-grid-item-mobile-size: 180px;
-  --logo-grid-item-border-color: var(--border-color-light);
+  --logo-grid-item-border-color: #ddd;
   --logo-grid-item-padding: 15%;
 
   /* Icon */
-  --icon-color: var(--text-color-primary);
-  --icon-color-hover: var(--text-color-primary);
+  --icon-color: var(--color-black);
+  --icon-color-hover: var(--color-ui-01);
   --icon-font-size: var(--paragraph-m-font-size);
 
   /* Accordion */
@@ -340,7 +333,7 @@
   --gds-input-padding: var(--spacing-xs) var(--spacing-s) calc(var(--spacing-xs) - 0.15em) var(--spacing-s);
 
   /* Hint */
-  --gds-hint-color: var(--body-text-color);
+  --gds-hint-color: var(--color-black);
   --gds-hint-background: var(--color-white);
   --gds-hint-border: 1px solid var(--color-ui-01);
   --gds-hint-border-radius: 4px 4px 4px 0;
