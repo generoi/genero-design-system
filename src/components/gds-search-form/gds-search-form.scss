@@ -100,6 +100,7 @@ form {
   }
 
   svg {
+    fill: currentColor;
     width: 1em;
     height: 1em;
     display: block;
@@ -146,7 +147,7 @@ form {
 
     [type="submit"] {
       z-index: 2;
-      color: var(--gds-color-black);
+      color: var(--gds-search-form-icon-color);
       padding-right: var(--gds-spacing-2xs);
     }
   }
