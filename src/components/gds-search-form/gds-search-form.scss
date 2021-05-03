@@ -185,7 +185,9 @@ form {
     }
   }
 }
-
+:host([floating]) {
+  margin-top: -1em;
+}
 :host([floating][collapsed]) {
   position: relative;
   width: calc(
