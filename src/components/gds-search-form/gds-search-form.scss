@@ -81,7 +81,7 @@ form {
   z-index: 0;
 
   cursor: pointer;
-  color: var(--gds-color-black);
+  color: currentColor;
   padding: var(--gds-search-form-button-padding);
   width: var(--gds-search-form-button-width);
   box-sizing: border-box;
