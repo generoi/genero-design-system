@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.1](https://github.com/generoi/genero-design-system/compare/v4.0.0-beta.0...v4.0.0-beta.1) (2021-05-03)
+
+
+### Bug Fixes
+
+* **gds-search-form:** remove hard-coded color value ([369d7d0](https://github.com/generoi/genero-design-system/commit/369d7d04626a41da2f715458a5c1a858f07d292a))
+* **search-form:** fix positioning of floating search ([b1cfb80](https://github.com/generoi/genero-design-system/commit/b1cfb803d563cfdb5ba334e111f16b01e4ec9ef2))
+* **search-form:** remove hard-coded color ([3262a05](https://github.com/generoi/genero-design-system/commit/3262a052a0c8706dab3d97683548cb1ed00aa7da))
+
 ## [4.0.0-beta.0](https://github.com/generoi/genero-design-system/compare/v3.13.1...v4.0.0-beta.0) (2021-04-14)
 
 
