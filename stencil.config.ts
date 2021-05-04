@@ -4,6 +4,7 @@ import { postcss } from '@stencil/postcss';
 import { reactOutputTarget } from '@stencil/react-output-target'
 import { inlineSvg } from 'stencil-inline-svg';
 import autoprefixer from 'autoprefixer';
+import { generateCustomElements } from './generate-custom-elements';
 
 export const config: Config = {
   namespace: 'gds',
@@ -22,6 +23,10 @@ export const config: Config = {
     },
     {
       type: 'docs-readme',
+    },
+    {
+      type: 'docs-custom',
+      generator: generateCustomElements,
     },
     {
       type: 'www',
