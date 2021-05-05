@@ -5,9 +5,6 @@ module.exports = {
   addons: [
     {
       name: '@storybook/addon-essentials',
-      options: {
-        backgrounds: false,
-      }
     },
     '@storybook/preset-scss',
     '@storybook/addon-controls',
