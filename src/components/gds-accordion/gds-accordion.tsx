@@ -19,7 +19,7 @@ export class GdsAccordion {
   /**
    * Opens automatically when hovered (desktop only).
    */
-  @Prop() openOnHover: boolean
+  @Prop() openOnHover: boolean = false
 
   /**
    * Content floats.

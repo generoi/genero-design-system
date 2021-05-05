@@ -24,6 +24,7 @@
                     "name": "openOnHover",
                     "description": "Opens automatically when hovered (desktop only).",
                     "type": "boolean",
+                    "default": "false",
                     "attribute": "open-on-hover"
                 }
             ],
@@ -43,7 +44,8 @@
                 {
                     "name": "openOnHover",
                     "description": "Opens automatically when hovered (desktop only).",
-                    "type": "boolean"
+                    "type": "boolean",
+                    "default": "false"
                 }
             ],
             "events": [],
