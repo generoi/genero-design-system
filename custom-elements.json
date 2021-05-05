@@ -24,7 +24,6 @@
                     "name": "openOnHover",
                     "description": "Opens automatically when hovered (desktop only).",
                     "type": "boolean",
-                    "default": "false",
                     "attribute": "open-on-hover"
                 }
             ],
@@ -44,30 +43,14 @@
                 {
                     "name": "openOnHover",
                     "description": "Opens automatically when hovered (desktop only).",
-                    "type": "boolean",
-                    "default": "false"
+                    "type": "boolean"
                 }
             ],
             "events": [],
             "methods": [],
-            "slots": [
-                {
-                    "name": "icon-collapse",
-                    "description": "icon for closing"
-                }
-            ],
-            "cssProperties": [
-                {
-                    "name": "--gds-accordion-color",
-                    "description": "color of accordion"
-                }
-            ],
-            "cssParts": [
-                {
-                    "name": "top",
-                    "description": "accordion head"
-                }
-            ]
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
         },
         {
             "name": "gds-button",
