@@ -11,7 +11,8 @@ on:
 
 jobs:
   deploy:
-    if: ${{ github.actor != 'dependabot[bot]' }}
+    # Skip PRs by dependabot and on foreign forks.
+    if: ${{ github.actor != 'dependabot[bot]' && github.repository == 'generoi/genero-design-system' }}
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
