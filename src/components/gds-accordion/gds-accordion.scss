@@ -1,5 +1,18 @@
 @use "../../styles/breakpoints" as *;
-
+/**
+ * @prop --gds-accordion-color:
+ * @prop --gds-accordion-background:
+ * @prop --gds-accordion-border:
+ * @prop --gds-accordion-border-radius:
+ * @prop --gds-accordion-box-shadow:
+ * @prop --gds-accordion-content-background:
+ * @prop --gds-accordion-padding:
+ * @prop --gds-accordion-justify-content:
+ * @prop --gds-accordion-header-padding:
+ * @prop --gds-accordion-outline-focus:
+ * @prop --gds-accordion-heading-margin-left:
+ * @prop --gds-accordion-expanded-header-background:
+ */
 .accordion {
   color: var(--gds-accordion-color, inherit);
   background: var(--gds-accordion-background, var(--gds-color-white));

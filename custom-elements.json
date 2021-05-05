@@ -48,8 +48,74 @@
             ],
             "events": [],
             "methods": [],
-            "slots": [],
-            "cssProperties": [],
+            "slots": [
+                {
+                    "name": "content",
+                    "description": "the hidden part of the accordion"
+                },
+                {
+                    "name": "icon-collapse",
+                    "description": ""
+                },
+                {
+                    "name": "icon-expand",
+                    "description": ""
+                },
+                {
+                    "name": "label",
+                    "description": "the heading part of the accordion"
+                }
+            ],
+            "cssProperties": [
+                {
+                    "name": "--gds-accordion-background",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-border",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-border-radius",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-box-shadow",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-color",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-content-background",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-expanded-header-background",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-header-padding",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-heading-margin-left",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-justify-content",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-outline-focus",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-padding",
+                    "description": ""
+                }
+            ],
             "cssParts": []
         },
         {
