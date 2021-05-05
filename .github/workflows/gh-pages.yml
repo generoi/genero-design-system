@@ -3,10 +3,11 @@ on:
   push:
     branches:
       - master
-      # @todo remove once merged
-      - a11y
     tags:
       - 'v*.*.0'
+  pull_request:
+    branches:
+      - master
 
 jobs:
   deploy:
