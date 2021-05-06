@@ -5,6 +5,10 @@ let idCounter = 0
 
 /**
  * This is an accordion.
+ * @slot label - the heading part of the accordion
+ * @slot icon-collapse
+ * @slot icon-expand
+ * @slot content - the hidden part of the accordion
  */
 @Component({
   tag: 'gds-accordion',

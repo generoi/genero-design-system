@@ -90,6 +90,5 @@
   },
   "storybook-deployer": {
     "commitMessage": "docs: deploy storybook to gitHub pages"
-  },
-  "dependencies": {}
+  }
 }

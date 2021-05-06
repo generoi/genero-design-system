@@ -1,0 +1,1556 @@
+{
+    "version": "experimental",
+    "tags": [
+        {
+            "name": "gds-accordion",
+            "path": "./src/components/gds-accordion/gds-accordion.tsx",
+            "description": "This is an accordion.",
+            "properties": [
+                {
+                    "name": "contentFloats",
+                    "description": "Content floats.",
+                    "type": "boolean",
+                    "default": "false",
+                    "attribute": "content-floats"
+                },
+                {
+                    "name": "expanded",
+                    "description": "Keeps track of when the user has actively collapsed or expanded the accordion.",
+                    "type": "boolean",
+                    "default": "false",
+                    "attribute": "expanded"
+                },
+                {
+                    "name": "openOnHover",
+                    "description": "Opens automatically when hovered (desktop only).",
+                    "type": "boolean",
+                    "attribute": "open-on-hover"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "contentFloats",
+                    "description": "Content floats.",
+                    "type": "boolean",
+                    "default": "false"
+                },
+                {
+                    "name": "expanded",
+                    "description": "Keeps track of when the user has actively collapsed or expanded the accordion.",
+                    "type": "boolean",
+                    "default": "false"
+                },
+                {
+                    "name": "openOnHover",
+                    "description": "Opens automatically when hovered (desktop only).",
+                    "type": "boolean"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [
+                {
+                    "name": "content",
+                    "description": "the hidden part of the accordion"
+                },
+                {
+                    "name": "icon-collapse",
+                    "description": ""
+                },
+                {
+                    "name": "icon-expand",
+                    "description": ""
+                },
+                {
+                    "name": "label",
+                    "description": "the heading part of the accordion"
+                }
+            ],
+            "cssProperties": [
+                {
+                    "name": "--gds-accordion-background",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-border",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-border-radius",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-box-shadow",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-color",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-content-background",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-expanded-header-background",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-header-padding",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-heading-margin-left",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-justify-content",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-outline-focus",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-padding",
+                    "description": ""
+                }
+            ],
+            "cssParts": []
+        },
+        {
+            "name": "gds-button",
+            "path": "./src/components/gds-button/gds-button.tsx",
+            "description": "This is a button with optional left and right icons.\nNOTE: Should we have a separate button like anchor link component?",
+            "properties": [
+                {
+                    "name": "disabled",
+                    "description": "",
+                    "type": "boolean",
+                    "default": "false",
+                    "attribute": "disabled"
+                },
+                {
+                    "name": "leftIcon",
+                    "description": "Left side icon with a font.\nhttps://www.martinstoeckli.ch/fontmap/fontmap.html",
+                    "type": "string",
+                    "attribute": "left-icon"
+                },
+                {
+                    "name": "leftIconRotate",
+                    "description": "",
+                    "type": "number",
+                    "attribute": "left-icon-rotate"
+                },
+                {
+                    "name": "rightIcon",
+                    "description": "Right side icon with a font.",
+                    "type": "string",
+                    "attribute": "right-icon"
+                },
+                {
+                    "name": "rightIconRotate",
+                    "description": "",
+                    "type": "number",
+                    "attribute": "right-icon-rotate"
+                },
+                {
+                    "name": "size",
+                    "description": "Button size.",
+                    "type": "string",
+                    "default": "'m'",
+                    "attribute": "size"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "disabled",
+                    "description": "",
+                    "type": "boolean",
+                    "default": "false"
+                },
+                {
+                    "name": "leftIcon",
+                    "description": "Left side icon with a font.\nhttps://www.martinstoeckli.ch/fontmap/fontmap.html",
+                    "type": "string"
+                },
+                {
+                    "name": "leftIconRotate",
+                    "description": "",
+                    "type": "number"
+                },
+                {
+                    "name": "rightIcon",
+                    "description": "Right side icon with a font.",
+                    "type": "string"
+                },
+                {
+                    "name": "rightIconRotate",
+                    "description": "",
+                    "type": "number"
+                },
+                {
+                    "name": "size",
+                    "description": "Button size.",
+                    "type": "string",
+                    "default": "'m'"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-card",
+            "path": "./src/components/gds-card/gds-card.tsx",
+            "description": "A card that renders content in a container that has\nwhite background and border shadows. Comes without padding by default.",
+            "properties": [],
+            "attributes": [],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-google-maps",
+            "path": "./src/components/gds-google-maps/gds-google-maps.tsx",
+            "description": "Displays Google Maps.\n\nInspired by: https://www.joshmorony.com/creating-a-google-maps-web-component-with-stencil/",
+            "properties": [
+                {
+                    "name": "apiKey",
+                    "description": "API key from GCP.",
+                    "type": "string",
+                    "attribute": "api-key"
+                },
+                {
+                    "name": "initialMarker",
+                    "description": "Add marker to the initial center.",
+                    "type": "boolean",
+                    "default": "false",
+                    "attribute": "initial-marker"
+                },
+                {
+                    "name": "lat",
+                    "description": "Latitude.",
+                    "type": "string",
+                    "default": "'60.169281'",
+                    "attribute": "lat"
+                },
+                {
+                    "name": "lng",
+                    "description": "Longitude.",
+                    "type": "string",
+                    "default": "'24.941480'",
+                    "attribute": "lng"
+                },
+                {
+                    "name": "zoom",
+                    "description": "Zoom level for maps.",
+                    "type": "number",
+                    "default": "15",
+                    "attribute": "zoom"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "apiKey",
+                    "description": "API key from GCP.",
+                    "type": "string"
+                },
+                {
+                    "name": "initialMarker",
+                    "description": "Add marker to the initial center.",
+                    "type": "boolean",
+                    "default": "false"
+                },
+                {
+                    "name": "lat",
+                    "description": "Latitude.",
+                    "type": "string",
+                    "default": "'60.169281'"
+                },
+                {
+                    "name": "lng",
+                    "description": "Longitude.",
+                    "type": "string",
+                    "default": "'24.941480'"
+                },
+                {
+                    "name": "zoom",
+                    "description": "Zoom level for maps.",
+                    "type": "number",
+                    "default": "15"
+                }
+            ],
+            "events": [
+                {
+                    "name": "ready",
+                    "description": "Emits Google Maps SDK once map is loaded."
+                }
+            ],
+            "methods": [
+                {
+                    "name": "addMarker",
+                    "description": ""
+                }
+            ],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-hamburger",
+            "path": "./src/components/gds-hamburger/gds-hamburger.tsx",
+            "description": "",
+            "properties": [
+                {
+                    "name": "accessibleLabel",
+                    "description": "",
+                    "type": "string",
+                    "attribute": "accessible-label"
+                },
+                {
+                    "name": "active",
+                    "description": "",
+                    "type": "boolean",
+                    "default": "false",
+                    "attribute": "active"
+                },
+                {
+                    "name": "label",
+                    "description": "",
+                    "type": "string",
+                    "attribute": "label"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "accessibleLabel",
+                    "description": "",
+                    "type": "string"
+                },
+                {
+                    "name": "active",
+                    "description": "",
+                    "type": "boolean",
+                    "default": "false"
+                },
+                {
+                    "name": "label",
+                    "description": "",
+                    "type": "string"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-heading",
+            "path": "./src/components/gds-heading/gds-heading.tsx",
+            "description": "",
+            "properties": [
+                {
+                    "name": "as",
+                    "description": "Render the heading as a h element for SEO purposes.\n\nThose h element should be visible to GoogleBot:\nhttps://www.searchenginejournal.com/shadow-dom/353644/",
+                    "type": "string",
+                    "attribute": "as"
+                },
+                {
+                    "name": "size",
+                    "description": "Size of the heading.",
+                    "type": "string",
+                    "default": "'m'",
+                    "attribute": "size"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "as",
+                    "description": "Render the heading as a h element for SEO purposes.\n\nThose h element should be visible to GoogleBot:\nhttps://www.searchenginejournal.com/shadow-dom/353644/",
+                    "type": "string"
+                },
+                {
+                    "name": "size",
+                    "description": "Size of the heading.",
+                    "type": "string",
+                    "default": "'m'"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-hint",
+            "path": "./src/components/gds-hint/gds-hint.tsx",
+            "description": "A component for diplaying hints when clicking an icon.\n\nTODO: Dynamically position the popup box so that it doesn't overflow the viewport.",
+            "properties": [],
+            "attributes": [],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-icon",
+            "path": "./src/components/gds-icon/gds-icon.tsx",
+            "description": "Wraps Font Awesome icons.\n\nThere is a small problem with Fontawesome and shadow dom. So when you load the fontawesome script\nin the top of the page, it won't be able to access the icon inside the shadow dom and thus won't be\nable to display the icon. So there are two options I think:\n\n1) Use icons via slots. Then the fontawesome script can properly transform the i elements to svgs.\n2) Investigate how to use this inside gds-icon:\nhttps://fontawesome.com/how-to-use/on-the-web/advanced/svg-javascript-core",
+            "properties": [
+                {
+                    "name": "accessibleLabel",
+                    "description": "Accessible Label",
+                    "type": "string",
+                    "attribute": "accessible-label"
+                },
+                {
+                    "name": "class",
+                    "description": "Style overrides.",
+                    "type": "string",
+                    "attribute": "class"
+                },
+                {
+                    "name": "duotone",
+                    "description": "",
+                    "type": "boolean",
+                    "attribute": "duotone"
+                },
+                {
+                    "name": "light",
+                    "description": "",
+                    "type": "boolean",
+                    "attribute": "light"
+                },
+                {
+                    "name": "name",
+                    "description": "FA icon name.",
+                    "type": "string",
+                    "attribute": "name"
+                },
+                {
+                    "name": "regular",
+                    "description": "FA icon style. Only use one style.",
+                    "type": "boolean",
+                    "attribute": "regular"
+                },
+                {
+                    "name": "solid",
+                    "description": "",
+                    "type": "boolean",
+                    "attribute": "solid"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "accessibleLabel",
+                    "description": "Accessible Label",
+                    "type": "string"
+                },
+                {
+                    "name": "class",
+                    "description": "Style overrides.",
+                    "type": "string"
+                },
+                {
+                    "name": "duotone",
+                    "description": "",
+                    "type": "boolean"
+                },
+                {
+                    "name": "light",
+                    "description": "",
+                    "type": "boolean"
+                },
+                {
+                    "name": "name",
+                    "description": "FA icon name.",
+                    "type": "string"
+                },
+                {
+                    "name": "regular",
+                    "description": "FA icon style. Only use one style.",
+                    "type": "boolean"
+                },
+                {
+                    "name": "solid",
+                    "description": "",
+                    "type": "boolean"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-input-wrapper",
+            "path": "./src/components/gds-input-wrapper/gds-input-wrapper.tsx",
+            "description": "A wrapper component for input/textarea that handles labels, hints, and errors.\n\nInput and textarea are slotted so that these native elements can be used with all of their\nbuilt-in events and functionality.\n\nInspired by: https://blog.usejournal.com/extending-html-inputs-in-a-framework-agnostic-way-with-web-components-9227532b6139",
+            "properties": [
+                {
+                    "name": "error",
+                    "description": "TODO: Add this feature.",
+                    "type": "string",
+                    "attribute": "error"
+                },
+                {
+                    "name": "hideLabelVisually",
+                    "description": "Visually hide the label",
+                    "type": "boolean",
+                    "default": "false",
+                    "attribute": "hide-label-visually"
+                },
+                {
+                    "name": "label",
+                    "description": "Display the label above the input element.",
+                    "type": "string",
+                    "attribute": "label"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "error",
+                    "description": "TODO: Add this feature.",
+                    "type": "string"
+                },
+                {
+                    "name": "hideLabelVisually",
+                    "description": "Visually hide the label",
+                    "type": "boolean",
+                    "default": "false"
+                },
+                {
+                    "name": "label",
+                    "description": "Display the label above the input element.",
+                    "type": "string"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-label",
+            "path": "./src/components/gds-label/gds-label.tsx",
+            "description": "",
+            "properties": [
+                {
+                    "name": "color",
+                    "description": "Text color.\nTODO: Implement the color custom variable scheme.",
+                    "type": "string",
+                    "attribute": "color"
+                },
+                {
+                    "name": "size",
+                    "description": "Size of the label.",
+                    "type": "string",
+                    "default": "'m'",
+                    "attribute": "size"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "color",
+                    "description": "Text color.\nTODO: Implement the color custom variable scheme.",
+                    "type": "string"
+                },
+                {
+                    "name": "size",
+                    "description": "Size of the label.",
+                    "type": "string",
+                    "default": "'m'"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-link",
+            "path": "./src/components/gds-link/gds-link.tsx",
+            "description": "",
+            "properties": [
+                {
+                    "name": "accessibleLabel",
+                    "description": "Accessible label.",
+                    "type": "string",
+                    "attribute": "accessible-label"
+                },
+                {
+                    "name": "block",
+                    "description": "Block element.",
+                    "type": "boolean",
+                    "attribute": "block"
+                },
+                {
+                    "name": "full",
+                    "description": "Expand across container.",
+                    "type": "boolean",
+                    "attribute": "full"
+                },
+                {
+                    "name": "href",
+                    "description": "Link url.",
+                    "type": "string",
+                    "attribute": "href"
+                },
+                {
+                    "name": "rel",
+                    "description": "Link rel. (can be used for nofollow, sponsored etc.)",
+                    "type": "string",
+                    "attribute": "rel"
+                },
+                {
+                    "name": "target",
+                    "description": "Link open target.",
+                    "type": "string",
+                    "attribute": "target"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "accessibleLabel",
+                    "description": "Accessible label.",
+                    "type": "string"
+                },
+                {
+                    "name": "block",
+                    "description": "Block element.",
+                    "type": "boolean"
+                },
+                {
+                    "name": "full",
+                    "description": "Expand across container.",
+                    "type": "boolean"
+                },
+                {
+                    "name": "href",
+                    "description": "Link url.",
+                    "type": "string"
+                },
+                {
+                    "name": "rel",
+                    "description": "Link rel. (can be used for nofollow, sponsored etc.)",
+                    "type": "string"
+                },
+                {
+                    "name": "target",
+                    "description": "Link open target.",
+                    "type": "string"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-logo-grid",
+            "path": "./src/components/gds-logo-grid/gds-logo-grid.tsx",
+            "description": "",
+            "properties": [],
+            "attributes": [],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-logo-grid-item",
+            "path": "./src/components/gds-logo-grid-item/gds-logo-grid-item.tsx",
+            "description": "This component takes as much space as the parent grid allows.\nThe image is displayed in the center with relative margins.",
+            "properties": [
+                {
+                    "name": "accessibleLabel",
+                    "description": "Accessible label.",
+                    "type": "string",
+                    "attribute": "accessible-label"
+                },
+                {
+                    "name": "alt",
+                    "description": "Image alternative text.\nDefaults to \"\" which makes it decorative only.",
+                    "type": "string",
+                    "default": "''",
+                    "attribute": "alt"
+                },
+                {
+                    "name": "href",
+                    "description": "If defined, the logo will be a link.",
+                    "type": "string",
+                    "attribute": "href"
+                },
+                {
+                    "name": "imageUrl",
+                    "description": "Image url.",
+                    "type": "string",
+                    "attribute": "image-url"
+                },
+                {
+                    "name": "target",
+                    "description": "Link open target.",
+                    "type": "string",
+                    "attribute": "target"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "accessibleLabel",
+                    "description": "Accessible label.",
+                    "type": "string"
+                },
+                {
+                    "name": "alt",
+                    "description": "Image alternative text.\nDefaults to \"\" which makes it decorative only.",
+                    "type": "string",
+                    "default": "''"
+                },
+                {
+                    "name": "href",
+                    "description": "If defined, the logo will be a link.",
+                    "type": "string"
+                },
+                {
+                    "name": "imageUrl",
+                    "description": "Image url.",
+                    "type": "string"
+                },
+                {
+                    "name": "target",
+                    "description": "Link open target.",
+                    "type": "string"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-media-card",
+            "path": "./src/components/gds-media-card/gds-media-card.tsx",
+            "description": "Media Card component.\n\nTODO: Implement a gds-image component that implements <picture> and srcset etc.",
+            "properties": [
+                {
+                    "name": "accessibleLabel",
+                    "description": "",
+                    "type": "string",
+                    "attribute": "accessible-label"
+                },
+                {
+                    "name": "description",
+                    "description": "",
+                    "type": "string",
+                    "attribute": "description"
+                },
+                {
+                    "name": "headline",
+                    "description": "Title for the card (note: title is a reserved word).",
+                    "type": "string",
+                    "attribute": "headline"
+                },
+                {
+                    "name": "href",
+                    "description": "If defined, the card will be a link.",
+                    "type": "string",
+                    "attribute": "href"
+                },
+                {
+                    "name": "imageAlt",
+                    "description": "Image alt.\nDefaults to \"\" representing a decorative image.",
+                    "type": "string",
+                    "default": "''",
+                    "attribute": "image-alt"
+                },
+                {
+                    "name": "imageUrl",
+                    "description": "Image url.",
+                    "type": "string",
+                    "attribute": "image-url"
+                },
+                {
+                    "name": "overlay",
+                    "description": "Overlay.",
+                    "type": "boolean",
+                    "attribute": "overlay"
+                },
+                {
+                    "name": "overlayEffect",
+                    "description": "Overlay effect.",
+                    "type": "string",
+                    "attribute": "overlay-effect"
+                },
+                {
+                    "name": "superimposedBottom",
+                    "description": "",
+                    "type": "number",
+                    "attribute": "superimposed-bottom"
+                },
+                {
+                    "name": "superimposedLeft",
+                    "description": "",
+                    "type": "number",
+                    "attribute": "superimposed-left"
+                },
+                {
+                    "name": "superimposedRight",
+                    "description": "",
+                    "type": "number",
+                    "attribute": "superimposed-right"
+                },
+                {
+                    "name": "superimposedTop",
+                    "description": "superimpose image overflow amount in pixels.",
+                    "type": "number",
+                    "attribute": "superimposed-top"
+                },
+                {
+                    "name": "superimposedUrl",
+                    "description": "superimpose image url.",
+                    "type": "string",
+                    "attribute": "superimposed-url"
+                },
+                {
+                    "name": "target",
+                    "description": "Link open target.",
+                    "type": "string",
+                    "attribute": "target"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "accessibleLabel",
+                    "description": "",
+                    "type": "string"
+                },
+                {
+                    "name": "description",
+                    "description": "",
+                    "type": "string"
+                },
+                {
+                    "name": "headline",
+                    "description": "Title for the card (note: title is a reserved word).",
+                    "type": "string"
+                },
+                {
+                    "name": "href",
+                    "description": "If defined, the card will be a link.",
+                    "type": "string"
+                },
+                {
+                    "name": "imageAlt",
+                    "description": "Image alt.\nDefaults to \"\" representing a decorative image.",
+                    "type": "string",
+                    "default": "''"
+                },
+                {
+                    "name": "imageUrl",
+                    "description": "Image url.",
+                    "type": "string"
+                },
+                {
+                    "name": "overlay",
+                    "description": "Overlay.",
+                    "type": "boolean"
+                },
+                {
+                    "name": "overlayEffect",
+                    "description": "Overlay effect.",
+                    "type": "string"
+                },
+                {
+                    "name": "superimposedBottom",
+                    "description": "",
+                    "type": "number"
+                },
+                {
+                    "name": "superimposedLeft",
+                    "description": "",
+                    "type": "number"
+                },
+                {
+                    "name": "superimposedRight",
+                    "description": "",
+                    "type": "number"
+                },
+                {
+                    "name": "superimposedTop",
+                    "description": "superimpose image overflow amount in pixels.",
+                    "type": "number"
+                },
+                {
+                    "name": "superimposedUrl",
+                    "description": "superimpose image url.",
+                    "type": "string"
+                },
+                {
+                    "name": "target",
+                    "description": "Link open target.",
+                    "type": "string"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-menu",
+            "path": "./src/components/gds-menu/gds-menu.tsx",
+            "description": "This component can be used in on a webpage direct with good SEO since anchors are rendered outside of the component.",
+            "properties": [
+                {
+                    "name": "direction",
+                    "description": "Direction: \"horizontal\" or \"vertial\".\nDefaults to \"vertical\".",
+                    "type": "string",
+                    "attribute": "direction"
+                },
+                {
+                    "name": "role",
+                    "description": "Aria role\nDefaults to \"\".",
+                    "type": "string",
+                    "attribute": "role"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "direction",
+                    "description": "Direction: \"horizontal\" or \"vertial\".\nDefaults to \"vertical\".",
+                    "type": "string"
+                },
+                {
+                    "name": "role",
+                    "description": "Aria role\nDefaults to \"\".",
+                    "type": "string"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-menu-item",
+            "path": "./src/components/gds-menu-item/gds-menu-item.tsx",
+            "description": "",
+            "properties": [
+                {
+                    "name": "active",
+                    "description": "Is menu item appear active.",
+                    "type": "boolean",
+                    "attribute": "active"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "active",
+                    "description": "Is menu item appear active.",
+                    "type": "boolean"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-menu-item-nested",
+            "path": "./src/components/gds-menu-item-nested/gds-menu-item-nested.tsx",
+            "description": "",
+            "properties": [
+                {
+                    "name": "accessibleLabel",
+                    "description": "Accessible label of the submenu.\nDefaults to textContent of the link slot.",
+                    "type": "string",
+                    "attribute": "accessible-label"
+                },
+                {
+                    "name": "active",
+                    "description": "Is menu item appear active.",
+                    "type": "boolean",
+                    "attribute": "active"
+                },
+                {
+                    "name": "expanded",
+                    "description": "Keeps track of when the user has actively collapsed or expanded the submenu.",
+                    "type": "boolean",
+                    "default": "false",
+                    "attribute": "expanded"
+                },
+                {
+                    "name": "submenuIcon",
+                    "description": "Submenu icon.",
+                    "type": "string",
+                    "attribute": "submenu-icon"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "accessibleLabel",
+                    "description": "Accessible label of the submenu.\nDefaults to textContent of the link slot.",
+                    "type": "string"
+                },
+                {
+                    "name": "active",
+                    "description": "Is menu item appear active.",
+                    "type": "boolean"
+                },
+                {
+                    "name": "expanded",
+                    "description": "Keeps track of when the user has actively collapsed or expanded the submenu.",
+                    "type": "boolean",
+                    "default": "false"
+                },
+                {
+                    "name": "submenuIcon",
+                    "description": "Submenu icon.",
+                    "type": "string"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-navigation",
+            "path": "./src/components/gds-navigation/gds-navigation.tsx",
+            "description": "gds-navigation takes 4 slots: logo, menu, mobile-extensions, and desktop-extensions.\nThis component can be used in on a webpage direct with good SEO since anchors are rendered outside of the component.",
+            "properties": [
+                {
+                    "name": "accessibleHamburgerLabel",
+                    "description": "Accessible label for the hamburger menu",
+                    "type": "string",
+                    "attribute": "accessible-hamburger-label"
+                },
+                {
+                    "name": "accessibleNavigationLabel",
+                    "description": "Accessible name for the inner navigation",
+                    "type": "string",
+                    "attribute": "accessible-navigation-label"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "accessibleHamburgerLabel",
+                    "description": "Accessible label for the hamburger menu",
+                    "type": "string"
+                },
+                {
+                    "name": "accessibleNavigationLabel",
+                    "description": "Accessible name for the inner navigation",
+                    "type": "string"
+                }
+            ],
+            "events": [],
+            "methods": [
+                {
+                    "name": "closeMenu",
+                    "description": ""
+                }
+            ],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-paragraph",
+            "path": "./src/components/gds-paragraph/gds-paragraph.tsx",
+            "description": "Paragraph element with different sizes.",
+            "properties": [
+                {
+                    "name": "class",
+                    "description": "Use to override p element's style.",
+                    "type": "string",
+                    "attribute": "class"
+                },
+                {
+                    "name": "size",
+                    "description": "Size of the text.",
+                    "type": "string",
+                    "default": "'m'",
+                    "attribute": "size"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "class",
+                    "description": "Use to override p element's style.",
+                    "type": "string"
+                },
+                {
+                    "name": "size",
+                    "description": "Size of the text.",
+                    "type": "string",
+                    "default": "'m'"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-search-form",
+            "path": "./src/components/gds-search-form/gds-search-form.tsx",
+            "description": "",
+            "properties": [
+                {
+                    "name": "accessibleInputLabel",
+                    "description": "",
+                    "type": "string",
+                    "default": "'Search'",
+                    "attribute": "accessible-input-label"
+                },
+                {
+                    "name": "accessibleSubmitLabel",
+                    "description": "",
+                    "type": "string",
+                    "default": "'Search'",
+                    "attribute": "accessible-submit-label"
+                },
+                {
+                    "name": "action",
+                    "description": "",
+                    "type": "string",
+                    "attribute": "action"
+                },
+                {
+                    "name": "collapseOn",
+                    "description": "",
+                    "type": "string",
+                    "attribute": "collapse-on"
+                },
+                {
+                    "name": "collapsed",
+                    "description": "",
+                    "type": "boolean",
+                    "default": "false",
+                    "attribute": "collapsed"
+                },
+                {
+                    "name": "floating",
+                    "description": "",
+                    "type": "boolean",
+                    "default": "false",
+                    "attribute": "floating"
+                },
+                {
+                    "name": "placeholder",
+                    "description": "",
+                    "type": "string",
+                    "default": "'Search'",
+                    "attribute": "placeholder"
+                },
+                {
+                    "name": "query",
+                    "description": "",
+                    "type": "string",
+                    "default": "'s'",
+                    "attribute": "query"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "accessibleInputLabel",
+                    "description": "",
+                    "type": "string",
+                    "default": "'Search'"
+                },
+                {
+                    "name": "accessibleSubmitLabel",
+                    "description": "",
+                    "type": "string",
+                    "default": "'Search'"
+                },
+                {
+                    "name": "action",
+                    "description": "",
+                    "type": "string"
+                },
+                {
+                    "name": "collapseOn",
+                    "description": "",
+                    "type": "string"
+                },
+                {
+                    "name": "collapsed",
+                    "description": "",
+                    "type": "boolean",
+                    "default": "false"
+                },
+                {
+                    "name": "floating",
+                    "description": "",
+                    "type": "boolean",
+                    "default": "false"
+                },
+                {
+                    "name": "placeholder",
+                    "description": "",
+                    "type": "string",
+                    "default": "'Search'"
+                },
+                {
+                    "name": "query",
+                    "description": "",
+                    "type": "string",
+                    "default": "'s'"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-slider",
+            "path": "./src/components/gds-slider/gds-slider.tsx",
+            "description": "Simple slider that tries to look the same across different browsers.\n\nTODO: Add tickmars once there is proper support with custom appearance.",
+            "properties": [
+                {
+                    "name": "accessibleLabel",
+                    "description": "",
+                    "type": "string",
+                    "attribute": "accessible-label"
+                },
+                {
+                    "name": "max",
+                    "description": "",
+                    "type": "number",
+                    "attribute": "max"
+                },
+                {
+                    "name": "min",
+                    "description": "",
+                    "type": "number",
+                    "attribute": "min"
+                },
+                {
+                    "name": "value",
+                    "description": "",
+                    "type": "number",
+                    "attribute": "value"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "accessibleLabel",
+                    "description": "",
+                    "type": "string"
+                },
+                {
+                    "name": "max",
+                    "description": "",
+                    "type": "number"
+                },
+                {
+                    "name": "min",
+                    "description": "",
+                    "type": "number"
+                },
+                {
+                    "name": "value",
+                    "description": "",
+                    "type": "number"
+                }
+            ],
+            "events": [
+                {
+                    "name": "value-changed",
+                    "description": ""
+                }
+            ],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-submenu",
+            "path": "./src/components/gds-submenu/gds-submenu.tsx",
+            "description": "This component can be used in on a webpage direct with good SEO since anchors are rendered outside of the component.",
+            "properties": [
+                {
+                    "name": "role",
+                    "description": "Aria role",
+                    "type": "string",
+                    "attribute": "role"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "role",
+                    "description": "Aria role",
+                    "type": "string"
+                }
+            ],
+            "events": [
+                {
+                    "name": "close",
+                    "description": ""
+                }
+            ],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-tag",
+            "path": "./src/components/gds-tag/gds-tag.tsx",
+            "description": "",
+            "properties": [
+                {
+                    "name": "href",
+                    "description": "If defined, the tag will be a link.",
+                    "type": "string",
+                    "attribute": "href"
+                },
+                {
+                    "name": "target",
+                    "description": "Link open target.",
+                    "type": "string",
+                    "attribute": "target"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "href",
+                    "description": "If defined, the tag will be a link.",
+                    "type": "string"
+                },
+                {
+                    "name": "target",
+                    "description": "Link open target.",
+                    "type": "string"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-tag-group",
+            "path": "./src/components/gds-tag-group/gds-tag-group.tsx",
+            "description": "",
+            "properties": [],
+            "attributes": [],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-text",
+            "path": "./src/components/gds-text/gds-text.tsx",
+            "description": "Text element with different sizes.",
+            "properties": [
+                {
+                    "name": "size",
+                    "description": "Size of the text.",
+                    "type": "string",
+                    "default": "'m'",
+                    "attribute": "size"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "size",
+                    "description": "Size of the text.",
+                    "type": "string",
+                    "default": "'m'"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-text-button",
+            "path": "./src/components/gds-text-button/gds-text-button.tsx",
+            "description": "This is a button with optional left and right icons.\nNOTE: Should we have a separate button like anchor link component?",
+            "properties": [
+                {
+                    "name": "disabled",
+                    "description": "",
+                    "type": "boolean",
+                    "default": "false",
+                    "attribute": "disabled"
+                },
+                {
+                    "name": "leftIcon",
+                    "description": "Left side icon with a font.\nhttps://www.martinstoeckli.ch/fontmap/fontmap.html",
+                    "type": "string",
+                    "attribute": "left-icon"
+                },
+                {
+                    "name": "leftIconRotate",
+                    "description": "",
+                    "type": "number",
+                    "attribute": "left-icon-rotate"
+                },
+                {
+                    "name": "rightIcon",
+                    "description": "Right side icon with a font.",
+                    "type": "string",
+                    "attribute": "right-icon"
+                },
+                {
+                    "name": "rightIconRotate",
+                    "description": "",
+                    "type": "number",
+                    "attribute": "right-icon-rotate"
+                },
+                {
+                    "name": "size",
+                    "description": "Button size.",
+                    "type": "string",
+                    "default": "'m'",
+                    "attribute": "size"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "disabled",
+                    "description": "",
+                    "type": "boolean",
+                    "default": "false"
+                },
+                {
+                    "name": "leftIcon",
+                    "description": "Left side icon with a font.\nhttps://www.martinstoeckli.ch/fontmap/fontmap.html",
+                    "type": "string"
+                },
+                {
+                    "name": "leftIconRotate",
+                    "description": "",
+                    "type": "number"
+                },
+                {
+                    "name": "rightIcon",
+                    "description": "Right side icon with a font.",
+                    "type": "string"
+                },
+                {
+                    "name": "rightIconRotate",
+                    "description": "",
+                    "type": "number"
+                },
+                {
+                    "name": "size",
+                    "description": "Button size.",
+                    "type": "string",
+                    "default": "'m'"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-visually-hidden",
+            "path": "./src/components/gds-visually-hidden/gds-visually-hidden.tsx",
+            "description": "",
+            "properties": [
+                {
+                    "name": "focusable",
+                    "description": "",
+                    "type": "Boolean",
+                    "default": "false"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "focusable",
+                    "description": "",
+                    "type": "Boolean",
+                    "default": "false"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
+            "name": "gds-youtube-player",
+            "path": "./src/components/gds-youtube-player/gds-youtube-player.tsx",
+            "description": "YouTube Embedded iframe player.\n\nOptions: https://fernandosarachaga.com/en/youtube-how-to-configure-iframe-parameters/",
+            "properties": [
+                {
+                    "name": "accessibleLabel",
+                    "description": "Accessible Label",
+                    "type": "string",
+                    "attribute": "accessible-label"
+                },
+                {
+                    "name": "controls",
+                    "description": "Indicates whether the video player controls are displayed.",
+                    "type": "boolean",
+                    "default": "true",
+                    "attribute": "controls"
+                },
+                {
+                    "name": "videoId",
+                    "description": "Video ID",
+                    "type": "string",
+                    "attribute": "video-id"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "accessibleLabel",
+                    "description": "Accessible Label",
+                    "type": "string"
+                },
+                {
+                    "name": "controls",
+                    "description": "Indicates whether the video player controls are displayed.",
+                    "type": "boolean",
+                    "default": "true"
+                },
+                {
+                    "name": "videoId",
+                    "description": "Video ID",
+                    "type": "string"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [],
+            "cssProperties": [],
+            "cssParts": []
+        }
+    ]
+}
