@@ -45,3 +45,10 @@ jobs:
           publish_branch: gh-pages
           publish_dir: ./docs
           destination_dir: docs/${{ steps.release-version.outputs.tag }}
+          
+      - name: Add comment
+        if: ${{ github.event_name == 'pull_request' }}
+        uses: NejcZdovc/comment-pr@v1
+        with:
+          message: https;//gds.generogrowth.com/docs/${{ steps.release-version.outputs.tag }}
+          github_token: ${{secrets.GITHUB_TOKEN}}
