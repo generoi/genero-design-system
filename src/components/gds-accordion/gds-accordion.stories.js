@@ -6,258 +6,99 @@ export default {
   component: 'gds-accordion',
 }
 
-const Template = (args) => {
+const OptionsTemplate = (args, {argTypes}) => {
+  console.log(args, argTypes)
   return html`
-  <gds-accordion ?open-on-hover=${args.openOnHover} ?content-floats=${args.contentFloats} ?expanded=${args.expanded}>
-    <gds-label slot="label">title</gds-label>
+  <gds-accordion ?content-floats="${args.contentFloats}" ?open-on-hover="${args.openOnHover}" ?expanded=${args.expanded}>
+    <gds-label slot="label">Label</gds-label>
     <gds-icon slot="icon-collapse" name="caret-circle-up" regular></gds-icon>
     <gds-icon slot="icon-expand" name="caret-circle-down" regular></gds-icon>
     <div slot="content">
-      <gds-paragraph>content</gds-paragraph>
+      <gds-paragraph>Content</gds-paragraph>
     </div>
   </gds-accordion>
-  <gds-paragraph>sibling</gds-paragraph>
+  <p>If the accordion content floats this will be covered</p>
   <style>
   :root {
-    --gds-accordion-color:${args.gdsAccordionColor};
-    --gds-accordion-background:${args.gdsAccordionBackground};
-    --gds-accordion-border:${args.gdsAccordionBorder};
-    --gds-accordion-border-radius:${args.gdsAccordionBorderRadius};
-    --gds-accordion-box-shadow:${args.gdsAccordionBoxShadow};
-    --gds-accordion-content-background:${args.gdsAccordionContentBackground};
-    --gds-accordion-padding:${args.gdsAccordionPadding};
-    --gds-accordion-box-shadow:${args.gdsAccordionBoxShadow};
-    --gds-accordion-justify-content:${args.gdsAccordionJustifyContent};
-    --gds-accordion-header-padding:${args.gdsAccordionHeaderPadding};
-    --gds-accordion-outline-focus:${args.gdsAccordionOutlineFocus};
-    --gds-accordion-heading-margin-left:${args.gdsAccordionHeadingMarginLeft};
-    --gds-accordion-expanded-header-background:${args.gdsAccordionExpandedHeaderBackground};
+    --gds-accordion-background:${args['--gds-accordion-background']};
+    --gds-accordion-border:${args['--gds-accordion-border']};
+    --gds-accordion-border-radius:${args['--gds-accordion-border-radius']};
+    --gds-accordion-box-shadow:${args['--gds-accordion-box-shadow']};
+    --gds-accordion-color:${args['--gds-accordion-color']};
+    --gds-accordion-content-background:${args['--gds-accordion-content-background']};
+    --gds-accordion-expanded-header-background:${args['--gds-accordion-expanded-header-background']};
+    --gds-accordion-header-padding:${args['--gds-accordion-header-padding']};
+    --gds-accordion-heading-margin-left:${args['--gds-accordion-heading-margin-left']};
+    --gds-accordion-justify-content:${args['--gds-accordion-justify-content']};
+    --gds-accordion-outline-focus:${args['--gds-accordion-outline-focus']};
+    --gds-accordion-padding:${args['--gds-accordion-padding']};
   }
   </style>
-  `;
-};
-export const Options = Template.bind({});
-Options.args  = {
-  openOnHover: false,
-  contentFloats: false,
-  expanded: false,
-  slotLabel: '',
-  slotIconCollapse: '',
-  slotIconExpand: '',
-  slotContent: '',
-  gdsAccordionBackground: '',
-  gdsAccordionBorder: '',
-  gdsAccordionBorderRadius: '',
-  gdsAccordionBoxShadow: '',
-  gdsAccordionColor: '',
-  gdsAccordionContentBackground: '',
-  gdsAccordionExpandedHeaderBackground: '',
-  gdsAccordionHeaderPadding: '',
-  gdsAccordionHeadingMarginLeft: '',
-  gdsAccordionJustifyContent: '',
-  gdsAccordionOutlineFocus: '',
-  gdsAccordionPadding: '',
+  `
 }
+export const Options = OptionsTemplate.bind({})
 Options.argTypes = {
-  openOnHover: {
-    description: 'Opens automatically when hovered (desktop only).',
-    table: {
-      type: {
-        summary: 'open-on-hover',
-        detail: '<gds-accordion open-on-hover></gds-accordion>',
-      },
-      defaultValue : {
-        summary: 'false',
-      },
-      category: 'Props',
+  '--gds-accordion-background': {
+    control: {
+      type: 'text',
     },
   },
-  contentFloats: {
-    description: 'Content floats.',
-    table: {
-      type: {
-        summary: 'content-floats',
-        detail: '<gds-accordion content-floats></gds-accordion>',
-      },
-      defaultValue : {
-        summary: 'false',
-      },
-      category: 'Props',
+  '--gds-accordion-border': {
+    control: {
+      type: 'text',
     },
   },
-  expanded: {
-    description: 'Keeps track of when the user has actively collapsed or expanded the accordion.',
-    table: {
-      type: {
-        summary: 'expanded',
-        detail: '<gds-accordion expanded></gds-accordion>',
-      },
-      defaultValue : {
-        summary: 'false',
-      },
-      category: 'Props',
+  '--gds-accordion-border-radius': {
+    control: {
+      type: 'text',
     },
   },
-  slotLabel: {
-    table: {
-      type: {
-        summary: 'slot="label"',
-        detail: '<gds-accordion><p slot="label">label</p></gds-accordion>',
-      },
-      category: 'Slots',
-    },
-    control: false,
-  },
-  slotIconCollapse: {
-    table: {
-      type: {
-        summary: 'slot="icon-collapse"',
-        detail: '<gds-accordion><i slot="icon-collapse">icon</i></gds-accordion>',
-      },
-      category: 'Slots',
-    },
-    control: false,
-  },
-  slotIconExpand: {
-    table: {
-      type: {
-        summary: 'slot="icon-expand"',
-        detail: '<gds-accordion><i slot="icon-expand">icon</i></gds-accordion>',
-      },
-      category: 'Slots',
-    },
-    control: false,
-  },
-  slotContent: {
-    table: {
-      type: {
-        summary: 'slot="content"',
-        detail: '<gds-accordion><p slot="content">content</p></gds-accordion>',
-      },
-      category: 'Slots',
-    },
-    control: false,
-  },
-  gdsAccordionBackground: {
-    table: {
-      type: {
-        summary: '--gds-accordion-background',
-      },
-      defaultValue: {
-        summary: 'var(--gds-color-white)',
-      },
-      category: 'CSS Variable',
+  '--gds-accordion-box-shadow': {
+    control: {
+      type: 'text',
     },
   },
-  gdsAccordionBorder: {
-    table: {
-      type: {
-        summary: '--gds-accordion-border',
-      },
-      category: 'CSS Variable',
+  '--gds-accordion-color': {
+    control: {
+      type: 'text',
     },
   },
-  gdsAccordionBorderRadius: {
-    table: {
-      type: {
-        summary: '--gds-accordion-border-radius',
-      },
-      category: 'CSS Variable',
+  '--gds-accordion-content-background': {
+    control: {
+      type: 'text',
     },
   },
-  gdsAccordionBoxShadow: {
-    table: {
-      type: {
-        summary: '--gds-accordion-box-shadow',
-      },
-      category: 'CSS Variable',
+  '--gds-accordion-expanded-header-background': {
+    control: {
+      type: 'text',
     },
   },
-  gdsAccordionColor: {
-    table: {
-      type: {
-        summary: '--gds-accordion-color',
-      },
-      defaultValue: {
-        summary: 'inherit',
-      },
-      category: 'CSS Variable',
+  '--gds-accordion-header-padding': {
+    control: {
+      type: 'text',
     },
   },
-  gdsAccordionContentBackground: {
-    table: {
-      type: {
-        summary: '--gds-accordion-content-background',
-      },
-      defaultValue: {
-        summary: 'var(--gds-color-white)',
-      },
-      category: 'CSS Variable',
+  '--gds-accordion-heading-margin-left': {
+    control: {
+      type: 'text',
     },
   },
-  gdsAccordionExpandedHeaderBackground: {
-    table: {
-      type: {
-        summary: '--gds-accordion-expanded-header-background',
-      },
-      defaultValue: {
-        summary: 'var(--gds-color-white)',
-      },
-      category: 'CSS Variable',
+  '--gds-accordion-justify-content': {
+    control: {
+      type: 'text',
     },
   },
-  gdsAccordionHeaderPadding: {
-    table: {
-      type: {
-        summary: '--gds-accordion-header-padding',
-      },
-      defaultValue: {
-        summary: 'var(--gds-accordion-padding)',
-      },
-      category: 'CSS Variable',
+  '--gds-accordion-outline-focus': {
+    control: {
+      type: 'text',
     },
   },
-  gdsAccordionHeadingMarginLeft:{
-    table: {
-      type: {
-        summary: '--gds-accordion-heading-margin-left',
-      },
-      defaultValue: {
-        summary: 'var(--gds-spacing-2xs)',
-      },
-      category: 'CSS Variable',
+  '--gds-accordion-padding': {
+    control: {
+      type: 'text',
     },
   },
-  gdsAccordionJustifyContent: {
-    table: {
-      type: {
-        summary: '--gds-accordion-justify-content',
-      },
-      defaultValue: {
-        summary: 'space-between',
-      },
-      category: 'CSS Variable',
-    },
-  },
-  gdsAccordionOutlineFocus: {
-    table: {
-      type: {
-        summary: '--gds-accordion-outline-focus',
-      },
-      category: 'CSS Variable',
-    },
-  },
-  gdsAccordionPadding: {
-    table: {
-      type: {
-        summary: '--gds-accordion-padding',
-      },
-      defaultValue: {
-        summary: 'var(--gds-spacing-s)',
-      },
-      category: 'CSS Variable',
-    },
-  },
+
 }
 
 export const Examples = () => html`
