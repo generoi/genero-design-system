@@ -6,6 +6,7 @@ export default {
   component: 'gds-accordion',
 }
 
+// prettier-ignore
 const OptionsTemplate = args => {
   return html`
     <gds-accordion
@@ -23,18 +24,18 @@ const OptionsTemplate = args => {
     <p>If the accordion content floats this will be covered</p>
     <style>
       :root {
-        --gds-accordion-background: ${args['--gds-accordion-background']};
-        --gds-accordion-border: ${args['--gds-accordion-border']};
-        --gds-accordion-border-radius: ${args['--gds-accordion-border-radius']};
-        --gds-accordion-box-shadow: ${args['--gds-accordion-box-shadow']};
-        --gds-accordion-color: ${args['--gds-accordion-color']};
-        --gds-accordion-content-background: ${args['--gds-accordion-content-background']};
-        --gds-accordion-expanded-header-background: ${args['--gds-accordion-expanded-header-background']};
-        --gds-accordion-header-padding: ${args['--gds-accordion-header-padding']};
-        --gds-accordion-heading-margin-left: ${args['--gds-accordion-heading-margin-left']};
-        --gds-accordion-justify-content: ${args['--gds-accordion-justify-content']};
-        --gds-accordion-outline-focus: ${args['--gds-accordion-outline-focus']};
-        --gds-accordion-padding: ${args['--gds-accordion-padding']};
+        --gds-accordion-background:${args['--gds-accordion-background']};
+        --gds-accordion-border:${args['--gds-accordion-border']};
+        --gds-accordion-border-radius:${args['--gds-accordion-border-radius']};
+        --gds-accordion-box-shadow:${args['--gds-accordion-box-shadow']};
+        --gds-accordion-color:${args['--gds-accordion-color']};
+        --gds-accordion-content-background:${args['--gds-accordion-content-background']};
+        --gds-accordion-expanded-header-background:${args['--gds-accordion-expanded-header-background']};
+        --gds-accordion-header-padding:${args['--gds-accordion-header-padding']};
+        --gds-accordion-heading-margin-left:${args['--gds-accordion-heading-margin-left']};
+        --gds-accordion-justify-content:${args['--gds-accordion-justify-content']};
+        --gds-accordion-outline-focus:${args['--gds-accordion-outline-focus']};
+        --gds-accordion-padding:${args['--gds-accordion-padding']};
       }
     </style>
   `
