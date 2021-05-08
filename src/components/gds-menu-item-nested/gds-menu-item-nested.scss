@@ -92,7 +92,8 @@
     }
 
     .submenu {
-      max-height: 300px;
+      // Don't restrict max-height on mobile to show all items.
+      max-height: none;
     }
   }
 }
