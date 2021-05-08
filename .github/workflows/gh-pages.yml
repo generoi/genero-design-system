@@ -50,5 +50,5 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         uses: NejcZdovc/comment-pr@v1
         with:
-          message: https;//gds.generogrowth.com/docs/${{ steps.release-version.outputs.tag }}
+          message: https://gds.generogrowth.com/docs/${{ steps.release-version.outputs.tag }}
           github_token: ${{secrets.GITHUB_TOKEN}}
