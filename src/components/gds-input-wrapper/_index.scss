@@ -39,6 +39,11 @@
   background-repeat: no-repeat;
 }
 
+@mixin form-textarea {
+  resize: var(--gds-textarea-input-resize, both);
+  word-wrap: break-word;
+}
+
 @mixin placeholder {
   color: var(--gds-input-placeholder-color);
 }
