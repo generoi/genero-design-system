@@ -11,6 +11,7 @@
     width: var(--gds-hamburger-width);
     height: var(--gds-hamburger-thickness);
     background-color: var(--gds-hamburger-color);
+    border-radius: var(--gds-hamburger-border-radius);
     outline: 1px solid transparent; // 1
 
     @media (prefers-reduced-motion: no-preference) {
