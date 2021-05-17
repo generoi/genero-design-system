@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.3](https://github.com/generoi/genero-design-system/compare/v4.0.0-beta.1...v4.0.0-beta.3) (2021-05-17)
+
+
+### Features
+
+* **hamburger:** Add --gds-hamburger-border-radius ([f3278aa](https://github.com/generoi/genero-design-system/commit/f3278aa02cff7165f9a5ccc3d0c89a8786ab05b2))
+* **input-wrapper:** style for slotted textarea ([b8f1b77](https://github.com/generoi/genero-design-system/commit/b8f1b7736388b1dd23f26b66eac042e307cae1c9))
+
 ## [4.0.0-beta.2](https://github.com/generoi/genero-design-system/compare/v4.0.0-beta.1...v4.0.0-beta.2) (2021-05-08)
 
 ### Bug Fixes
