@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.4](https://github.com/generoi/genero-design-system/compare/v4.0.0-beta.3...v4.0.0-beta.4) (2021-05-18)
+
+
+### Features
+
+* **menu-item-nested:** Add css variables ([9cd2a23](https://github.com/generoi/genero-design-system/commit/9cd2a23deceaa631c5e44ae8b2733d673d134286))
+
 ## [4.0.0-beta.3](https://github.com/generoi/genero-design-system/compare/v4.0.0-beta.1...v4.0.0-beta.3) (2021-05-17)
 
 
