@@ -10,6 +10,7 @@
   display: flex;
   flex-direction: row;
   align-items: stretch;
+  justify-content: var(--gds-menu-item-nested-justify-content);
 }
 
 .submenu-icon {
@@ -21,6 +22,7 @@
   padding: 0;
   margin-left: calc(-1 * var(--gds-spacing-2xs));
   margin-right: var(--gds-spacing-xs);
+  font-size: var(--gds-menu-item-nested-submenu-icon-font-size);
 
   .submenu-icon-content {
     //  Since the element is rotated we need it to be square
