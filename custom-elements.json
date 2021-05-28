@@ -539,7 +539,76 @@
             "events": [],
             "methods": [],
             "slots": [],
-            "cssProperties": [],
+            "cssProperties": [
+                {
+                    "name": "--gds-input-background",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-input-border",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-input-border-focus",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-input-border-radius",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-input-color",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-input-font-family",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-input-font-size",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-input-font-weight",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-input-min-height",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-input-padding",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-input-placeholder-color",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-select-arrow-image",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-select-arrow-padding-right",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-select-arrow-position",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-select-arrow-size",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-select-input-padding-right",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-textarea-input-resize",
+                    "description": ""
+                }
+            ],
             "cssParts": []
         },
         {

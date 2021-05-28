@@ -1,10 +1,153 @@
 import { html } from 'lit-html'
+import { StyleTag, CssControls } from './gds-input-wrapper-stories-extra-data'
 
 export default {
   // This is the folder where this component shows in Storybook.
   title: 'Complex Components/InputWrapper',
   component: 'gds-input-wrapper',
 }
+export const Types = () => html`
+  <gds-heading>Supported</gds-heading>
+  <p>
+    <gds-input-wrapper>
+      <select slot="input">
+        <option>option 1</option>
+        <option>option 2</option>
+      </select>
+      <gds-label slot="label">select</gds-label>
+    </gds-input-wrapper>
+  </p>
+  <p>
+    <gds-input-wrapper>
+      <textarea slot="input" cols="30"></textarea>
+      <gds-label slot="label">textarea</gds-label>
+    </gds-input-wrapper>
+  </p>
+  <gds-heading size="xs">input type</gds-heading>
+  <p>
+    <gds-input-wrapper label="text">
+      <input type="text" slot="input" />
+    </gds-input-wrapper>
+  </p>
+  <p>
+    <gds-input-wrapper label="date">
+      <input type="date" slot="input" />
+    </gds-input-wrapper>
+  </p>
+  <p>
+    <gds-input-wrapper label="email">
+      <input type="email" slot="input" />
+    </gds-input-wrapper>
+  </p>
+  <p>
+    <gds-input-wrapper label="file">
+      <input type="file" slot="input" />
+    </gds-input-wrapper>
+  </p>
+  <p>
+    <gds-input-wrapper label="month">
+      <input type="month" slot="input" />
+    </gds-input-wrapper>
+  </p>
+  <p>
+    <gds-input-wrapper label="number">
+      <input type="number" slot="input" />
+    </gds-input-wrapper>
+  </p>
+  <p>
+    <gds-input-wrapper label="password">
+      <input type="password" slot="input" />
+    </gds-input-wrapper>
+  </p>
+  <p>
+    <gds-input-wrapper label="search">
+      <input type="search" slot="input" />
+    </gds-input-wrapper>
+  </p>
+  <p>
+    <gds-input-wrapper label="tel">
+      <input type="tel" slot="input" />
+    </gds-input-wrapper>
+  </p>
+  <p>
+    <gds-input-wrapper label="week">
+      <input type="week" slot="input" />
+    </gds-input-wrapper>
+  </p>
+  <gds-heading>unsupported</gds-heading>
+  <p>
+    <gds-input-wrapper label="button">
+      <input type="button" slot="input" value="button" />
+      <small slot="hint"> use an actual button instead </small>
+    </gds-input-wrapper>
+  </p>
+  <p>
+    <gds-input-wrapper label="checkbox">
+      <input type="checkbox" slot="input" />
+      <small slot="hint"> don't wrap it </small>
+    </gds-input-wrapper>
+  </p>
+  <p>
+    <gds-input-wrapper label="color">
+      <input type="color" slot="input" />
+      <small slot="hint"> don't wrap it </small>
+    </gds-input-wrapper>
+  </p>
+  <p>
+    <gds-input-wrapper label="image">
+      <input type="image" slot="input" />
+      <small slot="hint"> use an actual button instead </small>
+    </gds-input-wrapper>
+  </p>
+  <p>
+    <gds-input-wrapper label="radio">
+      <input type="radio" slot="input" />
+      <small slot="hint"> don't wrap it </small>
+    </gds-input-wrapper>
+  </p>
+  <p>
+    <gds-input-wrapper label="range">
+      <input type="range" slot="input" />
+      <small slot="hint"> don't wrap it </small>
+    </gds-input-wrapper>
+  </p>
+  <p>
+    <gds-input-wrapper label="submit">
+      <input type="submit" slot="input" />
+      <small slot="hint"> use an actual button instead </small>
+    </gds-input-wrapper>
+  </p>
+`
+Types.parameters = {
+  backgrounds: {
+    disable: false,
+    default: 'white',
+    values: [{ name: 'white', value: '#fff' }],
+  },
+}
+
+export const Options = args => html`
+  <gds-input-wrapper label="${args.label}" ?hide-label-visually=${args.hideLabelVisually}>
+    <input slot="input" />
+  </gds-input-wrapper>
+  <br />
+  <gds-input-wrapper label="${args.label}" ?hide-label-visually=${args.hideLabelVisually}>
+    <textarea slot="input"></textarea>
+  </gds-input-wrapper>
+  <br />
+  <gds-input-wrapper label="${args.label}" ?hide-label-visually=${args.hideLabelVisually}>
+    <select slot="input">
+      <option>first option</option>
+      <option disabled>disabled option</option>
+      <option>last option</option>
+    </select>
+  </gds-input-wrapper>
+
+  ${StyleTag(args)}
+`
+
+Options.argTypes = CssControls
+Options.parameters = Types.parameters
 
 export const Examples = () => html`
   <div class="form">
