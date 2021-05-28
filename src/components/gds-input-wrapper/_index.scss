@@ -47,6 +47,8 @@
 
 @mixin form-select {
   appearance: none; // safari
+  min-width: unset;
+  max-width: unset;
   padding-right: var(--gds-select-input-padding-right, calc(
     /* input needs a padding so content ends before arrow starts */
     var(--gds-select-arrow-padding-right, var(--gds-spacing-xs)) + var(--gds-select-arrow-size, 10px) + var(--gds-spacing-2xs)
