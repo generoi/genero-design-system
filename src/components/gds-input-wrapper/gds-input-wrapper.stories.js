@@ -1,5 +1,5 @@
 import { html } from 'lit-html'
-import { StyleTag, CssControls, CssArgs } from './gds-input-wrapper-stories-extra-data'
+import { StyleTag, CssControls } from './gds-input-wrapper-stories-extra-data'
 
 export default {
   // This is the folder where this component shows in Storybook.
@@ -127,15 +127,27 @@ Types.parameters = {
 }
 
 export const Options = args => html`
-  <gds-input-wrapper label="${args.label}">
+  <gds-input-wrapper label="${args.label}" ?hide-label-visually=${args.hideLabelVisually}>
     <input slot="input" />
   </gds-input-wrapper>
+  <br />
+  <gds-input-wrapper label="${args.label}" ?hide-label-visually=${args.hideLabelVisually}>
+    <textarea slot="input"></textarea>
+  </gds-input-wrapper>
+  <br />
+  <gds-input-wrapper label="${args.label}" ?hide-label-visually=${args.hideLabelVisually}>
+    <select slot="input">
+      <option>first option</option>
+      <option disabled>disabled option</option>
+      <option>last option</option>
+    </select>
+  </gds-input-wrapper>
+
   ${StyleTag(args)}
 `
 
 Options.argTypes = CssControls
-
-Options.args = CssArgs
+Options.parameters = Types.parameters
 
 export const Examples = () => html`
   <div class="form">
