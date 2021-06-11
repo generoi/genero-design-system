@@ -201,6 +201,14 @@ export namespace Components {
           * Overlay effect.
          */
         "overlayEffect": string;
+        /**
+          * Image sizes.
+         */
+        "sizes": string;
+        /**
+          * Image srcset.
+         */
+        "srcset": string;
         "superimposedBottom": number;
         "superimposedLeft": number;
         "superimposedRight": number;
@@ -746,6 +754,14 @@ declare namespace LocalJSX {
           * Overlay effect.
          */
         "overlayEffect"?: string;
+        /**
+          * Image sizes.
+         */
+        "sizes"?: string;
+        /**
+          * Image srcset.
+         */
+        "srcset"?: string;
         "superimposedBottom"?: number;
         "superimposedLeft"?: number;
         "superimposedRight"?: number;
