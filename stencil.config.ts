@@ -13,6 +13,7 @@ export const config: Config = {
     reactOutputTarget({
       componentCorePackage: 'genero-design-system',
       proxiesFile: './react-ts/index.ts',
+      includeDefineCustomElements: false,
     }),
     {
       type: 'dist-custom-elements-bundle',
