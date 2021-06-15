@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.5](https://github.com/generoi/genero-design-system/compare/v4.0.0-beta.4...v4.0.0-beta.5) (2021-06-15)
+
+
+### Bug Fixes
+
+* **build:** infinite loop in build watch ([5591894](https://github.com/generoi/genero-design-system/commit/559189495a8fc52e00aa665a77aa15e454c1f4ef))
+* **input-wrapper:** fix textarea resize in blink browsers ([41a735c](https://github.com/generoi/genero-design-system/commit/41a735c39cfae5ce5c5dc38df4e3c1379d1eceab))
+* **react:** Fix importing components in non-typescript react ([522567d](https://github.com/generoi/genero-design-system/commit/522567d69871426000425129277e8a3ae5ecfe34))
+
 ## [4.0.0-beta.4](https://github.com/generoi/genero-design-system/compare/v4.0.0-beta.3...v4.0.0-beta.4) (2021-05-18)
 
 
