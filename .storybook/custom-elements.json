@@ -867,6 +867,18 @@
                     "attribute": "overlay-effect"
                 },
                 {
+                    "name": "sizes",
+                    "description": "Image sizes.",
+                    "type": "string",
+                    "attribute": "sizes"
+                },
+                {
+                    "name": "srcset",
+                    "description": "Image srcset.",
+                    "type": "string",
+                    "attribute": "srcset"
+                },
+                {
                     "name": "superimposedBottom",
                     "description": "",
                     "type": "number",
@@ -943,6 +955,16 @@
                 {
                     "name": "overlayEffect",
                     "description": "Overlay effect.",
+                    "type": "string"
+                },
+                {
+                    "name": "sizes",
+                    "description": "Image sizes.",
+                    "type": "string"
+                },
+                {
+                    "name": "srcset",
+                    "description": "Image srcset.",
                     "type": "string"
                 },
                 {

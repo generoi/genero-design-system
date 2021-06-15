@@ -31,7 +31,15 @@ export class GdsMediaCard {
   /**
    * Image url.
    */
-  @Prop() imageUrl: string
+   @Prop() imageUrl: string
+  /**
+   * Image sizes.
+   */
+   @Prop() sizes: string
+   /**
+   * Image srcset.
+   */
+  @Prop() srcset: string
   /**
    * Image alt.
    * Defaults to "" representing a decorative image.
@@ -125,6 +133,8 @@ export class GdsMediaCard {
           }}>
           <img
             src={this.imageUrl}
+            srcset={this.srcset}
+            sizes={this.sizes}
             // If there's a superimposed image the background one is purely decorative
             alt={this.superimposedUrl ? '' : this.imageAlt}
             aria-hidden="true"

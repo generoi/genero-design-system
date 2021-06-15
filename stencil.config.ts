@@ -13,6 +13,8 @@ export const config: Config = {
     reactOutputTarget({
       componentCorePackage: 'genero-design-system',
       proxiesFile: './react-ts/index.ts',
+      // Needed because index.ts seems to include loader in a wrong way.
+      includeDefineCustomElements: false,
     }),
     {
       type: 'dist-custom-elements-bundle',

@@ -15,6 +15,8 @@
 | `imageUrl`           | `image-url`           | Image url.                                                 | `string`  | `undefined` |
 | `overlay`            | `overlay`             | Overlay.                                                   | `boolean` | `undefined` |
 | `overlayEffect`      | `overlay-effect`      | Overlay effect.                                            | `string`  | `undefined` |
+| `sizes`              | `sizes`               | Image sizes.                                               | `string`  | `undefined` |
+| `srcset`             | `srcset`              | Image srcset.                                              | `string`  | `undefined` |
 | `superimposedBottom` | `superimposed-bottom` |                                                            | `number`  | `undefined` |
 | `superimposedLeft`   | `superimposed-left`   |                                                            | `number`  | `undefined` |
 | `superimposedRight`  | `superimposed-right`  |                                                            | `number`  | `undefined` |

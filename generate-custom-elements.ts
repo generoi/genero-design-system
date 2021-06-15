@@ -83,5 +83,5 @@ export  function generateCustomElements(docs) {
         CEObject.tags.push(c)
     })
     const docstring = JSON.stringify(CEObject, null, 4)
-    fs.writeFileSync('custom-elements.json', docstring)
+    fs.writeFileSync('.storybook/custom-elements.json', docstring)
 }
