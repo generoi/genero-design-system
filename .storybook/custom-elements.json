@@ -1577,7 +1577,7 @@
             "properties": [
                 {
                     "name": "animation",
-                    "description": "Select type of animation",
+                    "description": "Animations (fade-in-up)",
                     "type": "string",
                     "default": "\"fade-in-up\"",
                     "attribute": "animation"
@@ -1607,7 +1607,7 @@
             "attributes": [
                 {
                     "name": "animation",
-                    "description": "Select type of animation",
+                    "description": "Animations (fade-in-up)",
                     "type": "string",
                     "default": "\"fade-in-up\""
                 },
@@ -1638,12 +1638,7 @@
                     "description": ""
                 }
             ],
-            "cssProperties": [
-                {
-                    "name": "--gds-transition-container-background",
-                    "description": ""
-                }
-            ],
+            "cssProperties": [],
             "cssParts": []
         },
         {

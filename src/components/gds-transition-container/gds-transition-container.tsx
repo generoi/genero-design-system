@@ -13,7 +13,8 @@ import { Component, Prop, h, Host } from '@stencil/core'
 
 export class GdsTransitionContainer {
   /**
-   * Select type of animation
+   * Animations (fade-in-up)
+   * 
    */
   @Prop() animation: string = "fade-in-up"
   /**

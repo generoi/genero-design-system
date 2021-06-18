@@ -339,7 +339,7 @@ export namespace Components {
     }
     interface GdsTransitionContainer {
         /**
-          * Select type of animation
+          * Animations (fade-in-up)
          */
         "animation": string;
         /**
@@ -918,7 +918,7 @@ declare namespace LocalJSX {
     }
     interface GdsTransitionContainer {
         /**
-          * Select type of animation
+          * Animations (fade-in-up)
          */
         "animation"?: string;
         /**
