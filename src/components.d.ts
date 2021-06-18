@@ -337,6 +337,24 @@ export namespace Components {
          */
         "size": string;
     }
+    interface GdsTransitionContainer {
+        /**
+          * Select type of animation
+         */
+        "animation": string;
+        /**
+          * Set delay
+         */
+        "delay": string;
+        /**
+          * Set animation duration
+         */
+        "duration": string;
+        /**
+          * Set easing
+         */
+        "ease": string;
+    }
     interface GdsVisuallyHidden {
         "focusable": Boolean;
     }
@@ -512,6 +530,12 @@ declare global {
         prototype: HTMLGdsTextButtonElement;
         new (): HTMLGdsTextButtonElement;
     };
+    interface HTMLGdsTransitionContainerElement extends Components.GdsTransitionContainer, HTMLStencilElement {
+    }
+    var HTMLGdsTransitionContainerElement: {
+        prototype: HTMLGdsTransitionContainerElement;
+        new (): HTMLGdsTransitionContainerElement;
+    };
     interface HTMLGdsVisuallyHiddenElement extends Components.GdsVisuallyHidden, HTMLStencilElement {
     }
     var HTMLGdsVisuallyHiddenElement: {
@@ -551,6 +575,7 @@ declare global {
         "gds-tag-group": HTMLGdsTagGroupElement;
         "gds-text": HTMLGdsTextElement;
         "gds-text-button": HTMLGdsTextButtonElement;
+        "gds-transition-container": HTMLGdsTransitionContainerElement;
         "gds-visually-hidden": HTMLGdsVisuallyHiddenElement;
         "gds-youtube-player": HTMLGdsYoutubePlayerElement;
     }
@@ -891,6 +916,24 @@ declare namespace LocalJSX {
          */
         "size"?: string;
     }
+    interface GdsTransitionContainer {
+        /**
+          * Select type of animation
+         */
+        "animation"?: string;
+        /**
+          * Set delay
+         */
+        "delay"?: string;
+        /**
+          * Set animation duration
+         */
+        "duration"?: string;
+        /**
+          * Set easing
+         */
+        "ease"?: string;
+    }
     interface GdsVisuallyHidden {
         "focusable"?: Boolean;
     }
@@ -935,6 +978,7 @@ declare namespace LocalJSX {
         "gds-tag-group": GdsTagGroup;
         "gds-text": GdsText;
         "gds-text-button": GdsTextButton;
+        "gds-transition-container": GdsTransitionContainer;
         "gds-visually-hidden": GdsVisuallyHidden;
         "gds-youtube-player": GdsYoutubePlayer;
     }
@@ -969,6 +1013,7 @@ declare module "@stencil/core" {
             "gds-tag-group": LocalJSX.GdsTagGroup & JSXBase.HTMLAttributes<HTMLGdsTagGroupElement>;
             "gds-text": LocalJSX.GdsText & JSXBase.HTMLAttributes<HTMLGdsTextElement>;
             "gds-text-button": LocalJSX.GdsTextButton & JSXBase.HTMLAttributes<HTMLGdsTextButtonElement>;
+            "gds-transition-container": LocalJSX.GdsTransitionContainer & JSXBase.HTMLAttributes<HTMLGdsTransitionContainerElement>;
             "gds-visually-hidden": LocalJSX.GdsVisuallyHidden & JSXBase.HTMLAttributes<HTMLGdsVisuallyHiddenElement>;
             "gds-youtube-player": LocalJSX.GdsYoutubePlayer & JSXBase.HTMLAttributes<HTMLGdsYoutubePlayerElement>;
         }

@@ -1571,6 +1571,77 @@
             "cssParts": []
         },
         {
+            "name": "gds-transition-container",
+            "path": "./src/components/gds-transition-container/gds-transition-container.tsx",
+            "description": "This is a wrapper to transition content",
+            "properties": [
+                {
+                    "name": "animation",
+                    "description": "Select type of animation",
+                    "type": "string",
+                    "default": "\"fade-in-up\"",
+                    "attribute": "animation"
+                },
+                {
+                    "name": "delay",
+                    "description": "Set delay",
+                    "type": "string",
+                    "default": "\"0s\"",
+                    "attribute": "delay"
+                },
+                {
+                    "name": "duration",
+                    "description": "Set animation duration",
+                    "type": "string",
+                    "default": "\"0.7s\"",
+                    "attribute": "duration"
+                },
+                {
+                    "name": "ease",
+                    "description": "Set easing",
+                    "type": "string",
+                    "default": "\"cubic-bezier(.67,.01,.14,1.01)\"",
+                    "attribute": "ease"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "animation",
+                    "description": "Select type of animation",
+                    "type": "string",
+                    "default": "\"fade-in-up\""
+                },
+                {
+                    "name": "delay",
+                    "description": "Set delay",
+                    "type": "string",
+                    "default": "\"0s\""
+                },
+                {
+                    "name": "duration",
+                    "description": "Set animation duration",
+                    "type": "string",
+                    "default": "\"0.7s\""
+                },
+                {
+                    "name": "ease",
+                    "description": "Set easing",
+                    "type": "string",
+                    "default": "\"cubic-bezier(.67,.01,.14,1.01)\""
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [
+                {
+                    "name": "transition",
+                    "description": ""
+                }
+            ],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
             "name": "gds-visually-hidden",
             "path": "./src/components/gds-visually-hidden/gds-visually-hidden.tsx",
             "description": "",
