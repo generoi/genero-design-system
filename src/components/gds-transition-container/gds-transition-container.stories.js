@@ -63,6 +63,56 @@ export const Examples = () => html`
   </gds-media-card>
 </div>
 </gds-transition-container>
+<div style="height: 30vh"></div>
+<gds-transition-container>
+<div class="demo-container-cards" slot="transition">
+  <gds-media-card
+    href="https://google.com"
+    image-url="${getMockImageUrl('product', 500, 500)}"
+    image-alt="Product"
+    accessible-label="Read more about it"
+  >
+    <gds-heading size="s" slot="headline">This is a headline</gds-heading>
+    <gds-paragraph size="l" slot="description">
+      This Media Card uses content slots for each section. Here is some description. The whole card is wrapped in link.
+    </gds-paragraph>
+    <gds-tag-group slot="tags">
+      <gds-tag>First Tag</gds-tag>
+      <gds-tag href="https://www.genero.fi">Tag with a link</gds-tag>
+    </gds-tag-group>
+  </gds-media-card>
+  <gds-media-card
+    href="https://google.com"
+    image-url="${getMockImageUrl('product', 500, 500)}"
+    image-alt="Product"
+    accessible-label="Read more about it"
+  >
+    <gds-heading size="s" slot="headline">This is a headline</gds-heading>
+    <gds-paragraph size="l" slot="description">
+      This Media Card uses content slots for each section. Here is some description. The whole card is wrapped in link.
+    </gds-paragraph>
+    <gds-tag-group slot="tags">
+      <gds-tag>First Tag</gds-tag>
+      <gds-tag href="https://www.genero.fi">Tag with a link</gds-tag>
+    </gds-tag-group>
+  </gds-media-card>
+  <gds-media-card
+    href="https://google.com"
+    image-url="${getMockImageUrl('product', 500, 500)}"
+    image-alt="Product"
+    accessible-label="Read more about it"
+  >
+    <gds-heading size="s" slot="headline">This is a headline</gds-heading>
+    <gds-paragraph size="l" slot="description">
+      This Media Card uses content slots for each section. Here is some description. The whole card is wrapped in link.
+    </gds-paragraph>
+    <gds-tag-group slot="tags">
+      <gds-tag>First Tag</gds-tag>
+      <gds-tag href="https://www.genero.fi">Tag with a link</gds-tag>
+    </gds-tag-group>
+  </gds-media-card>
+</div>
+</gds-transition-container>
 <style>
 .demo-container {
   height: 110vh;
