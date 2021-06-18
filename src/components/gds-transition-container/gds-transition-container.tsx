@@ -2,7 +2,7 @@ import { Component, Prop, h, Host } from '@stencil/core'
 
 /**
  * This is a wrapper to transition content
- * @slot transition
+ * @slot Only 1 slot, just wrap the content you want to add a transition animation for
  */
 
 @Component({
@@ -27,7 +27,7 @@ export class GdsTransitionContainer {
   /**
    * Set delay
    */
-  @Prop() delay: string = "0s"
+  @Prop() delay: string = "0.1s"
 
   componentDidLoad() {
     const elementsToTransition = document.querySelectorAll('.gds-transition-container')
@@ -53,7 +53,7 @@ export class GdsTransitionContainer {
       <Host>
         <div
         class="gds-transition-container">
-          <slot name="transition"></slot>
+          <slot></slot>
         </div>
       </Host>
     )

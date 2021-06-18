@@ -1586,7 +1586,7 @@
                     "name": "delay",
                     "description": "Set delay",
                     "type": "string",
-                    "default": "\"0s\"",
+                    "default": "\"0.1s\"",
                     "attribute": "delay"
                 },
                 {
@@ -1615,7 +1615,7 @@
                     "name": "delay",
                     "description": "Set delay",
                     "type": "string",
-                    "default": "\"0s\""
+                    "default": "\"0.1s\""
                 },
                 {
                     "name": "duration",
@@ -1634,11 +1634,16 @@
             "methods": [],
             "slots": [
                 {
-                    "name": "transition",
+                    "name": "Only 1 slot, just wrap the content you want to add a transition animation for",
                     "description": ""
                 }
             ],
-            "cssProperties": [],
+            "cssProperties": [
+                {
+                    "name": "--gds-transition-container-background",
+                    "description": ""
+                }
+            ],
             "cssParts": []
         },
         {

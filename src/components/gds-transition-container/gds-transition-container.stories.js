@@ -15,7 +15,7 @@ export const Examples = () => html`
 <h1 style="transform: rotate(90deg)">></h1>
 </div>
 <gds-transition-container>
-<div class="demo-container-cards" slot="transition">
+<div class="demo-container-cards">
   <gds-media-card
     href="https://google.com"
     image-url="${getMockImageUrl('product', 500, 500)}"
@@ -65,7 +65,7 @@ export const Examples = () => html`
 </gds-transition-container>
 <div style="height: 30vh"></div>
 <gds-transition-container>
-<div class="demo-container-cards" slot="transition">
+<div class="demo-container-cards">
   <gds-media-card
     href="https://google.com"
     image-url="${getMockImageUrl('product', 500, 500)}"
