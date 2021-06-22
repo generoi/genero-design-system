@@ -1,0 +1,17 @@
+@use "../../styles/breakpoints" as *;
+
+.gds-transition-container {
+  opacity: 0;
+}
+
+@keyframes fade-in-up {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
