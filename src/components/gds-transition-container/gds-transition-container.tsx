@@ -56,13 +56,6 @@ export class GdsTransitionContainer {
     })
   }
 
-  removeIntersectionObserver() {
-    if (this.io) {
-      this.io.disconnect();
-      this.io = null;
-    }
-  }
-
   render() {
     return (
       <div class="gds-transition-container">
