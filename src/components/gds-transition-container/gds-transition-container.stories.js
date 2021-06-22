@@ -14,8 +14,9 @@ export const Examples = () => html`
 <h1>Scroll down to demo</h1>
 <h1 style="transform: rotate(90deg)">></h1>
 </div>
-<gds-transition-container>
+<h2> Wrapped individually with different duration props</h2>
 <div class="demo-container-cards">
+<gds-transition-container duration="0.5s">
   <gds-media-card
     href="https://google.com"
     image-url="${getMockImageUrl('product', 500, 500)}"
@@ -31,6 +32,8 @@ export const Examples = () => html`
       <gds-tag href="https://www.genero.fi">Tag with a link</gds-tag>
     </gds-tag-group>
   </gds-media-card>
+</gds-transition-container>
+<gds-transition-container duration="0.7s">
   <gds-media-card
     href="https://google.com"
     image-url="${getMockImageUrl('product', 500, 500)}"
@@ -46,6 +49,8 @@ export const Examples = () => html`
       <gds-tag href="https://www.genero.fi">Tag with a link</gds-tag>
     </gds-tag-group>
   </gds-media-card>
+</gds-transition-container>
+<gds-transition-container duration="0.9s">
   <gds-media-card
     href="https://google.com"
     image-url="${getMockImageUrl('product', 500, 500)}"
@@ -61,10 +66,12 @@ export const Examples = () => html`
       <gds-tag href="https://www.genero.fi">Tag with a link</gds-tag>
     </gds-tag-group>
   </gds-media-card>
+</gds-transition-container>
 </div>
 </gds-transition-container>
 <div style="height: 30vh"></div>
 <gds-transition-container>
+<h2> Wrapped all cards in one transition container</h2>
 <div class="demo-container-cards">
   <gds-media-card
     href="https://google.com"
@@ -112,7 +119,6 @@ export const Examples = () => html`
     </gds-tag-group>
   </gds-media-card>
 </div>
-</gds-transition-container>
 <style>
 .demo-container {
   height: 110vh;

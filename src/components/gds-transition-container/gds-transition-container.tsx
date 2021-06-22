@@ -1,4 +1,4 @@
-import { Component, Prop, h, Host } from '@stencil/core'
+import { Component, Element, Prop, h } from '@stencil/core'
 
 /**
  * This is a wrapper to transition content
@@ -8,10 +8,14 @@ import { Component, Prop, h, Host } from '@stencil/core'
 @Component({
   tag: 'gds-transition-container',
   styleUrl: 'gds-transition-container.scss',
+  shadow: false,
 })
 
 
 export class GdsTransitionContainer {
+  @Element() el: HTMLElement;
+
+  io: IntersectionObserver;
   /**
    * Animations (fade-in-up)
    * 
@@ -31,32 +35,39 @@ export class GdsTransitionContainer {
   @Prop() delay: string = "0.1s"
 
   componentDidLoad() {
-    const elementsToTransition = document.querySelectorAll('.gds-transition-container')
+    this.addIntersectionObserver();
+  }
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
+  addIntersectionObserver() {
+    const elementsToTransition = this.el.querySelectorAll('.gds-transition-container')
+
+    this.io = new IntersectionObserver((entries: any) => {
+      entries.forEach(entry => {
         if (entry.intersectionRatio > 0) {
-          entry.target.setAttribute("style", `animation: ${this.animation} ${this.duration} ${this.ease} ${this.delay} forwards`)
+          entry.target.setAttribute("style", `animation: ${this.animation} ${this.duration} ${this.ease} ${this.delay} forwards`);
         } else {
           entry.target.setAttribute("style", "none")
         }
-      })
-    })
-
+      });
+    });
 
     elementsToTransition.forEach((element) => {
-      observer.observe(element)
+      this.io.observe(element)
     })
+  }
+
+  removeIntersectionObserver() {
+    if (this.io) {
+      this.io.disconnect();
+      this.io = null;
+    }
   }
 
   render() {
     return (
-      <Host>
-        <div
-        class="gds-transition-container">
-          <slot></slot>
-        </div>
-      </Host>
+      <div class="gds-transition-container">
+        <slot/>
+      </div>
     )
   }
 }
