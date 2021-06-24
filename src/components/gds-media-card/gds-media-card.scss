@@ -14,6 +14,7 @@
 }
 
 .image {
+  clip-path: var(--gds-media-card-mask-image);
   @include image;
 
   &.has-blur-effect {
