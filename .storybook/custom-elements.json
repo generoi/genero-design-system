@@ -217,6 +217,76 @@
             "cssParts": []
         },
         {
+            "name": "gds-consent-manager",
+            "path": "./src/components/gds-consent-manager/gds-consent-manager.tsx",
+            "description": "This is an accordion.",
+            "properties": [
+                {
+                    "name": "contentFloats",
+                    "description": "Content floats.",
+                    "type": "boolean",
+                    "default": "false",
+                    "attribute": "content-floats"
+                },
+                {
+                    "name": "expanded",
+                    "description": "Keeps track of when the user has actively collapsed or expanded the accordion.",
+                    "type": "boolean",
+                    "default": "false",
+                    "attribute": "expanded"
+                },
+                {
+                    "name": "openOnHover",
+                    "description": "Opens automatically when hovered (desktop only).",
+                    "type": "boolean",
+                    "default": "false",
+                    "attribute": "open-on-hover"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "contentFloats",
+                    "description": "Content floats.",
+                    "type": "boolean",
+                    "default": "false"
+                },
+                {
+                    "name": "expanded",
+                    "description": "Keeps track of when the user has actively collapsed or expanded the accordion.",
+                    "type": "boolean",
+                    "default": "false"
+                },
+                {
+                    "name": "openOnHover",
+                    "description": "Opens automatically when hovered (desktop only).",
+                    "type": "boolean",
+                    "default": "false"
+                }
+            ],
+            "events": [],
+            "methods": [],
+            "slots": [
+                {
+                    "name": "content",
+                    "description": "the hidden part of the accordion"
+                },
+                {
+                    "name": "icon-collapse",
+                    "description": ""
+                },
+                {
+                    "name": "icon-expand",
+                    "description": ""
+                },
+                {
+                    "name": "label",
+                    "description": "the heading part of the accordion"
+                }
+            ],
+            "cssProperties": [],
+            "cssParts": []
+        },
+        {
             "name": "gds-google-maps",
             "path": "./src/components/gds-google-maps/gds-google-maps.tsx",
             "description": "Displays Google Maps.\n\nInspired by: https://www.joshmorony.com/creating-a-google-maps-web-component-with-stencil/",

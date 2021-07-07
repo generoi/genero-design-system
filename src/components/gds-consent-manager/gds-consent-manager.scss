@@ -1,0 +1,114 @@
+@use "../../styles/breakpoints" as *;
+/**
+ * @prop --gds-accordion-color:
+ * @prop --gds-accordion-background:
+ * @prop --gds-accordion-border:
+ * @prop --gds-accordion-border-radius:
+ * @prop --gds-accordion-box-shadow:
+ * @prop --gds-accordion-content-background:
+ * @prop --gds-accordion-padding:
+ * @prop --gds-accordion-justify-content:
+ * @prop --gds-accordion-header-padding:
+ * @prop --gds-accordion-outline-focus:
+ * @prop --gds-accordion-heading-margin-left:
+ * @prop --gds-accordion-expanded-header-background:
+ */
+.accordion {
+  color: var(--gds-accordion-color, inherit);
+  background: var(--gds-accordion-background, var(--gds-color-white));
+  border: var(--gds-accordion-border);
+  border-radius: var(--gds-accordion-border-radius);
+  box-shadow: var(--gds-accordion-box-shadow);
+  position: relative;
+  // Can't have this with floating.
+  // overflow: hidden;
+  display: flex;
+  flex-direction: column;
+
+  .content {
+    box-sizing: border-box;
+    display: none;
+    background: var(--gds-accordion-content-background, var(--gds-color-white));
+    padding: var(--gds-accordion-padding, var(--gds-spacing-s));
+
+    // These are required because we can't have overflow: hidden with floating.
+    border-bottom-right-radius: var(--gds-accordion-border-radius);
+    border-bottom-left-radius: var(--gds-accordion-border-radius);
+  }
+
+  .contentFloats {
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    z-index: 10;
+    box-shadow: var(--gds-accordion-box-shadow);
+  }
+
+  .header {
+    all: unset; // reset button styles
+    // Span full width
+    flex: 1 1 auto;
+    outline: none;
+
+    position: relative;
+    display: flex;
+    justify-content: var(--gds-accordion-justify-content, space-between);
+    align-items: center;
+    cursor: pointer;
+    padding: var(--gds-accordion-header-padding, var(--gds-accordion-padding));
+    outline: none;
+
+    &:focus {
+      outline: var(--gds-accordion-outline-focus);
+      z-index: 1;
+
+      // Until :focus-visible has proper cross-browser support.
+      &:not(:focus-visible) {
+        outline: none;
+      }
+    }
+
+    // These are required because we can't have overflow: hidden with floating.
+    border-top-right-radius: var(--gds-accordion-border-radius);
+    border-top-left-radius: var(--gds-accordion-border-radius);
+  }
+
+  .heading {
+    margin-right: var(--gds-accordion-heading-margin-left, var(--gds-spacing-2xs));
+  }
+
+  .iconCollapse {
+    display: none;
+  }
+  .iconExpand {
+    display: block;
+    flex-shrink: 0;
+  }
+
+  @mixin expanded {
+    .iconCollapse {
+      display: block;
+    }
+    .iconExpand {
+      display: none;
+    }
+    .header {
+      background: var(--gds-accordion-expanded-header-background, var(--gds-color-white));
+    }
+    .content {
+      display: block;
+    }
+  }
+
+  // Logic for expanding by clicking.
+  &.expanded {
+    @include expanded;
+  }
+
+  // Logic for expanding by hovering on desktop.
+  @include desktopOnly {
+    &.openOnHover:hover {
+      @include expanded;
+    }
+  }
+}
