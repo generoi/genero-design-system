@@ -48,6 +48,8 @@ export class GdsMenuItemNested {
    */
   private submenuId: string
 
+  private hasSubmenuIconSlot: boolean
+
   /**
    * Expand on mouse enter.
    */
@@ -118,6 +120,7 @@ export class GdsMenuItemNested {
     ++idCounter;
     this.submenuId = `gds-menu-item-nested-submenu-${idCounter}`
     this.linkSlot = this.host.querySelector(':scope > [slot="link"]') as HTMLSlotElement
+    this.hasSubmenuIconSlot = !!this.host.querySelector(':scope > [slot="submenu-icon"]')
 
     if (!this.accessibleLabel) {
       this.accessibleLabel = this.linkSlot.textContent.trim()
@@ -130,7 +133,7 @@ export class GdsMenuItemNested {
         <div class="menu-item">
           <slot name="link"></slot>
 
-          {this.submenuIcon && (
+          {(this.submenuIcon || this.hasSubmenuIconSlot) && (
             <button
               aria-expanded={ this.expanded ? 'true' : 'false' }
               aria-haspopup="true"
@@ -141,7 +144,9 @@ export class GdsMenuItemNested {
               ref={el => (this.submenuButtonEl = el as HTMLElement)}
             >
               <span class="submenu-icon-content" tabindex="-1" aria-hidden="true">
-                {this.submenuIcon}
+                <slot name="submenu-icon">
+                  {this.submenuIcon}
+                </slot>
               </span>
             </button>
           )}

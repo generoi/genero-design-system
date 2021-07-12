@@ -50,10 +50,11 @@ export const Submenus = () => html`
           </a>
         </gds-submenu>
       </gds-menu-item-nested>
-      <gds-menu-item-nested slot="item" submenu-icon="❯">
+      <gds-menu-item-nested slot="item">
         <a slot="link" href="#second">
           <gds-menu-item>Second item</gds-menu-item>
         </a>
+        <span slot="submenu-icon">›</span>
         <gds-submenu slot="submenu">
           <a slot="submenu-item" href="#first-submenu">
             <gds-menu-item>First submenu item</gds-menu-item>
