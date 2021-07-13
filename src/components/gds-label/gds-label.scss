@@ -4,18 +4,18 @@
   @include base;
 }
 
-.size-xl {
+:host-context([size='xl']) {
   @include size-xl;
 }
 
-.size-l {
+:host-context([size='l']) {
   @include size-l;
 }
 
-.size-m {
+:host-context([size='m']) {
   @include size-m;
 }
 
-.size-s {
+:host-context([size='s']) {
   @include size-s;
 }

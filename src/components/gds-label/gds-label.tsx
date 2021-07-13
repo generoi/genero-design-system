@@ -9,7 +9,7 @@ export class GdsLabel {
   /**
    * Size of the label.
    */
-  @Prop() size: string = 'm'
+  @Prop({ reflect: true }) size: string = 'm'
   /**
    * Text color.
    * TODO: Implement the color custom variable scheme.
@@ -22,9 +22,7 @@ export class GdsLabel {
         style={{
           color: this.color,
         }}>
-        <span class={`size-${this.size}`}>
-          <slot></slot>
-        </span>
+        <slot></slot>
       </Host>
     )
   }

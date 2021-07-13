@@ -1,5 +1,5 @@
 @mixin base {
-  display: inline-block;
+  display: inline-flex;
   color: var(--gds-tag-color, white);
   line-height: var(--gds-tag-line-height, 1em);
   background-color: var(--gds-tag-background-color, black);
