@@ -48,6 +48,7 @@ export class GdsMenuItemNested {
    */
   private submenuId: string
 
+  private isSubmenu: boolean
   private hasSubmenuIconSlot: boolean
 
   /**
@@ -121,6 +122,8 @@ export class GdsMenuItemNested {
     this.submenuId = `gds-menu-item-nested-submenu-${idCounter}`
     this.linkSlot = this.host.querySelector(':scope > [slot="link"]') as HTMLSlotElement
     this.hasSubmenuIconSlot = !!this.host.querySelector(':scope > [slot="submenu-icon"]')
+    // @todo eventually add megamenu alternative
+    this.isSubmenu = this.host.querySelector(':scope > [slot="submenu"]').tagName === 'gds-submenu';
 
     if (!this.accessibleLabel) {
       this.accessibleLabel = this.linkSlot.textContent.trim()
@@ -153,7 +156,7 @@ export class GdsMenuItemNested {
         </div>
         <div
           id={ this.submenuId }
-          class="submenu"
+          class={ this.isSubmenu ? 'submenu' : ''}
           role="region"
           aria-label={ this.accessibleLabel }
         >
