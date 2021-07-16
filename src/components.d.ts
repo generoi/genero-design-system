@@ -846,6 +846,14 @@ declare namespace LocalJSX {
           * Accessible name for the inner navigation
          */
         "accessibleNavigationLabel"?: string;
+        /**
+          * Public event when mobile menu is closed.
+         */
+        "onCloseHamburgerMenu"?: (event: CustomEvent<void>) => void;
+        /**
+          * Public event when mobile menu is opened.
+         */
+        "onOpenHamburgerMenu"?: (event: CustomEvent<void>) => void;
     }
     interface GdsParagraph {
         /**

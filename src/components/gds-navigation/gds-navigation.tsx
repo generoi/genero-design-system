@@ -1,4 +1,4 @@
-import { Component, h, Host, State, Element, Prop } from '@stencil/core'
+import { Component, h, Host, State, Element, Prop, Event, EventEmitter } from '@stencil/core'
 import { HTMLStencilElement, Listen, Method } from '@stencil/core/internal'
 
 let idCounter = 0;
@@ -33,6 +33,15 @@ export class GdsNavigation {
    */
   @State() open: boolean = false
 
+  /**
+   * Public event when mobile menu is opened.
+   */
+  @Event() openHamburgerMenu: EventEmitter<void>;
+  /**
+   * Public event when mobile menu is closed.
+   */
+  @Event() closeHamburgerMenu: EventEmitter<void>;
+
   private contentId: string
   private contentEl: HTMLDivElement
   private hamburgerEl: HTMLButtonElement
@@ -56,12 +65,12 @@ export class GdsNavigation {
 
     switch (event.key) {
       case 'Escape':
-        this.closeHamburgerMenu()
+        this.closeHamburgerMenu.emit()
         this.hamburgerEl.focus();
         break
       case 'Tab':
         if (!this.contentEl.contains(event.target as Node)) {
-          this.closeHamburgerMenu()
+          this.closeHamburgerMenu.emit()
         }
         break
     }
@@ -79,19 +88,21 @@ export class GdsNavigation {
     this.contentId = `gds-navigation-content-${idCounter}`
   }
 
-  closeHamburgerMenu() {
+  @Listen('closeHamburgerMenu')
+  handleCloseHamburgerMenu() {
     this.open = false
   }
 
-  openHamburgerMenu() {
+  @Listen('openHamburgerMenu')
+  handleOpenHamburgerMenu() {
     this.open = true
   }
 
   private handleHamburgerClick() {
     if (this.open) {
-      this.closeHamburgerMenu()
+      this.closeHamburgerMenu.emit();
     } else {
-      this.openHamburgerMenu()
+      this.openHamburgerMenu.emit();
     }
   }
 
@@ -163,6 +174,6 @@ export class GdsNavigation {
 
   @Method()
   async closeMenu() {
-    this.closeHamburgerMenu()
+    this.closeHamburgerMenu.emit()
   }
 }

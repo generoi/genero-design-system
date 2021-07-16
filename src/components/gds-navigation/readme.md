@@ -11,6 +11,14 @@
 | `accessibleNavigationLabel` | `accessible-navigation-label` | Accessible name for the inner navigation | `string` | `undefined` |
 
 
+## Events
+
+| Event                | Description                              | Type                |
+| -------------------- | ---------------------------------------- | ------------------- |
+| `closeHamburgerMenu` | Public event when mobile menu is closed. | `CustomEvent<void>` |
+| `openHamburgerMenu`  | Public event when mobile menu is opened. | `CustomEvent<void>` |
+
+
 ## Methods
 
 ### `closeMenu() => Promise<void>`
