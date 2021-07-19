@@ -22,7 +22,9 @@ export class GdsLabel {
         style={{
           color: this.color,
         }}>
-        <slot></slot>
+        <span class={`size-${this.size}`}>
+          <slot></slot>
+        </span>
       </Host>
     )
   }
