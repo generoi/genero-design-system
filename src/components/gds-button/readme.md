@@ -15,6 +15,19 @@
 | `size`            | `size`              | Button size.                                                                   | `string`  | `'m'`       |
 
 
+## Dependencies
+
+### Used by
+
+ - [gds-consent-manager](../gds-consent-manager)
+
+### Graph
+```mermaid
+graph TD;
+  gds-consent-manager --> gds-button
+  style gds-button fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

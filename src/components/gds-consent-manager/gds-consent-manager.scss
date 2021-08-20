@@ -1,114 +1,97 @@
-@use "../../styles/breakpoints" as *;
 /**
- * @prop --gds-accordion-color:
- * @prop --gds-accordion-background:
- * @prop --gds-accordion-border:
- * @prop --gds-accordion-border-radius:
- * @prop --gds-accordion-box-shadow:
- * @prop --gds-accordion-content-background:
- * @prop --gds-accordion-padding:
- * @prop --gds-accordion-justify-content:
- * @prop --gds-accordion-header-padding:
- * @prop --gds-accordion-outline-focus:
- * @prop --gds-accordion-heading-margin-left:
- * @prop --gds-accordion-expanded-header-background:
+ * @prop --gds-consent-manager-max-width:
  */
-.accordion {
-  color: var(--gds-accordion-color, inherit);
-  background: var(--gds-accordion-background, var(--gds-color-white));
-  border: var(--gds-accordion-border);
-  border-radius: var(--gds-accordion-border-radius);
-  box-shadow: var(--gds-accordion-box-shadow);
-  position: relative;
-  // Can't have this with floating.
-  // overflow: hidden;
-  display: flex;
-  flex-direction: column;
+.gds-cm-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 10;
+}
 
-  .content {
-    box-sizing: border-box;
-    display: none;
-    background: var(--gds-accordion-content-background, var(--gds-color-white));
-    padding: var(--gds-accordion-padding, var(--gds-spacing-s));
+.gds-cm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
 
-    // These are required because we can't have overflow: hidden with floating.
-    border-bottom-right-radius: var(--gds-accordion-border-radius);
-    border-bottom-left-radius: var(--gds-accordion-border-radius);
-  }
-
-  .contentFloats {
-    position: absolute;
-    width: 100%;
-    top: 100%;
-    z-index: 10;
-    box-shadow: var(--gds-accordion-box-shadow);
-  }
+.gds-cm {
+  background: var(--gds-color-white);
+  width: 600px;
+  height: auto;
+  position: absolute;
+  padding: 4rem;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  border-radius: var(--gds-consent-manager-border-radius);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 
   .header {
-    all: unset; // reset button styles
-    // Span full width
-    flex: 1 1 auto;
-    outline: none;
-
-    position: relative;
     display: flex;
-    justify-content: var(--gds-accordion-justify-content, space-between);
-    align-items: center;
-    cursor: pointer;
-    padding: var(--gds-accordion-header-padding, var(--gds-accordion-padding));
-    outline: none;
+    justify-content: space-between;
 
-    &:focus {
-      outline: var(--gds-accordion-outline-focus);
-      z-index: 1;
+    nav {
+      &.hidden {
+        display: none;
+      }
 
-      // Until :focus-visible has proper cross-browser support.
-      &:not(:focus-visible) {
-        outline: none;
+      gds-menu-item {
+        padding-top: 0;
+        padding-bottom: 0;
       }
     }
-
-    // These are required because we can't have overflow: hidden with floating.
-    border-top-right-radius: var(--gds-accordion-border-radius);
-    border-top-left-radius: var(--gds-accordion-border-radius);
   }
 
-  .heading {
-    margin-right: var(--gds-accordion-heading-margin-left, var(--gds-spacing-2xs));
-  }
+  .accordions-wrapper {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    --gds-accordion-color: inherit;
+    --gds-accordion-background: var(--gds-color-white);
+    --gds-accordion-content-background: var(--gds-color-white);
+    --gds-accordion-expanded-header-background: transparent;
+    --gds-accordion-border: none;
+    --gds-accordion-border-radius: none;
+    --gds-accordion-box-shadow: none;
+    --gds-accordion-padding: var(--gds-spacing-s);
+    --gds-accordion-header-padding: 0;
 
-  .iconCollapse {
-    display: none;
-  }
-  .iconExpand {
-    display: block;
-    flex-shrink: 0;
-  }
-
-  @mixin expanded {
-    .iconCollapse {
-      display: block;
+    input[type="checkbox"] {
+      margin: 0.5rem;
     }
-    .iconExpand {
-      display: none;
-    }
-    .header {
-      background: var(--gds-accordion-expanded-header-background, var(--gds-color-white));
-    }
-    .content {
-      display: block;
-    }
-  }
 
-  // Logic for expanding by clicking.
-  &.expanded {
-    @include expanded;
-  }
+    gds-accordion .icon {
+      transform: rotate(90deg);
+    }
 
-  // Logic for expanding by hovering on desktop.
-  @include desktopOnly {
-    &.openOnHover:hover {
-      @include expanded;
+    .gds-cm-accordion-content {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      position: relative;
     }
   }
+
+  .footer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: var(--gds-spacing-m);
+  }
+}
+
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }

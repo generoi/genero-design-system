@@ -15,11 +15,13 @@
 
 ### Used by
 
+ - [gds-consent-manager](../gds-consent-manager)
  - [gds-tag](../gds-tag)
 
 ### Graph
 ```mermaid
 graph TD;
+  gds-consent-manager --> gds-label
   gds-tag --> gds-label
   style gds-label fill:#f9f,stroke:#333,stroke-width:4px
 ```

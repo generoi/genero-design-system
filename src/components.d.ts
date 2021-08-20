@@ -40,18 +40,25 @@ export namespace Components {
     interface GdsCard {
     }
     interface GdsConsentManager {
+        "accordionIsOpen": boolean;
+        "configs": string;
         /**
-          * Content floats.
+          * Define description
          */
-        "contentFloats": boolean;
+        "description": string;
         /**
-          * Keeps track of when the user has actively collapsed or expanded the accordion.
+          * Define headline
          */
-        "expanded": boolean;
+        "headline": string;
         /**
-          * Opens automatically when hovered (desktop only).
+          * Mutables
          */
-        "openOnHover": boolean;
+        "isopen": boolean;
+        /**
+          * Set language
+         */
+        "language": string;
+        "languageNavigation": boolean;
     }
     interface GdsGoogleMaps {
         "addMarker": (lat: string, lng: string, options?: object) => Promise<any>;
@@ -636,18 +643,29 @@ declare namespace LocalJSX {
     interface GdsCard {
     }
     interface GdsConsentManager {
+        "accordionIsOpen"?: boolean;
+        "configs"?: string;
         /**
-          * Content floats.
+          * Define description
          */
-        "contentFloats"?: boolean;
+        "description"?: string;
         /**
-          * Keeps track of when the user has actively collapsed or expanded the accordion.
+          * Define headline
          */
-        "expanded"?: boolean;
+        "headline"?: string;
         /**
-          * Opens automatically when hovered (desktop only).
+          * Mutables
          */
-        "openOnHover"?: boolean;
+        "isopen"?: boolean;
+        /**
+          * Set language
+         */
+        "language"?: string;
+        "languageNavigation"?: boolean;
+        /**
+          * Creates an Event that a hook can be hooked to
+         */
+        "onConsent"?: (event: CustomEvent<any>) => void;
     }
     interface GdsGoogleMaps {
         /**
