@@ -1,0 +1,97 @@
+/**
+ * @prop --gds-consent-manager-max-width:
+ */
+.gds-cm-wrapper {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+  z-index: 10;
+}
+
+.gds-cm-overlay {
+  background: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.gds-cm {
+  background: var(--gds-color-white);
+  width: 600px;
+  height: auto;
+  position: absolute;
+  padding: 4rem;
+  left: 50%;
+  transform: translate(-50%, 0px);
+  border-radius: var(--gds-consent-manager-border-radius);
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+
+    nav {
+      &.hidden {
+        display: none;
+      }
+
+      gds-menu-item {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+    }
+  }
+
+  .accordions-wrapper {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+    --gds-accordion-color: inherit;
+    --gds-accordion-background: var(--gds-color-white);
+    --gds-accordion-content-background: var(--gds-color-white);
+    --gds-accordion-expanded-header-background: transparent;
+    --gds-accordion-border: none;
+    --gds-accordion-border-radius: none;
+    --gds-accordion-box-shadow: none;
+    --gds-accordion-padding: var(--gds-spacing-s);
+    --gds-accordion-header-padding: 0;
+
+    input[type="checkbox"] {
+      margin: 0.5rem;
+    }
+
+    gds-accordion .icon {
+      transform: rotate(90deg);
+    }
+
+    .gds-cm-accordion-content {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      position: relative;
+    }
+  }
+
+  .footer {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    gap: var(--gds-spacing-m);
+  }
+}
+
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}

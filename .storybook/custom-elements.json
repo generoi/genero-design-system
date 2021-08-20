@@ -217,6 +217,124 @@
             "cssParts": []
         },
         {
+            "name": "gds-consent-manager",
+            "path": "./src/components/gds-consent-manager/gds-consent-manager.tsx",
+            "description": "This is the consent manager.",
+            "properties": [
+                {
+                    "name": "accordionIsOpen",
+                    "description": "",
+                    "type": "boolean",
+                    "default": "false",
+                    "attribute": "accordion-is-open"
+                },
+                {
+                    "name": "configs",
+                    "description": "",
+                    "type": "string",
+                    "attribute": "configs"
+                },
+                {
+                    "name": "description",
+                    "description": "Define description",
+                    "type": "string",
+                    "attribute": "description"
+                },
+                {
+                    "name": "headline",
+                    "description": "Define headline",
+                    "type": "string",
+                    "attribute": "headline"
+                },
+                {
+                    "name": "isopen",
+                    "description": "Mutables",
+                    "type": "boolean",
+                    "default": "true",
+                    "attribute": "isopen"
+                },
+                {
+                    "name": "language",
+                    "description": "Set language",
+                    "type": "string",
+                    "default": "this.defaultLanguage",
+                    "attribute": "language"
+                },
+                {
+                    "name": "languageNavigation",
+                    "description": "",
+                    "type": "boolean",
+                    "default": "true",
+                    "attribute": "language-navigation"
+                }
+            ],
+            "attributes": [
+                {
+                    "name": "accordionIsOpen",
+                    "description": "",
+                    "type": "boolean",
+                    "default": "false"
+                },
+                {
+                    "name": "configs",
+                    "description": "",
+                    "type": "string"
+                },
+                {
+                    "name": "description",
+                    "description": "Define description",
+                    "type": "string"
+                },
+                {
+                    "name": "headline",
+                    "description": "Define headline",
+                    "type": "string"
+                },
+                {
+                    "name": "isopen",
+                    "description": "Mutables",
+                    "type": "boolean",
+                    "default": "true"
+                },
+                {
+                    "name": "language",
+                    "description": "Set language",
+                    "type": "string",
+                    "default": "this.defaultLanguage"
+                },
+                {
+                    "name": "languageNavigation",
+                    "description": "",
+                    "type": "boolean",
+                    "default": "true"
+                }
+            ],
+            "events": [
+                {
+                    "name": "consent",
+                    "description": "Creates an Event that a hook can be hooked to"
+                }
+            ],
+            "methods": [],
+            "slots": [
+                {
+                    "name": "content",
+                    "description": "the hidden part of the consent manager"
+                },
+                {
+                    "name": "label",
+                    "description": "the heading part of the consent manager"
+                }
+            ],
+            "cssProperties": [
+                {
+                    "name": "--gds-consent-manager-max-width",
+                    "description": ""
+                }
+            ],
+            "cssParts": []
+        },
+        {
             "name": "gds-google-maps",
             "path": "./src/components/gds-google-maps/gds-google-maps.tsx",
             "description": "Displays Google Maps.\n\nInspired by: https://www.joshmorony.com/creating-a-google-maps-web-component-with-stencil/",

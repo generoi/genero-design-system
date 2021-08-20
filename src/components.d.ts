@@ -39,6 +39,27 @@ export namespace Components {
     }
     interface GdsCard {
     }
+    interface GdsConsentManager {
+        "accordionIsOpen": boolean;
+        "configs": string;
+        /**
+          * Define description
+         */
+        "description": string;
+        /**
+          * Define headline
+         */
+        "headline": string;
+        /**
+          * Mutables
+         */
+        "isopen": boolean;
+        /**
+          * Set language
+         */
+        "language": string;
+        "languageNavigation": boolean;
+    }
     interface GdsGoogleMaps {
         "addMarker": (lat: string, lng: string, options?: object) => Promise<any>;
         /**
@@ -392,6 +413,12 @@ declare global {
         prototype: HTMLGdsCardElement;
         new (): HTMLGdsCardElement;
     };
+    interface HTMLGdsConsentManagerElement extends Components.GdsConsentManager, HTMLStencilElement {
+    }
+    var HTMLGdsConsentManagerElement: {
+        prototype: HTMLGdsConsentManagerElement;
+        new (): HTMLGdsConsentManagerElement;
+    };
     interface HTMLGdsGoogleMapsElement extends Components.GdsGoogleMaps, HTMLStencilElement {
     }
     var HTMLGdsGoogleMapsElement: {
@@ -552,6 +579,7 @@ declare global {
         "gds-accordion": HTMLGdsAccordionElement;
         "gds-button": HTMLGdsButtonElement;
         "gds-card": HTMLGdsCardElement;
+        "gds-consent-manager": HTMLGdsConsentManagerElement;
         "gds-google-maps": HTMLGdsGoogleMapsElement;
         "gds-hamburger": HTMLGdsHamburgerElement;
         "gds-heading": HTMLGdsHeadingElement;
@@ -613,6 +641,31 @@ declare namespace LocalJSX {
         "size"?: string;
     }
     interface GdsCard {
+    }
+    interface GdsConsentManager {
+        "accordionIsOpen"?: boolean;
+        "configs"?: string;
+        /**
+          * Define description
+         */
+        "description"?: string;
+        /**
+          * Define headline
+         */
+        "headline"?: string;
+        /**
+          * Mutables
+         */
+        "isopen"?: boolean;
+        /**
+          * Set language
+         */
+        "language"?: string;
+        "languageNavigation"?: boolean;
+        /**
+          * Creates an Event that a hook can be hooked to
+         */
+        "onConsent"?: (event: CustomEvent<any>) => void;
     }
     interface GdsGoogleMaps {
         /**
@@ -963,6 +1016,7 @@ declare namespace LocalJSX {
         "gds-accordion": GdsAccordion;
         "gds-button": GdsButton;
         "gds-card": GdsCard;
+        "gds-consent-manager": GdsConsentManager;
         "gds-google-maps": GdsGoogleMaps;
         "gds-hamburger": GdsHamburger;
         "gds-heading": GdsHeading;
@@ -998,6 +1052,7 @@ declare module "@stencil/core" {
             "gds-accordion": LocalJSX.GdsAccordion & JSXBase.HTMLAttributes<HTMLGdsAccordionElement>;
             "gds-button": LocalJSX.GdsButton & JSXBase.HTMLAttributes<HTMLGdsButtonElement>;
             "gds-card": LocalJSX.GdsCard & JSXBase.HTMLAttributes<HTMLGdsCardElement>;
+            "gds-consent-manager": LocalJSX.GdsConsentManager & JSXBase.HTMLAttributes<HTMLGdsConsentManagerElement>;
             "gds-google-maps": LocalJSX.GdsGoogleMaps & JSXBase.HTMLAttributes<HTMLGdsGoogleMapsElement>;
             "gds-hamburger": LocalJSX.GdsHamburger & JSXBase.HTMLAttributes<HTMLGdsHamburgerElement>;
             "gds-heading": LocalJSX.GdsHeading & JSXBase.HTMLAttributes<HTMLGdsHeadingElement>;
