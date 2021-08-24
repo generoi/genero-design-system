@@ -31,6 +31,7 @@
 
   &:hover {
     background-color: var(--gds-button-background-color-hover, var(--gds-button-background-color));
+    color: var(--gds-button-color-hover);
     background-image: var(--gds-button-background-image-hover, var(--gds-button-background-image));
     outline: var(--gds-button-outline-hover, var(--gds-button-outline));
   }
