@@ -315,6 +315,9 @@
   /* Consent manager */
   --gds-consent-manager-max-width: 50vw;
   --gds-consent-manager-border-radius: 20px;
+  --gds-consent-manager-position-left: 50%;
+  --gds-consent-manager-position-top: 50%;
+  --gds-consent-manager-transform: translate(-50%, -50%);
 
   /* Input Wrapper */
   --gds-input-wrapper-label-color: var(--gds-color-ui-02);

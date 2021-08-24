@@ -26,8 +26,9 @@
   height: auto;
   position: absolute;
   padding: 4rem;
-  left: 50%;
-  transform: translate(-50%, 0px);
+  left: var(--gds-consent-manager-position-left);
+  top: var(--gds-consent-manager-position-top);
+  transform: var(--gds-consent-manager-transform);
   border-radius: var(--gds-consent-manager-border-radius);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 
