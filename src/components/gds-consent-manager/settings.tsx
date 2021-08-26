@@ -4,6 +4,7 @@ export interface CookieNoticeSetting {
     heading: string
     buttonEdit: string
     buttonAcceptSelected: string
+    buttonAcceptAll: string
     consents: Array<Consent>
 }
 

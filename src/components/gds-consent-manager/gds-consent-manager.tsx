@@ -279,7 +279,7 @@ export class GdsConsentManager {
               </div>
               <div class="footer">
                 <gds-button onClick={ this.accordionIsOpen ? () => this.acceptSelectedCookies() : () => this.toggleAccordions() } size="m">{ this.accordionIsOpen ? this.settings.buttonAcceptSelected : this.settings.buttonEdit }</gds-button>
-                <gds-button onClick={ () => this.acceptAllCookies() } size="m">Accept all</gds-button>
+                <gds-button onClick={ () => this.acceptAllCookies() } size="m">{this.settings.buttonAcceptAll}</gds-button>
               </div>
             </div>
           </div>
