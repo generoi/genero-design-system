@@ -76,14 +76,12 @@ export class GdsNavigation {
     }
   }
 
-  componentWillRender() {
+  componentWillLoad() {
     this.hasMenuIconSlot = !!this.hostElement.querySelector('[slot="menu-icon"]')
     this.hasMobileExtensionsSlot = !!this.hostElement.querySelector('[slot="mobile-extensions"]')
     this.hasDesktopExtensionsSlot = !!this.hostElement.querySelector('[slot="desktop-extensions"]')
     this.hasSearchSlot = !!this.hostElement.querySelector('[slot="search"]')
-  }
 
-  componentWillLoad() {
     ++idCounter;
     this.contentId = `gds-navigation-content-${idCounter}`
   }
