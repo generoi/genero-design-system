@@ -95,6 +95,7 @@ export class GdsMenuItemNested {
     if (this.expanded) {
       this.expanded = false;
       this.active = false;
+      this.forced = false;
     }
   }
 
@@ -114,7 +115,6 @@ export class GdsMenuItemNested {
 
     // Second time it toggles it off.
     this.close()
-    this.forced = false;
   }
 
   componentWillLoad() {
