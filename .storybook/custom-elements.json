@@ -26,6 +26,13 @@
                     "type": "boolean",
                     "default": "false",
                     "attribute": "open-on-hover"
+                },
+                {
+                    "name": "useTransition",
+                    "description": "Content floats.",
+                    "type": "boolean",
+                    "default": "false",
+                    "attribute": "use-transition"
                 }
             ],
             "attributes": [
@@ -44,6 +51,12 @@
                 {
                     "name": "openOnHover",
                     "description": "Opens automatically when hovered (desktop only).",
+                    "type": "boolean",
+                    "default": "false"
+                },
+                {
+                    "name": "useTransition",
+                    "description": "Content floats.",
                     "type": "boolean",
                     "default": "false"
                 }
@@ -115,6 +128,10 @@
                 },
                 {
                     "name": "--gds-accordion-padding",
+                    "description": ""
+                },
+                {
+                    "name": "--gds-accordion-transition",
                     "description": ""
                 }
             ],
@@ -1273,7 +1290,16 @@
                     "type": "string"
                 }
             ],
-            "events": [],
+            "events": [
+                {
+                    "name": "closeHamburgerMenu",
+                    "description": "Public event when mobile menu is closed."
+                },
+                {
+                    "name": "openHamburgerMenu",
+                    "description": "Public event when mobile menu is opened."
+                }
+            ],
             "methods": [
                 {
                     "name": "closeMenu",

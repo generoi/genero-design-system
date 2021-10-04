@@ -139,6 +139,28 @@ export const Examples = () => html`
     </gds-accordion>
     <br />
 
+    <gds-accordion use-transition="true">
+      <gds-label slot="label">Toggle content with transition</gds-label>
+      <gds-icon slot="icon-collapse" name="caret-circle-up" regular></gds-icon>
+      <gds-icon slot="icon-expand" name="caret-circle-down" regular></gds-icon>
+      <div slot="content">
+        <gds-paragraph>Some content</gds-paragraph>
+        <gds-paragraph>Can be put here.</gds-paragraph>
+      </div>
+    </gds-accordion>
+    <br />
+
+    <gds-accordion use-transition="true" content-floats="true">
+      <gds-label slot="label">Floating content with transition</gds-label>
+      <gds-icon slot="icon-collapse" name="caret-circle-up" regular></gds-icon>
+      <gds-icon slot="icon-expand" name="caret-circle-down" regular></gds-icon>
+      <div slot="content">
+        <gds-paragraph>Some content</gds-paragraph>
+        <gds-paragraph>Can be put here.</gds-paragraph>
+      </div>
+    </gds-accordion>
+    <br />
+
     <gds-accordion expanded>
       <gds-label slot="label">Can be open by default</gds-label>
       <gds-icon slot="icon-collapse" name="caret-circle-up" regular></gds-icon>

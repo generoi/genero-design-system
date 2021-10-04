@@ -19,6 +19,10 @@ export namespace Components {
           * Opens automatically when hovered (desktop only).
          */
         "openOnHover": boolean;
+        /**
+          * Content floats.
+         */
+        "useTransition": boolean;
     }
     interface GdsButton {
         "disabled": boolean;
@@ -622,6 +626,10 @@ declare namespace LocalJSX {
           * Opens automatically when hovered (desktop only).
          */
         "openOnHover"?: boolean;
+        /**
+          * Content floats.
+         */
+        "useTransition"?: boolean;
     }
     interface GdsButton {
         "disabled"?: boolean;

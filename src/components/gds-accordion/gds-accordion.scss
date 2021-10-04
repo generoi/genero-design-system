@@ -12,6 +12,7 @@
  * @prop --gds-accordion-outline-focus:
  * @prop --gds-accordion-heading-margin-left:
  * @prop --gds-accordion-expanded-header-background:
+ * @prop --gds-accordion-transition:
  */
 .accordion {
   color: var(--gds-accordion-color, inherit);
@@ -42,6 +43,28 @@
     top: 100%;
     z-index: 10;
     box-shadow: var(--gds-accordion-box-shadow);
+  }
+
+  &.useTransition {
+    &:not(.contentFloatsWrapper) {
+      overflow: hidden;
+    }
+
+    .content {
+      transition: var(--gds-accordion-transition, all 0.5s ease-in-out);
+      display: block;
+    }
+
+    &:not(.expanded) .content {
+      height: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+      opacity: 0;
+
+      & > * {
+        display: none;
+      }
+    }
   }
 
   .header {

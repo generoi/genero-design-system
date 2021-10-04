@@ -27,6 +27,11 @@ export class GdsAccordion {
   @Prop() contentFloats: boolean = false
 
   /**
+   * Content floats.
+   */
+   @Prop() useTransition: boolean = false
+
+  /**
    * Keeps track of when the user has actively collapsed or expanded the accordion.
    */
   @Prop({
@@ -66,6 +71,8 @@ export class GdsAccordion {
             accordion: true,
             expanded: this.expanded,
             openOnHover: this.openOnHover,
+            useTransition: this.useTransition,
+            contentFloatsWrapper: this.contentFloats,
           }}>
           <button
             class="header" onClick={() => (this.expanded = !this.expanded)}
