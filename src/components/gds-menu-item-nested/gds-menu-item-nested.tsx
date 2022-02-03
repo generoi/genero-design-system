@@ -123,7 +123,7 @@ export class GdsMenuItemNested {
     this.linkSlot = this.host.querySelector(':scope > [slot="link"]') as HTMLSlotElement
     this.hasSubmenuIconSlot = !!this.host.querySelector(':scope > [slot="submenu-icon"]')
     // @todo eventually add megamenu alternative
-    this.isSubmenu = this.host.querySelector(':scope > [slot="submenu"]').tagName === 'gds-submenu';
+    this.isSubmenu = this.host.querySelector(':scope > [slot="submenu"]').tagName.toLowerCase() === 'gds-submenu';
 
     if (!this.accessibleLabel) {
       this.accessibleLabel = this.linkSlot.textContent.trim()
