@@ -2,6 +2,8 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [4.0.0-beta.17](https://github.com/generoi/genero-design-system/compare/v4.0.0-beta.16...v4.0.0-beta.17) (2022-02-28)
+
 ## [4.0.0-beta.16](https://github.com/generoi/genero-design-system/compare/v4.0.0-beta.15...v4.0.0-beta.16) (2022-02-03)
 
 ## [4.0.0-beta.15](https://github.com/generoi/genero-design-system/compare/v4.0.0...v4.0.0-beta.15) (2021-10-04)
