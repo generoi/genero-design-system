@@ -23,6 +23,7 @@
 
   display: block;
   object-fit: var(--gds-media-card-object-fit, cover);
+  object-position: var(--gds-media-card-object-position, center);
 }
 
 @mixin superimposed {
