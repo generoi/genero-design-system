@@ -22,7 +22,7 @@
 
 .gds-cm {
   background: var(--gds-color-white);
-  width: 600px;
+  max-width: var(--gds-consent-manager-max-width, 600px);
   height: auto;
   position: absolute;
   padding: 4rem;
