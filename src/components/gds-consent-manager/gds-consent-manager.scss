@@ -14,23 +14,24 @@
 }
 
 .gds-cm-overlay {
-  background: rgba(0, 0, 0, 0.3);
+  background: var(--gds-consent-manager-overlay-background);
   height: 100%;
   width: 100%;
   position: absolute;
 }
 
 .gds-cm {
-  background: var(--gds-color-white);
-  max-width: var(--gds-consent-manager-max-width, 600px);
+  background: var(--gds-consent-manager-background);
+  max-width: var(--gds-consent-manager-max-width);
   height: auto;
   position: absolute;
-  padding: 4rem;
+  padding: var(--gds-consent-manager-padding);
   left: var(--gds-consent-manager-position-left);
   top: var(--gds-consent-manager-position-top);
   transform: var(--gds-consent-manager-transform);
   border-radius: var(--gds-consent-manager-border-radius);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+  box-sizing: border-box;
 
   .header {
     display: flex;
@@ -53,6 +54,7 @@
     visibility: hidden;
     position: absolute;
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+
     --gds-accordion-color: inherit;
     --gds-accordion-background: var(--gds-color-white);
     --gds-accordion-content-background: var(--gds-color-white);

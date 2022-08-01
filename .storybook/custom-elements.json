@@ -349,7 +349,20 @@
                     "description": ""
                 }
             ],
-            "cssParts": []
+            "cssParts": [
+                {
+                    "name": "accordion",
+                    "description": ""
+                },
+                {
+                    "name": "container",
+                    "description": ""
+                },
+                {
+                    "name": "footer",
+                    "description": ""
+                }
+            ]
         },
         {
             "name": "gds-google-maps",

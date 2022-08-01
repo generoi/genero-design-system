@@ -224,7 +224,7 @@ export class GdsConsentManager {
           languageNavigation : this.languageNavigation
           }} >
           <div class="gds-cm-overlay">
-            <div class="gds-cm">
+            <div class="gds-cm" part="container">
               <div class="header">
                 <slot name="headline">
                   {this.headline && (
@@ -244,8 +244,8 @@ export class GdsConsentManager {
                   </gds-menu>
                 </nav>
                 */}
-                </div>
-                <div class="body">
+              </div>
+              <div class="body">
                 <slot name="description">
                   {this.description && (
                     <gds-paragraph size="l" class="description">
@@ -255,7 +255,7 @@ export class GdsConsentManager {
                 </slot>
                 <div class={this.accordionIsOpen ? 'is-open accordions-wrapper' : 'accordions-wrapper'}>
                   {this.settings.consents.map((consent) =>
-                    <gds-accordion>
+                    <gds-accordion part="accordion">
                       <gds-label slot="label" size="l" onClick={ (event) => event.stopPropagation() }>
                         <input
                           onClick={ () => this.toggleConsent(consent) }
@@ -277,7 +277,7 @@ export class GdsConsentManager {
                   )}
                 </div>
               </div>
-              <div class="footer">
+              <div class="footer" part="footer">
                 <gds-button onClick={ this.accordionIsOpen ? () => this.acceptSelectedCookies() : () => this.toggleAccordions() } size="m">{ this.accordionIsOpen ? this.settings.buttonAcceptSelected : this.settings.buttonEdit }</gds-button>
                 <gds-button onClick={ () => this.acceptAllCookies() } size="m">{this.settings.buttonAcceptAll}</gds-button>
               </div>

@@ -314,10 +314,14 @@
   --gds-accordion-outline-focus: var(--gds-global-outline-focus);
 
   /* Consent manager */
-  --gds-consent-manager-max-width: 50vw;
+
+  --gds-consent-manager-overlay-background: rgba(0, 0, 0, 0.3);
+  --gds-consent-manager-background: var(--gds-color-white);
+  --gds-consent-manager-max-width: min(600px, calc(100vw - 8px));
   --gds-consent-manager-border-radius: 20px;
   --gds-consent-manager-position-left: 50%;
   --gds-consent-manager-position-top: 50%;
+  --gds-consent-manager-padding: 4rem;
   --gds-consent-manager-transform: translate(-50%, -50%);
 
   /* Input Wrapper */

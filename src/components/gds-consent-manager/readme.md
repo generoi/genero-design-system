@@ -31,6 +31,15 @@
 | `"label"`   | the heading part of the consent manager |
 
 
+## Shadow Parts
+
+| Part          | Description |
+| ------------- | ----------- |
+| `"accordion"` |             |
+| `"container"` |             |
+| `"footer"`    |             |
+
+
 ## CSS Custom Properties
 
 | Name                              | Description |
