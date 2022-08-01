@@ -257,12 +257,15 @@ export class GdsConsentManager {
                   {this.settings.consents.map((consent) =>
                     <gds-accordion part="accordion">
                       <gds-label slot="label" size="l" onClick={ (event) => event.stopPropagation() }>
-                        <input
-                          onClick={ () => this.toggleConsent(consent) }
-                          type="checkbox"
-                          disabled={ consent.necessary }
-                          checked={ consent.necessary || consent.consent}
-                        />{consent.label}
+                        <label>
+                          <input
+                            onClick={ () => this.toggleConsent(consent) }
+                            type="checkbox"
+                            disabled={ consent.necessary }
+                            checked={ consent.necessary || consent.consent}
+                          />
+                          {consent.label}
+                        </label>
                       </gds-label>
                       <div slot="icon-collapse" class="icon iconCollapse">
                         ❮
