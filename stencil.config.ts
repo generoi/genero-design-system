@@ -9,6 +9,7 @@ import { generateCustomElements } from './generate-custom-elements';
 export const config: Config = {
   namespace: 'gds',
   taskQueue: 'async',
+  buildEs5: true,
   outputTargets: [
     reactOutputTarget({
       componentCorePackage: 'genero-design-system',
