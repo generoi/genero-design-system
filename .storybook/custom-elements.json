@@ -1473,7 +1473,20 @@
             "methods": [],
             "slots": [],
             "cssProperties": [],
-            "cssParts": []
+            "cssParts": [
+                {
+                    "name": "form",
+                    "description": ""
+                },
+                {
+                    "name": "input",
+                    "description": ""
+                },
+                {
+                    "name": "submit",
+                    "description": ""
+                }
+            ]
         },
         {
             "name": "gds-slider",

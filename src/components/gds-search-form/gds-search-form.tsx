@@ -41,12 +41,13 @@ export class GdsSearch {
           action={this.action}
           method="get"
           role="search"
+          part="form"
         >
           <gds-input-wrapper label={this.accessibleInputLabel} hide-label-visually>
-            <input slot="input" type="search" name={this.query} placeholder={this.placeholder} autocomplete="off" />
+            <input slot="input" type="search" name={this.query} placeholder={this.placeholder} autocomplete="off" part="input" />
           </gds-input-wrapper>
 
-          <button type="submit" aria-label={this.accessibleSubmitLabel}>
+          <button type="submit" aria-label={this.accessibleSubmitLabel} part="submit">
             <slot name="search-icon">
               <div innerHTML={searchIcon} />
             </slot>

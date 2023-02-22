@@ -19,6 +19,15 @@
 | `query`                 | `query`                   |             | `string`  | `'s'`       |
 
 
+## Shadow Parts
+
+| Part       | Description |
+| ---------- | ----------- |
+| `"form"`   |             |
+| `"input"`  |             |
+| `"submit"` |             |
+
+
 ## Dependencies
 
 ### Depends on
